@@ -1,0 +1,330 @@
+// ==============================
+// === THE CHOREOGRAPHIC GRID ===
+// ==============================
+// GRID SETUP
+// GRID CALCULATIONS
+// GRID SETUP
+// MEDIA QUERIES
+//  - ALPHA
+//  - BETA
+// CENTRED COLUMNS
+// RESPONSIVE STYLES
+
+// Basic Usage
+// <div class="row">
+// 	<div class="col span4"></div>
+// 	<div class="col span8"></div>
+// </div>
+
+
+// ==================
+// === GRID SETUP ===
+// ==================
+
+// Choose your grid options
+$debugQueries         : false  !default; // Show the media query debugger at the top of the viewport
+$usingPushPullColumns : true   !default; // Allow columns to be pushed & pulled
+$usingOffsetcolumns   : true   !default; // Allow columns to be offset
+$usingSplitsAndShunts : true   !default; // Use Splits & Shunts for responsive web design
+// Setup grid defaults
+$gridColumnCount      : 12     !default; // Total column count
+$gridGutterWidth      : 30     !default; // [in pixels]
+$gridMaxWidth         : 1000   !default; // [in pixels]
+$gridMargin           : 0      !default; // [in pixels] Space outside the grid
+// Column Padding
+$gridColumnPadding    : 0      !default; // [in pixels]
+$gridColumnPaddingUnit: '%'    !default; // [in pixels or percent] Specify your unit of measurement for column padding
+$nestedColumnPadding  : false  !default; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
+
+// =========================
+// === GRID CALCULATIONS ===
+// =========================
+// CALCULATE COLUMNS WIDTHS
+@function gridColumnWidthCalc($columnSpan: 1, $showUnit: true) {
+	$numberOfBlocksInContainer: $gridColumnCount / $columnSpan;
+	$totalWidthOfAllGutters:    gutterCalc(false) * ($numberOfBlocksInContainer - 1);
+	$totalWidthOfAllBlocks:     1 - $totalWidthOfAllGutters;
+	$widthOfASingleBlock:       $totalWidthOfAllBlocks / $numberOfBlocksInContainer;
+
+	@if $showUnit == true {
+		@return percentage( $widthOfASingleBlock );
+	} @else {
+		@return $widthOfASingleBlock;
+	}
+}
+
+// COLUMN WIDTH MIXIN
+@mixin column($columnSpan: 1) {
+	width: gridColumnWidthCalc($columnSpan, true);
+}
+
+// GUTTERS
+// Default: percent
+// Usage: gutterCalc() or gutterCalc(false)
+@function gutterCalc($showUnit: true) {
+	@if $showUnit == true {
+		@return percentage( $gridGutterWidth / ( $gridMaxWidth - ($gridMargin * 2) ) );
+	} @else {
+		@return $gridGutterWidth / ( $gridMaxWidth - ($gridMargin * 2) );
+	}
+}
+
+// COLUMN PADDING (GUTTER)
+// Can be pixels or percent.
+// Default: percent
+// Usage: paddingCalc() or paddingCalc(px)
+@function paddingCalc() {
+	@if $gridColumnPaddingUnit == '%' {
+		@return percentage( $gridColumnPadding / $gridMaxWidth );
+	} @else if $gridColumnPaddingUnit == 'px' {
+		@return $gridColumnPadding + px;
+	}
+}
+
+// ================================================================
+// === SHUNTS, OFFSET COLUMNS, COLUMN SOURCE ORDER CALCULATIONS ===
+// ================================================================
+@mixin shunt($shuntSpan: 1) {
+	margin-right: (gridColumnWidthCalc($shuntSpan, false) * $shuntSpan) + ($gridGutterWidth * ($shuntSpan - 1));
+}
+@mixin offset($columnOffset: 1) {
+	margin-left: percentage( gridColumnWidthCalc($columnOffset, false) * $columnOffset / 100 );
+}
+@mixin offsetFirstChild($columnOffset: 1) {
+	margin-left: (gridColumnWidthCalc($columnOffset, false) * $columnOffset) + ($gridGutterWidth * $columnOffset);
+}
+@mixin push($pushOffset: 1) {
+	left: gridColumnWidthCalc($pushOffset, true) + gutterCalc();
+	position: relative;
+}
+@mixin pull($pullOffset: 1) {
+	right: gridColumnWidthCalc($pullOffset, true) + gutterCalc();
+	position: relative;
+}
+
+@mixin gridColumn() {
+	@if $gridGutterWidth > 0 {
+		margin-left: gutterCalc();
+	}
+	@if $gridColumnPadding > 0 {
+		padding: paddingCalc();
+	}
+	float: left;
+	min-height: 1px;
+	position: relative;
+	clear: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	&:first-child {
+		margin-left: 0;
+	}
+
+	& + &:last-child { float: right; }
+	& + &.end { float: left; }
+}
+
+@mixin clearfix {
+	*zoom: 1;
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin media-query($mq-title: 'mobile', $bgcolor: transparentize(yellow, .4)) {
+	content: $mq-title;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 30px;
+	line-height: 30px;
+	background-color: $bgcolor;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	z-index: 1000;
+}
+
+
+// ============
+// === GRID ===
+// ============
+.container {
+	padding-left: $gridMargin + px;
+	padding-right: $gridMargin + px;
+	width: 90%;
+	max-width: $gridMaxWidth + px;
+	margin: 0 auto;
+}
+
+.row {
+	width: 100%;
+	margin: 0 auto;
+	@include clearfix;
+
+	// Nested rows
+	& .row {
+		min-width: 0;
+
+		@if $nestedColumnPadding == false {
+			.col {
+				padding: 0;
+			}
+		}
+	}
+}
+
+// MEDIA QUERY DEBUGGER
+@if $debugQueries == true {
+	body:before {
+		@include media-query("mobile", transparentize(green, .4));
+	}
+}
+
+
+
+// ===========================================
+// === Media queries for responsive design ===
+// ===========================================
+
+// === 768> ===
+@media screen and (min-width: 768px) {
+	// NAME THIS MEDIA QUERY
+	$mediaQueryName : 'mq-alpha';
+
+	@if $debugQueries == true {
+		body:before {
+			@include media-query($mediaQueryName, transparentize(yellow, .4));
+		}
+	}
+
+	// COLUMNS ONLY START AT THIS VIEWPORT WIDTH
+	.col {
+		@include gridColumn();
+	}
+
+	// CREATE THE RELEVANT CLASSES
+	@for $i from 1 to $gridColumnCount + 1 {
+		@if $mediaQueryName {
+			.span#{$i}, .#{$mediaQueryName}-resize-to#{$i} { @include column($i); }
+		} @else {
+			.span#{$i} { @include column($i); }
+		}
+	}
+
+	// ==============================================
+	// === OFFSET & SOURCE ORDERING (PUSH & PULL) ===
+	// ==============================================
+	@if $usingOffsetcolumns == true {
+		@for $i from 1 to $gridColumnCount {
+			.row > .offset1 {
+				@include offset($i);
+				&:first-child {
+					@include offsetFirstChild($i);
+				}
+			}
+		}
+	}
+	@if $usingPushPullColumns == true {
+		@for $i from 2 to $gridColumnCount {
+			.row > .push#{$i}	{ @include push($i); }
+		}
+		@for $i from 2 to $gridColumnCount {
+			.row > .pull#{$i}	{ @include pull($i); }
+		}
+	}
+
+	// ====================================
+	// === SPLITTING COLUMNS & SHUNTING ===
+	// ====================================
+	.split .col, .shunt {
+		float:none;
+		margin-left: 0;
+		min-height: 1px;
+		position: relative;
+		width: 100%;
+		clear: both;
+	}
+}
+// === end 768> ===
+
+
+
+// === 992> ===
+@media screen and (min-width: 992px) {
+	// NAME THIS MEDIA QUERY
+	$mediaQueryName : 'mq-beta';
+
+	@if $debugQueries == true {
+		body:before {
+			@include media-query($mediaQueryName, transparentize(red, .1));
+		}
+	}
+
+	// ====================
+	// === CHOREOGRAPHY ===
+	// ====================
+	@if $usingSplitsAndShunts == true {
+		.split .col, .shunt {
+			@include gridColumn;
+		}
+
+
+		// === INFO ===
+		// I need to restate the grid widths & offsets in this media-query because of the cascade. For example, if I add .#{$mediaQueryName}-resize-to8 to a column in #{$mediaQueryName} & I need the the same column to return to it's 'natural' width (.span6 for example) in the wider media-query, there is no other way, that I can see, to do that. One thought I had was to add a body class, using javascript, stating which media-query is currently being viewed, then I can just use that to apply the relevant class. Not sure about this though.
+
+		@for $i from 1 to $gridColumnCount {
+			@if $mediaQueryName {
+				.span#{$i}, .#{$mediaQueryName}-resize-to#{$i}, .split .span#{$i} { @include column($i); }
+			} @else {
+				.span#{$i}, .split .span#{$i} { @include column($i); }
+			}
+		}
+	}
+
+	// Offset Columns
+	@if $usingOffsetcolumns == true {
+		@for $i from 1 to $gridColumnCount {
+			.row > .offset1 {
+				@include offset($i);
+				&:first-child {
+					@include offsetFirstChild($i);
+				}
+			}
+		}
+	}
+
+	// Push & Pull Columns
+	@if $usingPushPullColumns == true {
+		@for $i from 2 to $gridColumnCount - 2 {
+			.row > .#{$mediaQueryName}-push#{$i}, .push#{$i}	{ @include push($i); }
+		}
+		@for $i from 2 to $gridColumnCount - 2 {
+			.row > .#{$mediaQueryName}-pull#{$i}, .pull#{$i}	{ @include pull($i); }
+		}
+	}
+
+	.#{$mediaQueryName}-end { float: right; }
+	.#{$mediaQueryName}-end { float: left; }
+
+
+}
+// === end 992> ===
+
+// =======================
+// === CENTRED COLUMNS ===
+// =======================
+.centered.col, .centred.col { float: none; margin: 0 auto; }
+
+img {
+	max-width: 100%;
+}
