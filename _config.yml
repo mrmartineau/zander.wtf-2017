@@ -1,11 +1,10 @@
 name: Zander Martineau
 pygments: true
+permalink: /:categories/:title.html
 
 
 # Vars
 myname: Zander Martineau
 email: zander@martineau.tv
 socialusername: MrMartineau
-
-tagline: I am a London-based Creative Technologist working at <a href=\"http://tmw.co.uk\">TMW</a>. They keep me busy working with some high-profile global brands on some very diverse and interesting projects. This is a selection of my best work over the last few years.
 
