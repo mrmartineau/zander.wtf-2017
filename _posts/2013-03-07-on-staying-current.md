@@ -1,9 +1,9 @@
 ---
 comments: false
 layout: post
-slug: on-staying-current
 title: On staying current
-categories: Blog
+categories:
+- Code
 ---
 
 At [TMW](http://tmw.co.uk), I always ask interviewees how they keep up-to-date with the latest in front-end web goings-on. The answers I receive are varied but there's always a few recurring themes: Twitter and blogs - but which ones. I thought it would be a good idea to document my own 'stategy' for staying current, here it is.
