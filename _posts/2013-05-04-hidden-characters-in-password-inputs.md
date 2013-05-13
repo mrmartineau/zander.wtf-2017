@@ -18,7 +18,7 @@ input[type="password"] {
 
 **I will be adding this to all projects from now on, and so should you.**
 
-## Here's an example:
+### Here's an example:
 
 [View it on BrowserStack](http://www.browserstack.com/start#os=Windows&os_version=XP&browser=IE&browser_version=8.0&zoom_to_fit=true&url=http%3A%2F%2Fcodepen.io%2Fmrmartineau%2Ffull%2FgvlIt&resolution=1280x1024&speed=2)
 
