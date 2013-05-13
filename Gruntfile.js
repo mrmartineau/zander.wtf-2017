@@ -12,13 +12,16 @@ module.exports = function (grunt) {
 
 	// == JS files
 	var jsFileList = [
+		'js/libs/director.router.js',
+		'js/libs/handlebars.js',
+		'js/plugins.js',
 		'js/script.js'
 	];
 	var jsFile = '_script.min.js';
 	// ====================
 
 	// =====================
-	var distDir = 'js/compiled/';
+	var distDir = 'js/_compiled/';
 
 	// ====================
 	// Grunt config
@@ -30,10 +33,7 @@ module.exports = function (grunt) {
 		},
 
 		jshint: {
-			all: [
-				'Gruntfile.js',
-				'js/*.js'
-			],
+			all: jsFileList,
 			options: {
 				jshintrc: '.jshintrc'
 			}
@@ -49,7 +49,8 @@ module.exports = function (grunt) {
 					debugInfo : false
 				},
 				files: {
-					'css/kickoff.css': 'scss/kickoffe.scss'
+					'css/kickoff.css': 'scss/kickoff.scss',
+					'_site/css/kickoff.css': 'scss/kickoff.scss'
 				}
 			},
 			deploy: {
@@ -71,18 +72,20 @@ module.exports = function (grunt) {
 		},
 
 		uglify: {
-			options: {
-				mangle: false,
-				// report: 'gzip',
+			js : {
+				options: {
+					mangle: false,
+					// report: 'gzip',
 
-				// sourceMap: @string. The location of the source map, relative to the project
-				sourceMap: '_script.min.js.map',
+					// sourceMap: @string. The location of the source map, relative to the project
+					sourceMap: '_script.min.js.map',
 
-				// sourceMappingURL: @string. The string that is printed to the final file
-				sourceMappingURL: '../../_script.min.js.map'
-			},
-			files: {
-				'js/compiled/_script.min.js' : jsFileList
+					// sourceMappingURL: @string. The string that is printed to the final file
+					sourceMappingURL: '../../_script.min.js.map'
+				},
+				files: {
+					'js/_compiled/_script.min.js' : jsFileList
+				}
 			}
 		},
 
@@ -91,28 +94,41 @@ module.exports = function (grunt) {
 		},
 
 		copy: {
-			deploy: {
-				files: [{
-					src: ['js/**'],
-					dest: 'dist/'
-				}]
+			main: {
+				files: [
+					{
+						src: ['js/_compiled/_script.min.js'],
+						dest: '_site/js/_compiled/_script.min.js',
+						filter: 'isFile'
+					},
+					{
+						src: ['_script.min.js.map'],
+						dest: '_site/_script.min.js.map',
+						filter: 'isFile'
+					}
+				]
 			}
 		},
 
 		watch: {
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: ['sass:dev']
+				tasks: ['sass:dev', 'copy:main']
 			},
 
 			js: {
 				files: 'js/**/*.js',
-				tasks: ['uglify']
+				tasks: ['uglify', 'copy:main']
+			},
+
+			json : {
+				files: '*.json',
+				tasks: ['jekyll:dev', 'copy:main']
 			},
 
 			jekyll: {
-				files: ['blog/*.html'],
-				tasks: ['jekyll:dev']
+				files: ['blog/*.html', '_includes/*.html', '_layouts/*.html', '_posts/*.md', 'config.yml', '*.php'],
+				tasks: ['jekyll:dev', 'copy:main']
 			}
 		},
 
@@ -149,19 +165,19 @@ module.exports = function (grunt) {
 
 		jekyll: {
 			server : {
-				src : 'blog',
-				dest: 'dev',
+				src : './',
+				dest: '_site',
 				server : true,
 				server_port : 8000,
 				auto : true
 			},
 			dev: {
-				src: 'blog',
-				dest: 'dev'
+				src: './',
+				dest: '_site'
 			},
 			prod: {
-				src: 'blog',
-				dest: 'prod'
+				src: './',
+				dest: '_deploy'
 			}
 		}
 	};
@@ -203,7 +219,7 @@ module.exports = function (grunt) {
 	// grunt.registerTask('default', ['jshint', 'uglify', 'sass:dev']);
 
 	// Default task 2: Same as above but this creates a server and watches the project for changes
-	grunt.registerTask('default', ['jshint', 'uglify', 'sass:dev']);
+	grunt.registerTask('default', ['jshint', 'uglify', 'sass:dev', 'copy']);
 
 	grunt.registerTask('watcher', ['livereload-start', 'regarde']);
 
