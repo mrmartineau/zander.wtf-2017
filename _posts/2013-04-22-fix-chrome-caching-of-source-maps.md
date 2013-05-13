@@ -11,12 +11,11 @@ Over the past few days I have (finally) started tinkering with [Grunt](http://gr
 
 ![](http://cl.ly/OU1y/Screen%20Shot%202013-04-22%20at%2023.23.59.png)
 
-## Fix it
+### Fix it
 
 Go to the 'Network' tab (in dev tools), right click and select 'Clear browser cache', then close any open files in the 'Sources' tab. Now, refresh the page and that's it - source maps updated!
 
-1. ![](http://cl.ly/OTj9/Screen%20Shot%202013-04-22%20at%2023.27.18.png)
-
-2. ![](http://cl.ly/OUC6/Screen%20Shot%202013-04-22%20at%2023.31.54.png)
+![](http://cl.ly/OTj9/Screen%20Shot%202013-04-22%20at%2023.27.18.png)
+![](http://cl.ly/OUC6/Screen%20Shot%202013-04-22%20at%2023.31.54.png)
 
 Let me know if that worked for you, or if there's another way to fix this issue.
