@@ -4,12 +4,16 @@
 		"site_name": "Zander",
 		"name": "Zander Martineau",
 		"first_name": "Zander",
-		"tagline": "I am a London-based Creative Technologist working at <a href=\"http://tmw.co.uk\">TMW</a>. They keep me busy working with some high-profile global brands on some very diverse and interesting projects. This is a selection of my best work over the last few years.",
+		"tagline": "I am a London-based Creative Technologist working at <a href=\"http://tmw.co.uk\">TMW</a>.",
 		"navigation_links" : [
 			{
 				"url":  "#/portfolio",
 				"name": "Portfolio",
 				"char": "&#8962;"
+			},
+			{
+				"url":  "/blog",
+				"name": "Blog"
 			},
 			{
 				"url":  "#/code",
@@ -20,10 +24,6 @@
 				"url":  "#/sublime-text-resources",
 				"name": "Sublime Text resources",
 				"char": "&#128361;"
-			},
-			{
-				"url":  "http://rathersplendid.net",
-				"name": "My blog"
 			}
 		],
 		"footer_links": [

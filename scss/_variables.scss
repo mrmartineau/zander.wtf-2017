@@ -40,7 +40,7 @@ $orange:                            #f89406;
 $pink:                              #c3325f;
 $purple:                            #643545;
 $silver:                            #687581;
-$silverDark:                        #191d26;
+$silverDark:                        darken($silver, 20%);
 
 $accentColor:                       $silver;
 $primaryButtonBackground:           $blue;
@@ -65,7 +65,7 @@ $bodyBackground:                     #fff;
 $textColor:                          $silver;
 
 // LINKS
-$linkColor:                          $accentColor;
+$linkColor:                          darken($accentColor, 20%);
 $linkColorHover:                     lighten($linkColor, 30%);
 
 // BASELINE GRID - Set this in pixels, the font-size mixin will convert to REMS

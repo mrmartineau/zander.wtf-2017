@@ -24,7 +24,7 @@
 // BASE CSS
 @import "typography";
 @import "forms";
-@import "tables";
+// @import "tables";
 @import "code";
 
 // COMPONENTS: COMMON
@@ -40,6 +40,7 @@
 
 // YOUR APP/SITE STYLES
 @import "app";
+@import "blog";
 @import "portfolio-colours";
 
 

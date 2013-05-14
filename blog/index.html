@@ -3,11 +3,9 @@ layout: default
 ---
 
 {% for post in site.posts %}
-
-	<article id="{{post.meta_name}}" class="portfolio-pieces--item item-{{@index}} type-{{meta.type}} layout-{{meta.layout}}">
-		<div class="inner-wrap">
-			<h1 class="portfolio-pieces--item--inner--title">{{ post.title }}</h1>
-			{{ post.content }}
-		</div>
+	<article class="entry">
+		<h1 class="entry--title"><a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
+		<time class="entry--date text-centre">{{ post.date | date_to_string }}</time>
+		{{ post.content }}
 	</article>
 {% endfor %}

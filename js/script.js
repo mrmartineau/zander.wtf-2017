@@ -1,6 +1,3 @@
-/*jslint sloppy: true, white: true, browser: true, devel: true */
-/*jshint forin:true, noarg:true, noempty:true, eqeqeq:true, bitwise:true, strict:false, curly:true, browser:true, indent:4, maxerr:50, white:false, smarttabs:false */
-
 /*	Author:
 		TMW - (Author Name Here)
 */
@@ -86,7 +83,6 @@ ZANDER.ui = {
 
 	navigationToggle : function() {
 		$('body').on('click', '.navvy', function(event) {
-			log('navvy fired');
 			event.preventDefault();
 
 			if ( ZANDER.SiteSetup.navClosed === true ) {
@@ -100,12 +96,12 @@ ZANDER.ui = {
 	},
 
 	openNav : function() {
-		$('.nav').slideDown('fast');
+		$('.masthead').slideDown('fast');
 		$('.navvy').addClass('is-active');
 	},
 
 	closeNav : function() {
-		$('.nav').slideUp('fast');
+		$('.masthead').slideUp('fast');
 		$('.navvy').removeClass('is-active');
 	},
 
@@ -254,7 +250,7 @@ ZANDER.tpl = {
 
 		Handlebars.registerHelper('iter', function(context, options) {
 			var fn = options.fn, inverse = options.inverse;
-			var ret = "";
+			var ret = '';
 
 			if(context && context.length > 0) {
 				for(var i=0, j=context.length; i<j; i++) {
@@ -308,6 +304,18 @@ ZANDER.Router = {
 			router.setRoute('/home');
 		}
 
+		function allRoutes() {
+			log('Any route!');
+			// ZANDER.tpl.navigation();
+			// ZANDER.tpl.footerLinks();
+			$(window).scrollTop(0);
+
+			// Add current section class to body
+			var currentSection = router.getRoute(0);
+			log(currentSection);
+			$(document.body).addClass(currentSection);
+		}
+
 		router.configure({
 			on: allRoutes,
 			notfound: notFound,
@@ -316,17 +324,6 @@ ZANDER.Router = {
 
 		router.init('/home');
 
-		function allRoutes() {
-			log('Any route!');
-			ZANDER.tpl.navigation();
-			ZANDER.tpl.footerLinks();
-			$(window).scrollTop(0);
-
-			// Add current section class to body
-			var currentSection = router.getRoute(0);
-			log(currentSection);
-			$(document.body).addClass(currentSection);
-		}
 	},
 
 	home : function() {
@@ -343,6 +340,10 @@ ZANDER.Router = {
 		log('Single project #' + projectName);
 		// ZANDER.tpl.getData('project-item-header', projectName, '#header');
 		ZANDER.tpl.getData('project-item', projectName, '#main');
+	},
+
+	blogView : function() {
+
 	},
 
 	aboutView : function() {

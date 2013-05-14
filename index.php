@@ -21,22 +21,27 @@
 	</head>
 	<body>
 
-		<div class="navvy-container">
+		<nav class="navvy-container">
+			<a href="/#/portfolio" title="Work">Work</a>
 			<div class="navvy">
 				<b></b>
 				<i></i>
 				<b></b>
 			</div>
-		</div>
-		<nav class="nav"></nav>
+			<a href="/blog" title="Blog">Blog</a>
+		</nav>
 
-
-		<!--  === HEADER ===  -->
-
-		<header id="masthead" role="banner">
+		<header class="masthead">
 			<h1><a href="#/home">Zander Martineau</a></h1>
+			<p>I am a London-based Creative Technologist working at <a href=\"http://tmw.co.uk\">TMW</a></p>
+			<footer id="footer" role="contentinfo">
+				<div class="personal-links">
+					<div class="icon-links personal-links">
+						<a href="http://github.com/MrMartineau" title="github" class="personal-links--github"></a><a href="http://twitter.com/MrMartineau" title="twitter" class="personal-links--twitter"></a><a href="http://instagram.com/MrMartineau" title="instagram" class="personal-links--instagram"></a><a href="http://dribbble.com/MrMartineau" title="dribbble" class="personal-links--dribbble"></a><a href="http://mrmartineau.tumblr.com/" title="tumblr" class="personal-links--tumblr"></a><a href="https://pinboard.in/u:mrmartineau" title="pinboard" class="personal-links--pinboard"></a>
+					</div>
+				</div>
+			</footer>
 		</header>
-
 
 		<!--  === MAIN CONTENT ===  -->
 		<section id="main" role="main">
@@ -49,12 +54,7 @@
 			<!-- </nav> -->
 
 
-		<!--  === FOOTER ===  -->
-		<footer id="footer" role="contentinfo">
-			<div class="personal-links">
 
-			</div>
-		</footer>
 
 
 
@@ -70,12 +70,6 @@
 
 	<!-- === Home / Project listing === -->
 	<script id="home-tpl" type="text/x-handlebars-template">
-		<div class="hero-unit">
-			<div class="hero-unit--inner">
-				<p>{{{info.tagline}}}</p>
-			</div>
-		</div>
-
 		{{#portfolio}}
 			<article id="{{meta.name}}" class="portfolio-pieces--item item-{{@index}} type-{{meta.type}} layout-{{meta.layout}}">
 				<div class="inner-wrap">
@@ -328,10 +322,7 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
-
-	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/script.js"></script>
+	<script src="/js/_compiled/_script.min.js"></script>
 
 </body>
 </html>

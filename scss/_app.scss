@@ -30,80 +30,16 @@ body {
 a {
 	@include transition();
 }
-// ================
-// === MASTHEAD ===
-// ================
-#masthead {
-	// position: fixed;
-	// top: 0;
-	// right: 0;
-	// left: 0;
-	// z-index: 1000;
 
-	position: relative;
-	background-color: #fff;
-
-	h1 {
-		text-align: center;
-		margin: 100px 5% 50px;
-		color: $accentColor;
-		@include font-size(30);
-		line-height: 1;
-		text-transform: uppercase;
-	}
-}
-
-.navvy-container {
-	position: fixed;
-	top: 0;right: 0;left: 0;
-	background-color: #fff;
-	z-index: 10;
-	padding: 10px 0;
-	height: 45px;
-}
-
-.navvy {
-	margin: 0 auto;
-	display: block;
-	cursor: pointer;
-	font-weight: 500;
-	z-index: 100;
-	width: 30px;
-
-	b, i {
-		background-color: $linkColorHover;
-		display: block;
-		height: 6px;
-		@include border-radius(10px);
-	}
-
-	&.is-active,
-	&:hover {
-		b,i {
-			background-color: $silver;
-		}
-	}
-
-	&:active {
-		b,i {
-			background-color: darken($linkColorHover, 20%);
-		}
-	}
-
-	i {
-		margin: 4px 0;
-	// 	margin: 4px 2px 4px 0;
-	}
-}
-
+// === Navigation ===
 .nav {
-	position: fixed;
-	top: 45px;right: 0;left: 0;
 	text-align: center;
 	margin-bottom: 15px;
 	background-color: #fff;
 	z-index: 100;
-	display: none;
+	@include font-size(16);
+	font-weight: bold;
+	height: 40px;
 
 	a {
 		display: inline-block;
@@ -121,6 +57,76 @@ a {
 		&:after {
 			content: " ";
 		}
+	}
+}
+
+.navvy-container {
+	background-color: #fff;
+	z-index: 10;
+	padding: 10px 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	@include font-size(16);
+	height: 40px;
+
+	a {
+		vertical-align: top;
+	}
+}
+
+.navvy {
+	margin: 0 20px;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: 500;
+	z-index: 100;
+	width: 30px;
+	height: 20px;
+
+	b, i {
+		background-color: $linkColorHover;
+		display: block;
+		height: 4px;
+		// @include border-radius(10px);
+	}
+
+	&.is-active,
+	&:hover {
+		b,i {
+			background-color: $silver;
+		}
+	}
+
+	&:active {
+		b,i {
+			background-color: darken($linkColorHover, 20%);
+		}
+	}
+
+	i {
+		margin: 4px 0;
+	}
+}
+
+// === MASTHEAD ===
+.masthead {
+	position: relative;
+	background-color: #fff;
+	text-align: center;
+	display: none;
+
+
+	h1 {
+		margin: 30px 5% 30px;
+		color: $accentColor;
+		@include font-size(32);
+		@include line-height(40);
+		text-transform: uppercase;
+	}
+
+	a {
+		color: $silver;
 	}
 }
 

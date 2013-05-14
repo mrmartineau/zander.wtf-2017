@@ -1,6 +1,3 @@
-/*jslint sloppy: true, white: true, browser: true, devel: true */
-/*jshint forin:true, noarg:true, noempty:true, eqeqeq:true, bitwise:true, strict:false, curly:true, browser:true, indent:4, maxerr:50, sloppy:true, white:false, smarttabs:false */
-
 /*	Author:
 		TMW - (Author Name Here)
 */

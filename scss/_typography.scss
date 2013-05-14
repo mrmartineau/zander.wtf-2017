@@ -11,39 +11,42 @@
 // LINKS
 // HELPER CLASSES
 
-@include font-face('entypo-social', '/css/entypo-social/entypo-social', normal, normal, true);
-@include font-face('entypo', '/css/entypo/entypo', normal, normal, true);
+@include font-face('entypo-social', '/css/fonts/entypo-social/entypo-social', normal, normal, true);
+@include font-face('entypo', '/css/fonts/entypo/entypo', normal, normal, true);
+
+html {
+	font-size: 20px;
+}
 
 // BODY TEXT
 body {
-	font-family: $baseFontFamily;
 	@include rem(font-size, 20);
+	font-family: $baseFontFamily;
 	line-height: 1.5;
 	color: $textColor;
 	background-color: $bodyBackground;
 
 	// Two ways to smoothen type, they are disabled by default. Enable only one of them if you need them.
 	// 1.
-	-webkit-font-smoothing: antialiased;
-	   -moz-font-smoothing: antialiased;
-	font-smooth:always;
+	// -webkit-font-smoothing: antialiased;
+	//    -moz-font-smoothing: antialiased;
+	// font-smooth:always;
 
 	// 2.
 	// @include opacity(99);
 }
 
 p {
-	font-family: $baseFontFamily;
 	margin-top: 0;
-	margin-bottom: $baseLineHeight + px;
+	margin-bottom: $baseLineHeight;
+
 	small {
-		font-size: $baseFontSize - 2;
 		color: $grayLight;
 	}
 }
 
 .lead {
-	margin-bottom: $baseLineHeight + px;
+	margin-bottom: $baseLineHeight;
 	font-size: 20px;
 	font-weight: 200;
 	@include line-height($baseLineHeight * 1.5);
@@ -57,41 +60,42 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: $headingsFontWeight;
 	// color: $headingsColor;
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
+
 	& small {
-		font-size: 75%;
 		font-weight: normal;
 		color: $grayLight;
 	}
 }
 h1 {
-	@include rem(font-size, 68);
-	@include rem(line-height, 72);
-	margin-top: 24px;
-	margin-bottom: 48px;
+	@include rem(font-size, 52);
+	@include rem(line-height, 60);
+	margin-top: 30px;
+	margin-bottom: 60px;
 }
 h2 {
-	@include rem(font-size, 42);
-	@include rem(line-height, 48);
-	margin-top: 48px;
-	margin-bottom: 24px;
+	@include rem(font-size, 32);
+	@include rem(line-height, 40);
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 h3 {
-	@include rem(font-size, 26);
-	@include rem(line-height, 48);
-	margin-top: 24px;
+	@include rem(font-size, 25);
+	@include rem(line-height, 30);
+	margin-top: 30px;
 	margin-bottom: 0px;
 }
 h4, h5, h6 {
-	@include rem(line-height, 48);
+	@include rem(line-height, 30);
+	@include font-size(20);
 }
 h4 {
-	@include rem(font-size, 14);
-}
-h5 {
-	@include font-size(12);
+	font-weight: 400;
+	font-family: $baseFontFamily;
+	text-transform: uppercase;
+	color: $silverDark;
+	letter-spacing: -1px;
 }
 h6 {
-	@include font-size(11);
 	color: $grayLight;
 	text-transform: uppercase;
 }
@@ -99,7 +103,7 @@ h6 {
 // Page header
 .page-header {
 	padding-bottom: $baseLineHeight - 1 + px;
-	margin: ($baseLineHeight + px) 0;
+	margin: ($baseLineHeight) 0;
 	border-bottom: 1px solid $grayLighter;
 }
 .page-header h1 {
@@ -161,7 +165,7 @@ ul, ol {
 
 // Description Lists
 dl {
-	margin-bottom: $baseLineHeight + px;
+	margin-bottom: $baseLineHeight;
 }
 dt,
 dd {
@@ -193,7 +197,7 @@ dd {
 
 // Horizontal rules
 hr {
-	margin: ($baseLineHeight + px) 0;
+	margin: ($baseLineHeight) 0;
 	border: 0;
 	border-top: 1px solid $hrBorder;
 	border-bottom: 1px solid $white;
@@ -223,7 +227,7 @@ abbr.initialism {
 // Blockquotes
 blockquote {
 	padding: 0 0 0 15px;
-	margin: 0 0 ($baseLineHeight + px);
+	margin: 0 0 ($baseLineHeight);
 	border-left: 5px solid $grayLighter;
 	& p {
 		margin-bottom: 0;
@@ -266,7 +270,7 @@ blockquote {
 // Addresses
 address {
 	display: block;
-	margin-bottom: $baseLineHeight + px;
+	margin-bottom: $baseLineHeight;
 	@include line-height($baseLineHeight);
 	font-style: normal;
 }
