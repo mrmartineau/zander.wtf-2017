@@ -1,4 +1,6 @@
 _site
-.sass_cache/*/*
+.sass_cache
 node_modules
 .scssc
+mtv.sublime-workspace
+mtv.sublime-project
