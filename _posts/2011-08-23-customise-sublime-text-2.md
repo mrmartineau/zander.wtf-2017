@@ -3,6 +3,8 @@ layout: post
 title: "Customise Sublime Text 2"
 categories:
 - Sublime Text
+comments: true
+comments_id: 237
 ---
 
 **[UPDATE 11 May 2013]** This information is extremely out of date, please visit the wiki I created for up-to-date information: [https://github.com/mrmartineau/SublimeTextSetup/wiki](https://github.com/mrmartineau/SublimeTextSetup/wiki)
@@ -76,19 +78,16 @@ result. Install this through ‘Package Control’.
 Lorem ipsum, dummy content, placeholder HTML. This little package has
 what you need. Install this through ‘Package Control’.
 
-### 6. [jQuery](https://github.com/mrmartineau/Jquery) (incomplete) by [me](http://martineau.tv)
+### 6. [jQuery](https://github.com/mrmartineau/Jquery) by [me](http://martineau.tv)
 
 Another port from a Textmate bundle, it is still a work in progress but
 does work & if anyone feels like lending a hand, I don’t mind. Download
 the source from Github & place the contents into a ‘jQuery’ folder in
-‘/Application Support/Sublime Text 2/Packages’ (at least it is on a
-Mac![]().
+‘/Application Support/Sublime Text 2/Packages’ (at least it is on a Mac!).
 
-h3. 7. "SublimeTagmatcher":https://github.com/pyparadigm/SublimeTagmatcher by "pyparadigm":https://github.com/pyparadigm
+### 7. [SublimeTagmatcher](https://github.com/pyparadigm/SublimeTagmatcher) by [pyparadigm](https://github.com/pyparadigm)
 
-If you click inside the begin tag, it will highlight the end tag, and vice versa. Check out below.
-
-)https://github.com/pyparadigm/SublimeTagmatcher/blob/master/ssexample.png?raw=true!
+If you click inside the begin tag, it will highlight the end tag, and vice versa.
 
 ### 8. [Elastic Tabs Stops](https://github.com/adzenith/Sublime-plugins/blob/master/elastic_tabstops.py) by [adzenith](https://github.com/adzenith)
 
@@ -96,19 +95,28 @@ Incredibly useful plugin to make tabstops expand or shrink to fit their
 contents. ([More info on elastic tab
 stops](http://nickgravgaard.com/elastictabstops/))
 
-### 9. [Increase/Decrease number by delta\_value](https://github.com/rmaksim/Sublime-Text-2-Solutions/) by [rmaksim](https://github.com/rmaksim)
+### 9. [Increase/Decrease number by delta\_value](https://github.com/rmaksim/Sublime-Text-2-Inc-Dec-Value) by [rmaksim](https://github.com/rmaksim)
 
 Just look at the following images:
-![](https://github.com/rmaksim/Sublime-Text-2-Solutions/raw/master/inc_dec_number.gif)
-![](https://github.com/rmaksim/Sublime-Text-2-Solutions/raw/master/inc_dec_hex_color.gif)
-![](https://github.com/rmaksim/Sublime-Text-2-Solutions/raw/master/inc_dec_opposite.gif)
+![](https://raw.github.com/rmaksim/Sublime-Text-2-Inc-Dec-Value/master/inc_dec_number.gif)
+![](https://raw.github.com/rmaksim/Sublime-Text-2-Inc-Dec-Value/master/inc_dec_hex_color.gif)
+![](https://raw.github.com/rmaksim/Sublime-Text-2-Inc-Dec-Value/master/inc_dec_opposite.gif)
 
 Installation tips: Download the script & put it into a folder called ‘RMaksimSublimeText2Solutions’ within your ‘Packages’ folder. Then open Sublime, the edit the `Key Bindings - User`
 
 ![](http://cl.ly/9kW6/Screen_Shot_2011-08-30_at_23.42.01.png)
-Now paste in the key bindings from the bottom of [this page](https://github.com/rmaksim/Sublime-Text-2-Solutions/)
+Now paste in the key bindings from here:
 
-![](http://cl.ly/9kmT/Screen_Shot_2011-08-30_at_23.43.50.png)
+{% highlight json %}
+    [
+        { "keys": ["alt+up"],         "command": "inc_dec_value", "args": { "action": "inc_min" } },
+        { "keys": ["alt+down"],       "command": "inc_dec_value", "args": { "action": "dec_min" } },
+        { "keys": ["super+up"],       "command": "inc_dec_value", "args": { "action": "inc_max" } },
+        { "keys": ["super+down"],     "command": "inc_dec_value", "args": { "action": "dec_max" } },
+        { "keys": ["super+alt+up"],   "command": "inc_dec_value", "args": { "action": "inc_all" } },
+        { "keys": ["super+alt+down"], "command": "inc_dec_value", "args": { "action": "dec_all" } }
+    ]
+{% endhighlight %}
 
 Now restart Sublime. :)
 
@@ -293,26 +301,20 @@ The comment banner looks like this:
 ## Syntax Themes
 
 Textmate themes are compatible with Sublime. My favourite is called
-[Made of
-Code](http://madeofcode.com/posts/29-photo-my-new-textmate-theme-8220-made-of-code-8221-mdash-download-9-feb-2010-update-t).
-Here are a few links to download some others:
+[Made of Code](http://madeofcode.com/posts/29-photo-my-new-textmate-theme-8220-made-of-code-8221-mdash-download-9-feb-2010-update-t).
+
+#### Here are a few links to download some others:
 
 1.  [github.com/antlong/Textmate-Themes](https://github.com/antlong/Textmate-Themes)
 2.  [textmatetheme.com](http://textmatetheme.com/)
 
 ## Customising Sublime’s UI skin
 
-The default UI is okay, but it leaves a lot to be desired. This is
-remedied by installing [Soda](https://github.com/buymeasoda/soda-theme)
-, an app ‘skin’ which features dark & light variants depending on your
-preference. This can be installed through the ‘Package Control’ package.
+The default UI is okay, but it leaves a lot to be desired. This is remedied by installing [Soda](https://github.com/buymeasoda/soda-theme), an app ‘skin’ which features dark & light variants depending on your preference. This can be installed through the ‘Package Control’ package.
 
 ## Get a new app icon
 
-The current Sublime Text icon leaves a lot to be desired also as you can
-see by the image at the top of this post, especially on a Mac.
-Thankfully a few kind souls have taken charge & designed their own for
-us to use.
+The current Sublime Text icon leaves a lot to be desired also as you can see by the image at the top of this post, especially on a Mac. Thankfully a few kind souls have taken charge & designed their own for us to use.
 
 ### High-res version of original by Kronuz
 
