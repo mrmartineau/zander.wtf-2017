@@ -8,7 +8,7 @@ categories:
 
 At [TMW](http://tmw.co.uk), I always ask interviewees how they keep up-to-date with the latest in front-end web goings-on. The answers I receive are varied but there's always a few recurring themes: Twitter and blogs - but which ones. I thought it would be a good idea to document my own 'stategy' for staying current, here it is.
 
-## TL;DR
+### TL;DR
 
 This is my 'recipe' for staying on top of web development trends, the focus is on Javascript, HTML, CSS, Responsive Web Design and Accessibility. Grab the full list of links here:
 [pinboard.in/u:MrMartineau/t:on-staying-current/](https://pinboard.in/u:MrMartineau/t:on-staying-current/)
@@ -132,7 +132,7 @@ Curated by [Peter Cooper](http://twitter.com/peterc) of [The Javascript Show](ht
 
 Curated by [Russ Weakley](http://twitter.com/russmaxdesign), this newsletter is a very reliable source of links to a wide range of web development and accessibility subjects. Have a look at the most recent (at time of writing) issue:[www.maxdesign.com.au/2013/03/05/some-links-403/](http://www.maxdesign.com.au/2013/03/05/some-links-403/)
 
-### [HTML5 Weekly](http://html5weekly.com/))
+### [HTML5 Weekly](http://html5weekly.com/)
 
 Another weekly newsletter by [Peter Cooper](http://twitter.com/peterc), this time focusing on HTML5 and its related technologies. Have a look at the most recent (at time of writing) issue: [html5weekly.com/archive/78.html](http://html5weekly.com/archive/78.html)
 
@@ -160,10 +160,10 @@ Weekly digest of W3C news and trends
 
 Jakob Nielsen's articles about interface usability and website design. He is a highly regarded source for UX and his Alertboxes always delve into the heart of the matter.
 
-## No RSS love?
+### No RSS love?
 
 You might have noticed that I did not mention any RSS feeds here. The reason is because although I have a ridiculously organised Google Reader account, I just don't check it often enough. If you are hankering after a bunch of RSS feeds to add to your reader, you're in luck. Paul Irish has created 3 lists for you to import into your favourite reader, check them out [here](http://paulirish.com/2011/web-browser-frontend-and-standards-feeds-to-follow/)
 
-## Can you add to my list
+### Can you add to my list?
 
 Please let me know what you think of this list, is yours similar?
