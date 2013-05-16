@@ -6,6 +6,28 @@ layout: default
 	<article class="entry">
 		<h1 class="entry--title"><a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
 		<time class="entry--date text-centre">{{ post.date | date_to_string }}</time>
+
+		{% if post.image %}
+			<figure>
+				<img src="/img/posts/{{ post.image }}" alt="{{ post.title }}">
+			</figure>
+		{% endif %}
+
 		{{ post.content }}
 	</article>
 {% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if site.previous_page %}
+    <a href="/page{{ site.previous_page }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ site.page }} of {{ site.total_pages }}</span>
+  {% if site.next_page %}
+    <a href="/page{{ site.next_page }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>

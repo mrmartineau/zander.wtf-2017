@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+	<article class="entry">
+		<h1 class="entry--title"><a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
+		<time class="entry--date text-centre">{{ post.date | date_to_string }}</time>
+	</article>
+{% endfor %}
