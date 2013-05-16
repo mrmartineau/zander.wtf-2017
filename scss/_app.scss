@@ -26,41 +26,25 @@
 // }
 body {
 	overflow-y: scroll;
+	padding-top: 40px;
 }
 a {
 	@include transition();
 }
 
 // === Navigation ===
-.nav {
-	text-align: center;
-	margin-bottom: 15px;
-	background-color: #fff;
-	z-index: 100;
-	@include font-size(16);
-	font-weight: bold;
-	height: 40px;
+@mixin alt-link($normal: $silverDark, $hover: $silver) {
+	a, a:link, a:visited {
+		color: $normal;
+	}
 
-	a {
-		display: inline-block;
-		padding: 7px 15px 5px;
-		font-weight: 500;
-
-		&:hover {
-			color: darken($accentColor, 20%);
-		}
-
-		&:before {
-			content: "";
-		}
-
-		&:after {
-			content: " ";
-		}
+	a:hover {
+		color: $hover;
 	}
 }
-
 .navvy-container {
+	position: fixed;
+	left: 0;top: 0;right: 0;
 	background-color: #fff;
 	z-index: 10;
 	padding: 10px 0;
@@ -69,10 +53,13 @@ a {
 	font-weight: bold;
 	@include font-size(16);
 	height: 40px;
+	color: $silverDark;
 
 	a {
 		vertical-align: top;
 	}
+
+	@include alt-link;
 }
 
 .navvy {
@@ -85,10 +72,9 @@ a {
 	height: 20px;
 
 	b, i {
-		background-color: $linkColorHover;
+		background-color: $silverDark;
 		display: block;
 		height: 4px;
-		// @include border-radius(10px);
 	}
 
 	&.is-active,
@@ -111,11 +97,13 @@ a {
 
 // === MASTHEAD ===
 .masthead {
-	position: relative;
+	position: fixed;
+	left: 0; top: 40px; right: 0;
 	background-color: #fff;
 	text-align: center;
 	display: none;
-
+	@include box-shadow(0 3px 3px rgba(0,0,0,.25));
+	z-index: 1;
 
 	h1 {
 		margin: 30px 5% 30px;
@@ -246,7 +234,7 @@ a {
 // === ARTICLES ===
 // ================
 
-$portfolioColWidth: 46%;
+$portfolioColWidth: 48%;
 $portfolioSideMargin: 0;
 $portfolioSidePadding: 13%;
 
@@ -276,6 +264,7 @@ $portfolioSidePadding: 13%;
 
 .portfolio-pieces--item--inner--title {
 	margin-bottom: 0;
+	margin-top: 0;
 	color: $accentColor;
 	text-transform: uppercase;
 	@include font-size(30);
@@ -289,7 +278,7 @@ $portfolioSidePadding: 13%;
 	// === end 768px> ===
 }
 .portfolio-pieces--item--inner--site-url {
-	margin-bottom: 72px;
+	margin-bottom: 6%;
 }
 
 .portfolio-pieces--item--description {
@@ -302,6 +291,8 @@ $portfolioSidePadding: 13%;
 
 .portfolio-pieces--item--info {
 	margin-bottom: $baseLineHeight;
+	// @include font-size(16);
+	// @include line-height(30);
 
 	p:last-child {
 		margin-bottom: 0;

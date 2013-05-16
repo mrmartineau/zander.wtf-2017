@@ -87,13 +87,14 @@ h3 {
 h4, h5, h6 {
 	@include rem(line-height, 30);
 	@include font-size(20);
+	margin-top: 30px;
 }
 h4 {
 	font-weight: 400;
 	font-family: $baseFontFamily;
 	text-transform: uppercase;
 	color: $silverDark;
-	letter-spacing: -1px;
+	// letter-spacing: -1px;
 }
 h6 {
 	color: $grayLight;
@@ -130,7 +131,7 @@ ol { list-style-type: decimal }
 // Add a .normal class to unordered/ordered lists if you want them to have bullets/numbers
 ul, ol {
 	padding: 0;
-	margin: 0 0 ($baseLineHeight / 2 + px) 25px;
+	margin: 0 0 ($baseLineHeight / 2) 25px;
 	& ul,
 	& ol {
 		margin: 0 0 0 45px;

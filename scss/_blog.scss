@@ -1,5 +1,5 @@
 .section-blog {
-	// padding-top: 100px;
+	padding-top: 100px;
 }
 
 .entry {
@@ -9,25 +9,31 @@
 
 	ul {
 		list-style-type: circle;
+	}
+
+	ul, ol {
 		margin-left: 45px;
 	}
 
-	p a {
-		color: $green;
+	ol {
+
 	}
+
+	// p a {
+	// 	color: $green;
+	// }
 
 	img, iframe {
 		display: block;
 		margin: 24px auto;
 		@include box-shadow(0 1px 3px rgba(0,0,0,.25));
 		@include border-radius(5px);
-		// border: 1px solid $silver;
-
 	}
 
 	img {
 		padding: 1px;
 	}
+
 	figure {
 		margin: 24px -50px;
 	}
@@ -37,12 +43,19 @@
 	}
 }
 
+#disqus_thread iframe {
+	@include box-shadow(none);
+}
+
 .entry--title {
 	text-align: center;
-	color:$silverDark;
 	@include rem(font-size, 32);
 	@include rem(line-height, 40);
 	margin: 0 4% 30px;
+
+	&, a {
+		color: $silverDark;
+	}
 }
 
 .entry--date {
