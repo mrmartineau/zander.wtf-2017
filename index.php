@@ -35,7 +35,7 @@
 			<footer id="footer" role="contentinfo">
 				<div class="personal-links">
 					<div class="icon-links personal-links">
-						<a href="http://github.com/MrMartineau" title="github" class="personal-links--github"></a><a href="http://twitter.com/MrMartineau" title="twitter" class="personal-links--twitter"></a><a href="http://instagram.com/MrMartineau" title="instagram" class="personal-links--instagram"></a><a href="http://dribbble.com/MrMartineau" title="dribbble" class="personal-links--dribbble"></a><a href="http://mrmartineau.tumblr.com/" title="tumblr" class="personal-links--tumblr"></a><a href="https://pinboard.in/u:mrmartineau" title="pinboard" class="personal-links--pinboard"></a>
+						<a href="http://github.com/MrMartineau" title="github" class="personal-links--github"></a><a href="http://twitter.com/MrMartineau" title="twitter" class="personal-links--twitter"></a><a href="http://instagram.com/MrMartineau" title="instagram" class="personal-links--instagram"></a><a href="http://dribbble.com/MrMartineau" title="dribbble" class="personal-links--dribbble"></a><a href="http://mrmartineau.tumblr.com/" title="tumblr" class="personal-links--tumblr"></a><a href="https://pinboard.in/u:mrmartineau" title="pinboard" class="personal-links--pinboard">&#62214;</a>
 					</div>
 				</div>
 			</footer>
