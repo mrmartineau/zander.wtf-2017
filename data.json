@@ -86,11 +86,6 @@
 					"url": "https://twitter.com/munkychop"
 				},
 				{
-					"title": "Developer",
-					"name": "Alex Wakeman",
-					"url": "https://twitter.com/theworldmovesme"
-				},
-				{
 					"title": "Agency",
 					"name": "TMW",
 					"url": "http://tmw.co.uk"
@@ -634,10 +629,68 @@
 			}
 		}
 	],
-	"code": {
-		"title" : "Code",
+	"open-source": {
+		"title" : "Open Source Projects",
 		"description": "Below are a few open source projects that I maintain and contribute to.",
 		"items": [
+			{
+				"name": "Social Homepage",
+				"description": "<p>My version of a social home page/business card site. You can see it at <a href=\"http://mrmartineau.co.uk\">mrmartineau.co.uk</a>. Please use it for yourself by <a href=\"https://github.com/mrmartineau/social-homepage/fork\">forking the project on Github</a></p>",
+				"view": {
+					"name": "mrmartineau.github.com/social-homepage",
+					"url": "http://mrmartineau.github.com/social-homepage"
+				},
+				"date": "October 2012",
+				"skills": "CSS: SASS",
+				"meta": {
+					"name" : "social-homepage",
+					"id": "4",
+					"layout": "",
+					"type": "code"
+				},
+				"github": {
+					"user": "mrmartineau",
+					"repo": "social-homepage"
+				}
+			},
+			{
+				"name": "Sublime Text Setup",
+				"description": "<p>This project aims to enable people to get started with Sublime Text 2 much more quickly. It includes a list of recommended plugins and useful defaults for some plugins and settings.</p>",
+				"view": {
+					"name": "github.com/mrmartineau/SublimeTextSetup",
+					"url": "https://github.com/mrmartineau/SublimeTextSetup"
+				},
+				"date": "Ongoing",
+				"meta": {
+					"name" : "sublime-text-setup",
+					"id": "1",
+					"layout": "",
+					"type": "code"
+				},
+				"github": {
+					"user": "mrmartineau",
+					"repo": "SublimeTextSetup"
+				}
+			},
+			{
+				"name": "SASS Snippets",
+				"description": "<p>A collection of Sublime Text 2 snippets & functions to be used with SASS. Most snippets are to be used specifically with .scss</p>",
+				"view": {
+					"name": "github.com/mrmartineau/SASS-Snippets",
+					"url": "https://github.com/mrmartineau/SASS-Snippets"
+				},
+				"date": "Ongoing",
+				"meta": {
+					"name" : "sass-snippets",
+					"id": "1",
+					"layout": "",
+					"type": "code"
+				},
+				"github": {
+					"user": "mrmartineau",
+					"repo": "SASS-Snippets"
+				}
+			},
 			{
 				"name": "The Choreographic Grid",
 				"description": "<p>A responsive CSS grid for content interdigitation, built with SASS for today's modern websites. Instead of using poorly supported features of modern CSS (I'm looking at you, Flex box), it uses floats but has some sneaky tricks up it's sleeve.</p><p>As well as standard grid features, I created two new features that help when creating responsive sites, these are 'Shunts' and 'Splits'. Find out more at the <a href=\"http://mrmartineau.github.io/Choreographic-Grid/test.html\">project demo</a>.</p>",
@@ -649,7 +702,7 @@
 				"skills": "CSS: SASS",
 				"meta": {
 					"name" : "choreographic-grid",
-					"id": "9",
+					"id": "3",
 					"layout": "",
 					"type": "code"
 				},
@@ -662,8 +715,8 @@
 				"name": "TMW Kickoff",
 				"description": "<p>Kickoff is a robust, adaptable and unopinionated front-end framework that is great starting point for any web site; we use for every project at TMW.</p><p>The framework includes a SASS-based, CSS framework (with all the usual resets and mixins), a responsive <a href=\"https://github.com/mrmartineau/Choreographic-Grid\">grid system</a>; beautiful typographic styles; javascript plugins, utilities and a great set of boilerplates for most eventualities. This means that our devs can get up and running as quickly as possible and not have to worry about this tedious initial step.</p>",
 				"view": {
-					"name": "github.com/mrmartineau/Javascript-less-Social-Links",
-					"url": "http://github.com/mrmartineau/Javascript-less-Social-Links"
+					"name": "github.com/mrmartineau/kickoff",
+					"url": "http://github.com/mrmartineau/kickoff"
 				},
 				"date": "Ongoing",
 				"skills": "Front-end",
@@ -685,7 +738,7 @@
 				],
 				"meta": {
 					"name" : "kickoff",
-					"id": "7",
+					"id": "2",
 					"layout": "",
 					"type": "code",
 					"colours": {
@@ -710,7 +763,7 @@
 				"date": "Ongoing",
 				"meta": {
 					"name" : "javascript-less-links",
-					"id": "7",
+					"id": "1",
 					"layout": "",
 					"type": "code",
 					"colours": {
@@ -723,38 +776,6 @@
 				"github": {
 					"user": "mrmartineau",
 					"repo": "Javascript-less-Social-Links"
-				}
-			},
-			{
-				"name": "Validatr",
-				"description": "<p>Validatr is an HTML5 form validation plugin originally developed by Jay Morrow. It has a simple API that leverages HTML5's input attributes to perform validation. I forked this project to add some simple additions and at the time of writing (Apr 2013) my changes have not been merged into the master repo. To find out more about my changes to the plugin, please visit the repo's page on <a href=\"http://github.com/mrmartineau/validatr\">Github</a>.</p>",
-				"view": {
-					"name": "github.com/mrmartineau/validatr",
-					"url": "http://github.com/mrmartineau/validatr"
-				},
-				"date": "Ongoing",
-				"skills": "Javascript",
-				"credits": [
-					{
-						"title": "Developer",
-						"name": "Jay Morrow"
-					}
-				],
-				"meta": {
-					"name" : "validatr",
-					"id": "7",
-					"layout": "",
-					"type": "code",
-					"colours": {
-						"bg": "#96C3AC",
-						"text": "#1e4833",
-						"link": "#F6EEDD",
-						"linkHover": "#fff"
-					}
-				},
-				"github": {
-					"user": "mrmartineau",
-					"repo": "validatr"
 				}
 			}
 		]
