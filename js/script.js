@@ -16,19 +16,6 @@ var ZANDER = window.ZANDER || {};
 
 	});// END DOC READY
 
-	// optional triggers
-	// WINDOW.LOAD
-	// $(window).load(function() {
-
-	// });
-
-	// WINDOW.RESIZE
-	// $(window).resize(function() {
-
-	// });
-
-
-
 })(jQuery);
 
 
@@ -300,7 +287,7 @@ ZANDER.Router = {
 		var router = new Router(ZANDER.Router.routes);
 
 		function notFound() {
-			// log('no route found');
+			log('no route found');
 			router.setRoute('/home');
 		}
 
@@ -356,9 +343,9 @@ ZANDER.Router = {
 		ZANDER.tpl.listing('cv', '#main');
 	},
 
-	codeView : function() {
-		log('Code page');
-		ZANDER.tpl.listing('code', '#main');
+	openSourceView : function() {
+		log('Open Source page');
+		ZANDER.tpl.listing('open-source', '#main');
 	},
 
 	sublimeView : function() {
@@ -374,6 +361,6 @@ ZANDER.Router.routes = {
 	'/portfolio/:projectName': ZANDER.Router.projectItemView,
 	'/about': ZANDER.Router.aboutView,
 	'/cv': ZANDER.Router.cvView,
-	'/code': ZANDER.Router.codeView,
+	'/open-source': ZANDER.Router.openSourceView,
 	'/sublime-text-resources': ZANDER.Router.sublimeView
 };

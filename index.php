@@ -6,8 +6,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title></title>
-		<meta name="description" content="">
+		<title>Zander Martineau - Creative Technologist</title>
+		<meta name="description" content="Zander Martineau is a London-based Creative Technologist working at TMW. This is a selection of my best work over the last few years.">
 
 		<!-- Mobile viewport optimized: h5bp.com/viewport -->
 		<meta name="viewport" content="width=device-width">
@@ -16,8 +16,6 @@
 		<script type="text/javascript" src="//use.typekit.net/zsa7ozf.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<script src="js/libs/modernizr.min.js"></script>
-
-		<style id="custom-styles"></style>
 	</head>
 	<body>
 
@@ -122,15 +120,15 @@
 
 
 	<!-- === Code ===  -->
-	<script id="code-tpl" type="text/x-handlebars-template">
+	<script id="open-source-tpl" type="text/x-handlebars-template">
 		<div class="hero-unit">
 			<div class="hero-unit--inner">
-				<h1>{{code.title}}</h1>
-				<p>{{{code.description}}}</p>
+				<h1>{{open-source.title}}</h1>
+				<p>{{{open-source.description}}}</p>
 			</div>
 		</div>
 
-		{{#code.items}}
+		{{#open-source.items}}
 			<article id="{{meta.name}}" class="portfolio-pieces--item item-{{@index}} type-{{meta.type}} layout-{{meta.layout}}">
 				<div class="inner-wrap">
 					<div class="portfolio-pieces--item--inner group">
@@ -168,7 +166,7 @@
 					</section>
 				</div>
 			</article>
-		{{/code.items}}
+		{{/open-source.items}}
 	</script>
 
 	<script id="project-item-header-tpl" type="text/x-handlebars-template">
