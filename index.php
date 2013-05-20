@@ -20,7 +20,7 @@
 	<body>
 
 		<nav class="navvy-container">
-			<a href="/#/portfolio" title="Work">Work</a>
+			<a href="/" title="Work">Work</a>
 			<div class="navvy">
 				<b></b>
 				<i></i>
