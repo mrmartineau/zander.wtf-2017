@@ -12,10 +12,8 @@ module.exports = function (grunt) {
 
 	// == JS files
 	var jsFileList = [
-		'js/libs/director.router.js',
-		'js/libs/handlebars.js',
 		'js/plugins.js',
-		'js/script.js'
+		'js/script-jekyll.js'
 	];
 	var jsFile = '_script.min.js';
 	// ====================
@@ -127,7 +125,7 @@ module.exports = function (grunt) {
 			},
 
 			jekyll: {
-				files: ['blog/*.html', '_includes/*.html', '_layouts/*.html', '_posts/*.md', 'config.yml', '*.php'],
+				files: ['blog/*.html', '_includes/*.html', '_layouts/*.html', '_posts/**/*.md', 'config.yml', '*.php'],
 				tasks: ['jekyll:dev', 'copy:main']
 			}
 		},
