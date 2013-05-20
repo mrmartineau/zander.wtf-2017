@@ -1,0 +1,86 @@
+---
+layout: work-wrapper
+---
+
+{% for post in site.posts %}
+	{% if post.categories contains 'work-entry' %}
+
+	<article id="{{ post.meta-id }}" class="portfolio-pieces--item type-{{ post.meta-type }} layout-{{ post.meta-layout }}">
+		<div class="inner-wrap">
+			<div class="portfolio-pieces--item--inner group">
+				<h1 class="portfolio-pieces--item--inner--title"><a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
+				<div class="portfolio-pieces--item--inner--site-url text-centre">{{ post.view | markdownify }}</div>
+
+				<section class="portfolio-pieces--item--description">
+					{{ post.content }}
+				</section>
+
+				<section class="portfolio-pieces--item--info">
+					<ul>
+						<li><b>Date:</b> <div>{{ post.meta-date}}</div></li>
+						<li><b>Skills:</b> <div>{{ post.meta-skills }}</div></li>
+						{% if post.designers %}
+							{% for designer in post.designers %}
+							<li>
+								<b>Designer:</b> <div>{{ designer | markdownify }}</div>
+							</li>
+							{% endfor %}
+						{% endif %}
+
+						{% if post.developers %}
+							{% for developer in post.developers %}
+							<li>
+								<b>Developer:</b> <div>{{ developer | markdownify }}</div>
+							</li>
+							{% endfor %}
+						{% endif %}
+
+						{% if post.agency %}
+							{% for agency in post.agency %}
+							<li>
+								<b>Agency:</b> <div>{{ agency | markdownify }}</div>
+							</li>
+							{% endfor %}
+						{% endif %}
+
+						{% if post.client %}
+							{% for client in post.client %}
+							<li>
+								<b>Client:</b> <div>{{ client | markdownify }}</div>
+							</li>
+							{% endfor %}
+						{% endif %}
+					</ul>
+				</section>
+
+			</div>
+
+			{% if post.images %}
+			<section class="portfolio-pieces--item--shots">
+				{% for image in post.images %}
+					<figure class="shot-{{ forloop.index0 }} shot-visible" data-index="{{ forloop.index0 }}">
+						{{ image | markdownify }}
+					</figure>
+				{% endfor %}
+			</section>
+			{% endif %}
+		</div>
+	</article>
+
+	{% endif %}
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if site.previous_page %}
+    <a href="/page{{ site.previous_page }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ site.page }} of {{ site.total_pages }}</span>
+  {% if site.next_page %}
+    <a href="/page{{ site.next_page }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
