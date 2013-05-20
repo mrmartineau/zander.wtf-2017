@@ -37,7 +37,7 @@ body {
 
 p {
 	margin-top: 0;
-	margin-bottom: $baseLineHeight;
+	margin-bottom: $baseLineHeight + px;
 
 	small {
 		color: $grayLight;
@@ -45,7 +45,7 @@ p {
 }
 
 .lead {
-	margin-bottom: $baseLineHeight;
+	margin-bottom: $baseLineHeight + px;
 	font-size: 20px;
 	font-weight: 200;
 	@include line-height($baseLineHeight * 1.5);
@@ -103,7 +103,7 @@ h6 {
 // Page header
 .page-header {
 	padding-bottom: $baseLineHeight - 1 + px;
-	margin: ($baseLineHeight) 0;
+	margin: ($baseLineHeight + px) 0;
 	border-bottom: 1px solid $grayLighter;
 }
 .page-header h1 {
@@ -130,7 +130,7 @@ ol { list-style-type: decimal }
 // Add a .normal class to unordered/ordered lists if you want them to have bullets/numbers
 ul, ol {
 	padding: 0;
-	margin: 0 0 ($baseLineHeight / 2) 25px;
+	margin: 0 0 ($baseLineHeight / 2) + px 25px;
 	& ul,
 	& ol {
 		margin: 0 0 0 45px;
@@ -165,7 +165,7 @@ ul, ol {
 
 // Description Lists
 dl {
-	margin-bottom: $baseLineHeight;
+	margin-bottom: $baseLineHeight + px;
 }
 dt,
 dd {
@@ -197,7 +197,7 @@ dd {
 
 // Horizontal rules
 hr {
-	margin: ($baseLineHeight) 0;
+	margin: ($baseLineHeight + px) 0;
 	border: 0;
 	border-top: 1px solid $hrBorder;
 	border-bottom: 1px solid $white;
@@ -227,7 +227,7 @@ abbr.initialism {
 // Blockquotes
 blockquote {
 	padding: 0 0 0 15px;
-	margin: 0 0 ($baseLineHeight);
+	margin: 0 0 ($baseLineHeight + px);
 	border-left: 5px solid $grayLighter;
 	& p {
 		margin-bottom: 0;
@@ -270,7 +270,7 @@ blockquote {
 // Addresses
 address {
 	display: block;
-	margin-bottom: $baseLineHeight;
+	margin-bottom: $baseLineHeight + px;
 	@include line-height($baseLineHeight);
 	font-style: normal;
 }

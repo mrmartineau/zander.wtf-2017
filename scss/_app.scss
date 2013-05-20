@@ -18,12 +18,12 @@
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
-// body {
-// 	-webkit-animation: z-fade-in 1s; /* Safari 4+ */
-// 	  -moz-animation:    z-fade-in 1s; /* Fx 5+ */
-// 	  -o-animation:      z-fade-in 1s; /* Opera 12+ */
-// 	  animation:         z-fade-in 1s; /* IE 10+ */
-// }
+body {
+	-webkit-animation: z-fade-in 1s; /* Safari 4+ */
+	  -moz-animation:    z-fade-in 1s; /* Fx 5+ */
+	  -o-animation:      z-fade-in 1s; /* Opera 12+ */
+	  animation:         z-fade-in 1s; /* IE 10+ */
+}
 body {
 	overflow-y: scroll;
 	padding-top: 40px;
@@ -153,13 +153,9 @@ a {
 // === FOOTER ===
 // ==============
 #footer {
-	// position: fixed;
-	// right: 0;
-	// bottom: 0;
-	// left: 0;
 	z-index: 1000;
 	background-color: #fff;
-	// @include box-shadow( 0px -10px 0px fadeout(#000, 90%) );
+	padding-bottom: 8px;
 }
 
 .icon-links {
@@ -177,9 +173,6 @@ a {
 
 		&:hover {
 			color: #000 !important;
-			// background-color: #fff;
-			// text-shadow: none;
-			// @include scale(1.5);
 			z-index: 1;
 		}
 	}
@@ -268,12 +261,6 @@ $portfolioSidePadding: 13%;
 	@include font-size(30);
 	line-height: 1.3;
 	text-align: center;
-
-	// === 768px> ===
-	@include respond-min(38.4em) {
-		@include font-size(50);
-	}
-	// === end 768px> ===
 }
 .portfolio-pieces--item--inner--site-url {
 	margin-bottom: 6%;
@@ -289,15 +276,13 @@ $portfolioSidePadding: 13%;
 
 .portfolio-pieces--item--info {
 	margin-bottom: $baseLineHeight;
-	// @include font-size(16);
-	// @include line-height(30);
 
 	p:last-child {
 		margin-bottom: 0;
 	}
 
 	ul {
-		// @include rem(font-size, $baseFontSize - 2);
+		margin: 20px 20px 20px 0;
 
 		li {
 			position: relative;
@@ -322,6 +307,10 @@ $portfolioSidePadding: 13%;
 	@include user-select();
 	@include vendor-prefix(perspective, 500px);
 
+	p {
+		margin-bottom: 0;
+	}
+
 	figure {
 		position: relative;
 		text-align: center;
@@ -331,7 +320,7 @@ $portfolioSidePadding: 13%;
 		@include vendor-prefix(backface-visibility, hidden);
 		@include vendor-prefix(transform-style, preserve-3d);
 
-		.website & {
+		.type-website & {
 			border-bottom: none;
 
 			img {
@@ -339,13 +328,13 @@ $portfolioSidePadding: 13%;
 				position: relative;
 				@include transition();
 				@include border-radius(5px 5px 0 0);
+				border: 2px solid $bodyBackground;
 			}
 		}
 
 		img {
 			@include box-shadow(0 0px 7px rgba(0,0,0,.25));
 			@include border-radius(5px);
-			border: 2px solid $bodyBackground;
 			// border-bottom-width: 0;
 			background-color: #fff;
 			display: block;
@@ -444,24 +433,9 @@ $portfolioSidePadding: 13%;
 // ===========================================
 // === Media queries for responsive design ===
 // ===========================================
-// NOTE: these will need to be adjusted, possibly moved into another file
 
-// Retina media Queries
-// Credit: http://dev.mattnt.com/retina-results.html
-@media print,
-	(-o-min-device-pixel-ratio: 5/4),
-	(-webkit-min-device-pixel-ratio: 1.25),
-	(min-resolution: 120dpi) {
-
-	// * {
-	// 	background-image: url(@imgSprite2x);
-	// 	background-size: @imgSpriteDimensions;
-	// }
-
-}
-
-// === 550> ===
-@include respond-min(550) {
+// === $mid> ===
+@media screen and (min-width: $mid) {
 	#masthead {
 		h1 {
 			@include rem(font-size, 40);
@@ -472,14 +446,17 @@ $portfolioSidePadding: 13%;
 		margin: 0 auto;
 	}
 }
-// === end 550> ===
+// === end $mid> ===
 
 
-// === 768px> ===
-@include respond-min(768) {
-
+// === $wide> ===
+@media screen and (min-width: $wide) {
 	.portfolio-pieces--item--inner {
 		padding: 5% $portfolioSidePadding;
+	}
+
+	.portfolio-pieces--item--inner--title {
+		@include font-size(50);
 	}
 
 	.portfolio-pieces--item--shots {
@@ -499,7 +476,6 @@ $portfolioSidePadding: 13%;
 
 		figure {
 			margin-bottom: 0;
-			// @include rem(height, 500);
 
 			&.shot-1, &.shot-2 {
 				display: block;
@@ -509,6 +485,8 @@ $portfolioSidePadding: 13%;
 	}
 
 	.layout-mobile-two-up {
+		margin-bottom: -3%;
+
 		figure {
 			width: 48%;
 
@@ -551,16 +529,18 @@ $portfolioSidePadding: 13%;
 
 		figure {
 			width: 80%;
-			position: absolute;
 
 			&.shot-0 {
-				left: 0%;
-				top: 0%;
+				position: relative;
+
+				// left: 0%;
+				// top: 0%;
 				// z-index: 2;
 				@include transform(rotateY(0deg));
 			}
 
 			&.shot-1 {
+				position: absolute;
 				top: 10%;
 				left: 20%;
 				@include transform(rotateY(-10deg));
@@ -597,12 +577,15 @@ $portfolioSidePadding: 13%;
 			}
 
 			&.shot-1 {
+				position: relative;
 				top: 0%;
-				left: 10%;
+				left: 0%;
+				// margin: 0 auto;
 				z-index: 200;
 				@include transform(rotateY(0deg));
 				@include vendor-prefix(transform-origin, 0 0);
 				@include opacity(100);
+				margin: 0 auto;
 			}
 
 			&.shot-2 {
@@ -656,11 +639,11 @@ $portfolioSidePadding: 13%;
 		}
 	}
 }
-// === end 768px> ===
+// === end $wide> ===
 
 
-// === 920> ===
-@include respond-min(920) {
+// === $wider> ===
+@media screen and (min-width: $wider) {
 
 	.portfolio-pieces--item {
 
@@ -668,10 +651,6 @@ $portfolioSidePadding: 13%;
 			width: 90%;
 		}
 	}
-
-	// .portfolio-pieces--item--inner {
-	// 	padding: 5% $portfolioSidePadding;
-	// }
 
 	.portfolio-pieces--item--description {
 		float: left;
@@ -685,6 +664,7 @@ $portfolioSidePadding: 13%;
 		margin-bottom: 0;
 
 		ul {
+			margin-top: 0;
 
 			b {
 				text-align: right;
@@ -692,18 +672,4 @@ $portfolioSidePadding: 13%;
 		}
 	}
 }
-// === end 920> ===
-
-
-// === 992> ===
-@include respond-min(992px) {
-
-}
-// === end 992> ===
-
-
-// === 1382> ===
-@include respond-min(1382px) {
-
-}
-// === end 1382> ===
+// === end $wider> ===

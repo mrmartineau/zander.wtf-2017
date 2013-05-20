@@ -70,7 +70,7 @@ $linkColorHover:                     lighten($linkColor, 30%);
 
 // BASELINE GRID - Set this in pixels, the font-size mixin will convert to REMS
 $baseFontSize:                       20;
-$baseLineHeight:                     $baseFontSize*1.5px;
+$baseLineHeight:                     $baseFontSize*1.5;
 $boldFontWeight:                     bold;
 
 // TYPOGRAPHY
@@ -172,9 +172,9 @@ $imgSprite2x:                       "#{$imgUIPath}/sprites$2x.png";
 
 // Choose your grid options
 $debugQueries         : false ; // Show the media query debugger at the top of the viewport
-$usingPushPullColumns : true  ; // Allow columns to be pushed & pulled
-$usingOffsetcolumns   : true  ; // Allow columns to be offset
-$usingSplitsAndShunts : true  ; // Use Splits & Shunts for responsive web design
+$usingPushPullColumns : false  ; // Allow columns to be pushed & pulled
+$usingOffsetcolumns   : false  ; // Allow columns to be offset
+$usingSplitsAndShunts : false  ; // Use Splits & Shunts for responsive web design
 // Setup grid defaults
 $gridColumnCount      : 12    ; // Total column count
 $gridGutterWidth      : 20    ; // [in pixels]
@@ -189,5 +189,8 @@ $nestedColumnPadding  : false ; // Remove padding on nested columns so they are 
 // ==============================
 // === APP-SPECIFIC VARIABLES ===
 // ==============================
-
+$narrow: 550;
+$mid: 550px;    // 550/20 = 27.5em
+$wide: 868px; // 868/20 = 43.4em
+$wider: 920px;  // 920/20 = 46em
 

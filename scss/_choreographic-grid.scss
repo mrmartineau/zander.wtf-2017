@@ -196,8 +196,8 @@ $nestedColumnPadding  : false  !default; // Remove padding on nested columns so 
 // === Media queries for responsive design ===
 // ===========================================
 
-// === 768> ===
-@media screen and (min-width: 768px) {
+// === $wide> ===
+@media screen and (min-width: $wide) {
 	// NAME THIS MEDIA QUERY
 	$mediaQueryName : 'mq-alpha';
 
@@ -255,70 +255,7 @@ $nestedColumnPadding  : false  !default; // Remove padding on nested columns so 
 		clear: both;
 	}
 }
-// === end 768> ===
-
-
-
-// === 992> ===
-@media screen and (min-width: 992px) {
-	// NAME THIS MEDIA QUERY
-	$mediaQueryName : 'mq-beta';
-
-	@if $debugQueries == true {
-		body:before {
-			@include media-query($mediaQueryName, transparentize(red, .1));
-		}
-	}
-
-	// ====================
-	// === CHOREOGRAPHY ===
-	// ====================
-	@if $usingSplitsAndShunts == true {
-		.split .col, .shunt {
-			@include gridColumn;
-		}
-
-
-		// === INFO ===
-		// I need to restate the grid widths & offsets in this media-query because of the cascade. For example, if I add .#{$mediaQueryName}-resize-to8 to a column in #{$mediaQueryName} & I need the the same column to return to it's 'natural' width (.span6 for example) in the wider media-query, there is no other way, that I can see, to do that. One thought I had was to add a body class, using javascript, stating which media-query is currently being viewed, then I can just use that to apply the relevant class. Not sure about this though.
-
-		@for $i from 1 to $gridColumnCount {
-			@if $mediaQueryName {
-				.span#{$i}, .#{$mediaQueryName}-resize-to#{$i}, .split .span#{$i} { @include column($i); }
-			} @else {
-				.span#{$i}, .split .span#{$i} { @include column($i); }
-			}
-		}
-	}
-
-	// Offset Columns
-	@if $usingOffsetcolumns == true {
-		@for $i from 1 to $gridColumnCount {
-			.row > .offset1 {
-				@include offset($i);
-				&:first-child {
-					@include offsetFirstChild($i);
-				}
-			}
-		}
-	}
-
-	// Push & Pull Columns
-	@if $usingPushPullColumns == true {
-		@for $i from 2 to $gridColumnCount - 2 {
-			.row > .#{$mediaQueryName}-push#{$i}, .push#{$i}	{ @include push($i); }
-		}
-		@for $i from 2 to $gridColumnCount - 2 {
-			.row > .#{$mediaQueryName}-pull#{$i}, .pull#{$i}	{ @include pull($i); }
-		}
-	}
-
-	.#{$mediaQueryName}-end { float: right; }
-	.#{$mediaQueryName}-end { float: left; }
-
-
-}
-// === end 992> ===
+// === end $wide> ===
 
 // =======================
 // === CENTRED COLUMNS ===

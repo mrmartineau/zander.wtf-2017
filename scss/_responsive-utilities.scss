@@ -21,25 +21,3 @@ img {
 .hidden-phone      { }
 .hidden-tablet     { }
 .hidden-desktop    { display: none !important; }
-
-// Phones only
-@include respond-max(767px) {
-	// Show
-	.visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
-	// Hide
-	.hidden-phone      { display: none !important; }
-	// Hide everything else
-	.hidden-desktop    { display: inherit !important; }
-	.visible-desktop   { display: none !important; }
-}
-
-// Tablets & small desktops only
-@media (min-width: 768px) and (max-width: 979px) {
-	// Show
-	.visible-tablet    { display: inherit !important; }
-	// Hide
-	.hidden-tablet     { display: none !important; }
-	// Hide everything else
-	.hidden-desktop    { display: inherit !important; }
-	.visible-desktop   { display: none !important ; }
-}
