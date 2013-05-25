@@ -1,7 +1,9 @@
 markdown: rdiscount
 pygments: true
-permalink: /:title
-paginate: 5
+permalink: /blog/:year/:month/:title
+include: ['.htaccess']
+exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', 'index-static.php', 'index-jekyll.html', 'index-handlebars.php', 'blog-src']
+timezone: Europe/London
 
 
 # Vars

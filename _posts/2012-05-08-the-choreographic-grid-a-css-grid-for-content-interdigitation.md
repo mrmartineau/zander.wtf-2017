@@ -2,11 +2,13 @@
 layout: post
 title: "The Choreographic Grid - a CSS grid for content interdigitation"
 categories:
-- Sublime Text
+- Code
+- CSS
+- Responsive
 link: https://github.com/mrmartineau/sublimetextsetup
 ---
 
-After having read Trent Walton's article on [Content Choreography](http://trentwalton.com/2011/07/14/content-choreography/) again & working on a number of responsive sites, I felt that the current group of CSS grids was lacking in this department - [so I created my own](https://github.com/mrmartineau/Choreographic-Grid)
+After having read Trent Walton's article on [Content Choreography](http://trentwalton.com/2011/07/14/content-choreography/) again & working on a number of responsive sites, I felt that the current group of CSS grids was lacking in this department - [so I created my own](https://github.com/mrmartineau/Choreographic-Grid).
 
 It is definitely a work in progress & there are still features I would like to add but I thought I should get a sense check from you guys to see if its worth pursuing.
 
@@ -22,7 +24,7 @@ These are columns that sit beside each other on wider viewports but when the vie
 
 Both these things allow the layout to adapt in a more natural way, that traditionally has not been available to us.
 
-By the way, **Splits** can be shunted too.
+By the way, **Splits** can be shunted too!
 
 #### Caveat
 

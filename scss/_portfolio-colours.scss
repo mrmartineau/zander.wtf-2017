@@ -13,7 +13,7 @@
 
 			&:hover {
 				// color: $linkHover;
-				color: lighten($linkColour, 30%);
+				color: lighten($linkColour, 20%);
 			}
 		}
 	}
@@ -29,11 +29,11 @@
 @include project-colours('#drinkiq', #96C3AC, #1e4833, #803B22, #fff);
 @include project-colours('#purple-magazine', #B14798, #fff, #000, #fff);
 @include project-colours('#novalux', #0D204A, #fff, #41efdd, #fff);
-@include project-colours('#novalux-logo', #0D9B8C, #fff, #085c53, #fff);
+@include project-colours('#novalux-logo', #0D9B8C, #fff, #042d29, #fff);
 @include project-colours('#datasift', #51709A, #fff, #FF9933, #fff);
 @include project-colours('#colette', #114695, #fff, #76C9A7, #fff);
 @include project-colours('#shift-4', #FE0C24, #fff, #000, #fff);
-@include project-colours('#conversocial', #4A9BDC, #000, #224764, #fff);
+@include project-colours('#conversocial', #4A9BDC, #000, #fff, #fff);
 @include project-colours('#sohofixed', #023766, #fff, #0587ff, #fff);
 @include project-colours('#sohofixed-identity', #000, #eee, #555, #fff);
 
@@ -49,3 +49,15 @@
 @include project-colours('#jquery', #2c6ca7, #fff, #fff, #fff);
 @include project-colours('#placeholders', #f8d498, #a95d0e, #d87712, #fff);
 @include project-colours('#html5', #d25b40, #fff, #fff, #fff);
+
+
+
+#choreographic-grid {
+	background-image: url('#{$imgUIPath}/bg-grid.png');
+	background-position: center top;
+}
+
+#lynx-apollo {
+	background-image: url('#{$imgPath}/projects/lynx-apollo/stars.jpg');
+	background-position: center top;
+}

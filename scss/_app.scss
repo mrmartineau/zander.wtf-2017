@@ -45,7 +45,7 @@ a {
 .navvy-container {
 	position: fixed;
 	left: 0;top: 0;right: 0;
-	background-color: #fff;
+	background-color: #f1f1f1;
 	z-index: 10;
 	padding: 10px 0;
 	text-transform: uppercase;
@@ -99,10 +99,10 @@ a {
 .masthead {
 	position: fixed;
 	left: 0; top: 40px; right: 0;
-	background-color: #fff;
+	background-color: #f1f1f1;
 	text-align: center;
 	display: none;
-	@include box-shadow(0 3px 3px rgba(0,0,0,.25));
+	// @include box-shadow(0 3px 3px rgba(0,0,0,.25));
 	z-index: 1;
 
 	h1 {
@@ -113,31 +113,27 @@ a {
 		text-transform: uppercase;
 	}
 
+	p {
+		margin-bottom: 0;
+	}
+
 	a {
-		color: $silver;
+		color: #d14;
+	}
+
+	a:hover {
+		color: #d14;
 	}
 }
 
 .hero-unit {
 	padding: 50px 0;
 	text-align: center;
-	background-color: $linkColorHover;
-
-	.home &,
-	.portfolio & {
-		background-color: #fff;
-	}
 }
 
 .hero-unit--inner {
 	@include rem('max-width', 500);
 	margin: 0 5%;
-	color: #fff;
-
-	.home &,
-	.portfolio & {
-		color: $silver;
-	}
 
 	:first-child {
 		margin-top: 0;
@@ -154,7 +150,6 @@ a {
 // ==============
 #footer {
 	z-index: 1000;
-	background-color: #fff;
 	padding-bottom: 8px;
 }
 
@@ -167,12 +162,12 @@ a {
 		min-height: 40px;
 		padding: 0 20px;
 		font-family: 'entypo-social';
-		@include font-size(60);
+		@include font-size(110);
 		font-weight: 400;
 		line-height: 1;
 
 		&:hover {
-			color: #000 !important;
+			color: #d14;
 			z-index: 1;
 		}
 	}
@@ -301,11 +296,13 @@ $portfolioSidePadding: 13%;
 }
 
 .portfolio-pieces--item--shots {
+	position: relative;
 	margin: 0 3%;
 	position: relative;
 	@extend %clearfix;
 	@include user-select();
 	@include vendor-prefix(perspective, 500px);
+	@include vendor-prefix(backface-visibility, none);
 
 	p {
 		margin-bottom: 0;
@@ -327,7 +324,7 @@ $portfolioSidePadding: 13%;
 				display: block;
 				position: relative;
 				@include transition();
-				@include border-radius(5px 5px 0 0);
+				@include border-radius(5px);
 				border: 2px solid $bodyBackground;
 			}
 		}
@@ -338,25 +335,14 @@ $portfolioSidePadding: 13%;
 			// border-bottom-width: 0;
 			background-color: #fff;
 			display: block;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		&.shot-1, &.shot-2, &.shot-hidden {
 			display: none;
 		}
-
-		// &:hover {
-		// 	z-index: 2;
-		// }
 	}
-
-	// &:hover {
-	// 	img {
-	// 		opacity: .5;
-	// 	}
-	// 	.launch {
-	// 		opacity: 1;
-	// 	}
-	// }
 
 }
 
@@ -387,22 +373,6 @@ $portfolioSidePadding: 13%;
 // ============================
 // === Different shot types ===
 // ============================
-%layout-mobile-two-up {
-
-}
-
-%layout-mobile-three-up {
-
-}
-
-%layout-desktop-two-up {
-
-}
-
-%layout-desktop-three-up {
-
-}
-
 .layout-stacked {
 	figure {
 		margin: 0 auto 3%;
@@ -413,22 +383,18 @@ $portfolioSidePadding: 13%;
 	}
 }
 
-%layout-responsive {
 
+// ==================
+// === Pagination ===
+// ==================
+.pagination {
+	text-align: center;
+	padding: 20px;
+
+	a {
+		margin: 0 10px;
+	}
 }
-
-
-
-#choreographic-grid {
-	background-image: url('#{$imgUIPath}/bg-grid.png');
-	background-position: center top;
-}
-#lynx-apollo {
-	background-image: url('#{$imgPath}/projects/lynx-apollo/stars.jpg');
-	background-position: center top;
-}
-
-
 
 // ===========================================
 // === Media queries for responsive design ===
@@ -564,16 +530,20 @@ $portfolioSidePadding: 13%;
 
 		figure {
 			width: 80%;
-			position: absolute;
 			cursor: pointer;
 
 			&.shot-0 {
+				position: absolute;
 				top: 13%;
 				left: 0%;
 				z-index: 0;
 				@include transform(rotateY(18deg));
 				@include vendor-prefix(transform-origin, 0 0);
 				@include opacity(70);
+
+				// &:hover {
+				// 	@include transform(rotateY(28deg));
+				// }
 			}
 
 			&.shot-1 {
@@ -589,6 +559,7 @@ $portfolioSidePadding: 13%;
 			}
 
 			&.shot-2 {
+				position: absolute;
 				top: 13%;
 				left: 20%;
 				z-index: 0;
@@ -596,9 +567,9 @@ $portfolioSidePadding: 13%;
 				@include vendor-prefix(transform-origin, right 0);
 				@include opacity(70);
 
-				&:hover {
-
-				}
+				// &:hover {
+				// 	@include transform(rotateY(-28deg));
+				// }
 			}
 
 			&.shot-hidden {

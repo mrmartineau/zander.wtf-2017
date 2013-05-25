@@ -3,7 +3,7 @@ comments: false
 layout: post
 title: "How to fix hidden characters in password inputs in old Internet Explorer. Hint: web fonts"
 categories:
-- Code
+- code
 ---
 
 I came across an interesting bug recently where, in **Internet Explorer (versions 6-8)**, the _dot_ characters for an `input[type="password"]` were not showing up. I could see the cursor moving as if text was being entered but no result was being shown.

@@ -36,9 +36,30 @@ ZANDER.SiteSetup = {
 			success : function( data ) {
 				// TODO: Save this to localstorage & use it
 				ZANDER.data = data;
+				console.log(data);
+				if ( window.localStorage ) {
+					localStorage.setItem('data', JSON.stringify(data));
+				}
+				// var retrievedObject = localStorage.getItem('data');
+				// console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
-				ZANDER.Router.init();
 				ZANDER.ui.shotHeight();
+
+				if ( pageName === 'home' ) {
+					ZANDER.tpl.listing('home', '#main');
+					log('Home page');
+				} else if ( pageName === 'cv' ){
+					ZANDER.tpl.listing('cv', '#main');
+					log('CV page');
+				} else if ( pageName === 'sublime' ){
+					ZANDER.tpl.listing('sublime', '#main');
+					log('Sublime page');
+				} else if ( pageName === 'open-source' ){
+					ZANDER.tpl.listing('open-source', '#main');
+					log('Open source page');
+				} else {
+					log('Another page');
+				}
 			},
 
 			error : function() {
@@ -55,7 +76,6 @@ ZANDER.ui = {
 		ZANDER.ui.navigationToggle();
 		ZANDER.ui.scroll();
 		ZANDER.ui.shotSwitch();
-
 	},
 
 	masthead : function() {
@@ -219,8 +239,6 @@ ZANDER.ui = {
 		});
 	}
 };
-
-
 
 ZANDER.tpl = {
 	init : function() {

@@ -425,7 +425,7 @@ h2 {
   font-size: 1.6rem;
   line-height: 40px;
   line-height: 2rem;
-  margin-top: 30px;
+  margin-top: 60px;
   margin-bottom: 30px;
 }
 
@@ -476,13 +476,13 @@ h6 {
 
 /* line 114, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_typography.scss */
 a {
-  color: #3498db;
+  color: #dd1144;
   text-decoration: none;
 }
 
 /* line 118, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_typography.scss */
 a:hover {
-  color: #b6daf2;
+  color: #f790aa;
 }
 
 /* line 127, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_typography.scss */
@@ -713,755 +713,16 @@ sub {
   text-align: right;
 }
 
-/* ============ */
-/* === FORM === */
-/* ============ */
-/* line 15, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-form {
-  margin: 0 0 30px;
+/* line 316, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_typography.scss */
+::-moz-selection {
+  color: #fff;
+  background: #d14;
 }
 
-/* line 19, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-/* line 26, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.control-group {
-  margin-top: 15px;
-}
-/* line 30, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-legend + .control-group {
-  margin-top: 30px;
-  -webkit-margin-top-collapse: separate;
-}
-
-/* line 38, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 30px;
-  font-size: 30px;
-  font-size: 1.5rem;
-  line-height: 60px;
-  line-height: 3rem;
-  color: #404040;
-  border: 0;
-  border-bottom: 1px solid #eee;
-}
-/* line 50, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-legend small {
-  font-size: 15px;
-  font-size: 0.75rem;
-  color: #bfbfbf;
-}
-
-/* line 61, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-label,
-input,
-button,
-select,
-textarea {
-  font-size: 20px;
-  font-size: 1rem;
-  line-height: 30px;
-  line-height: 1.5rem;
-  font-weight: normal;
-}
-
-/* line 71, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input,
-button,
-select,
-textarea {
-  font-family: "colfax-web-1", "colfax-web-2", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-/* line 76, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #404040;
-  font-weight: bold;
-}
-/* line 82, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-label small {
-  font-weight: normal;
-  color: #8c8c8c;
-}
-/* line 88, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-label.checkbox, label.radio {
-  font-weight: normal;
-}
-/* line 95, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-label input, label textarea, label select {
-  display: block;
-}
-
-/* line 105, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input,
-textarea,
-select,
-.uneditable-input,
-.file-wrapper {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-  *zoom: 1;
-  width: 210px;
-  height: 45px;
-  padding: 4px;
-  margin-bottom: 9px;
-  font-size: 20px;
-  font-size: 1rem;
-  line-height: 30px;
-  line-height: 1.5rem;
-  color: #404040;
-  background-color: #FFF;
-  border: 1px solid #cccccc;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-
-/* line 119, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.uneditable-textarea {
-  width: auto;
-  height: auto;
-}
-
-/* line 130, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input[type="image"], input[type="checkbox"], input[type="radio"] {
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 3px 0;
-  *margin-top: 0;
-  /* IE7 */
-  line-height: normal;
-  cursor: pointer;
-  -webkit-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  border: 0;
-  /* IE9 and down */
-}
-/* line 141, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input[type="image"] {
-  border: 0;
-}
-/* line 145, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input[type="file"] {
-  width: auto;
-  height: 28px;
-  padding: initial;
-  line-height: initial;
-  border: initial;
-  background-color: white;
-  background-color: initial;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-}
-/* line 159, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input[type="button"], input[type="reset"], input[type="submit"] {
-  width: auto;
-  height: auto;
-}
-/* line 165, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input[type="image"] {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-}
-/* line 170, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input[type="hidden"] {
-  display: none;
-}
-/* line 174, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input[type="color"] {
-  height: 40px;
-  width: 40px;
-  overflow: hidden;
-  padding: 2px;
-}
-
-/* line 184, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-select {
-  width: 220px;
-  height: 28px;
-  /* In IE7, the height of the select element cannot be changed by height, only font-size */
-  *margin-top: 4px;
-  /* For IE7, add top margin to align select with labels */
-  line-height: 28px;
-  line-height: 1.4rem;
-  background-color: white;
-}
-/* line 195, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-select[multiple], select[size] {
-  height: auto;
-}
-
-/* line 203, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-textarea {
-  height: auto;
-  resize: vertical;
-}
-
-/* line 221, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.radio,
-.checkbox {
-  padding-left: 18px;
-}
-/* line 225, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.radio input[type="radio"], .radio input[type="checkbox"],
-.checkbox input[type="radio"],
-.checkbox input[type="checkbox"] {
-  float: left;
-  margin-left: -18px;
-}
-/* line 232, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.radio.inline,
-.checkbox.inline {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-  *zoom: 1;
-  padding-top: 5px;
-  margin-bottom: 0;
-  vertical-align: middle;
-}
-
-/* line 245, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.control-input > .radio:first-child, .control-input > .checkbox:first-child {
-  padding-top: 5px;
-}
-
-/* line 252, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.radio.inline + .radio.inline,
-.checkbox.inline + .checkbox.inline {
-  margin-left: 10px;
-}
-
-/* line 262, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input,
-textarea,
-.file-wrapper {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
-}
-
-/* line 271, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input:focus,
-textarea:focus {
-  border-color: rgba(82, 168, 236, 0.8);
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  outline: 0;
-  outline: thin dotted;
-}
-
-/* line 284, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus,
-select:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-/* line 295, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-mini {
-  width: 60px;
-}
-
-/* line 296, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-small {
-  width: 90px;
-}
-
-/* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-medium {
-  width: 150px;
-}
-
-/* line 298, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-large {
-  width: 210px;
-}
-
-/* line 299, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-xlarge {
-  width: 270px;
-}
-
-/* line 300, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-xxlarge {
-  width: 530px;
-}
-
-/* line 312, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input[class*="span"],
-select[class*="span"],
-textarea[class*="span"],
-.uneditable-input[class*="span"],
-.row-fluid input[class*="span"],
-.row-fluid select[class*="span"],
-.row-fluid textarea[class*="span"],
-.row-fluid .uneditable-input[class*="span"] {
-  float: none;
-  margin-left: 0;
-}
-
-/* line 318, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.file-wrapper input {
-  width: 90%;
-}
-
-/* line 332, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input[disabled], input[readonly],
-select[disabled],
-select[readonly],
-textarea[disabled],
-textarea[readonly] {
-  background-color: #e6e6e6;
-  border-color: #ddd;
-  cursor: not-allowed;
-}
-/* line 340, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input:focus:required:invalid,
-select:focus:required:invalid,
-textarea:focus:required:invalid {
-  color: #b94a48;
-  border-color: #ee5f5b;
-}
-/* line 343, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-input:focus:required:invalid:focus,
-select:focus:required:invalid:focus,
-textarea:focus:required:invalid:focus {
-  border-color: #e9322d;
-  -webkit-box-shadow: 0 0 6px #f8b9b7;
-  -moz-box-shadow: 0 0 6px #f8b9b7;
-  -o-box-shadow: 0 0 6px #f8b9b7;
-  box-shadow: 0 0 6px #f8b9b7;
-}
-
-/* line 495, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.warning > label,
-.control-group.warning .help-block,
-.control-group.warning .help-inline {
-  color: #c09853;
-}
-/* line 501, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.warning input,
-.control-group.warning select,
-.control-group.warning textarea {
-  color: #c09853;
-  border-color: #c09853;
-}
-/* line 504, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.warning input:focus,
-.control-group.warning select:focus,
-.control-group.warning textarea:focus {
-  border-color: #a47e3c;
-  -webkit-box-shadow: 0 0 6px #dbc59e;
-  -moz-box-shadow: 0 0 6px #dbc59e;
-  -o-box-shadow: 0 0 6px #dbc59e;
-  box-shadow: 0 0 6px #dbc59e;
-}
-/* line 511, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.warning .input-prepend .add-on,
-.control-group.warning .input-append .add-on {
-  color: #c09853;
-  background-color: #fcf8e3;
-  border-color: #c09853;
-}
-
-/* line 495, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.error > label,
-.control-group.error .help-block,
-.control-group.error .help-inline {
-  color: #b94a48;
-}
-/* line 501, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.error input,
-.control-group.error select,
-.control-group.error textarea {
-  color: #b94a48;
-  border-color: #b94a48;
-}
-/* line 504, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.error input:focus,
-.control-group.error select:focus,
-.control-group.error textarea:focus {
-  border-color: #953b39;
-  -webkit-box-shadow: 0 0 6px #d59392;
-  -moz-box-shadow: 0 0 6px #d59392;
-  -o-box-shadow: 0 0 6px #d59392;
-  box-shadow: 0 0 6px #d59392;
-}
-/* line 511, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.error .input-prepend .add-on,
-.control-group.error .input-append .add-on {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #b94a48;
-}
-
-/* line 495, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.success > label,
-.control-group.success .help-block,
-.control-group.success .help-inline {
-  color: #468847;
-}
-/* line 501, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.success input,
-.control-group.success select,
-.control-group.success textarea {
-  color: #468847;
-  border-color: #468847;
-}
-/* line 504, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.success input:focus,
-.control-group.success select:focus,
-.control-group.success textarea:focus {
-  border-color: #356635;
-  -webkit-box-shadow: 0 0 6px #7aba7b;
-  -moz-box-shadow: 0 0 6px #7aba7b;
-  -o-box-shadow: 0 0 6px #7aba7b;
-  box-shadow: 0 0 6px #7aba7b;
-}
-/* line 511, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-.control-group.success .input-prepend .add-on,
-.control-group.success .input-append .add-on {
-  color: #468847;
-  background-color: #dff0d8;
-  border-color: #468847;
-}
-
-/* line 385, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-search input, .form-search textarea, .form-search select, .form-search .help-inline, .form-search .uneditable-input, .form-search .input-prepend, .form-search .input-append,
-.form-inline input,
-.form-inline textarea,
-.form-inline select,
-.form-inline .help-inline,
-.form-inline .uneditable-input,
-.form-inline .input-prepend,
-.form-inline .input-append,
-.form-horizontal input,
-.form-horizontal textarea,
-.form-horizontal select,
-.form-horizontal .help-inline,
-.form-horizontal .uneditable-input,
-.form-horizontal .input-prepend,
-.form-horizontal .input-append {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-  *zoom: 1;
-  margin-bottom: 0;
-}
-/* line 392, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-search .hide,
-.form-inline .hide,
-.form-horizontal .hide {
-  display: none;
-}
-
-/* line 414, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-horizontal .control-group {
-  margin-bottom: 30px;
-  *zoom: 1;
-}
-/* line 132, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_choreographic-grid.scss */
-.form-horizontal .control-group:before, .form-horizontal .control-group:after {
-  content: " ";
-  display: table;
-}
-/* line 137, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_choreographic-grid.scss */
-.form-horizontal .control-group:after {
-  clear: both;
-}
-/* line 421, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-horizontal .control-label, .form-horizontal .control-group label {
-  float: left;
-  width: 140px;
-  padding-top: 5px;
-  text-align: right;
-}
-/* line 430, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-horizontal .control-input, .form-horizontal .control-group div {
-  margin-left: 160px;
-  /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .control-input */
-  *display: inline-block;
-  *margin-left: 0;
-  *padding-left: 20px;
-}
-/* line 436, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-horizontal .control-input:first-child, .form-horizontal .control-group div:first-child {
-  *padding-left: 160px;
-}
-/* line 442, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-horizontal .help-block {
-  margin-top: 15px;
-  margin-bottom: 0;
-}
-/* line 448, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-horizontal .form-actions {
-  padding-left: 160px;
-}
-
-/* line 461, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-search > *,
-.form-inline > * {
-  margin-right: 10px;
-}
-/* line 464, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-search > *:last-child,
-.form-inline > *:last-child {
-  margin-right: 0;
-}
-/* line 469, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-search label,
-.form-inline label {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-  *zoom: 1;
-}
-/* line 476, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-search .radio, .form-search .checkbox,
-.form-inline .radio,
-.form-inline .checkbox {
-  padding-left: 0;
-  margin-bottom: 0;
-  vertical-align: middle;
-}
-/* line 483, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-search .radio input[type="radio"], .form-search .radio input[type="checkbox"], .form-search .checkbox input[type="radio"], .form-search .checkbox input[type="checkbox"],
-.form-inline .radio input[type="radio"],
-.form-inline .radio input[type="checkbox"],
-.form-inline .checkbox input[type="radio"],
-.form-inline .checkbox input[type="checkbox"] {
-  float: left;
-  margin-left: 0;
-  margin-right: 3px;
-}
-/* line 492, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-search .input-prepend, .form-search .input-append,
-.form-inline .input-prepend,
-.form-inline .input-append {
-  margin-bottom: 0;
-}
-
-/* line 500, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.search-query {
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-left: 4px;
-  padding-right: 4px;
-  margin-bottom: 0;
-  -webkit-border-radius: 100px;
-  -o-border-radius: 100px;
-  border-radius: 100px;
-}
-
-/* line 514, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-actions {
-  padding: 29px 20px 30px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  background-color: whitesmoke;
-  border-top: 1px solid #ddd;
-  *zoom: 1;
-}
-/* line 132, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_choreographic-grid.scss */
-.form-actions:before, .form-actions:after {
-  content: " ";
-  display: table;
-}
-/* line 137, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_choreographic-grid.scss */
-.form-actions:after {
-  clear: both;
-}
-/* line 522, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-actions .btn {
-  margin-right: 10px;
-}
-/* line 525, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.form-actions .btn:last-child {
-  margin-right: 0;
-}
-
-/* line 532, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.uneditable-input {
-  background-color: white;
-  border-color: #eee;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  -o-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
-  cursor: not-allowed;
-}
-
-/* line 446, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-:-moz-placeholder {
-  color: #bfbfbf;
-}
-
-/* line 449, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
-::-webkit-input-placeholder {
-  color: #bfbfbf;
-}
-
-/* line 545, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.help-block,
-.help-inline {
-  color: gray;
-}
-
-/* line 549, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.help-block {
-  display: block;
-  margin-bottom: 15px;
-}
-
-/* line 554, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.help-inline {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-  *zoom: 1;
-  vertical-align: middle;
-  padding-left: 5px;
-}
-
-/* line 568, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-prepend,
-.input-append {
-  margin-bottom: 5px;
-}
-/* line 573, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-prepend input, .input-prepend select, .input-prepend .uneditable-input,
-.input-append input,
-.input-append select,
-.input-append .uneditable-input {
-  position: relative;
-  margin-bottom: 0;
-  *margin-left: 0;
-  vertical-align: middle;
-  -webkit-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
-/* line 580, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-prepend input:focus, .input-prepend select:focus, .input-prepend .uneditable-input:focus,
-.input-append input:focus,
-.input-append select:focus,
-.input-append .uneditable-input:focus {
-  z-index: 2;
-}
-/* line 584, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-prepend .uneditable-input,
-.input-append .uneditable-input {
-  border-left-color: #ccc;
-}
-/* line 587, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-prepend .add-on,
-.input-append .add-on {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-  *zoom: 1;
-  width: auto;
-  min-width: 16px;
-  height: 30px;
-  padding: 4px 5px;
-  font-weight: normal;
-  line-height: 30px;
-  line-height: 1.5rem;
-  text-align: center;
-  text-shadow: 0 1px 0 white;
-  vertical-align: middle;
-  background-color: #e6e6e6;
-  border: 1px solid #ccc;
-}
-/* line 603, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-prepend .add-on, .input-prepend .btn,
-.input-append .add-on,
-.input-append .btn {
-  -webkit-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-/* line 606, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-prepend .active,
-.input-append .active {
-  background-color: #d8eddb;
-  border-color: #70bc79;
-}
-
-/* line 613, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-prepend .add-on, .input-prepend .btn {
-  margin-right: -1px;
-}
-
-/* line 620, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-append input, .input-append select, .input-append .uneditable-input {
-  -webkit-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-/* line 623, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-append .uneditable-input {
-  border-left-color: #eee;
-  border-right-color: #ccc;
-}
-/* line 628, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-append .add-on, .input-append .btn {
-  margin-left: -1px;
-  -webkit-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-}
-
-/* line 637, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-prepend.input-append input, .input-prepend.input-append select, .input-prepend.input-append .uneditable-input {
-  -webkit-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-/* line 641, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child {
-  margin-right: -1px;
-  -webkit-border-radius: 3px 0 0 3px;
-  -o-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-}
-/* line 646, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_forms.scss */
-.input-prepend.input-append .add-on:last-child, .input-prepend.input-append .btn:last-child {
-  margin-left: -1px;
-  -webkit-border-radius: 0 3px 3px 0;
-  -o-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
+/* line 317, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_typography.scss */
+::selection {
+  color: #fff;
+  background: #d14;
 }
 
 /* line 9, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_code.scss */
@@ -1470,13 +731,13 @@ pre {
   padding: 0 3px 2px;
   font-family: "source-code-pro-1", "source-code-pro-2", Menlo, Monaco, "Courier New", monospace;
   _font-family: 'courier new', monospace;
-  font-size: 13px;
-  font-size: 0.65rem;
+  font-size: 15px;
+  font-size: 0.75rem;
   color: #404040;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  tab-size: 3;
+  tab-size: 2;
 }
 
 /* line 20, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_code.scss */
@@ -1485,9 +746,10 @@ code {
   color: #d14;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
+  vertical-align: text-top;
 }
 
-/* line 28, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_code.scss */
+/* line 29, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_code.scss */
 pre {
   display: block;
   padding: 14.5px;
@@ -1505,19 +767,22 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
 }
-/* line 43, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_code.scss */
+/* line 44, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_code.scss */
 pre.prettyprint {
   margin-bottom: 30px;
 }
-/* line 48, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_code.scss */
+/* line 49, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_code.scss */
 pre code {
   padding: 0;
   color: inherit;
   background-color: transparent;
   border: 0;
+  font-size: 13px;
+  font-size: 0.65rem;
+  line-height: 1.4;
 }
 
-/* line 57, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_code.scss */
+/* line 60, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_code.scss */
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
@@ -1901,38 +1166,38 @@ ul.centred li, ul.centered li {
 
 /* line 142, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_buttons.scss */
 .btn-primary {
-  background-color: #346edb;
+  background-color: #dd1111;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#3498db), to(#346edb));
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#dd1144), to(#dd1111));
   /* Konqueror */
-  background-image: -moz-linear-gradient(#3498db, #346edb);
+  background-image: -moz-linear-gradient(#dd1144, #dd1111);
   /* FF 3.6+ */
-  background-image: -ms-linear-gradient(#3498db, #346edb);
+  background-image: -ms-linear-gradient(#dd1144, #dd1111);
   /* IE10 */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3498db), color-stop(100%, #346edb));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dd1144), color-stop(100%, #dd1111));
   /* Safari 4+, Chrome 2+ */
-  background-image: -webkit-linear-gradient(#3498db, #346edb);
+  background-image: -webkit-linear-gradient(#dd1144, #dd1111);
   /* Safari 5.1+, Chrome 10+ */
-  background-image: -o-linear-gradient(#3498db, #346edb);
+  background-image: -o-linear-gradient(#dd1144, #dd1111);
   /* Opera 11.10 */
-  background-image: -ms-linear-gradient(top, #3498db 0%, #346edb 100%);
+  background-image: -ms-linear-gradient(top, #dd1144 0%, #dd1111 100%);
   /* IE10+ */
-  background-image: linear-gradient(#3498db, #346edb);
+  background-image: linear-gradient(#dd1144, #dd1111);
   /* the standard */
-  border-color: #346edb #346edb #1d4da5;
+  border-color: #dd1111 #dd1111 #960c0c;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
-  *background-color: #346edb;
+  *background-color: #dd1111;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 }
 /* line 536, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
-  background-color: #346edb;
-  *background-color: #2561d1;
+  background-color: #dd1111;
+  *background-color: #c50f0f;
 }
 /* line 543, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_mixins.scss */
 .btn-primary:active, .btn-primary.active {
-  background-color: #2157bb;
+  background-color: #ae0d0d;
 }
 
 /* line 146, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_buttons.scss */
@@ -2242,7 +1507,7 @@ a {
   left: 0;
   top: 0;
   right: 0;
-  background-color: #fff;
+  background-color: #f1f1f1;
   z-index: 10;
   padding: 10px 0;
   text-transform: uppercase;
@@ -2288,7 +1553,7 @@ a {
 }
 /* line 88, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .navvy:active b, .navvy:active i {
-  background-color: #5faee3;
+  background-color: #ef3261;
 }
 /* line 93, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .navvy i {
@@ -2301,13 +1566,9 @@ a {
   left: 0;
   top: 40px;
   right: 0;
-  background-color: #fff;
+  background-color: #f1f1f1;
   text-align: center;
   display: none;
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
-  -o-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 /* line 108, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
@@ -2321,74 +1582,71 @@ a {
   text-transform: uppercase;
 }
 /* line 116, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+.masthead p {
+  margin-bottom: 0;
+}
+/* line 120, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .masthead a {
-  color: #34495e;
+  color: #d14;
+}
+/* line 124, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+.masthead a:hover {
+  color: #d14;
 }
 
-/* line 121, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 129, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .hero-unit {
   padding: 50px 0;
   text-align: center;
-  background-color: #b6daf2;
-}
-/* line 127, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
-.home .hero-unit, .portfolio .hero-unit {
-  background-color: #fff;
 }
 
-/* line 132, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 134, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .hero-unit--inner {
   max-width: 500px;
   max-width: 25rem;
   margin: 0 5%;
-  color: #fff;
 }
 /* line 138, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
-.home .hero-unit--inner, .portfolio .hero-unit--inner {
-  color: #34495e;
-}
-/* line 142, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .hero-unit--inner :first-child {
   margin-top: 0;
 }
-/* line 146, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 142, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .hero-unit--inner :last-child {
   margin-bottom: 0;
 }
 
-/* line 155, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 151, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 #footer {
   z-index: 1000;
-  background-color: #fff;
   padding-bottom: 8px;
 }
 
-/* line 161, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 156, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .icon-links {
   text-align: center;
 }
-/* line 164, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 159, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .icon-links a {
   position: relative;
   display: inline-block;
   min-height: 40px;
   padding: 0 20px;
   font-family: 'entypo-social';
-  font-size: 60px;
-  font-size: 3rem;
+  font-size: 110px;
+  font-size: 5.5rem;
   font-weight: 400;
   line-height: 1;
 }
-/* line 174, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 169, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .icon-links a:hover {
-  color: #000 !important;
+  color: #d14;
   z-index: 1;
 }
-/* line 180, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 175, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .icon-links i {
   font-style: normal;
 }
-/* line 184, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 179, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .icon-links span {
   display: none;
   position: absolute;
@@ -2397,77 +1655,77 @@ a {
   opacity: 0;
 }
 
-/* line 194, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 189, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 a.personal-links--email {
   color: #70bc79;
 }
 
-/* line 197, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 192, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 a.personal-links--twitter {
   color: #258cba;
 }
 
-/* line 200, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 195, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 a.personal-links--appnet {
   color: #717171;
 }
 
-/* line 203, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 198, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 a.personal-links--instagram {
   color: #33628A;
 }
 
-/* line 206, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 201, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 a.personal-links--dribbble {
   color: #c12d6d;
 }
 
-/* line 209, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 204, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 a.personal-links--github {
   color: #000;
 }
 
-/* line 212, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 207, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 a.personal-links--tumblr {
   color: #2f4662;
 }
 
-/* line 215, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 210, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 a.personal-links--pinboard {
   color: #e93f37;
 }
 
-/* line 218, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 213, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 a.personal-links--stackoverflow {
   color: #fa9a00;
 }
 
-/* line 232, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 227, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item {
   position: relative;
   margin: 0px 0 0px 0;
   background-color: #fff;
   overflow: hidden;
 }
-/* line 239, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 234, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item .inner-wrap {
   width: 100%;
   max-width: 1350px;
   margin: 0 auto;
 }
-/* line 245, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 240, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item:nth-child(even) {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 251, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 246, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--inner {
   position: relative;
   padding: 5% 3% 0;
 }
 
-/* line 256, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 251, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--inner--title {
   margin-bottom: 0;
   margin-top: 0;
@@ -2479,33 +1737,33 @@ a.personal-links--stackoverflow {
   text-align: center;
 }
 
-/* line 265, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 260, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--inner--site-url {
   margin-bottom: 6%;
 }
 
-/* line 269, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 264, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--description {
   margin-bottom: 30;
 }
-/* line 272, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 267, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--description p:last-child {
   margin-bottom: 0;
 }
 
-/* line 277, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 272, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--info {
   margin-bottom: 30;
 }
-/* line 280, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 275, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--info p:last-child {
   margin-bottom: 0;
 }
-/* line 284, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 279, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--info ul {
   margin: 20px 20px 20px 0;
 }
-/* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 282, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--info ul li {
   position: relative;
   *zoom: 1;
@@ -2519,18 +1777,19 @@ a.personal-links--stackoverflow {
 .portfolio-pieces--item--info ul li:after {
   clear: both;
 }
-/* line 292, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 287, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--info ul b {
   position: absolute;
   width: 110px;
 }
-/* line 297, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 292, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--info ul div {
   margin-left: 120px;
 }
 
-/* line 303, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 298, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--shots {
+  position: relative;
   margin: 0 3%;
   position: relative;
   -webkit-user-select: none;
@@ -2541,12 +1800,16 @@ a.personal-links--stackoverflow {
   -moz-perspective: 500px;
   -o-perspective: 500px;
   perspective: 500px;
+  -webkit-backface-visibility: none;
+  -moz-backface-visibility: none;
+  -o-backface-visibility: none;
+  backface-visibility: none;
 }
-/* line 310, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 307, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--shots p {
   margin-bottom: 0;
 }
-/* line 314, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 311, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--shots figure {
   position: relative;
   text-align: center;
@@ -2567,11 +1830,11 @@ a.personal-links--stackoverflow {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 323, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 320, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .type-website .portfolio-pieces--item--shots figure {
   border-bottom: none;
 }
-/* line 326, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 323, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .type-website .portfolio-pieces--item--shots figure img {
   display: block;
   position: relative;
@@ -2579,12 +1842,12 @@ a.personal-links--stackoverflow {
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-border-radius: 5px 5px 0 0;
-  -o-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
   border: 2px solid white;
 }
-/* line 335, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 332, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--shots figure img {
   -webkit-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.25);
@@ -2595,13 +1858,15 @@ a.personal-links--stackoverflow {
   border-radius: 5px;
   background-color: #fff;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* line 343, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 342, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .portfolio-pieces--item--shots figure.shot-1, .portfolio-pieces--item--shots figure.shot-2, .portfolio-pieces--item--shots figure.shot-hidden {
   display: none;
 }
 
-/* line 363, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 349, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .launch {
   position: absolute;
   top: 200px;
@@ -2620,58 +1885,56 @@ a.personal-links--stackoverflow {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 381, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 367, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .launch:hover {
   border-color: #000;
   background-color: #000;
 }
 
-/* line 407, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 377, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .layout-stacked figure {
   margin: 0 auto 3%;
 }
-/* line 411, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+/* line 381, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
 .layout-stacked img {
   margin: 0 auto;
 }
 
-/* line 422, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
-#choreographic-grid {
-  background-image: url("/img/ui/bg-grid.png");
-  background-position: center top;
+/* line 390, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+.pagination {
+  text-align: center;
+  padding: 20px;
 }
-
-/* line 426, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
-#lynx-apollo {
-  background-image: url("/img/projects/lynx-apollo/stars.jpg");
-  background-position: center top;
+/* line 394, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+.pagination a {
+  margin: 0 10px;
 }
 
 @media screen and (min-width: 550px) {
-  /* line 440, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 406, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   #masthead h1 {
     font-size: 40px;
     font-size: 2rem;
   }
 
-  /* line 445, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 411, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .hero-unit--inner {
     margin: 0 auto;
   }
 }
 @media screen and (min-width: 868px) {
-  /* line 454, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 420, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .portfolio-pieces--item--inner {
     padding: 5% 13%;
   }
 
-  /* line 458, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 424, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .portfolio-pieces--item--inner--title {
     font-size: 50px;
     font-size: 2.5rem;
   }
 
-  /* line 462, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 428, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .portfolio-pieces--item--shots {
     margin: 0 4%;
     max-height: 500px;
@@ -2685,40 +1948,40 @@ a.personal-links--stackoverflow {
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
-  /* line 466, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 432, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .type-logo .portfolio-pieces--item--shots {
     max-height: none;
   }
-  /* line 473, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 439, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .portfolio-pieces--item--shots.is-expanded {
     max-height: 9999px;
     max-height: 499.95rem;
   }
-  /* line 477, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 443, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .portfolio-pieces--item--shots figure {
     margin-bottom: 0;
   }
-  /* line 480, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 446, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .portfolio-pieces--item--shots figure.shot-1, .portfolio-pieces--item--shots figure.shot-2 {
     display: block;
   }
 
-  /* line 487, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 453, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-mobile-two-up {
     margin-bottom: -3%;
   }
-  /* line 490, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 456, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-mobile-two-up figure {
     width: 48%;
   }
-  /* line 493, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 459, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-mobile-two-up figure:hover {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
     transform: rotateY(0deg);
   }
-  /* line 498, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 464, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-mobile-two-up .shot-0 {
     float: left;
     -webkit-transform: rotateY(8deg);
@@ -2730,7 +1993,7 @@ a.personal-links--stackoverflow {
     -o-transform-origin: 0 0;
     transform-origin: 0 0;
   }
-  /* line 505, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 471, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-mobile-two-up .shot-1 {
     float: right;
     -webkit-transform: rotateY(-8deg);
@@ -2743,28 +2006,28 @@ a.personal-links--stackoverflow {
     transform-origin: right 0;
   }
 
-  /* line 514, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 480, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-mobile-three-up figure {
     width: 30%;
   }
-  /* line 517, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 483, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-mobile-three-up figure:nth-child(even) {
     width: 60%;
   }
-  /* line 522, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 488, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-mobile-three-up .shot-1 {
     float: right;
   }
 
-  /* line 527, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 493, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-desktop-two-up {
     position: relative;
   }
-  /* line 530, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 496, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-desktop-two-up figure {
     width: 80%;
   }
-  /* line 533, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 499, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-desktop-two-up figure.shot-0 {
     position: relative;
     -webkit-transform: rotateY(0deg);
@@ -2772,7 +2035,7 @@ a.personal-links--stackoverflow {
     -o-transform: rotateY(0deg);
     transform: rotateY(0deg);
   }
-  /* line 542, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 508, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-desktop-two-up figure.shot-1 {
     position: absolute;
     top: 10%;
@@ -2786,24 +2049,24 @@ a.personal-links--stackoverflow {
     -o-transform-origin: right 0;
     transform-origin: right 0;
   }
-  /* line 555, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 521, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-desktop-two-up figure.shot-hidden {
     position: static;
     display: block;
   }
 
-  /* line 562, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 528, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-desktop-three-up {
     position: relative;
   }
-  /* line 565, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 531, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-desktop-three-up figure {
     width: 80%;
-    position: absolute;
     cursor: pointer;
   }
-  /* line 570, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 535, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-desktop-three-up figure.shot-0 {
+    position: absolute;
     top: 13%;
     left: 0%;
     z-index: 0;
@@ -2819,7 +2082,7 @@ a.personal-links--stackoverflow {
     filter: alpha(opacity=70);
     opacity: 0.7;
   }
-  /* line 579, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 549, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-desktop-three-up figure.shot-1 {
     position: relative;
     top: 0%;
@@ -2838,8 +2101,9 @@ a.personal-links--stackoverflow {
     opacity: 1;
     margin: 0 auto;
   }
-  /* line 591, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 561, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-desktop-three-up figure.shot-2 {
+    position: absolute;
     top: 13%;
     left: 20%;
     z-index: 0;
@@ -2855,35 +2119,35 @@ a.personal-links--stackoverflow {
     filter: alpha(opacity=70);
     opacity: 0.7;
   }
-  /* line 604, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 575, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-desktop-three-up figure.shot-hidden {
     position: static;
     display: block;
   }
 
-  /* line 613, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 584, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-stacked figure {
     margin: 0 auto;
   }
-  /* line 617, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 588, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-stacked figure + figure {
     margin-top: 4%;
   }
 
-  /* line 622, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 593, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .type-logo figure {
     margin: 0 auto 4%;
   }
 
-  /* line 626, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 597, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-responsive {
     position: relative;
   }
-  /* line 629, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 600, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-responsive .desktop-shot {
     width: 90%;
   }
-  /* line 633, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 604, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .layout-responsive .mobile-shot {
     position: absolute;
     right: 0;
@@ -2892,29 +2156,29 @@ a.personal-links--stackoverflow {
   }
 }
 @media screen and (min-width: 920px) {
-  /* line 650, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 621, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .portfolio-pieces--item .inner-wrap {
     width: 90%;
   }
 
-  /* line 655, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 626, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .portfolio-pieces--item--description {
     float: left;
     width: 48%;
     margin-bottom: 0;
   }
 
-  /* line 661, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 632, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .portfolio-pieces--item--info {
     float: right;
     width: 48%;
     margin-bottom: 0;
   }
-  /* line 666, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 637, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .portfolio-pieces--item--info ul {
     margin-top: 0;
   }
-  /* line 669, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
+  /* line 640, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_app.scss */
   .portfolio-pieces--item--info ul b {
     text-align: right;
   }
@@ -3007,7 +2271,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #lynx-apollo.portfolio-pieces--item a:hover {
-  color: #b2cedb;
+  color: #8fb8cb;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3025,7 +2289,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #brother-campaigns.portfolio-pieces--item a:hover {
-  color: #fbbde1;
+  color: #f78ecc;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3043,7 +2307,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #knorr-mobile.portfolio-pieces--item a:hover {
-  color: #fdf6d1;
+  color: #fbeda0;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3061,7 +2325,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #drinkiq.portfolio-pieces--item a:hover {
-  color: #d68365;
+  color: #cb633d;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3079,7 +2343,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #purple-magazine.portfolio-pieces--item a:hover {
-  color: #4d4d4d;
+  color: #333333;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3097,7 +2361,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #novalux.portfolio-pieces--item a:hover {
-  color: #cefbf6;
+  color: #9ff7ee;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3111,11 +2375,11 @@ a.personal-links--stackoverflow {
 }
 /* line 11, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #novalux-logo.portfolio-pieces--item a {
-  color: #085c53;
+  color: #042d29;
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #novalux-logo.portfolio-pieces--item a:hover {
-  color: #14e9d2;
+  color: #0c8b7e;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3133,7 +2397,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #datasift.portfolio-pieces--item a:hover {
-  color: #ffe6cc;
+  color: #ffcc99;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3151,7 +2415,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #colette.portfolio-pieces--item a:hover {
-  color: #e4f4ed;
+  color: #bfe6d6;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3169,7 +2433,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #shift-4.portfolio-pieces--item a:hover {
-  color: #4d4d4d;
+  color: #333333;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3183,11 +2447,11 @@ a.personal-links--stackoverflow {
 }
 /* line 11, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #conversocial.portfolio-pieces--item a {
-  color: #224764;
+  color: white;
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #conversocial.portfolio-pieces--item a:hover {
-  color: #5996c6;
+  color: white;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3205,7 +2469,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #sohofixed.portfolio-pieces--item a:hover {
-  color: #9ed0ff;
+  color: #6bb8ff;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3223,7 +2487,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #sohofixed-identity.portfolio-pieces--item a:hover {
-  color: #a2a2a2;
+  color: #888888;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3237,11 +2501,11 @@ a.personal-links--stackoverflow {
 }
 /* line 11, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #choreographic-grid.portfolio-pieces--item a {
-  color: #b6daf2;
+  color: #f790aa;
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #choreographic-grid.portfolio-pieces--item a:hover {
-  color: white;
+  color: #feeff3;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3295,7 +2559,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #validatr.portfolio-pieces--item a:hover {
-  color: #4d4d4d;
+  color: #333333;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3313,7 +2577,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #sublime-text-setup.portfolio-pieces--item a:hover {
-  color: #c3c3c3;
+  color: #aaaaaa;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3331,7 +2595,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #sass-snippets.portfolio-pieces--item a:hover {
-  color: #4d4d4d;
+  color: #333333;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3367,7 +2631,7 @@ a.personal-links--stackoverflow {
 }
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #placeholders.portfolio-pieces--item a:hover {
-  color: #f6c38d;
+  color: #f2a95e;
 }
 
 /* line 3, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
@@ -3386,6 +2650,18 @@ a.personal-links--stackoverflow {
 /* line 14, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
 #html5.portfolio-pieces--item a:hover {
   color: white;
+}
+
+/* line 55, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
+#choreographic-grid {
+  background-image: url("/img/ui/bg-grid.png");
+  background-position: center top;
+}
+
+/* line 60, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_portfolio-colours.scss */
+#lynx-apollo {
+  background-image: url("/img/projects/lynx-apollo/stars.jpg");
+  background-position: center top;
 }
 
 /* line 6, /Users/mrmartineau/Dropbox/dropbox-htdocs/personal-current/martineau.tv/scss/_utilities.scss */

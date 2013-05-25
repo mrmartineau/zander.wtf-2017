@@ -75,6 +75,8 @@ module.exports = function (grunt) {
 			js : {
 				options: {
 					mangle: false,
+					beautify: true,
+					compress: false,
 					// report: 'gzip',
 
 					// sourceMap: @string. The location of the source map, relative to the project

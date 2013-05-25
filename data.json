@@ -606,10 +606,6 @@
 				{
 					"caption": "Logo on dark background",
 					"url": "01.gif"
-				},
-				{
-					"caption": "Logo on light background",
-					"url": "02.gif"
 				}
 			],
 			"meta": {
@@ -782,7 +778,7 @@
 	},
 	"sublime": {
 		"title" : "Sublime Text resources",
-		"description": "Sublime Text is my code editor of choice. It is fast, extremely extendible and I highly recommend that you use it if you are a front-end web developer. Here I present some plugins and",
+		"description": "<p><a href=\"http://sublimetext.com\">Sublime Text</a> is my code editor of choice. It is fast, extremely extendible and I highly recommend that you use it if you are a front-end web developer. Here I present some plugins and snippets that will help to improve your experience with this code editor.</p>",
 		"items": [
 			{
 				"name": "Sublime Text Setup",

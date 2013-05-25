@@ -74,7 +74,7 @@ h1 {
 h2 {
 	@include rem(font-size, 32);
 	@include rem(line-height, 40);
-	margin-top: 30px;
+	margin-top: 60px;
 	margin-bottom: 30px;
 }
 h3 {
@@ -312,3 +312,6 @@ sub { bottom: -0.25em; }
 .text-centre, .text-center { text-align: center;}
 .text-left { text-align: left;}
 .text-right { text-align: right;}
+
+::-moz-selection { color: #fff;  background: #d14; }
+::selection      { color: #fff;  background: #d14; }

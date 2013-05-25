@@ -2,6 +2,7 @@
 layout: post
 title: "Pure CSS Icons"
 categories:
+- Code
 - CSS
 comments: true
 comments_id: 211
@@ -31,7 +32,7 @@ Made with just two spans rotated at opposite angles.
 ![Heart](/img/posts/210.png)
 
 #### iPhone
-With a big dose of inspiration from the brilliant "Helveticons":http://helveticons.ch icon set, I created this iPhone icon. Three spans within one container div.
+With a big dose of inspiration from the brilliant [Helveticons](http://helveticons.ch) icon set, I created this iPhone icon. Three spans within one container div.
 ![iPhone](/img/posts/209.png)
 
 #### Microphone
