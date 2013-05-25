@@ -13,7 +13,8 @@ module.exports = function (grunt) {
 	// == JS files
 	var jsFileList = [
 		'js/plugins.js',
-		'js/script-jekyll.js'
+		'js/libs/handlebars.js',
+		'js/script.js'
 	];
 	var jsFile = '_script.min.js';
 	// ====================
@@ -22,8 +23,9 @@ module.exports = function (grunt) {
 	var distDir = 'js/_compiled/';
 
 	// ====================
-	// Grunt config
-	var config = {
+
+	// Project configuration.
+	grunt.initConfig({
 		pkg: require('./package'),
 		meta: {
 			banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -76,13 +78,13 @@ module.exports = function (grunt) {
 					// report: 'gzip',
 
 					// sourceMap: @string. The location of the source map, relative to the project
-					sourceMap: '_script.min.js.map',
+					sourceMap: 'script.min.js.map',
 
 					// sourceMappingURL: @string. The string that is printed to the final file
-					sourceMappingURL: '../../_script.min.js.map'
+					sourceMappingURL: '../../script.min.js.map'
 				},
 				files: {
-					'js/_compiled/_script.min.js' : jsFileList
+					'js/compiled/script.min.js' : jsFileList
 				}
 			}
 		},
@@ -95,14 +97,12 @@ module.exports = function (grunt) {
 			main: {
 				files: [
 					{
-						src: ['js/_compiled/_script.min.js'],
-						dest: '_site/js/_compiled/_script.min.js',
-						filter: 'isFile'
+						src: ['js/compiled/script.min.js'],
+						dest: '_site/js/compiled/script.min.js'
 					},
 					{
-						src: ['_script.min.js.map'],
-						dest: '_site/_script.min.js.map',
-						filter: 'isFile'
+						src: ['script.min.js.map'],
+						dest: '_site/script.min.js.map'
 					}
 				]
 			}
@@ -115,18 +115,18 @@ module.exports = function (grunt) {
 			},
 
 			js: {
-				files: 'js/**/*.js',
+				files: ['Gruntfile.js','js/*.js','js/libs/**/*.js'],
 				tasks: ['uglify', 'copy:main']
 			},
 
 			json : {
 				files: '*.json',
-				tasks: ['jekyll:dev', 'copy:main']
+				tasks: ['jekyll:blog', 'copy:main']
 			},
 
 			jekyll: {
-				files: ['blog/*.html', '_includes/*.html', '_layouts/*.html', '_posts/**/*.md', 'config.yml', '*.php'],
-				tasks: ['jekyll:dev', 'copy:main']
+				files: ['_includes/*.html', '_layouts/*.html', '_posts/**/*.md', 'config.yml', '*.php'],
+				tasks: ['jekyll:blog', 'copy:main']
 			}
 		},
 
@@ -163,25 +163,15 @@ module.exports = function (grunt) {
 
 		jekyll: {
 			server : {
-				src : './',
-				dest: '_site',
-				server : true,
-				server_port : 8000,
-				auto : true
+				server : false,
+				auto : false
 			},
-			dev: {
+			blog: {
 				src: './',
 				dest: '_site'
-			},
-			prod: {
-				src: './',
-				dest: '_deploy'
 			}
 		}
-	};
-
-	// Project configuration.
-	grunt.initConfig(config);
+	});
 
 	// Load some stuff
 	grunt.loadNpmTasks('grunt-modernizr');
