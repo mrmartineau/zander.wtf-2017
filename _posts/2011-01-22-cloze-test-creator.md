@@ -6,6 +6,7 @@ categories:
 
 comments: true
 comments_id: 232
+comments_old: true
 link: http://martineau.tv/cloze/
 link-title: martineau.tv/cloze/
 
