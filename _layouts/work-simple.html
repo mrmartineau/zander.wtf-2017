@@ -1,70 +1,64 @@
 ---
 layout: work-wrapper
 ---
-<article id="{{ page.meta-id }}" class="portfolio-pieces--item type-{{ page.meta-type }} layout-{{ page.meta-layout }}">
-	<div class="inner-wrap">
-		<div class="portfolio-pieces--item--inner group">
-			<h1 class="portfolio-pieces--item--inner--title">{{ page.title }}</h1>
-			<div class="portfolio-pieces--item--inner--site-url text-centre">{{ page.view | markdownify }}</div>
+	<article id="{{ page.meta-id }}" class="portfolio-pieces--item type-{{ page.meta-type }} layout-{{ page.meta-layout }}">
+		<div class="inner-wrap">
+			<div class="portfolio-pieces--item--inner group">
+				<h1 class="portfolio-pieces--item--inner--title"><a href="{{ page.url }}" title="Read {{ page.title }}">{{ page.title }}</a></h1>
+				<div class="portfolio-pieces--item--inner--site-url text-centre">{{ page.view | markdownify }}</div>
 
-			<section class="portfolio-pieces--item--description">
-				{{ content }}
+				<section class="portfolio-pieces--item--description">
+					{{ page.content }}
+				</section>
+
+				<section class="portfolio-pieces--item--info">
+					<ul>
+						<li><b>Date:</b> <div>{{ page.meta-date}}</div></li>
+						<li><b>Skills:</b> <div>{{ page.meta-skills }}</div></li>
+						{% if page.designers %}
+							{% for designer in page.designers %}
+							<li>
+								<b>Designer:</b> <div>{{ designer | markdownify }}</div>
+							</li>
+							{% endfor %}
+						{% endif %}
+
+						{% if page.developers %}
+							{% for developer in page.developers %}
+							<li>
+								<b>Developer:</b> <div>{{ developer | markdownify }}</div>
+							</li>
+							{% endfor %}
+						{% endif %}
+
+						{% if page.agency %}
+							{% for agency in page.agency %}
+							<li>
+								<b>Agency:</b> <div>{{ agency | markdownify }}</div>
+							</li>
+							{% endfor %}
+						{% endif %}
+
+						{% if page.client %}
+							{% for client in page.client %}
+							<li>
+								<b>Client:</b> <div>{{ client | markdownify }}</div>
+							</li>
+							{% endfor %}
+						{% endif %}
+					</ul>
+				</section>
+
+			</div>
+
+			{% if page.images %}
+			<section class="portfolio-pieces--item--shots">
+				{% for image in page.images %}
+					<figure class="shot-{{ forloop.index0 }} shot-visible" data-index="{{ forloop.index0 }}">
+						{{ image | markdownify }}
+					</figure>
+				{% endfor %}
 			</section>
-
-			<section class="portfolio-pieces--item--info">
-				<ul>
-					<li><b>Date:</b> <div>{{ page.meta-date}}</div></li>
-					<li><b>Skills:</b> <div>{{ page.meta-skills }}</div></li>
-					{% if page.designers %}
-						{% for designer in page.designers %}
-						<li>
-							<b>Designer:</b> <div>{{ designer | markdownify }}</div>
-						</li>
-						{% endfor %}
-					{% endif %}
-
-					{% if page.developers %}
-						{% for developer in page.developers %}
-						<li>
-							<b>Developer:</b> <div>{{ developer | markdownify }}</div>
-						</li>
-						{% endfor %}
-					{% endif %}
-
-					{% if page.agency %}
-						{% for agency in page.agency %}
-						<li>
-							<b>Agency:</b> <div>{{ agency | markdownify }}</div>
-						</li>
-						{% endfor %}
-					{% endif %}
-
-					{% if page.client %}
-						{% for client in page.client %}
-						<li>
-							<b>Client:</b> <div>{{ client | markdownify }}</div>
-						</li>
-						{% endfor %}
-					{% endif %}
-				</ul>
-			</section>
-
+			{% endif %}
 		</div>
-
-		{% if page.images %}
-		<section class="portfolio-pieces--item--shots">
-			{% for image in page.images %}
-				<figure class="shot-hidden-{{ forloop.index0 }} shot-hidden is-invisible">
-					{{ image | markdownify }}
-				</figure>
-			{% endfor %}
-
-			{% for image in page.images %}
-				<figure class="shot-{{ forloop.index0 }} shot-visible" data-index="{{ forloop.index0 }}">
-					{{ image | markdownify }}
-				</figure>
-			{% endfor %}
-		</section>
-		{% endif %}
-	</div>
-</article>
+	</article>
