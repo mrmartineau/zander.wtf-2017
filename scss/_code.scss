@@ -6,11 +6,14 @@
 
 // Inline and block code styles
 code,
-pre {
+pre,
+.gist,
+.gist .gist-file .gist-data .line-pre,
+.gist-meta {
 	padding: 0 3px 2px;
-	font-family: $monoFontFamily;
+	font-family: $monoFontFamily !important;
 	_font-family: 'courier new', monospace;
-	@include font-size(15);
+	@include font-size(14);
 	color: $grayDark;
 	@include border-radius(3px);
 	tab-size: 2;
@@ -60,4 +63,9 @@ pre {
 .pre-scrollable {
 	max-height: 340px;
 	overflow-y: scroll;
+}
+
+.gist-file {
+	border-radius: 5px;
+	overflow: hidden;
 }

@@ -76,7 +76,7 @@ $boldFontWeight:                     bold;
 // TYPOGRAPHY
 $sansFontFamily:                     "colfax-web-1", "colfax-web-2", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serifFontFamily:                    Georgia, "Times New Roman", Times, serif;
-$monoFontFamily:                     "source-code-pro-1", "source-code-pro-2", Menlo, Monaco, "Courier New", monospace;
+$monoFontFamily:                     "source-code-pro-1", "source-code-pro-2", Menlo, Consolas,"Liberation Mono", Monaco, "Courier New", monospace;
 
 $baseFontFamily:                     $sansFontFamily;
 $altFontFamily:                      $serifFontFamily;
@@ -186,6 +186,7 @@ $gridColumnPaddingUnit: 'px'   ; // [in pixels or percent] Specify your unit of 
 $nestedColumnPadding  : false ; // Remove padding on nested columns so they are aligned correctly. Set this to [false] to enable it.
 
 
+
 // ==============================
 // === APP-SPECIFIC VARIABLES ===
 // ==============================
@@ -193,4 +194,5 @@ $narrow: 550;
 $mid: 550px;    // 550/20 = 27.5em
 $wide: 868px; // 868/20 = 43.4em
 $wider: 920px;  // 920/20 = 46em
+
 

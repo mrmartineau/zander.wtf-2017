@@ -106,7 +106,7 @@ a {
 	z-index: 1;
 
 	h1 {
-		margin: 30px 5% 30px;
+		margin: 20px 5%;
 		color: $accentColor;
 		@include font-size(32);
 		@include line-height(40);
@@ -164,7 +164,9 @@ a {
 		font-family: 'entypo-social';
 		@include font-size(110);
 		font-weight: 400;
-		line-height: 1;
+		line-height: 0.5;
+		height: 75px;
+		vertical-align: top;
 
 		&:hover {
 			color: #d14;
@@ -394,6 +396,21 @@ $portfolioSidePadding: 13%;
 	a {
 		margin: 0 10px;
 	}
+}
+
+// ===================
+// === Site search ===
+// ===================
+.site-search {
+	margin: 30px;
+}
+.site-search-input {
+	@include border-radius(50px);
+	// padding-left: 20px;
+	// padding-right: 20px;
+	width: 260px;
+	height: 40px;
+	// text-align: center;
 }
 
 // ===========================================

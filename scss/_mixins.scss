@@ -317,7 +317,7 @@ $old-ie: false !default;
 	background-image: -o-linear-gradient($deg, $startColor, $endColor); // Opera 11.10
 	background-image: linear-gradient($deg, $startColor, $endColor); // The standard
 }
-@mixin gradient-radial($innerColor: #555, $outerColor: #333) {
+@mixin gradient-radial( $innerColor: #555, $outerColor: #333) {
 	background-color: $outerColor;
 	background-image: -webkit-gradient(radial, center center, 0, center center, 460, from($innerColor), to($outerColor));
 	background-image: -webkit-radial-gradient(circle, $innerColor, $outerColor);
