@@ -103,18 +103,7 @@ Just look at the following images:
 Installation tips: Download the script & put it into a folder called `RMaksimSublimeText2Solutions` within your `Packages` folder. Then open Sublime, the edit the `Key Bindings - User`
 
 ![](http://cl.ly/9kW6/Screen_Shot_2011-08-30_at_23.42.01.png)
-Now paste in the key bindings from here:
-
-{% highlight json %}
-	[
-		{ "keys": ["alt+up"],         "command": "inc_dec_value", "args": { "action": "inc_min" } },
-		{ "keys": ["alt+down"],       "command": "inc_dec_value", "args": { "action": "dec_min" } },
-		{ "keys": ["super+up"],       "command": "inc_dec_value", "args": { "action": "inc_max" } },
-		{ "keys": ["super+down"],     "command": "inc_dec_value", "args": { "action": "dec_max" } },
-		{ "keys": ["super+alt+up"],   "command": "inc_dec_value", "args": { "action": "inc_all" } },
-		{ "keys": ["super+alt+down"], "command": "inc_dec_value", "args": { "action": "dec_all" } }
-	]
-{% endhighlight %}
+Now paste in the key bindings from [here](https://gist.github.com/mrmartineau/5734979#file-inc-dec-json):
 
 Now restart Sublime. :)
 
@@ -125,107 +114,7 @@ Sublime! Check the
 
 ![](http://cl.ly/CfSN/Screen%20Shot%202011-12-15%20at%2022.10.37.png)
 
-This is my current setup for my Mac:
-
-{% highlight json %}
-	[
-		{"id": "side-bar-files-open-with",
-			"children":
-			[
-				// Espresso
-				{
-					"caption": "Espresso",
-					"id": "side-bar-files-open-with-espresso",
-					"command": "side_bar_files_open_with",
-					"args": {
-						"paths": [],
-						"application": "Espresso.app",
-						"extensions":"css" //open all even folders
-					}
-				},
-				// CSS Edit
-				{
-					"caption": "CSS Edit",
-					"id": "side-bar-files-open-with-cssedit",
-					"command": "side_bar_files_open_with",
-					"args": {
-						"paths": [],
-						"application": "CSSEdit.app",
-						"extensions":"css" //any file with extension
-					}
-				},
-				{"caption":"-"},
-				// Browsers
-				{
-					"caption": "Chrome",
-					"id": "side-bar-files-open-with-chrome",
-					"command": "side_bar_files_open_with",
-					"args": {
-						"paths": [],
-						"application": "Chrome.app",
-						"extensions":"html|php"  //any file with these extensions
-					}
-				},
-				{
-					"caption": "Firefox",
-					"id": "side-bar-files-open-with-firefox",
-					"command": "side_bar_files_open_with",
-					"args": {
-						"paths": [],
-						"application": "Firefox.app",
-						"extensions":"html|php"  //any file with these extensions
-					}
-				},
-				{"caption":"-"},
-				// Photoshop
-				{
-					"caption": "Photoshop",
-					"id": "side-bar-files-open-with-photoshop",
-					"command": "side_bar_files_open_with",
-					"args": {
-						"paths": [],
-						"application": "Adobe Photoshop CS5.app",
-						"extensions":"psd|png|jpg|jpeg|gif"  //any file with these extensions
-					}
-				},
-				// Preview
-				{
-					"caption": "Preview",
-					"id": "side-bar-files-open-with-preview",
-					"command": "side_bar_files_open_with",
-					"args": {
-						"paths": [],
-						"application": "Preview.app",
-						"extensions":"psd|png|jpg|jpeg|gif"  //any file with these extensions
-					}
-				},
-				{"caption":"-"},
-				// Textmate
-				{
-					"caption": "Textmate",
-					"id": "side-bar-files-open-with-textmate",
-					"command": "side_bar_files_open_with",
-					"args": {
-						"paths": [],
-						"application": "Textmate.app",
-						"extensions":"html|php|js"  //any file with these extensions
-					}
-				},
-				// Coda
-				{
-					"caption": "Coda",
-					"id": "side-bar-files-open-with-coda",
-					"command": "side_bar_files_open_with",
-					"args": {
-						"paths": [],
-						"application": "Coda.app",
-						"extensions":"html|php|js"  //any file with these extensions
-					}
-				}
-			]
-		}
-	]
-{% endhighlight %}
+View the gist of these settings at [gist.github.com/mrmartineau/5734979](https://gist.github.com/mrmartineau/5734979)
 
 
 ### More packages:
@@ -248,42 +137,7 @@ This is my current setup for my Mac:
 Most of the above plugins rely on keyboard shortcuts & it’s not always
 totally clear how these are handled. I add mine to my user’s Key
 Bindings (found by opening the file in Sublime’s prefs - ‘Key Bindings -
-User’). For example, here is mine in it’s entirety:
-
-{% highlight json %}
-	[
-		{ "keys": ["super+."], "command": "close_tag" },
-		{ "keys": ["super+alt+shift+a"], "command": "alignment" },
-		{ "keys": ["super+alt+ctrl+a"], "command": "alignment" },
-		{ "keys": ["alt+up"],  "command": "inc_dec_number", "args": { "delta": 1} },
-		{ "keys": ["alt+down"], "command": "inc_dec_number", "args": { "delta": -1} },
-		{ "keys": ["super+up"],  "command": "inc_dec_number", "args": { "delta": 10} },
-		{ "keys": ["super+down"], "command": "inc_dec_number", "args": { "delta": -10} },
-		{ "keys": ["ctrl+shift+c"], "command": "convert_to_utf8" },
-		{ "keys": ["super+shift+alt+u"], "command": "UrlQuoteSelection" },
-		{ "keys": ["super+shift+alt+c"], "command": "CloseTagCommand" },
-		{ "keys": ["super+shift+t"], "command": "open_recent_files" },
-		{ "keys": ["ctrl+alt+forward_slash"], "command": "google_it" },
-		{ "keys": ["super+shift+8"], "command": "pep8_check" },
-		{ "keys": ["super+."], "command": "spaces-to-tabs" },
-		{ "keys": ["escape"], "command": "alternative_autocomplete", "context":
-			[
-			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-			{ "key": "overlay_visible", "operator": "equal", "operand": false }
-			]
-		},
-		{ "keys": ["shift+escape"], "command": "alternative_autocomplete", "args": {"cycle": "previous"}, "context":
-			[
-			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-			{ "key": "overlay_visible", "operator": "equal", "operand": false }
-			]
-		},
-		{ "keys": [""], "command": "bufmod_apply_function" },
-		{ "keys": [""], "command": "bufmod_decorate"},
-		{ "keys": ["super+shift+c"], "command": "color_pick" },
-		{ "keys": ["ctrl+shift+b"], "command": "insert_snippet", "args": {"contents": "${TM_COMMENT_START/s*$//} ==${1/./=/g}==${TM_COMMENT_END/^s*(.+)/ $1/}\n${TM_COMMENT_START/s*$//} = ${1:Banner} =${TM_COMMENT_END/^s*(.+)/ $1/}\n${TM_COMMENT_START/s*$//} ==${1/./=/g}==${TM_COMMENT_END/^s*(.+)/ $1/}"}}
-	]
-{% endhighlight %}
+User’). For example, here is mine in it’s entirety: [gist.github.com/mrmartineau/5734979#file-keyboard-shortcuts-json](https://gist.github.com/mrmartineau/5734979#file-keyboard-shortcuts-json)
 
 These are used by a variety of plugins & can be changed to whatever you like.
 
@@ -295,9 +149,9 @@ Also, I just [found a pretty neat snippet](https://forrst.com/posts/Textmates_co
 The comment banner looks like this:
 
 {% highlight html %}
-	<!--  ==========  -->
-	<!--  = Banner =  -->
-	<!--  ==========  -->
+<!--  ==========  -->
+<!--  = Banner =  -->
+<!--  ==========  -->
 {% endhighlight %}
 
 ## Syntax Themes
