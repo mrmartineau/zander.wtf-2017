@@ -19,10 +19,6 @@
 
 	}
 
-	// p a {
-	// 	color: $green;
-	// }
-
 	img, iframe {
 		display: block;
 		margin: 24px auto;
@@ -43,15 +39,17 @@
 	}
 }
 
-#disqus_thread iframe {
+#disqus_thread iframe, .entry .no-shadow {
 	@include box-shadow(none);
 }
 
 .entry--title {
 	text-align: center;
-	@include rem(font-size, 32);
-	@include rem(line-height, 40);
+	@include rem(font-size, 42);
+	line-height: 1.3;
+	// @include rem(line-height, 40);
 	margin: 0 4% 30px;
+	font-weight: normal;
 
 	&, a {
 		color: $silverDark;
