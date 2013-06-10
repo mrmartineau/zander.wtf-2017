@@ -40,7 +40,7 @@ p {
 	margin-bottom: $baseLineHeight + px;
 
 	small {
-		color: $grayLight;
+		color: lighten($textColor, 15%);
 	}
 }
 
@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	& small {
 		font-weight: normal;
-		color: $grayLight;
+		color: lighten($textColor, 15%);
 	}
 }
 h1 {
