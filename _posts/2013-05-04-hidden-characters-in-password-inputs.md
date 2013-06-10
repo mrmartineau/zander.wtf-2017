@@ -16,11 +16,8 @@ input[type="password"] {
 }
 {% endhighlight %}
 
-**I will be adding this to all projects from now on, and so should you.**
+I will be adding this to all projects from now on, and I recommend you do as well.
 
-### Here's an example:
-
-[View it on BrowserStack](http://www.browserstack.com/start#os=Windows&os_version=XP&browser=IE&browser_version=8.0&zoom_to_fit=true&url=http%3A%2F%2Fcodepen.io%2Fmrmartineau%2Ffull%2FgvlIt&resolution=1280x1024&speed=2)
-
+#### Here's an example:
 <pre class="codepen" data-height="300" data-type="result" data-href="gvlIt" data-user="mrmartineau" data-safe="true"><code></code><a href="http://codepen.io/mrmartineau/pen/gvlIt">Check out this Pen!</a></pre>
 <script async src="http://codepen.io/assets/embed/ei.js"></script>
