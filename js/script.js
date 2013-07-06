@@ -95,6 +95,7 @@ ZANDER.ui = {
 			if ( ZANDER.SiteSetup.navClosed === true ) {
 				ZANDER.ui.openNav();
 				ZANDER.SiteSetup.navClosed = false;
+				_gaq.push(['_trackEvent', 'Navigation', 'Opened']);
 			} else {
 				ZANDER.ui.closeNav();
 				ZANDER.SiteSetup.navClosed = true;
