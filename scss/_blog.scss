@@ -6,6 +6,7 @@
 	width: 85%;
 	max-width: 650px;
 	margin: 0 auto 100px;
+	word-wrap: break-word;
 
 	ul {
 		list-style-type: circle;
@@ -37,9 +38,9 @@
 
 .entry--title {
 	text-align: center;
-	@include rem(font-size, 42);
+	@include rem(font-size, 30);
 	line-height: 1.3;
-	margin: 0 4% 30px;
+	margin: 0 0 15px;
 	font-weight: normal;
 
 	&, a {
@@ -52,11 +53,39 @@
 
 }
 
-
 .entry--date {
 	@include font-size(15);
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
+
+
+// ==================
+// === Pagination ===
+// ==================
+.pagination {
+	width: 85%;
+	max-width: 650px;
+	margin: 20px auto 40px;
+	padding-top: 20px;
+	text-align: center;
+	border-top: 1px solid #ddd;
+
+	a {
+		margin: 0 10px;
+	}
+}
+
+// === 550px> ===
+@media screen and (min-width: 550px) {
+	.entry--title {
+		@include rem(font-size, 42);
+		margin: 0 4% 30px;
+	}
+	.entry--date {
+		margin-bottom: 30px;
+	}
+}
+// === end 550px> ===
 
 // === 790px> ===
 @media screen and (min-width: 790px) {

@@ -11,10 +11,11 @@
 // LINKS
 // HELPER CLASSES
 
-@include font-face('entypo-social', '/css/fonts/EntypoZ/entyposocial-regular', normal, normal, true);
+@include font-face('entypo-social', 'fonts/EntypoZ/entyposocial-regular', normal, normal, true);
 
 html {
 	font-size: 20px;
+	-webkit-text-size-adjust: none;
 }
 
 // BODY TEXT
@@ -112,12 +113,14 @@ h6 {
 
 // LINKS
 a {
-	color: $linkColor;
-	text-decoration: none;
-}
-a:hover {
-	color: $linkColorHover;
-	//text-decoration: underline;
+	&, &:link, &:visited {
+		color: $linkColor;
+		text-decoration: none;
+	}
+	&:hover, &:active {
+		color: $linkColorHover;
+		//text-decoration: underline;
+	}
 }
 
 

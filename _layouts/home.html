@@ -1,0 +1,21 @@
+{% include html_start.html %}
+	<body class="{{ page.pageid }}">
+
+		<section class="hero-unit">
+			<div class="hero-unit-inner">
+				<h1>Hello, my name is <br>
+					<strong>Zander Martineau</strong></h1>
+				<p>I am a London-based Creative Technologist, working for <a href="http://tmw.co.uk">TMW</a>. CSS/Sass, HTML and Javascript are my weapons of choice; and I think I might be addicted to Github and Codepen&hellip;</p>
+			</div>
+		</section>
+
+		<!--  === MASTHEAD ===  -->
+		{% include masthead.html %}
+
+		<!--  === MAIN CONTENT ===  -->
+		<section id="main" role="main">
+		</section>
+
+		{{ content }}
+
+{% include html_end.html %}

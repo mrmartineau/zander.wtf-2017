@@ -3,110 +3,99 @@
 // === Your app styles ===
 // =======================
 @-webkit-keyframes z-fade-in {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
 }
 @-moz-keyframes z-fade-in {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
 }
 @-o-keyframes z-fade-in {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
 }
 @keyframes z-fade-in {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
 }
-body {
-	-webkit-animation: z-fade-in 1s; /* Safari 4+ */
-	  -moz-animation:    z-fade-in 1s; /* Fx 5+ */
-	  -o-animation:      z-fade-in 1s; /* Opera 12+ */
-	  animation:         z-fade-in 1s; /* IE 10+ */
-}
+
+
 body {
 	overflow-y: scroll;
 	padding-top: 40px;
+
+	&.home {
+		padding-top: 0;
+	}
+
+	-webkit-animation: z-fade-in 1s; /* Safari 4+ */
+	   -moz-animation: z-fade-in 1s; /* Fx 5+ */
+	     -o-animation: z-fade-in 1s; /* Opera 12+ */
+	        animation: z-fade-in 1s; /* IE 10+ */
 }
+
 a {
 	@include transition();
 }
 
-// === Navigation ===
-@mixin alt-link($normal: $silverDark, $hover: $silver) {
-	a, a:link, a:visited {
-		color: $normal;
-	}
+// === Hero ===
+.hero-unit {
+	border-bottom: 1px solid #ddd;
+	padding: 50px 0;
 
-	a:hover {
-		color: $hover;
+	h1 {
+		font-weight: normal;
 	}
 }
-.navvy-container {
-	position: fixed;
-	left: 0;top: 0;right: 0;
-	background-color: #f1f1f1;
-	z-index: 10;
-	padding: 10px 0;
-	text-transform: uppercase;
-	text-align: center;
-	font-weight: bold;
-	@include font-size(16);
-	height: 40px;
-	color: $silverDark;
 
-	a {
-		vertical-align: top;
+.hero-unit-inner {
+	max-width: 600px;
+	margin: 0 2%;
+
+	:first-child {
+		margin-top: 0;
 	}
-
-	@include alt-link;
-}
-
-.navvy {
-	margin: 0 20px;
-	display: inline-block;
-	cursor: pointer;
-	font-weight: 500;
-	z-index: 100;
-	width: 30px;
-	height: 20px;
-
-	b, i {
-		background-color: $silverDark;
-		display: block;
-		height: 4px;
-	}
-
-	&.is-active,
-	&:hover {
-		b,i {
-			background-color: $silver;
-		}
-	}
-
-	&:active {
-		b,i {
-			background-color: darken($linkColorHover, 20%);
-		}
-	}
-
-	i {
-		margin: 4px 0;
+	:last-child {
+		margin-bottom: 0;
 	}
 }
 
 // === MASTHEAD ===
 .masthead {
-	position: fixed;
-	left: 0; top: 40px; right: 0;
+	&.site,
+	&.stuck {
+		position: fixed;
+		left: 0;top: 0;right: 0;
+		z-index: 100;
+	}
+
+	&.home {
+		.masthead-content {
+			position: absolute;
+			left: 0; right: 0;
+		}
+	}
+
+	&.home.stuck {
+		.masthead-content {
+			position: static;
+		}
+	}
+}
+.masthead-content {
 	background-color: #f1f1f1;
 	text-align: center;
 	display: none;
-	// @include box-shadow(0 3px 3px rgba(0,0,0,.25));
 	z-index: 1;
+}
+
+.masthead,
+.hero-unit {
+	background-color: #f1f1f1;
+	text-align: center;
 
 	h1 {
-		margin: 20px 5%;
+		margin: 20px 0;
 		color: $accentColor;
 		@include font-size(32);
 		@include line-height(40);
@@ -116,43 +105,58 @@ a {
 	p {
 		margin-bottom: 0;
 	}
+}
 
-	a {
-		color: #d14;
+@mixin alt-link($normal: $silverDark, $hover: #d14) {
+	a, a:link, a:visited {
+		color: $normal;
 	}
-
 	a:hover {
-		color: #d14;
+		color: $hover;
 	}
 }
 
-.hero-unit {
-	padding: 50px 0;
+.nav {
+	padding: 10px 0;
+	text-transform: uppercase;
 	text-align: center;
-}
+	font-weight: bold;
+	@include font-size(16);
+	height: 40px;
+	color: $silverDark;
 
-.hero-unit--inner {
-	@include rem('max-width', 500);
-	margin: 0 5%;
-
-	:first-child {
-		margin-top: 0;
+	a, .zm-logo {
+		vertical-align: top;
+		@include user-select(none);
 	}
 
-	:last-child {
-		margin-bottom: 0;
+	@include alt-link($silverDark, #d14);
+}
+
+.zm-logo {
+	margin: 0 20px;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: 500;
+	z-index: 100;
+	width: 30px;
+	height: 20px;
+
+	&.is-active,
+	&:hover {
+		.zm-logo-item {
+			fill: #d14;
+		}
 	}
 }
 
-
-// ==============
-// === FOOTER ===
-// ==============
-#footer {
+.more-info {
 	z-index: 1000;
 	padding-bottom: 8px;
 }
 
+
+// === Icon links ===
 .icon-links {
 	text-align: center;
 
@@ -167,6 +171,7 @@ a {
 		line-height: 0.5;
 		height: 75px;
 		vertical-align: top;
+		overflow: hidden;
 
 		&:hover {
 			color: #d14;
@@ -221,13 +226,11 @@ a.personal-links--stackoverflow {
 // ================
 // === ARTICLES ===
 // ================
-
 $portfolioColWidth: 48%;
 $portfolioSideMargin: 0;
 $portfolioSidePadding: 13%;
 
 .portfolio-pieces--item {
-
 	position: relative;
 	margin: 0px $portfolioSideMargin 0px 0;
 	background-color: #fff;
@@ -353,11 +356,9 @@ $portfolioSidePadding: 13%;
 	top: 200px;
 	left:50%;
 	display: none;
-
 	width: 180px;
 	margin-left: -90px;
 	opacity: 0;
-
 	z-index: 4;
 	display: inline-block;
 	border: 4px #fff solid;
@@ -386,17 +387,6 @@ $portfolioSidePadding: 13%;
 }
 
 
-// ==================
-// === Pagination ===
-// ==================
-.pagination {
-	text-align: center;
-	padding: 20px;
-
-	a {
-		margin: 0 10px;
-	}
-}
 
 // ===================
 // === Site search ===
@@ -406,11 +396,8 @@ $portfolioSidePadding: 13%;
 }
 .site-search-input {
 	@include border-radius(50px);
-	// padding-left: 20px;
-	// padding-right: 20px;
 	width: 260px;
 	height: 40px;
-	// text-align: center;
 }
 
 // ===========================================
@@ -419,13 +406,14 @@ $portfolioSidePadding: 13%;
 
 // === $mid> ===
 @media screen and (min-width: $mid) {
-	#masthead {
+	.masthead, .hero-unit {
 		h1 {
 			@include rem(font-size, 40);
+			line-height: 1.2;
 		}
 	}
 
-	.hero-unit--inner {
+	.hero-unit-inner {
 		margin: 0 auto;
 	}
 }
