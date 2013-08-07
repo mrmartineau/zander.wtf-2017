@@ -37,7 +37,7 @@ ZANDER.SiteSetup = {
 			success : function( data ) {
 				// TODO: Save this to localstorage & use it
 				ZANDER.data = data;
-				console.log(data);
+				log(data);
 				if ( window.localStorage ) {
 					localStorage.setItem('data', JSON.stringify(data));
 				}
@@ -254,7 +254,7 @@ ZANDER.tpl = {
 		$('.nav').html( template(ZANDER.data) );
 	},
 
-	listing : function( tpl, el) {
+	listing : function(tpl, el) {
 		var template = ZANDER.helpers.template(tpl);
 
 		Handlebars.registerHelper('iter', function(context, options) {
@@ -301,89 +301,4 @@ ZANDER.helpers = {
 	template : function(name) {
 		return Handlebars.compile( $('#'+name+'-tpl').html() );
 	}
-};
-
-ZANDER.Router = {
-	init : function() {
-
-		var router = new Router(ZANDER.Router.routes);
-
-		function notFound() {
-			log('no route found');
-			router.setRoute('/');
-		}
-
-		function allRoutes() {
-			log('Any route!');
-			// ZANDER.tpl.navigation();
-			// ZANDER.tpl.footerLinks();
-			$(window).scrollTop(0);
-
-			// Add current section class to body
-			var currentSection = router.getRoute(0);
-			log(currentSection);
-			$(document.body).addClass(currentSection);
-		}
-
-		router.configure({
-			on: allRoutes,
-			notfound: notFound,
-			html5history: true
-		});
-
-		router.init('/');
-
-	},
-
-	home : function() {
-		ZANDER.tpl.listing('home', '#main');
-		log('Home');
-	},
-
-	projectListView : function() {
-		ZANDER.tpl.listing('home', '#main');
-		log('Projects list');
-	},
-
-	projectItemView : function(projectName) {
-		log('Single project #' + projectName);
-		// ZANDER.tpl.getData('project-item-header', projectName, '#header');
-		ZANDER.tpl.getData('project-item', projectName, '#main');
-	},
-
-	blogView : function() {
-
-	},
-
-	aboutView : function() {
-		log('About page');
-		ZANDER.tpl.listing('about', '#main');
-	},
-
-	cvView : function() {
-		log('CV page');
-		ZANDER.tpl.listing('cv', '#main');
-	},
-
-	openSourceView : function() {
-		log('Open Source page');
-		ZANDER.tpl.listing('open-source', '#main');
-	},
-
-	sublimeView : function() {
-		log('Sublime page');
-		ZANDER.tpl.listing('sublime', '#main');
-	}
-};
-
-ZANDER.Router.routes = {
-	'/': ZANDER.Router.home,
-	'/home': ZANDER.Router.home,
-	'/portfolio': ZANDER.Router.home,
-	'/portfolio/:projectName': ZANDER.Router.projectItemView,
-	'/about': ZANDER.Router.aboutView,
-	'/cv': ZANDER.Router.cvView,
-	'/open-source': ZANDER.Router.openSourceView,
-	'/sublime-text-resources': ZANDER.Router.sublimeView,
-	'/blog': ZANDER.Router.blogView
 };
