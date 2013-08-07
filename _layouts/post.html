@@ -34,3 +34,13 @@ layout: default
 	{% endif %}
 
 </article>
+
+<!-- Pagination links -->
+<div class="pagination">
+	{% if page.previous %}
+		<a href="{{page.previous.url}}">Previous post</a>
+	{% endif %}
+	{% if page.next %}
+		<a href="{{page.next.url}}">Next post</a>
+	{% endif %}
+</div>
