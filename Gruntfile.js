@@ -6,6 +6,8 @@ module.exports = function (grunt) {
 	var jsFileList = [
 		'js/plugins.js',
 		'js/libs/handlebars.js',
+		'js/libs/plugins/waypoints.js',
+		'js/libs/plugins/waypoints-sticky.js',
 		'js/script.js'
 	];
 	var jsFile = '_script.min.js';

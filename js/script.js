@@ -21,6 +21,7 @@ var ZANDER = window.ZANDER || {};
 
 ZANDER.SiteSetup = {
 	navClosed : true,
+
 	init : function () {
 		ZANDER.ui.init();
 		ZANDER.SiteSetup.getData();
@@ -80,7 +81,7 @@ ZANDER.ui = {
 
 	masthead : function() {
 
-		$('#masthead').height( this.viewportHeight() );
+		$('.masthead').height( this.viewportHeight() );
 
 		var getViewPortHeight = function getViewPortHeight() {
 			var viewportHeight = $(window).height() - 300;
@@ -89,7 +90,7 @@ ZANDER.ui = {
 	},
 
 	navigationToggle : function() {
-		$('body').on('click', '.navvy', function(event) {
+		$('body').on('click', '.zm-logo', function(event) {
 			event.preventDefault();
 
 			if ( ZANDER.SiteSetup.navClosed === true ) {
@@ -104,20 +105,22 @@ ZANDER.ui = {
 	},
 
 	openNav : function() {
-		$('.masthead').slideDown('fast');
-		$('.navvy').addClass('is-active');
+		$('.masthead-content').slideDown('fast');
+		$('.zm-logo').addClass('is-active');
 	},
 
 	closeNav : function() {
-		$('.masthead').slideUp('fast');
-		$('.navvy').removeClass('is-active');
+		$('.masthead-content').slideUp('fast');
+		$('.zm-logo').removeClass('is-active');
 	},
 
 	scroll : function() {
-		// TODO: Close nav on scroll
+
+		$('.masthead.home').waypoint('sticky');
+
 		$(window).scroll(function(event) {
 			if ( ZANDER.SiteSetup.navClosed === false ) {
-				log('Close nav on scroll');
+				// log('Close nav on scroll');
 
 				ZANDER.ui.closeNav();
 				ZANDER.SiteSetup.navClosed = true;
@@ -147,16 +150,16 @@ ZANDER.ui = {
 				allSiblingsCount = $allSiblings.length - 1
 			;
 
-			log('allSiblingsCount: ' + allSiblingsCount);
+			// log('allSiblingsCount: ' + allSiblingsCount);
 
 				if ( $this.hasClass('shot-1') ) {
-					log('do nothing');
+					// log('do nothing');
 					return false;
 				} else if ( $this.hasClass('shot-2') ) {
 
 					$allSiblings.each(function(i) {
 						var number = parseInt( $(this).data('index') , 10 );
-						log('number: ' + number );
+						// log('number: ' + number );
 						var
 							className    = 'shot-' + i,
 							incClassName
