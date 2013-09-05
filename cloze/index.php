@@ -1,11 +1,17 @@
-<?php
-
-	$title = 'Cloze Test Generator by Zander Martineau';
-	$pageName = 'cloze';
-	$customCSS = 'css/style.css';
-	include_once '../includes/html_start.php';
-
-?>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Cloze Test Generator by Zander Martineau</title>
+		<meta name="description" content="Zander Martineau is a London-based Creative Technologist working at TMW. This is a selection of my best work over the last few years.">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="/css/kickoff.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script>var pageName = 'cloze';</script>
+		<script type="text/javascript" src="//use.typekit.net/zsa7ozf.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	</head>
 <body>
 	<div id="main" class="entry">
 		<h1 class="text-centre">Cloze creator</h1>
@@ -20,7 +26,7 @@
 			</div>
 		</div>
 		<textarea id="input" class="input" autofocus></textarea>
-		<div class="group">
+		<div class="group"	>
 			<div id="result">
 				<h3>2. Click the words below that you want to hide</h3>
 				<p><small>Click words only once</small></p>
@@ -38,7 +44,22 @@
 			<p><a href="http://en.wikipedia.org/wiki/Cloze_test" title="Cloze Test info">Cloze Test info</a> | Built by <a href="http://martineau.tv/">Zander Martineau</a></p>
 		</footer>
 	</div><!--!/#container -->
-<?php
-	$customScript = 'js/script.js';
-	include_once '../includes/html_end.php';
-?>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/libs/jquery.min.js"><\/script>')</script>
+	<script src="/js/compiled/script.min.js"></script>
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-621491-22']);
+		_gaq.push(['_setDomainName', 'martineau.tv']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</body>
+</html>
