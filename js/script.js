@@ -37,7 +37,7 @@ ZANDER.SiteSetup = {
 			success : function( data ) {
 				// TODO: Save this to localstorage & use it
 				ZANDER.data = data;
-				log(data);
+				console.log(data);
 				if ( window.localStorage ) {
 					localStorage.setItem('data', JSON.stringify(data));
 				}
@@ -115,13 +115,10 @@ ZANDER.ui = {
 	},
 
 	scroll : function() {
-
 		$('.masthead.home').waypoint('sticky');
 
 		$(window).scroll(function(event) {
 			if ( ZANDER.SiteSetup.navClosed === false ) {
-				// log('Close nav on scroll');
-
 				ZANDER.ui.closeNav();
 				ZANDER.SiteSetup.navClosed = true;
 			}

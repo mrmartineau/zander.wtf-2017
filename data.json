@@ -61,6 +61,74 @@
 	},
 	"portfolio": [
 		{
+			"name": "The Bar",
+			"description": "<p>theBar.com is a popular US cocktail resource; I was apart of a team, at TMW, to create the Western Europe version of this site.</p><p>We updated the UX and design and built an extremely fast desktop/mobile site.</p>",
+			"view": {
+				"name": "uk.thebar.com",
+				"url": "http://uk.thebar.com"
+			},
+			"date": "February - September 2013",
+			"skills": "Front-end development; asset font creation, hiDPI",
+			"credits": [
+				{
+					"title": "Designer",
+					"name": "Simon Kinslow",
+					"url": "http://www.simonkinslow.com/"
+				},
+				{
+					"title": "Developer (F/E)",
+					"name": "Nic Bell",
+					"url": "http://nicbell.net/"
+				},
+				{
+					"title": "Developer (B/E)",
+					"name": "Martin Georgiev",
+					"url": "http://www.linkedin.com/profile/view?id=17683453"
+				},
+				{
+					"title": "Developer (B/E)",
+					"name": "Matthew Basson",
+					"url": "http://www.linkedin.com/profile/view?id=50420509"
+				},
+				{
+					"title": "Agency",
+					"name": "TMW",
+					"url": "http://tmw.co.uk"
+				},
+				{
+					"title": "Client",
+					"name": "Diageo",
+					"url": "http://diageo.com"
+				}
+			],
+			"images": [
+				{
+					"caption": "",
+					"url": "02.jpg"
+				},
+				{
+					"caption": "",
+					"url": "01.jpg"
+				},
+				{
+					"caption": "",
+					"url": "03.jpg"
+				}
+			],
+			"meta": {
+				"name" : "thebar",
+				"id": "12",
+				"layout": "desktop-three-up",
+				"type": "website",
+				"colours": {
+					"bg": "#031962",
+					"text": "#fff",
+					"link": "#F12EA1",
+					"linkHover": "#fff"
+				}
+			}
+		},
+		{
 			"name": "Lynx Apollo Vote Boosters",
 			"description": "<p>Lynx is currently (Jan 2013) running a worldwide competition to send someone into space - the entrant with the most votes wins - they asked TMW to create a microsite to help entrants promote themselves and garner more votes.</p><p>We built a responsive, single-page app that allows entrants to create and share a poster or choose from one of many prewritten status messages. The site is interesting because it positions the user in space and changes the viewport on each sub-page. As well as being project lead, I created the moving page navigation element and the more complex responsive features.</p>",
 			"view": {
@@ -125,10 +193,7 @@
 					"text": "#fff",
 					"link": "#F12EA1",
 					"linkHover": "#fff"
-				},
-				"tags": [
-					"parallax"
-				]
+				}
 			}
 		},
 		{
