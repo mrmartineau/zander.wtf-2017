@@ -131,7 +131,17 @@ a {
 	}
 
 	@include alt-link($silverDark, #d14);
+
+	a.is-active {
+		border-bottom: 2px solid rgba($silverDark, 0.3);
+		border-top: 2px solid rgba($silverDark, 0.3);
+		padding-top: 3px;
+		padding-left: 3px;
+		padding-right: 3px;
+	}
 }
+
+
 
 .zm-logo {
 	margin: 0 20px;

@@ -62,7 +62,7 @@
 	"portfolio": [
 		{
 			"name": "The Bar",
-			"description": "<p>theBar.com is a popular US cocktail resource; I was apart of a team, at TMW, to create the Western Europe version of this site.</p><p>We updated the UX and design and built an extremely fast desktop/mobile site.</p>",
+			"description": "<p>theBar.com is a popular US cocktail resource; I was a member of the team who created the Western Europe version of this already popular site.</p><p>From UX to performance, every aspect of the site was improved and carefully considered. I created a special asset font for the site, this creates crisp, hiDpi friendly icons that look great at any resolution.</p>",
 			"view": {
 				"name": "uk.thebar.com",
 				"url": "http://uk.thebar.com"
@@ -76,17 +76,17 @@
 					"url": "http://www.simonkinslow.com/"
 				},
 				{
-					"title": "Developer (F/E)",
+					"title": "Dev (F/E)",
 					"name": "Nic Bell",
 					"url": "http://nicbell.net/"
 				},
 				{
-					"title": "Developer (B/E)",
+					"title": "Dev (B/E)",
 					"name": "Martin Georgiev",
 					"url": "http://www.linkedin.com/profile/view?id=17683453"
 				},
 				{
-					"title": "Developer (B/E)",
+					"title": "Dev (B/E)",
 					"name": "Matthew Basson",
 					"url": "http://www.linkedin.com/profile/view?id=50420509"
 				},
@@ -104,21 +104,19 @@
 			"images": [
 				{
 					"caption": "",
-					"url": "02.jpg"
+					"shot": "desktop",
+					"url": "01.png"
 				},
 				{
 					"caption": "",
-					"url": "01.jpg"
-				},
-				{
-					"caption": "",
-					"url": "03.jpg"
+					"shot": "mobile",
+					"url": "02.png"
 				}
 			],
 			"meta": {
 				"name" : "thebar",
 				"id": "12",
-				"layout": "desktop-three-up",
+				"layout": "responsive",
 				"type": "website",
 				"colours": {
 					"bg": "#031962",
@@ -247,7 +245,7 @@
 					"linkHover": "#fff"
 				},
 				"tags": [
-					"parallax"
+					""
 				]
 			}
 		},
@@ -356,7 +354,7 @@
 				},
 				"bg": "",
 				"tags": [
-					"parallax"
+					""
 				]
 			}
 		},
@@ -394,7 +392,7 @@
 					"linkHover": "#fff"
 				},
 				"tags": [
-					"parallax"
+					""
 				]
 			}
 		},
@@ -436,7 +434,7 @@
 					"linkHover": "#fff"
 				},
 				"tags": [
-					"parallax"
+					""
 				]
 			}
 		},
@@ -483,7 +481,7 @@
 					"linkHover": "#fff"
 				},
 				"tags": [
-					"parallax"
+					""
 				]
 			}
 		},
@@ -573,7 +571,7 @@
 					"linkHover": "#fff"
 				},
 				"tags": [
-					"parallax"
+					""
 				]
 			}
 		},
@@ -610,7 +608,7 @@
 					"linkHover": "#fff"
 				},
 				"tags": [
-					"parallax"
+					""
 				]
 			}
 		},
@@ -647,7 +645,7 @@
 					"linkHover": "#fff"
 				},
 				"tags": [
-					"parallax"
+					""
 				]
 			}
 		},

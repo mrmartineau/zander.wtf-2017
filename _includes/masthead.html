@@ -1,6 +1,6 @@
 <header class="masthead {% if page.pageid == "home" %}home{% else %}site{% endif %}">
 			<nav class="nav home">
-				<a href="/" title="Work">Work</a>
+				<a{% if page.pageid == "home" %} class="is-active"{% endif %} href="/" title="Work">Work</a>
 
 				<div class="zm-logo">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 262.625 175" enable-background="new 0 0 262.625 175" xml:space="preserve">
@@ -8,7 +8,7 @@
 					</svg>
 				</div>
 
-				<a href="/blog" title="Blog">Blog</a>
+				<a{% if page.path contains "blog" %} class="is-active"{% endif %} href="/blog" title="Blog">Blog</a>
 			</nav>
 
 			<div class="masthead-content">
