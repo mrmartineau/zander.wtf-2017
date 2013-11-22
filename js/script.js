@@ -114,9 +114,11 @@
 					ZANDER.ui.masthead.classList.add('stuck');
 					ZANDER.ui.navDocked = true;
 					console.log(ZANDER.ui.heroUnit.style);
+					// FIXME: marginBottom http://stackoverflow.com/questions/318158/how-do-i-set-the-margin-of-an-object-with-javascript
 					ZANDER.ui.heroUnit.style[marginBottom] = ZANDER.ui.masthead.scrollHeight;
 				} else if (ZANDER.ui.navDocked && (navOffset - scrollTop >= 0) ) {
 					ZANDER.ui.masthead.classList.remove('stuck');
+					// FIXME: marginBottom http://stackoverflow.com/questions/318158/how-do-i-set-the-margin-of-an-object-with-javascript
 					ZANDER.ui.heroUnit.style[marginBottom] = 0;
 					ZANDER.ui.navDocked = false;
 				}
