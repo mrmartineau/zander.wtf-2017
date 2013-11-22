@@ -21,8 +21,6 @@
 	});// END DOC READY
 
 	ZANDER.SiteSetup = {
-		navClosed : true,
-
 		init : function () {
 			ZANDER.ui.init();
 			ZANDER.SiteSetup.getData();
@@ -65,43 +63,46 @@
 		heroUnit : document.querySelector('.hero-unit'),
 
 		navDocked : false,
-
+		mastheadContentClosed : true,
 
 		init : function() {
 			var self = this;
-			ZANDER.ui.navigationToggle();
+			ZANDER.ui.mastheadContentToggle();
 			ZANDER.ui.navStickOnScroll();
 			// ZANDER.ui.shotSwitch();
+			ZANDER.ui.getShotsHeight();
+			window.addEventListener('resize', function(e) {
+				ZANDER.ui.getShotsHeight();
+				// console.log('we resized');
+			});
 		},
 
-		navigationToggle : function() {
+		mastheadContentToggle : function() {
 			ZANDER.ui.logo.addEventListener('click', function(e) {
-				if ( ZANDER.SiteSetup.navClosed === true ) {
-					ZANDER.ui.openNav();
-					console.log('open nav');
+				if ( ZANDER.ui.mastheadContentClosed === true ) {
+					ZANDER.ui.mastheadContentOpen();
 				} else {
-					ZANDER.ui.closeNav();
-					console.log('close nav');
+					ZANDER.ui.mastheadContentClose();
 				}
 			});
 		},
 
-		openNav : function() {
+		mastheadContentOpen : function() {
 			_gaq.push(['_trackEvent', 'Navigation', 'Opened']);
 			var mastheadContentHeight = ZANDER.ui.mastheadContent.scrollHeight;
-			ZANDER.ui.mastheadContent.style[height] = mastheadContentHeight;
+			ZANDER.ui.mastheadContent.style.height = mastheadContentHeight + 'px';
 			ZANDER.ui.logo.classList.add('is-active');
-			ZANDER.SiteSetup.navClosed = false;
+			ZANDER.ui.mastheadContentClosed = false;
 		},
 
-		closeNav : function() {
-			ZANDER.ui.mastheadContent.style[height] = 0;
+		mastheadContentClose : function() {
+			ZANDER.ui.mastheadContent.style.height = '0px';
 			ZANDER.ui.logo.classList.remove('is-active');
-			ZANDER.SiteSetup.navClosed = true;
+			ZANDER.ui.mastheadContentClosed = true;
 		},
 
 		/**
-		 * Change the height of the items proportionally based on the width of the viewport
+		 * Stick masthead content to top of screen on scroll
 		 */
 		navStickOnScroll : function() {
 			var navOffset = ZANDER.ui.masthead.offsetTop;
@@ -113,19 +114,16 @@
 				if (!ZANDER.ui.navDocked && (navOffset - scrollTop < 0)) {
 					ZANDER.ui.masthead.classList.add('stuck');
 					ZANDER.ui.navDocked = true;
-					console.log(ZANDER.ui.heroUnit.style);
-					// FIXME: marginBottom http://stackoverflow.com/questions/318158/how-do-i-set-the-margin-of-an-object-with-javascript
-					ZANDER.ui.heroUnit.style[marginBottom] = ZANDER.ui.masthead.scrollHeight;
+					ZANDER.ui.heroUnit.style.marginBottom = ZANDER.ui.masthead.scrollHeight;
 				} else if (ZANDER.ui.navDocked && (navOffset - scrollTop >= 0) ) {
 					ZANDER.ui.masthead.classList.remove('stuck');
-					// FIXME: marginBottom http://stackoverflow.com/questions/318158/how-do-i-set-the-margin-of-an-object-with-javascript
-					ZANDER.ui.heroUnit.style[marginBottom] = 0;
+					ZANDER.ui.heroUnit.style.marginBottom = 0;
 					ZANDER.ui.navDocked = false;
 				}
 
-				if ( !ZANDER.SiteSetup.navClosed ) {
-					ZANDER.ui.closeNav();
-					ZANDER.SiteSetup.navClosed = true;
+				if ( !ZANDER.ui.mastheadContentClosed ) {
+					ZANDER.ui.mastheadContentClose();
+					ZANDER.ui.mastheadContentClosed = true;
 				}
 			});
 		},
