@@ -5,16 +5,17 @@ module.exports = function (grunt) {
 	// == JS files
 	var jsFileList = [
 		'js/plugins.js',
+		'js/helpers.js',
 		'js/libs/handlebars.js',
-		'js/libs/plugins/waypoints.js',
-		'js/libs/plugins/waypoints-sticky.js',
+		'bower_components/domready/ready.js',
+		'bower_components/reqwest/reqwest.js',
 		'js/script.js'
 	];
 	var jsFile = '_script.min.js';
 	// ====================
 
 	// =====================
-	var distDir = 'js/_compiled/';
+	var distDir = 'js/compiled/';
 
 	// ====================
 
@@ -58,16 +59,20 @@ module.exports = function (grunt) {
 		uglify: {
 			js : {
 				options: {
-					mangle: true,
-					beautify: false,
-					compress: true,
-					// report: 'gzip',
+
+					mangle: true, // mangle: Turn on or off mangling
+					beautify: true, // beautify: beautify your code for debugging/troubleshooting purposes
+					compress: false,
+					report: 'gzip', // report: Show file size report
 
 					// sourceMap: @string. The location of the source map, relative to the project
-					sourceMap: 'script.min.js.map',
+					sourceMap: distDir + jsFile + '.map',
 
 					// sourceMappingURL: @string. The string that is printed to the final file
-					sourceMappingURL: '../../script.min.js.map'
+					sourceMappingURL: jsFile +'.map',
+
+					// sourceMapRoot: @string. The location where your source files can be found. This sets the sourceRoot field in the source map.
+					sourceMapRoot: '../../'
 				},
 				files: {
 					'js/compiled/script.min.js' : jsFileList
@@ -129,13 +134,8 @@ module.exports = function (grunt) {
 		}
 	});
 
-	// Load some stuff
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-jekyll');
+	// Load all the grunt tasks
+	require('load-grunt-tasks')(grunt);
 
 	// =============
 	// === Tasks ===
