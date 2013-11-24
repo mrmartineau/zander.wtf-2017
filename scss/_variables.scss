@@ -69,7 +69,7 @@ $linkColor:                          #d14;
 $linkColorHover:                     lighten($linkColor, 30%);
 
 // BASELINE GRID - Set this in pixels, the font-size mixin will convert to REMS
-$baseFontSize:                       20;
+$baseFontSize:                       16;
 $baseLineHeight:                     $baseFontSize*1.5;
 $boldFontWeight:                     bold;
 

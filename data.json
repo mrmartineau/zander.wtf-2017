@@ -4,62 +4,95 @@
 		"site_name": "Zander",
 		"name": "Zander Martineau",
 		"first_name": "Zander",
-		"tagline": "I am a London-based Creative Technologist working at <a href=\"http://tmw.co.uk\">TMW</a>.",
-		"navigation_links" : [
-			{
-				"url":  "#/portfolio",
-				"name": "Portfolio",
-				"char": "&#8962;"
-			},
-			{
-				"url":  "/blog",
-				"name": "Blog"
-			},
-			{
-				"url":  "#/code",
-				"name": "Code",
-				"char": "&#8505;"
-			},
-			{
-				"url":  "#/sublime-text-resources",
-				"name": "Sublime Text resources",
-				"char": "&#128361;"
-			}
-		],
-		"footer_links": [
-			{
-				"url":  "http://github.com/MrMartineau",
-				"name": "github",
-				"char": "&#62208;"
-			},
-			{
-				"url":  "http://twitter.com/MrMartineau",
-				"name": "twitter",
-				"char": "&#62217;"
-			},
-			{
-				"url":  "http://instagram.com/MrMartineau",
-				"name": "instagram",
-				"char": "&#62253;"
-			},
-			{
-				"url":  "http://dribbble.com/MrMartineau",
-				"name": "dribbble",
-				"char": "&#62235;"
-			},
-			{
-				"url":  "http://mrmartineau.tumblr.com/",
-				"name": "tumblr",
-				"char": "&#62229;"
-			},
-			{
-				"url":  "https://pinboard.in/u:mrmartineau",
-				"name": "pinboard",
-				"char": "&#59254;"
-			}
-		]
+		"tagline": "I am a London-based Creative Technologist working at <a href=\"http://tmw.co.uk\">TMW</a>."
 	},
 	"portfolio": [
+		{
+			"name": "Lynx Africa 18th Anniversary",
+			"description": "<p>The iconic Lynx Africa deoderant turns 18 this year and to celebrate I helped produce a Tumblr blog that publishes a new piece of artwork each day for 18 days.</p>",
+			"view": {
+				"name": "lynxafrica18.tumblr.com",
+				"url": "http://lynxafrica18.tumblr.com"
+			},
+			"date": "October 2013",
+			"skills": "Front-end development",
+			"credits": [
+				{
+					"title": "Designer",
+					"name": "Andrew Turk"
+				},
+				{
+					"title": "Agency",
+					"name": "TMW",
+					"url": "http://tmw.co.uk"
+				},
+				{
+					"title": "Client",
+					"name": "Unilever",
+					"url": "http://unilever.com"
+				}
+			],
+			"images": [
+				{
+					"caption": "",
+					"url": "jimll.jpg"
+				}
+			],
+			"meta": {
+				"name" : "lynxafrica",
+				"id": "13",
+				"layout": "stacked",
+				"type": "website",
+				"colours": {
+					"bg": "#00723B",
+					"text": "#fff",
+					"link": "#fff",
+					"linkHover": "#fff"
+				}
+			}
+		},
+		{
+			"name": "TMW Kickoff",
+			"description": "<p>Kickoff is a robust, adaptable and unopinionated front-end framework that is great starting point for any web site; we use for every project at TMW.</p><p>The framework includes a SASS-based, CSS framework (with all the usual resets and mixins), a responsive <a href=\"https://github.com/mrmartineau/Choreographic-Grid\">grid system</a>; beautiful typographic styles; javascript plugins, utilities and a great set of boilerplates for most eventualities. This means that our devs can get up and running as quickly as possible and not have to worry about this tedious initial step.</p>",
+			"view": {
+				"name": "tmwagency.github.io/kickoff",
+				"url": "http://tmwagency.github.io/kickoff"
+			},
+			"date": "Ongoing",
+			"skills": "Front-end",
+			"credits": [
+				{
+					"title": "Developer",
+					"name": "Zander Martineau"
+				},
+				{
+					"title": "Developer",
+					"name": "Ashley Nolan",
+					"url": "http://dragongraphics.co.uk"
+				},
+				{
+					"title": "Agency",
+					"name": "TMW",
+					"url": "http://tmw.co.uk"
+				}
+			],
+			"meta": {
+				"name" : "kickoff",
+				"id": "2",
+				"layout": "",
+				"type": "code",
+				"colours": {
+					"bg": "#96C3AC",
+					"text": "#1e4833",
+					"link": "#F6EEDD",
+					"linkHover": "#fff"
+				}
+			},
+			"github": {
+				"user": "tmwagency",
+				"repo": "kickoff"
+			}
+		},
 		{
 			"name": "The Bar",
 			"description": "<p>theBar.com is a popular US cocktail resource; I was a member of the team who created the Western Europe version of this already popular site.</p><p>From UX to performance, every aspect of the site was improved and carefully considered. I created a special asset font for the site, this creates crisp, hiDpi friendly icons that look great at any resolution.</p>",
@@ -983,9 +1016,5 @@
 				]
 			}
 		]
-	},
-	"about": {
-		"title" : "About Zander",
-		"copy"  : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus omnis beatae veritatis voluptatem laboriosam itaque possimus voluptas voluptate aperiam eveniet assumenda harum iure inventore illum dignissimos perspiciatis eligendi saepe aliquam!"
 	}
 }
