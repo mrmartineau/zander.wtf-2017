@@ -320,7 +320,7 @@ $portfolioSidePadding: 13%;
 	position: relative;
 	margin: 0 3%;
 	position: relative;
-	@extend %clearfix;
+	// @extend %clearfix;
 	@include user-select();
 	@include vendor-prefix(perspective, 500px);
 	@include vendor-prefix(backface-visibility, none);
@@ -362,6 +362,10 @@ $portfolioSidePadding: 13%;
 
 		&.shot-1, &.shot-2, &.shot-hidden {
 			display: none;
+		}
+
+		&:hover {
+			z-index: 100 !important;
 		}
 	}
 
@@ -523,18 +527,20 @@ $portfolioSidePadding: 13%;
 				// left: 0%;
 				// top: 0%;
 				// z-index: 2;
-				@include transform(rotateY(0deg));
+				img {
+					@include transform(rotateY(0deg));
+				}
 			}
 
 			&.shot-1 {
 				position: absolute;
 				top: 10%;
 				left: 20%;
-				@include transform(rotateY(-10deg));
-				@include vendor-prefix(transform-origin, right 0);
 				// text-align: right;
 
 				img {
+					@include transform(rotateY(-10deg));
+					@include vendor-prefix(transform-origin, right 0);
 					// display: inline;
 				}
 			}
@@ -558,13 +564,16 @@ $portfolioSidePadding: 13%;
 				top: 13%;
 				left: 0%;
 				z-index: 0;
-				@include transform(rotateY(18deg));
-				@include vendor-prefix(transform-origin, 0 0);
-				@include opacity(70);
+				img {
+					@include transform(rotateY(18deg));
+					@include vendor-prefix(transform-origin, 0 0);
+					@include opacity(70);
+				}
 
-				// &:hover {
-				// 	@include transform(rotateY(28deg));
-				// }
+				&:hover img {
+					@include transform(rotateY(0deg));
+					z-index: 100;
+				}
 			}
 
 			&.shot-1 {
@@ -573,10 +582,12 @@ $portfolioSidePadding: 13%;
 				left: 0%;
 				// margin: 0 auto;
 				z-index: 200;
-				@include transform(rotateY(0deg));
-				@include vendor-prefix(transform-origin, 0 0);
-				@include opacity(100);
 				margin: 0 auto;
+				img {
+					@include transform(rotateY(0deg));
+					@include vendor-prefix(transform-origin, 0 0);
+					@include opacity(100);
+				}
 			}
 
 			&.shot-2 {
@@ -584,13 +595,19 @@ $portfolioSidePadding: 13%;
 				top: 13%;
 				left: 20%;
 				z-index: 0;
-				@include transform(rotateY(-18deg));
-				@include vendor-prefix(transform-origin, right 0);
-				@include opacity(70);
 
-				// &:hover {
-				// 	@include transform(rotateY(-28deg));
-				// }
+				img {
+					@include transform(rotateY(-18deg));
+					@include vendor-prefix(transform-origin, right 0);
+					@include opacity(70);
+				}
+
+				&:hover {
+						z-index: 100;
+					img {
+						@include transform(rotateY(0deg));
+					}
+				}
 			}
 
 			&.shot-hidden {
