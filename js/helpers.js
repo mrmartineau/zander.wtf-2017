@@ -1,17 +1,6 @@
 // ==================
 // === HELPERS.js ===
 // ==================
-
-// Array Remove - By John Resig (MIT Licensed)
-// http://ejohn.org/blog/javascript-array-remove/
-if ( !Array.prototype.remove ) {
-	Array.prototype.remove = function(from, to) {
-		var rest = this.slice((to || from) + 1 || this.length);
-		this.length = from < 0 ? this.length + from : from;
-		return this.push.apply(this, rest);
-	};
-}
-
 // Get/Set CSS styles with ease
 function styler(el) {
 	return {
@@ -47,3 +36,14 @@ function styler(el) {
 		}
 	};
 };
+
+/**
+ * [getEventTarget description]
+ * Usage: function editCell(e) { var target = getEventTarget(e); [...] }
+ * @param  {[type]} e [description]
+ * @return {[type]}   [description]
+ */
+function getEventTarget(e) {
+	e = e || window.event;
+	return e.target || e.srcElement;
+}

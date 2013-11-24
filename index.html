@@ -1,51 +1,676 @@
----
-layout: home
-pageid: home
-title: Zander Martineau
----
 
-<!-- === Home / Project listing === -->
-<script id="home-tpl" type="text/x-handlebars-template">
-	{% raw %}
-	{{#each portfolio}}
-		<article id="{{meta.name}}" class="portfolio-pieces--item item-{{@index}} type-{{meta.type}} layout-{{meta.layout}}">
-			<div class="inner-wrap">
-				<div class="portfolio-pieces--item--inner group">
-					<h1 class="portfolio-pieces--item--inner--title">{{name}}</h1>
-					<p class="portfolio-pieces--item--inner--site-url text-centre">{{#if view.url}}<a href="{{view.url}}">{{view.name}}</a>{{else}}{{view.name}}{{/if}}</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Zander Martineau</title>
+		<meta name="description" content="This is the personal blog of Zander Martineau">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/css/kickoff.css">
+		<script src="//use.typekit.net/zsa7ozf.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		<script>var pageName = 'home';</script>
 
-					<section class="portfolio-pieces--item--description">
-						{{{description}}}
+		<!-- Mobile & Fav Icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicons/zm-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicons/zm-114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicons/zm-72.png">
+		<link rel="apple-touch-icon-precomposed" href="/img/favicons/zm-57.png">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<meta name="apple-mobile-web-app-title" content="martineau.tv">
+	</head>
+	<body class="home">
 
-						{{#if github}}
-							<div class="github-details">
-								<iframe src="http://ghbtns.com/github-btn.html?user={{github.user}}&repo={{github.repo}}&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
-								<iframe src="http://ghbtns.com/github-btn.html?user={{github.user}}&repo={{github.repo}}&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
-							</div>
-						{{/if}}
-					</section>
+		<section class="hero-unit">
+			<div class="hero-unit-inner">
+				<h1 class="text-centre">Hello, my name is <br> <strong>Zander Martineau</strong></h1>
+				<p class="text-centre">What you see below is the result of my efforts working as a Creative Technologist at <a href="http://tmw.co.uk">TMW</a> and <a href="http://neverbland.com">NEVERBLAND</a>/freelance before that. As well as 'work' I also maintain <a href="http://github.com/MrMartineau" title="View my Github profile">a bunch</a> of open source projects, most notably <a href="http://tmwagency.github.io/kickoff/">Kickoff</a>, a powerful, responsive front-end framework; you should try it out if you're starting a new project&hellip;</p>
+			</div>
+		</section>
 
-					<section class="portfolio-pieces--item--info">
-						<ul>
-							<li><b>Date:</b> <div>{{date}}</div></li>
-							<li><b>Skills:</b> <div>{{skills}}</div></li>
-							{{#credits}}
-								<li><b>{{title}}:</b> <div>{{#if url}}<a href="{{url}}" title="{{name}}">{{name}}</a>{{else}}{{name}}{{/if}}</div></li>
-							{{/credits}}
-						</ul>
-					</section>
+		<!--  === MASTHEAD ===  -->
+		<header class="masthead home">
+			<nav class="nav home">
+				<a class="is-active" href="/" title="Work">Work</a>
 
+				<div class="zm-logo">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 262.625 175" enable-background="new 0 0 262.625 175" xml:space="preserve">
+						<polygon fill="#34495E" points="223.125,0 176.875,95.25 130.875,0 130.5,0 91.375,0 3.5,0 3.5,35.75 80.5,35.75 0,139.25 0,175 91.375,175 132.5,175 132.625,175 115.62,139.25 49.75,139.25 117.427,52.469 159.875,136 193.875,136 221.375,82.5 221.375,175 262.625,175 262.625,0 " class="zm-logo-item"/>
+					</svg>
 				</div>
 
-				<section class="portfolio-pieces--item--shots">
-					{{#images}}
-						<figure class="shot-{{@index}} shot-visible{{#if shot}} {{shot}}-shot{{/if}}" data-index="{{@index}}">
-							<img src="/img/projects/{{../meta.name}}/{{url}}" alt="{{caption}}">
-						</figure>
-					{{/images}}
-				</section>
+				<a href="/blog" title="Blog">Blog</a>
+			</nav>
+
+			<div class="masthead-content">
+
+				<nav class="more-info text-centre">
+					<div class="icon-links personal-links">
+						<a href="http://github.com/MrMartineau" title="github" class="personal-links--github">&#xF300;</a><a href="http://twitter.com/MrMartineau" title="twitter" class="personal-links--twitter">&#xF309;</a>
+					</div>
+					<div>More info at <a href="http://mrmartineau.co.uk">mrmartineau.co.uk</a></div>
+				</nav>
 			</div>
-		</article>
-	{{/each}}
-	{% endraw %}
-</script>
+		</header>
+
+		<!--  === MAIN CONTENT ===  -->
+		<section id="main" role="main">
+
+
+				<article id="lynxafrica" class="portfolio-pieces--item item-0 type-website layout-stacked">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Lynx Africa 18th Anniversary</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://lynxafrica18.tumblr.com">lynxafrica18.tumblr.com</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>The iconic Lynx Africa deoderant turns 18 this year and to celebrate I helped produce a Tumblr blog that publishes a new piece of artwork each day for 18 days.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>October 2013</div></li>
+									<li><b>Skills:</b> <div>Front-end development</div></li>
+
+										<li><b>Designer:</b> <div>Andrew Turk</div></li>
+
+										<li><b>Agency:</b> <div><a href="http://tmw.co.uk" title="TMW">TMW</a></div></li>
+
+										<li><b>Client:</b> <div><a href="http://unilever.com" title="Unilever">Unilever</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible" data-index="0">
+									<img src="/img/projects/lynxafrica/jimll.jpg" alt="">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="kickoff" class="portfolio-pieces--item item-1 type-code layout-">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">TMW Kickoff</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://tmwagency.github.io/kickoff">tmwagency.github.io/kickoff</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>Kickoff is a robust, adaptable and unopinionated front-end framework that is great starting point for any web site; we use for every project at TMW.</p><p>The framework includes a SASS-based, CSS framework (with all the usual resets and mixins), a responsive <a href="https://github.com/mrmartineau/Choreographic-Grid">grid system</a>; beautiful typographic styles; javascript plugins, utilities and a great set of boilerplates for most eventualities. This means that our devs can get up and running as quickly as possible and not have to worry about this tedious initial step.</p>
+
+
+									<div class="github-details">
+										<iframe src="http://ghbtns.com/github-btn.html?user=tmwagency&amp;repo=kickoff&amp;type=watch&amp;count=true&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
+										<iframe src="http://ghbtns.com/github-btn.html?user=tmwagency&amp;repo=kickoff&amp;type=fork&amp;count=true&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
+									</div>
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>Ongoing</div></li>
+									<li><b>Skills:</b> <div>Front-end</div></li>
+
+										<li><b>Developer:</b> <div>Zander Martineau</div></li>
+
+										<li><b>Developer:</b> <div><a href="http://dragongraphics.co.uk" title="Ashley Nolan">Ashley Nolan</a></div></li>
+
+										<li><b>Agency:</b> <div><a href="http://tmw.co.uk" title="TMW">TMW</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+						</section>
+					</div>
+				</article>
+
+				<article id="thebar" class="portfolio-pieces--item item-2 type-website layout-responsive">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">The Bar</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://uk.thebar.com">uk.thebar.com</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>theBar.com is a popular US cocktail resource; I was a member of the team who created the Western Europe version of this already popular site.</p><p>From UX to performance, every aspect of the site was improved and carefully considered. I created a special asset font for the site, this creates crisp, hiDpi friendly icons that look great at any resolution.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>February - September 2013</div></li>
+									<li><b>Skills:</b> <div>Front-end development; asset font creation, hiDPI</div></li>
+
+										<li><b>Designer:</b> <div><a href="http://www.simonkinslow.com/" title="Simon Kinslow">Simon Kinslow</a></div></li>
+
+										<li><b>Dev (F/E):</b> <div><a href="http://nicbell.net/" title="Nic Bell">Nic Bell</a></div></li>
+
+										<li><b>Dev (B/E):</b> <div><a href="http://www.linkedin.com/profile/view?id=17683453" title="Martin Georgiev">Martin Georgiev</a></div></li>
+
+										<li><b>Dev (B/E):</b> <div><a href="http://www.linkedin.com/profile/view?id=50420509" title="Matthew Basson">Matthew Basson</a></div></li>
+
+										<li><b>Agency:</b> <div><a href="http://tmw.co.uk" title="TMW">TMW</a></div></li>
+
+										<li><b>Client:</b> <div><a href="http://diageo.com" title="Diageo">Diageo</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible desktop-shot" data-index="0">
+									<img src="/img/projects/thebar/01.png" alt="">
+								</figure>
+
+								<figure class="shot-1 shot-visible mobile-shot" data-index="1">
+									<img src="/img/projects/thebar/02.png" alt="">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="lynx-apollo" class="portfolio-pieces--item item-3 type-website layout-desktop-three-up">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Lynx Apollo Vote Boosters</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://lsa.lynxeffect.com/booster/">lsa.lynxeffect.com/booster/</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>Lynx is currently (Jan 2013) running a worldwide competition to send someone into space - the entrant with the most votes wins - they asked TMW to create a microsite to help entrants promote themselves and garner more votes.</p><p>We built a responsive, single-page app that allows entrants to create and share a poster or choose from one of many prewritten status messages. The site is interesting because it positions the user in space and changes the viewport on each sub-page. As well as being project lead, I created the moving page navigation element and the more complex responsive features.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>December 2012 - Jan 2013</div></li>
+									<li><b>Skills:</b> <div>Front-end: responsive, social APIs</div></li>
+
+										<li><b>Designer:</b> <div><a href="http://doesign.co.uk/" title="Andrew Jordan">Andrew Jordan</a></div></li>
+
+										<li><b>Developer:</b> <div><a href="http://nicbell.net/" title="Nic Bell">Nic Bell</a></div></li>
+
+										<li><b>Developer:</b> <div><a href="https://twitter.com/munkychop" title="Ivan Hayes">Ivan Hayes</a></div></li>
+
+										<li><b>Agency:</b> <div><a href="http://tmw.co.uk" title="TMW">TMW</a></div></li>
+
+										<li><b>Brand:</b> <div><a href="http://lynxeffect.co.uk" title="Lynx">Lynx</a></div></li>
+
+										<li><b>Client:</b> <div><a href="http://unilever.co.uk" title="Unilever">Unilever</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible" data-index="0">
+									<img src="/img/projects/lynx-apollo/02.jpg" alt="">
+								</figure>
+
+								<figure class="shot-1 shot-visible" data-index="1">
+									<img src="/img/projects/lynx-apollo/01.jpg" alt="">
+								</figure>
+
+								<figure class="shot-2 shot-visible" data-index="2">
+									<img src="/img/projects/lynx-apollo/03.jpg" alt="">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="brother-campaigns" class="portfolio-pieces--item item-4 type-website layout-desktop-three-up">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Brother Printers</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://campaigns.brother.co.uk">campaigns.brother.co.uk</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>Brother Printers asked TMW to create a microsite for the various printer ranges. Each page of this site is devoted to one range and uses campaign assets to give a more consistent look and feel across media.</p><p>I worked closely with the designer, Dawn Jenner, to create an engaging and appealing experience that promoted each product's features and enabled customers to make a more informed decision.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>September 2012 - Jan 2013</div></li>
+									<li><b>Skills:</b> <div>Front-end: parallax, performance</div></li>
+
+										<li><b>Designer:</b> <div>Dawn Jenner</div></li>
+
+										<li><b>Agency:</b> <div><a href="http://tmw.co.uk" title="TMW">TMW</a></div></li>
+
+										<li><b>Client:</b> <div><a href="http://brother.co.uk" title="Brother Industries">Brother Industries</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible" data-index="0">
+									<img src="/img/projects/brother-campaigns/02.jpg" alt="">
+								</figure>
+
+								<figure class="shot-1 shot-visible" data-index="1">
+									<img src="/img/projects/brother-campaigns/01.jpg" alt="">
+								</figure>
+
+								<figure class="shot-2 shot-visible" data-index="2">
+									<img src="/img/projects/brother-campaigns/03.jpg" alt="">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="knorr-mobile" class="portfolio-pieces--item item-5 type-website layout-mobile-two-up">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Knorr Mobile</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://knorr.co.uk">knorr.co.uk</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>Knorr, the food and beverage company, needed a mobile site for their successful corporate presence in the UK, TMW were asked to create it for them.</p><p>I developed a simple, hiDPI ready, site as a counterpart to their desktop site that, that focused on performance and</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>August 2012</div></li>
+									<li><b>Skills:</b> <div>Front-end: templating, javascript, AJAX</div></li>
+
+										<li><b>Designer:</b> <div><a href="http://hanormsby.co.uk" title="Hannah Ormsby">Hannah Ormsby</a></div></li>
+
+										<li><b>Developer:</b> <div>Tim Coppinger</div></li>
+
+										<li><b>Agency:</b> <div><a href="http://tmw.co.uk" title="TMW">TMW</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible" data-index="0">
+									<img src="/img/projects/knorr-mobile/01.jpg" alt="">
+								</figure>
+
+								<figure class="shot-1 shot-visible" data-index="1">
+									<img src="/img/projects/knorr-mobile/02.jpg" alt="">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="drinkiq" class="portfolio-pieces--item item-6 type-website layout-responsive">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">DrinkIQ</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://calculator.drinkiq.com">calculator.drinkiq.com</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>This app, developed for <a href="http://drinkiq.com">DrinkIQ</a>, determines how many calories and units of alcohol you might have consumed.</p><p>It is a fully responsive site that features two very different layouts at each of the main breakpoints. Javascript templating by <a href="http://handlebarsjs.com/">Handlebars</a> is used to populate the site's content.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>June 2012</div></li>
+									<li><b>Skills:</b> <div>Front-end</div></li>
+
+										<li><b>Designer:</b> <div>Sam Cottrell</div></li>
+
+										<li><b>Developer:</b> <div>Matt Basson</div></li>
+
+										<li><b>Agency:</b> <div><a href="http://tmw.co.uk" title="TMW">TMW</a></div></li>
+
+										<li><b>Client:</b> <div><a href="http://diageo.com" title="Diageo">Diageo</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible desktop-shot" data-index="0">
+									<img src="/img/projects/drinkiq/01.jpg" alt="">
+								</figure>
+
+								<figure class="shot-1 shot-visible mobile-shot" data-index="1">
+									<img src="/img/projects/drinkiq/02.jpg" alt="">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="novalux" class="portfolio-pieces--item item-7 type-website layout-stacked">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Novalux Energy website</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://novaluxenergy.com/">novaluxenergy.com</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>Novalux's <a href="#/projects/6/">visual identity</a> helped form the basis for their website design. I also designed the site and developed it using the <a href="http://expressionengine.com">ExpressionEngine</a> CMS. It makes use of some great web fonts (served from <a href="http://fontdeck.com">Fontdeck</a>), it is set in <a href="http://www.ms-studio.com/FontSales/proximanova.html">Proxima Nova</a> and <a href="http://fontdeck.com/font/clarendonurw/light">Clarendon</a>.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>March 2012</div></li>
+									<li><b>Skills:</b> <div>Design, Front-end, Back-end</div></li>
+
+										<li><b>Client:</b> <div><a href="http://novaluxenergy.com" title="Novalux">Novalux</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible" data-index="0">
+									<img src="/img/projects/novalux/01.jpg" alt="">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="novalux-logo" class="portfolio-pieces--item item-8 type-logo layout-stacked">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Novalux Energy Solutions visual identity</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://novaluxenergy.com/">novaluxenergy.com</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>Novalux Energy Solutions are experts in providing renewable and cost-effective energy solutions to businesses across the world. I was given the task of creating the Novalux visual identity.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>March 2012</div></li>
+									<li><b>Skills:</b> <div>Design</div></li>
+
+										<li><b>Client:</b> <div><a href="http://novaluxenergy.com" title="Novalux">Novalux</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible" data-index="0">
+									<img src="/img/projects/novalux-logo/01.jpg" alt="Logo on light background">
+								</figure>
+
+								<figure class="shot-1 shot-visible" data-index="1">
+									<img src="/img/projects/novalux-logo/02.jpg" alt="Logo on dark background">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="datasift" class="portfolio-pieces--item item-9 type-website layout-desktop-two-up">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Datasift UI &amp; iconography</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://datasift.com">datasift.com</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>DataSift is the leading platform for building applications with insights derived from the most popular social networks and news sources. NEVERBLAND were asked to create a WYSIWYG editor for customers to more easily create 'streams' within their system.</p> <p>I designed a huge library of icons and the UI for the WYSIWYG editor itself. I left NEVERBLAND half-way through this project so what you see now is an updated version of the work that I did.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>January 2012</div></li>
+									<li><b>Skills:</b> <div>Design</div></li>
+
+										<li><b>Agency:</b> <div><a href="http://neverbland.com" title="NEVERBLAND">NEVERBLAND</a></div></li>
+
+										<li><b>Client:</b> <div><a href="http://datasift.com" title="Datasift">Datasift</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible" data-index="0">
+									<img src="/img/projects/datasift/01.jpg" alt="UI">
+								</figure>
+
+								<figure class="shot-1 shot-visible" data-index="1">
+									<img src="/img/projects/datasift/02.gif" alt="Icon spritesheet">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="colette" class="portfolio-pieces--item item-10 type-website layout-stacked">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Colette</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre">Pitch</p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>Colette is a department store based in Paris. NEVERBLAND were asked to pitch for a redesign of their existing ecommerce offering.</p><p>I produced this design for the home page, you can see three states: normal, navigation hovered and page content hovered. Unfortunately our ideas were not chosen and at time of writing, Colette still have not redesigned their site.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>June 2011</div></li>
+									<li><b>Skills:</b> <div>Design</div></li>
+
+										<li><b>Agency:</b> <div><a href="http://neverbland.com" title="NEVERBLAND">NEVERBLAND</a></div></li>
+
+										<li><b>Client:</b> <div><a href="http://colette.fr" title="Colette">Colette</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible" data-index="0">
+									<img src="/img/projects/colette/01.jpg" alt="Homepage: item hover">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="shift-4" class="portfolio-pieces--item item-11 type-website layout-responsive">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Shift 4</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://shift-4.co.uk">shift-4.co.uk</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>Shift 4 are a broadcast facility company for film and TV in the UK. NEVERBLAND were asked to revamp and extend their existing site. We added a full equipment listing, with wishlist (think shopping list) feature; a blog and various other sections that overall helped customers engage with the company.</p><p>I designed &amp; developed the front-end for this project making it fully responsive &amp; adaptable to any device that uses it.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>October 2011</div></li>
+									<li><b>Skills:</b> <div>Design and front-end development</div></li>
+
+										<li><b>Developer:</b> <div>Maciej Garycki</div></li>
+
+										<li><b>Agency:</b> <div><a href="http://neverbland.com" title="NEVERBLAND">NEVERBLAND</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible desktop-shot" data-index="0">
+									<img src="/img/projects/shift-4/desktop.png" alt="Homepage: desktop">
+								</figure>
+
+								<figure class="shot-1 shot-visible mobile-shot" data-index="1">
+									<img src="/img/projects/shift-4/mobile.png" alt="Homepage: mobile">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="conversocial" class="portfolio-pieces--item item-12 type-website layout-stacked">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Conversocial</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://conversocial.com">conversocial.com</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>Conversocial is a Social Media management app for marketers and brands. NEVERBLAND were asked to redesign &amp; develop their existing website. What you see below is my design for their home page, which unfortunately, was never used, however, many aspects were used in the final site. Conversocial have since redesigned their homepage so NEVERBLAND's version can be seen <a href="http://web.archive.org/web/20110705083639/http://www.conversocial.com/">here</a>.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>January 2011</div></li>
+									<li><b>Skills:</b> <div>Design</div></li>
+
+										<li><b>Agency:</b> <div><a href="http://neverbland.com" title="NEVERBLAND">NEVERBLAND</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible" data-index="0">
+									<img src="/img/projects/conversocial/01.jpg" alt="">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="sohofixed" class="portfolio-pieces--item item-13 type-website layout-stacked">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Soho Fixed</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://sohofixed.com">sohofixed.com</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>Soho Fixed is a site where you can buy custom-made, fixed-gear or single-speed bycycles. I designed and developed the entire project - pay attention to the header with it's animating background image and the hover effect on the navigation. All non-bike photography was also shot by me.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>January 2011</div></li>
+									<li><b>Skills:</b> <div>Design &amp; Development</div></li>
+
+										<li><b>Agency:</b> <div><a href="http://neverbland.com" title="NEVERBLAND">NEVERBLAND</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible" data-index="0">
+									<img src="/img/projects/sohofixed/01.jpg" alt="">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+				<article id="sohofixed-identity" class="portfolio-pieces--item item-14 type-logo layout-stacked">
+					<div class="inner-wrap">
+						<div class="portfolio-pieces--item--inner group">
+							<h1 class="portfolio-pieces--item--inner--title">Soho Fixed visual identity</h1>
+							<p class="portfolio-pieces--item--inner--site-url text-centre"><a href="http://sohofixed.com/">sohofixed.com</a></p>
+
+							<section class="portfolio-pieces--item--description">
+								<p>As well as creating the website, I was given the task of creating the Soho Fixed visual identity. I kept it simple and bold because it was for stickers on each bike. The logo can also be separated, for example: the shield can be used on the head tube and the wording on the down tube.</p>
+
+
+							</section>
+
+							<section class="portfolio-pieces--item--info">
+								<ul>
+									<li><b>Date:</b> <div>January 2011</div></li>
+									<li><b>Skills:</b> <div>Design</div></li>
+
+										<li><b>Client:</b> <div><a href="http://sohofixed.com" title="Soho Fixed">Soho Fixed</a></div></li>
+
+								</ul>
+							</section>
+
+						</div>
+
+						<section class="portfolio-pieces--item--shots">
+
+								<figure class="shot-0 shot-visible" data-index="0">
+									<img src="/img/projects/sohofixed-identity/01.gif" alt="Logo on dark background">
+								</figure>
+
+						</section>
+					</div>
+				</article>
+
+
+		</section>
+
+	<script src="/js/compiled/script.min.js"></script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-621491-22']);
+		_gaq.push(['_setDomainName', 'martineau.tv']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</body>
+</html>

@@ -8,7 +8,7 @@
    * Bonzo   : DOM utility         - https://github.com/ded/bonzo
    * Qwery   : CSS Selector engine - https://github.com/ded/qwery
    * domReady: Obvious             - https://github.com/ded/domready
-   * lodash  : Utility library     - http://lodash.com/
+   * lodash  : Utility library   	  - http://lodash.com/
    * reqwest : Ajax                - https://github.com/ded/Reqwest
    ========================================================================== */
 
@@ -23,36 +23,6 @@
 	ZANDER.SiteSetup = {
 		init : function () {
 			ZANDER.ui.init();
-			ZANDER.SiteSetup.getData();
-		},
-
-		getData : function() {
-			// console.log('getData() & cache it');
-
-			// TODO: Check if data is in localstorage
-			reqwest({
-				url : '/data.json',
-				type : 'json',
-				// method: 'post',
-				success : function( data ) {
-					ZANDER.data = data;
-					console.log(data);
-					if ( window.localStorage ) {
-						localStorage.setItem('data', JSON.stringify(data));
-					}
-					// var retrievedObject = localStorage.getItem('data');
-					// console.log('retrievedObject: ', JSON.parse(retrievedObject));
-
-					// ZANDER.ui.shotHeight();
-
-					ZANDER.tpl.listing('home', '#main');
-					console.log('Home page');
-				},
-
-				error : function(resp) {
-					console.error('error!', resp);
-				}
-			});
 		}
 	};
 
@@ -69,11 +39,10 @@
 			var self = this;
 			ZANDER.ui.mastheadContentToggle();
 			ZANDER.ui.navStickOnScroll();
-			// ZANDER.ui.shotSwitch();
+			ZANDER.ui.shotSwitch();
 			ZANDER.ui.getShotsHeight();
 			window.addEventListener('resize', function(e) {
 				ZANDER.ui.getShotsHeight();
-				// console.log('we resized');
 			});
 		},
 
@@ -139,79 +108,79 @@
 			;
 
 			// .layout-desktop-three-up
-			$('#main').on('.layout-desktop-three-up figure', 'click', function(event) {
-				var $this = $(this),
-					$allSiblings = $this.siblings('.shot-visible').andSelf(),
-					allSiblingsCount = $allSiblings.length - 1
-				;
+			// $('#main').on('.layout-desktop-three-up figure', 'click', function(event) {
+			// 	var $this = $(this),
+			// 		$allSiblings = $this.siblings('.shot-visible').andSelf(),
+			// 		allSiblingsCount = $allSiblings.length - 1
+			// 	;
 
-					if ( $this.hasClass('shot-1') ) {
-						// console.log('do nothing');
-						return false;
-					} else if ( $this.hasClass('shot-2') ) {
+			// 		if ( $this.hasClass('shot-1') ) {
+			// 			// console.log('do nothing');
+			// 			return false;
+			// 		} else if ( $this.hasClass('shot-2') ) {
 
-						$allSiblings.each(function(i) {
-							var number = parseInt( $(this).data('index') , 10 );
-							// console.log('number: ' + number );
-							var
-								className    = 'shot-' + i,
-								incClassName
-							;
+			// 			$allSiblings.each(function(i) {
+			// 				var number = parseInt( $(this).data('index') , 10 );
+			// 				// console.log('number: ' + number );
+			// 				var
+			// 					className    = 'shot-' + i,
+			// 					incClassName
+			// 				;
 
-							if ( number >= allSiblingsCount  ) {
-								number = 0;
-								incClassName = 'shot-' + number;
-							} else {
-								number++;
-								incClassName = 'shot-' + number;
-							}
+			// 				if ( number >= allSiblingsCount  ) {
+			// 					number = 0;
+			// 					incClassName = 'shot-' + number;
+			// 				} else {
+			// 					number++;
+			// 					incClassName = 'shot-' + number;
+			// 				}
 
-							$(this).removeClass().addClass(incClassName).addClass('shot-visible').data('index', number);
-						});
+			// 				$(this).removeClass().addClass(incClassName).addClass('shot-visible').data('index', number);
+			// 			});
 
-						// console.log('next');
-					} else {
+			// 			// console.log('next');
+			// 		} else {
 
-						$allSiblings.each(function(i) {
-							var number = parseInt( $(this)[0].className.match(/shot-(\d+)/)[1] , 10);
-							// console.log('number: ' + number );
-							var
-								className    = 'shot-' + i,
-								incClassName
-							;
+			// 			$allSiblings.each(function(i) {
+			// 				var number = parseInt( $(this)[0].className.match(/shot-(\d+)/)[1] , 10);
+			// 				// console.log('number: ' + number );
+			// 				var
+			// 					className    = 'shot-' + i,
+			// 					incClassName
+			// 				;
 
-							if ( number === 0  ) {
-								number = 2;
-								incClassName = 'shot-' + number;
-							} else {
-								number--;
-								incClassName = 'shot-' + number;
-							}
+			// 				if ( number === 0  ) {
+			// 					number = 2;
+			// 					incClassName = 'shot-' + number;
+			// 				} else {
+			// 					number--;
+			// 					incClassName = 'shot-' + number;
+			// 				}
 
-							$(this).removeClass().addClass(incClassName).addClass('shot-visible');
-						});
+			// 				$(this).removeClass().addClass(incClassName).addClass('shot-visible');
+			// 			});
 
-						console.log('prev');
-					}
+			// 			console.log('prev');
+			// 		}
 
-			});
+			// });
 
-			// .layout-desktop-two-up
-			$('#main').on('.layout-desktop-two-up figure', 'click', function(event) {
+			// // .layout-desktop-two-up
+			// $('#main').on('.layout-desktop-two-up figure', 'click', function(event) {
 
-				if ( $(this).hasClass('shot-1') ) {
-					// Move 1>0
-					$(this).addClass('shot-0').removeClass('shot-1')
-					// Move 1>0
-					.siblings('.shot-0').removeClass('shot-0').addClass('shot-1');
+			// 	if ( $(this).hasClass('shot-1') ) {
+			// 		// Move 1>0
+			// 		$(this).addClass('shot-0').removeClass('shot-1')
+			// 		// Move 1>0
+			// 		.siblings('.shot-0').removeClass('shot-0').addClass('shot-1');
 
-				} else {
-					// Move 0>1
-					$(this).removeClass('shot-0').addClass('shot-1')
-					// Move 1>0
-					.siblings('.shot-1').removeClass('shot-1').addClass('shot-0');
-				}
-			});
+			// 	} else {
+			// 		// Move 0>1
+			// 		$(this).removeClass('shot-0').addClass('shot-1')
+			// 		// Move 1>0
+			// 		.siblings('.shot-1').removeClass('shot-1').addClass('shot-0');
+			// 	}
+			// });
 		},
 
 
@@ -241,50 +210,6 @@
 					.parent().css('paddingBottom', '4%');
 				}
 			});
-		}
-	};
-
-	ZANDER.tpl = {
-		init : function() {
-			ZANDER.tpl.projectList();
-		},
-
-		listing : function(tpl, el) {
-			var template = ZANDER.helpers.template(tpl);
-
-			// Handlebars.registerHelper('iter', function(context, options) {
-			// 	var fn = options.fn, inverse = options.inverse;
-			// 	var ret = '';
-
-			// 	if(context && context.length > 0) {
-			// 		for(var i=0, j=context.length; i<j; i++) {
-			// 			ret = ret + fn($.extend({}, context[i], { i: i, iPlus1: i + 1 }));
-			// 		}
-			// 	} else {
-			// 		ret = inverse(this);
-			// 	}
-			// 	return ret;
-			// });
-
-			// Handlebars.registerHelper('ifz', function(conditional, check, options) {
-			// 	if(conditional === check) {
-			// 		return options.fn(this);
-			// 	} else {
-			// 		return options.inverse(this);
-			// 	}
-			// });
-			//
-
-			console.log(el);
-			document.querySelector(el).innerHTML = template(ZANDER.data);
-			// $(el).html(template(ZANDER.data));
-		}
-	};
-
-	ZANDER.helpers = {
-		template : function(name) {
-			var tplName = document.getElementById(name + '-tpl');
-			return Handlebars.compile( tplName.innerHTML );
 		}
 	};
 

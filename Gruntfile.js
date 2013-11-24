@@ -3,15 +3,19 @@ module.exports = function (grunt) {
 	'use strict';
 
 	// == JS files
-	var jsFileList = [
+	var compileTemplatesList = [
 		'js/plugins.js',
-		'js/helpers.js',
 		'js/libs/handlebars.js',
 		'bower_components/domready/ready.js',
 		'bower_components/reqwest/reqwest.js',
+		'js/compileTemplates.js'
+	];
+	var siteJSList = [
+		'js/plugins.js',
+		'bower_components/domready/ready.js',
 		'js/script.js'
 	];
-	var jsFile = '_script.min.js';
+	var jsFile = 'script.min.js';
 	// ====================
 
 	// =====================
@@ -24,7 +28,7 @@ module.exports = function (grunt) {
 		pkg: require('./package'),
 
 		jshint: {
-			all: jsFileList,
+			all: siteJSList,
 			options: {
 				jshintrc: '.jshintrc'
 			}
@@ -57,13 +61,13 @@ module.exports = function (grunt) {
 		},
 
 		uglify: {
-			js : {
+			site : {
 				options: {
 
 					mangle: true, // mangle: Turn on or off mangling
-					beautify: true, // beautify: beautify your code for debugging/troubleshooting purposes
-					compress: false,
-					report: 'gzip', // report: Show file size report
+					beautify: false, // beautify: beautify your code for debugging/troubleshooting purposes
+					compress: true,
+					// report: 'gzip', // report: Show file size report
 
 					// sourceMap: @string. The location of the source map, relative to the project
 					sourceMap: distDir + jsFile + '.map',
@@ -75,7 +79,27 @@ module.exports = function (grunt) {
 					sourceMapRoot: '../../'
 				},
 				files: {
-					'js/compiled/script.min.js' : jsFileList
+					'js/compiled/script.min.js' : siteJSList
+				}
+			},
+			handlebars : {
+				options: {
+
+					mangle: true, // mangle: Turn on or off mangling
+					beautify: true, // beautify: beautify your code for debugging/troubleshooting purposes
+					compress: false,
+
+					// sourceMap: @string. The location of the source map, relative to the project
+					sourceMap: distDir + 'compileTemplates.min.js.map',
+
+					// sourceMappingURL: @string. The string that is printed to the final file
+					sourceMappingURL: 'compileTemplates.min.js.map',
+
+					// sourceMapRoot: @string. The location where your source files can be found. This sets the sourceRoot field in the source map.
+					sourceMapRoot: '../../'
+				},
+				files: {
+					'js/compiled/compileTemplates.min.js' : compileTemplatesList
 				}
 			}
 		},
@@ -90,6 +114,14 @@ module.exports = function (grunt) {
 					{
 						src: ['script.min.js.map'],
 						dest: '_site/script.min.js.map'
+					},
+					{
+						src: ['js/compiled/compileTemplates.min.js'],
+						dest: '_site/js/compiled/compileTemplates.min.js'
+					},
+					{
+						src: ['compileTemplates.min.js.map'],
+						dest: '_site/compileTemplates.min.js.map'
 					}
 				]
 			}
@@ -98,22 +130,27 @@ module.exports = function (grunt) {
 		watch: {
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: ['sass:dev', 'copy:main']
+				tasks: ['sass:dev', 'copy']
 			},
 
-			js: {
-				files: ['Gruntfile.js','js/*.js','js/libs/**/*.js'],
-				tasks: ['uglify', 'copy:main']
+			// compileTemplatesJS: {
+			// 	files: ['Gruntfile.js','js/*.js','js/libs/**/*.js'],
+			// 	tasks: ['uglify', 'copy']
+			// },
+
+			siteJS: {
+				files: ['Gruntfile.js','js/**/*.js'],
+				tasks: ['uglify', 'copy']
 			},
 
 			json : {
 				files: '*.json',
-				tasks: ['jekyll:blog', 'copy:main']
+				tasks: ['jekyll:blog', 'copy']
 			},
 
 			jekyll: {
-				files: ['_includes/*.html', '_layouts/*.html', '_posts/**/*.md', 'config.yml', '*.php'],
-				tasks: ['jekyll:blog', 'copy:main']
+				files: ['**/*.html', '_posts/**/*.md', 'config.yml', '*.php'],
+				tasks: ['jekyll:blog', 'copy']
 			},
 
 			livereload: {
@@ -130,6 +167,35 @@ module.exports = function (grunt) {
 			blog: {
 				src: './',
 				dest: '_site'
+			}
+		},
+
+		fetchpages: {
+			dist: {
+				options: {
+					urls: [
+						// list of remote urls to fetch, local destination file name (localFile) required
+						{
+							url: 'http://martineau-u.dev/index.html',
+							localFile: 'index-1.html'
+						}
+					],
+					// base url for fetching pages via GruntJS files feature
+					filesBaseURL: 'http://martineau-u.dev/',
+					// local target folder for fetched pages
+					target: '_site'
+				},
+				files: [
+					// matching file names are added to "filesBaseURL" for fetching
+					{
+						src: [
+							'**/*.html',
+							'!url.html'
+						],
+						expand: true,
+						cwd: '_site'
+					}
+				]
 			}
 		}
 	});
