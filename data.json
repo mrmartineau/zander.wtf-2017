@@ -55,8 +55,8 @@
 			"name": "TMW Kickoff",
 			"description": "<p>Kickoff is a robust, adaptable and unopinionated front-end framework that is great starting point for any web site; we use for every project at TMW.</p><p>The framework includes a SASS-based, CSS framework (with all the usual resets and mixins), a responsive <a href=\"https://github.com/mrmartineau/Choreographic-Grid\">grid system</a>; beautiful typographic styles; javascript plugins, utilities and a great set of boilerplates for most eventualities. This means that our devs can get up and running as quickly as possible and not have to worry about this tedious initial step.</p>",
 			"view": {
-				"name": "github.com/mrmartineau/kickoff",
-				"url": "http://github.com/mrmartineau/kickoff"
+				"name": "tmwagency.github.io/kickoff",
+				"url": "http://tmwagency.github.io/kickoff"
 			},
 			"date": "Ongoing",
 			"skills": "Front-end",
