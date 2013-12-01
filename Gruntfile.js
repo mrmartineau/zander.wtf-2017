@@ -104,69 +104,63 @@ module.exports = function (grunt) {
 			}
 		},
 
-		copy: {
-			main: {
-				files: [
-					{
-						src: ['js/compiled/script.min.js'],
-						dest: '_site/js/compiled/script.min.js'
-					},
-					{
-						src: ['script.min.js.map'],
-						dest: '_site/script.min.js.map'
-					},
-					{
-						src: ['js/compiled/compileTemplates.min.js'],
-						dest: '_site/js/compiled/compileTemplates.min.js'
-					},
-					{
-						src: ['compileTemplates.min.js.map'],
-						dest: '_site/compileTemplates.min.js.map'
-					}
-				]
-			}
-		},
-
 		watch: {
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: ['sass:dev', 'copy']
+				tasks: ['sass:dev', 'copy:css']
 			},
 
-			// compileTemplatesJS: {
-			// 	files: ['Gruntfile.js','js/*.js','js/libs/**/*.js'],
-			// 	tasks: ['uglify', 'copy']
-			// },
-
 			siteJS: {
-				files: ['Gruntfile.js','js/**/*.js'],
-				tasks: ['uglify', 'copy']
+				files: ['js/**/*.js'],
+				tasks: ['uglify', 'copy:js']
 			},
 
 			json : {
 				files: '*.json',
-				tasks: ['jekyll:blog', 'copy']
+				tasks: ['copy:json']
 			},
 
 			jekyll: {
-				files: ['**/*.html', '_posts/**/*.md', 'config.yml', '*.php'],
-				tasks: ['jekyll:blog', 'copy']
+				files: ['**/*.html', '_posts/*.md', '_drafts/*.md', 'config.yml', '*.php'],
+				tasks: ['jekyll:blog']
 			},
 
 			livereload: {
 				option: {livereload: true},
-				files : ['css/kickoff.css', '_site/css/kickoff.css']
+				files : [
+					'css/kickoff.css',
+					'_site/css/kickoff.css',
+					'_site/**/*.html'
+				]
 			}
 		},
 
 		jekyll: {
 			server : {
 				server : false,
-				auto : false
+				auto   : false,
+				drafts : true
 			},
 			blog: {
 				src: './',
 				dest: '_site'
+			}
+		},
+
+
+		/**
+		 * Connect
+		 * https://github.com/gruntjs/grunt-contrib-connect
+		 * Start a static web server
+		 */
+		connect: {
+			server: {
+				options: {
+					// port: 9001,
+					open: true,
+					livereload: true,
+					base: './_site'
+				}
 			}
 		},
 
@@ -197,6 +191,56 @@ module.exports = function (grunt) {
 					}
 				]
 			}
+		},
+
+		// copy: {
+		// 	main: {
+		// 		files: [
+		// 			{
+		// 				src: ['js/compiled/script.min.js'],
+		// 				dest: '_site/js/compiled/script.min.js'
+		// 			},
+		// 			{
+		// 				src: ['script.min.js.map'],
+		// 				dest: '_site/script.min.js.map'
+		// 			},
+		// 			{
+		// 				src: ['js/compiled/compileTemplates.min.js'],
+		// 				dest: '_site/js/compiled/compileTemplates.min.js'
+		// 			},
+		// 			{
+		// 				src: ['compileTemplates.min.js.map'],
+		// 				dest: '_site/compileTemplates.min.js.map'
+		// 			}
+		// 		]
+		// 	}
+		// },
+
+		copy: {
+			dist: {
+				files: [
+					{ expand: true, cwd: './img', src: ['./**/*.*'], dest: '_site/img' },
+					{ expand: true, cwd: './css', src: ['./**/*.*'], dest: '_site/css' },
+					{ expand: true, cwd: './js', src: ['./**/*.*'], dest: '_site/js' }
+				]
+			},
+			img : {
+				files: [
+					{ expand: true, cwd: './img', src: ['./**/*.*'], dest: 'img' }
+				]
+			},
+			css : {
+				files: {
+					// Copy the sass-generated style file to
+					// the _site/ folder
+					'_site/css/kickoff.css': 'css/kickoff.css'
+				}
+			},
+			js: {
+				files: [
+					{ expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
+				]
+			}
 		}
 	});
 
@@ -212,5 +256,11 @@ module.exports = function (grunt) {
 
 	// Default task 2: Same as above but this creates a server and watches the project for changes
 	grunt.registerTask('default', ['uglify', 'sass:dev', 'copy']);
+
+	/**
+	 * A task for for a static server with a watch
+	 * run connect and watch
+	 */
+	grunt.registerTask("serve", ["connect", "watch"]);
 
 };
