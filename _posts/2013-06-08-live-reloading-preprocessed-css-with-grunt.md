@@ -23,4 +23,5 @@ Adding the subtask above is not enough, you will need to install the Livereload 
 Now all you need to do is run `grunt watch`, start editing your preprocessed CSS and view the styles reloading as you make those changes. Bear in mind that depending on the complexity of your preprocessed CSS, it might take a few seconds for the change to appear - SASS is notoriously slow if you use many `@extend`s.
 
 Below is an example of a full watch task with the included `scss`, `js` and `livereload` subtasks or you can see the `Gruntfile.js` that I use on this site, [here](https://github.com/mrmartineau/martineau.tv/blob/master/Gruntfile.js):
-{% gist 5734805 grunt-watch-task.js %}
+
+<script src="https://gist.github.com/mrmartineau/5734805.js"></script>
