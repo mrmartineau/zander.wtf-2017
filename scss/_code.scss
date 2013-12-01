@@ -12,7 +12,6 @@ pre,
 .gist-meta {
 	padding: 0 3px 2px;
 	font-family: $monoFontFamily !important;
-	_font-family: 'courier new', monospace;
 	@include font-size(14);
 	color: $grayDark;
 	@include border-radius(3px);
@@ -22,17 +21,16 @@ pre,
 // Inline code
 code {
 	padding: 2px 4px;
-	color: #d14;
+	color: $pink;
 	background-color: #f7f7f9;
 	border: 1px solid #e1e1e8;
 	vertical-align: text-top;
+	white-space: nowrap;
 }
-p code {
-	@include font-size(15);
-}
+
 // Blocks of code
 pre {
-	color: #d14;
+	color: $pink;
 	display: block;
 	padding: 10px;
 	margin: 0 0 ($baseLineHeight / 2 + px);

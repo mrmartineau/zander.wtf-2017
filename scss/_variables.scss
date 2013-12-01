@@ -37,7 +37,7 @@ $green:                             #70bc79;
 $red:                               #db2e3f;
 $yellow:                            #ffc40d;
 $orange:                            #f89406;
-$pink:                              #c3325f;
+$pink:                              #d14;
 $purple:                            #643545;
 $silver:                            #34495e;
 $silverDark:                        #2c3e50;
@@ -69,7 +69,7 @@ $linkColor:                          #d14;
 $linkColorHover:                     lighten($linkColor, 30%);
 
 // BASELINE GRID - Set this in pixels, the font-size mixin will convert to REMS
-$baseFontSize:                       16;
+$baseFontSize:                       20;
 $baseLineHeight:                     $baseFontSize*1.5;
 $boldFontWeight:                     bold;
 
