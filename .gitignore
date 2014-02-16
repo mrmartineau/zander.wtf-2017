@@ -1,6 +1,7 @@
 _site
-.sass_cache
+.sass-cache
 node_modules
+bower_components
 .scssc
 mtv.sublime-workspace
 mtv.sublime-project
