@@ -33,7 +33,7 @@ $white:                             #fff;
 // COLOURS
 $blue:                              #209abe;
 $blueDark:                          darken($blue, 20%);
-$green:                             #70bc79;
+$green:                             #20E46E;
 $red:                               #db2e3f;
 $yellow:                            #ffc40d;
 $orange:                            #f89406;
@@ -42,7 +42,7 @@ $purple:                            #643545;
 $silver:                            #34495e;
 $silverDark:                        #2c3e50;
 
-$accentColor:                       $silver;
+$accentColor:                       #2f353a;
 $primaryButtonBackground:           $blue;
 
 // COLOUR SCHEME
@@ -62,11 +62,13 @@ $analog2:                           adjust-hue($accentColor, -22);
 
 // SCAFFOLDING
 $bodyBackground:                     #fff;
-$textColor:                          $silver;
+$textColor:                          $accentColor;
+$mastheadTextColor                  : #bbb;
+$mastheadHoverColor                 : #fff;
 
 // LINKS
-$linkColor:                          #d14;
-$linkColorHover:                     lighten($linkColor, 30%);
+$linkColor:                          #20CCE4;
+$linkColorHover:                     darken(#20CCE4, 15%);
 
 // BASELINE GRID - Set this in pixels, the font-size mixin will convert to REMS
 $baseFontSize:                       20;
@@ -76,7 +78,7 @@ $boldFontWeight:                     bold;
 // TYPOGRAPHY
 $sansFontFamily:                     "colfax-web-1", "colfax-web-2", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serifFontFamily:                    Georgia, "Times New Roman", Times, serif;
-$monoFontFamily:                     "source-code-pro-1", "source-code-pro-2", Menlo, Consolas,"Liberation Mono", Monaco, "Courier New", monospace;
+$monoFontFamily:                     Consolas,"Liberation Mono", Monaco, "Courier New", monospace;
 
 $baseFontFamily:                     $sansFontFamily;
 $altFontFamily:                      $serifFontFamily;

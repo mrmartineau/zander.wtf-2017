@@ -40,12 +40,10 @@ a {
 
 // === Hero ===
 .hero-unit {
-	border-bottom: 1px solid #ddd;
-	padding: 50px 0;
-
-	h1 {
-		font-weight: normal;
-	}
+	padding: 80px 0;
+	background: #fff url(/img/ui/avatar-short.jpg) no-repeat;
+	@include prefixer(background-size, cover, webkit ms o moz spec);
+	color: darken($silver, 25%);
 }
 
 .hero-unit-inner {
@@ -58,6 +56,10 @@ a {
 	:last-child {
 		margin-bottom: 0;
 	}
+}
+
+.hero-unit 	.hero-unit-inner-name {
+	color: $accentColor;
 }
 
 // === MASTHEAD ===
@@ -84,7 +86,7 @@ a {
 	}
 }
 .masthead-content {
-	background-color: #f1f1f1;
+	color: $mastheadTextColor;
 	text-align: center;
 	z-index: 1;
 	height: 0;
@@ -93,9 +95,10 @@ a {
 }
 
 .masthead,
+.masthead-content,
 .hero-unit,
 .nav {
-	background-color: #f1f1f1;
+	background-color: $accentColor;
 }
 
 .masthead,
@@ -103,7 +106,6 @@ a {
 
 	h1 {
 		margin: 20px 0;
-		color: $accentColor;
 		@include font-size(32);
 		@include line-height(40);
 		text-transform: uppercase;
@@ -130,20 +132,20 @@ a {
 	font-weight: bold;
 	@include font-size(16);
 	height: 40px;
-	color: $silverDark;
+	color: $mastheadTextColor;
 
 	a, .zm-logo {
 		vertical-align: top;
 		@include user-select(none);
 	}
 
-	@include alt-link($silverDark, #d14);
+	@include alt-link($mastheadTextColor, $mastheadHoverColor);
 
 	a.is-active {
 		padding-top: 3px;
 		padding-left: 3px;
 		padding-right: 3px;
-		color: $linkColor;
+		color: $mastheadHoverColor;
 	}
 }
 
@@ -161,7 +163,7 @@ a {
 	&.is-active,
 	&:hover {
 		.zm-logo-item {
-			fill: #d14;
+			fill: $mastheadHoverColor;
 		}
 	}
 }
@@ -190,7 +192,7 @@ a {
 		overflow: hidden;
 
 		&:hover {
-			color: #d14;
+			color: $mastheadHoverColor;
 			z-index: 1;
 		}
 	}
@@ -200,20 +202,23 @@ a {
 	}
 
 	span {
-
 		display: none;
 		position: absolute;
-		// top: -30px;
 		@include opacity(0);
 	}
 
 }
 
+a.personal-links--twitter {
+	color: $mastheadTextColor;
+}
+a.personal-links--github {
+	color: $mastheadTextColor;
+}
+
+
 a.personal-links--email {
 	color: $green;
-}
-a.personal-links--twitter {
-	color: #258cba;
 }
 a.personal-links--appnet {
 	color: #717171;
@@ -223,9 +228,6 @@ a.personal-links--instagram {
 }
 a.personal-links--dribbble {
 	color: #c12d6d;
-}
-a.personal-links--github {
-	color: #000;
 }
 a.personal-links--tumblr {
 	color: #2f4662;
