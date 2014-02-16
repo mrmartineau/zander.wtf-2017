@@ -15,6 +15,7 @@
 <body>
 	<div id="main" class="entry">
 		<h1 class="text-centre">Cloze creator</h1>
+		<p class="text-centre">How can this be improved? Please make your suggestions <a href="https://github.com/mrmartineau/martineau.tv/issues/new">here</a></p>
 		<div class="group">
 			<h3>1. Paste in text</h3>
 			<div id="placeholders" class="fr">

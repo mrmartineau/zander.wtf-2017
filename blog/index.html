@@ -1,32 +1,22 @@
 ---
-layout: default
+layout: posts
 title: Blog - Zander Martineau
+pageid: blog
 ---
 
-{% for post in paginator.posts %}
-	<article class="entry">
-		<h1 class="entry--title"><a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
-		<time class="entry--date text-centre">{{ post.date | date_to_string }}</time>
+{% for post in site.posts %}
+	{% if post.post-type == 'link' %}
+	<article class="entry entry--list entry--link">
+		<time class="entry--date text-centre" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+		<h1 class="entry--title"><a href="{{ post.link-to }}" title="Read {{ post.title }}" rel="external">{{ post.title }}</a></h1>
 
-		{% if post.image %}
-			<figure>
-				<img src="/img/posts/{{ post.image }}" alt="{{ post.title }}">
-			</figure>
-		{% endif %}
+	{% else %}
 
-		{{ post.content }}
+	<article class="entry entry--list">
+			<time class="entry--date text-centre" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+			<h1 class="entry--title"><a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
+	{% endif %}
+
+		<p class="article--excerpt">{{post.excerpt}}</p>
 	</article>
 {% endfor %}
-
-<!-- Pagination links -->
-<div class="pagination">
-	{% if paginator.previous_page == 1 %}
-		<a href="/blog">Newer</a>
-	{% else %}
-		<a href="/blog/{{ paginator.previous_page_path }}">Newer</a>
-	{% endif %}
-	<span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-	{% if paginator.next_page %}
-		<a href="/blog/{{ paginator.next_page_path }}" class="next">Older</a>
-	{% endif %}
-</div>

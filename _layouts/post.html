@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: posts
+pageid: blog
 ---
 <article class="entry">
-	<h3 class="entry--title"><a href="{{ page.url }}" title="Read {{ page.title }}">{{ page.title }}</a></h3>
+	<h3 class="entry--title">{{ page.title }}</h3>
 	<time class="entry--date text-centre">{{ page.date | date_to_string }}</time>
 
 	{% if page.image %}

@@ -5,7 +5,7 @@ include: ['.htaccess']
 exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', 'index-static.php', 'index-handlebars.php', 'blog-src']
 timezone: Europe/London
 
-paginate: 8
+paginate: 25
 paginate_path: /blog/page:num
 
 # Vars
