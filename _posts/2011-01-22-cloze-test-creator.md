@@ -3,15 +3,13 @@ layout: post
 title: "Cloze test creator"
 categories:
 - open-source
-
 comments: true
 comments_id: 232
 comments_old: true
-link: http://martineau.tv/cloze/
-link-title: martineau.tv/cloze/
-
+link: "http://martineau.tv/cloze/"
+link-title: "martineau.tv/cloze/"
+excerpt: ""
 ---
-
 My wife uses a version of a Cloze test for when she teaches. She creates these tests using Word & a lot of copying & pasting. When she saw my [Quick & Dirty Cloze test with Lettering.js]() she asked if I could make a dedicated close test for her so I set about creating a basic webapp so that she could speed up this mundane task.
 
 ## Behold the Cloze creator

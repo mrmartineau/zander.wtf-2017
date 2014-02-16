@@ -5,6 +5,7 @@ title: "Live reloading preprocessed CSS using Grunt"
 categories:
 - code
 - grunt
+excerpt: "This is all you need to get Livereload working with Grunt."
 ---
 
 Having recently changed my development process from using the awesome [Codekit](http://incident57.com/codekit/) to [Grunt](http://gruntjs.com), I was frustrated that I no longer had live updates without a browser refresh when I made changes to my CSS; fortunately for me, there is a plugin for Grunt that solves this problem and, funnily enough, I happened to be using it already.

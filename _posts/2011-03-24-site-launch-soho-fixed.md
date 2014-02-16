@@ -4,8 +4,8 @@ title: "Site launch: Soho Fixed"
 categories:
 - Launch
 image: soho-fixed-header.png
+excerpt: ""
 ---
-
 [Soho Fixed](http://sohofixed.com), the
 brainchild of my mate, Jolyon, has just been launched. The site
 showcases fixie bikes built from new & unique reconditioned parts. A few

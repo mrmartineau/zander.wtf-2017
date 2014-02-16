@@ -4,6 +4,7 @@ title: Speedy Sublime Text setup
 categories:
 - Sublime Text
 link: https://github.com/mrmartineau/sublimetextsetup
+excerpt: "I created a wiki to speed up Sublime Text setup, click above to find out more."
 ---
 
 A few weeks ago I created a Github repo to aide people in setting up Sublime Text more quickly. It lists the essential plugins that ‘most’ users will need & a few others for the programmers among you.

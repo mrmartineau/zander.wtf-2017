@@ -6,6 +6,7 @@ categories:
 - CSS
 - Responsive
 link: https://github.com/mrmartineau/sublimetextsetup
+excerpt: "Find out more about my new CSS grid framework"
 ---
 
 After having read Trent Walton's article on [Content Choreography](http://trentwalton.com/2011/07/14/content-choreography/) again & working on a number of responsive sites, I felt that the current group of CSS grids was lacking in this department - [so I created my own](https://github.com/mrmartineau/Choreographic-Grid).

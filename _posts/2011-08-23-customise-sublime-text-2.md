@@ -6,6 +6,7 @@ categories:
 comments: true
 comments_id: 237
 comments_old: true
+excerpt: "Tips for customising the only text editor you'll ever need."
 ---
 
 **[UPDATE 11 May 2013]** This information is extremely out of date, please visit the wiki I created for up-to-date information: [https://github.com/mrmartineau/SublimeTextSetup/wiki](https://github.com/mrmartineau/SublimeTextSetup/wiki)

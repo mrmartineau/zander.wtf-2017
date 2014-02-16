@@ -4,6 +4,9 @@ layout: post
 title: "Site launch: mrmartineau.co.uk - my social home page"
 categories:
 - Note
+- github
+- open-source
+excerpt: ""
 ---
 
 I have just launched my own version of a social home page/business card site. Check it out at [mrmartineau.co.uk](http://mrmartineau.co.uk) and grab the code at [Github](https://github.com/mrmartineau/social-homepage)

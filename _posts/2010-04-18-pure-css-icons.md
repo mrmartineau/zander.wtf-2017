@@ -7,6 +7,7 @@ categories:
 comments: true
 comments_id: 211
 comments_old: true
+excerpt: ""
 ---
 
 Having marvelled at [David Desandro's Opera Logo](http://desandro.com/articles/opera-logo-css/) made entirely in HTML and CSS, I wanted to try a similar experiment for myself. So with a large scoop of border-radius I set about trying to create various 'common' icons that could be used in your web apps.
