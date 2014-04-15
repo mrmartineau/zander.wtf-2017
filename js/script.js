@@ -6,10 +6,7 @@
    Micro libraries
    * Bean    : Events API          - https://github.com/fat/bean
    * Bonzo   : DOM utility         - https://github.com/ded/bonzo
-   * Qwery   : CSS Selector engine - https://github.com/ded/qwery
    * domReady: Obvious             - https://github.com/ded/domready
-   * lodash  : Utility library   	  - http://lodash.com/
-   * reqwest : Ajax                - https://github.com/ded/Reqwest
    ========================================================================== */
 
 
@@ -37,8 +34,11 @@
 
 		init : function() {
 			var self = this;
+			// console.log('pageName', pageName);
 			ZANDER.ui.mastheadContentToggle();
-			ZANDER.ui.navStickOnScroll();
+			// if (pageName == 'home') {
+				ZANDER.ui.navStickOnScroll();
+			// }
 			ZANDER.ui.shotSwitch();
 			ZANDER.ui.getShotsHeight();
 			window.addEventListener('resize', function(e) {
@@ -74,6 +74,7 @@
 		 * Stick masthead content to top of screen on scroll
 		 */
 		navStickOnScroll : function() {
+			// console.log('navStickOnScroll');
 			var navOffset = ZANDER.ui.masthead.offsetTop;
 
 			document.addEventListener('scroll', function(event) {
@@ -199,8 +200,8 @@
 				var $parent    = $(this).parent(),
 					$shotHeight = $parent[0].scrollHeight
 				;
-				console.log($parent);
-				console.log($shotHeight);
+				// console.log($parent);
+				// console.log($shotHeight);
 
 				if ( $parent.hasClass('is-expanded') ) {
 					$parent.removeClass('is-expanded')
