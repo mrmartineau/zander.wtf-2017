@@ -9,28 +9,24 @@ title: Zander Martineau
 				<h2 class="me-desc">Creative Technologist, London</h2>
 			</section>
 			{% for post in site.posts limit:2 %}
-				<article class="latestEntry">
+				<a href="{{post.url}}" title="Read {{post.title}}" class="latestEntry">
 					<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-0{{forloop.index}}.jpg)"></div>
 					<div class="overlay overlay--dark"></div>
-					<a href="{{post.url}}" title="Read {{post.title}}" class="latestEntry-link">
-						<time class="latestEntry-date">{{post.date | date_to_string}}</time>
-						<h1 class="latestEntry-title">{{post.title}}</h1>
-						<p class="latestEntry-excerpt">{{post.excerpt}}</p>
-						<h3 class="latestEntry-cta">Read now</h3>
-					</a>
-				</article>
-			{% endfor %}
-
-			<article class="latestEntry">
-				<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-03.jpg)"></div>
-				<div class="overlay overlay--dark"></div>
-				<a href="#" class="latestEntry-link">
-					<time class="latestEntry-date">16 Apr 2014</time>
-					<h1 class="latestEntry-title">Link to rest of blog</h1>
-					<p class="latestEntry-excerpt">Follow this link to visit the rest of the blog</p>
+					<time class="latestEntry-date">{{post.date | date_to_string}}</time>
+					<h1 class="latestEntry-title">{{post.title}}</h1>
+					<p class="latestEntry-excerpt">{{post.excerpt}}</p>
 					<h3 class="latestEntry-cta">Read now</h3>
 				</a>
-			</article>
+			{% endfor %}
+
+			<a href="#" class="latestEntry">
+				<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-03.jpg)"></div>
+				<div class="overlay overlay--dark"></div>
+				<time class="latestEntry-date">16 Apr 2014</time>
+				<h1 class="latestEntry-title">Link to rest of blog</h1>
+				<p class="latestEntry-excerpt">Follow this link to visit the rest of the blog</p>
+				<h3 class="latestEntry-cta">Read now</h3>
+			</a>
 
 		</section>
 

@@ -73,17 +73,28 @@
    Latest entries
    ========================================================================== */
 .latestEntry {
+	// height: 100%;
+	display: block;
 	@extend %home-item;
 	overflow: hidden;
 
-	&, * {
-		transition: $link-transition;
+	&, &:link, &:visited {
+		color: #fff;
+		color: rgba(#fff, 0.75);
 	}
 
-	&:hover {
+	&:hover, &:active {
+		color: #fff;
+		color: rgba(#fff, 0.75);
+
 		.overlay--img {
 			transform: scale(1.2);
 		}
+	}
+
+	&, * {
+		transition: $link-transition;
+		// position: relative;
 	}
 
 	@include respond-min($breakpoint-mid) {
@@ -94,35 +105,22 @@
 	@include respond-min(850) {
 		width: 23%;
 	}
-}
-.latestEntry-link {
-	position: relative;
-	height: 100%;
-	display: block;
 
-	&, &:link, &:visited {
-		color: #fff;
-		color: rgba(#fff, 0.75);
-	}
-
-	&:hover, &:active {
-		color: #fff;
-		color: rgba(#fff, 0.75);
-	}
-
-	@include respond-min($breakpoint-mid) {
-		min-height: 380px;
-	}
+	// @include respond-min($breakpoint-mid) {
+	// 	min-height: 380px;
+	// }
 }
 .latestEntry-date {
 	text-transform: uppercase;
 	@include font-size(12);
 	font-weight: bold;
+	position: relative;
 }
 .latestEntry-title {
 	margin: 0 0 20px;
 	line-height: 1.2;
 	@include font-size(27);
+	position: relative;
 
 	@include respond-min($breakpoint-wide) {
 		@include font-size(40);
@@ -130,6 +128,7 @@
 
 }
 .latestEntry-excerpt {
+	position: relative;
 
 }
 .latestEntry-cta {
@@ -146,7 +145,7 @@
 	@include respond-min($breakpoint-mid) {
 		position: absolute;
 		left: 50%;
-		bottom: 0%;
+		bottom: 80px;
 		margin-left: -60px;
 	}
 }
