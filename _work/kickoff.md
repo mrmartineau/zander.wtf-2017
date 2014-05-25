@@ -1,0 +1,21 @@
+---
+layout: work
+title: "Kickoff"
+meta:
+  name: kickoff
+  date: Ongoing
+  skills: Front-end
+
+view: "[tmwagency.github.io/kickoff](http://tmwagency.github.io/kickoff)"
+
+credits:
+ - title: Developer
+   name: Zander Martineau
+ - title: Developer
+   name: "[Ashley Nolan](http://ashleynolan.co.uk)"
+
+github: tmwagency/kickoff
+---
+Kickoff is a robust, adaptable and unopinionated front-end framework that is great starting point for any web site; we use for every project at TMW.
+
+The framework includes a SASS-based, CSS framework (with all the usual resets and mixins), a responsive [grid system](https://github.com/mrmartineau/Choreographic-Grid) ; beautiful typographic styles; javascript plugins, utilities and a great set of boilerplates for most eventualities. This means that our devs can get up and running as quickly as possible and not have to worry about this tedious initial step.
