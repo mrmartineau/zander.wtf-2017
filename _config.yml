@@ -1,15 +1,33 @@
-markdown: rdiscount
-pygments: false
-permalink: /blog/:year/:month/:title
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: false
+permalink: /:year/:month/:title
 include: ['.htaccess']
 exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', 'index-static.php', 'index-handlebars.php', 'blog-src']
 timezone: Europe/London
 
 paginate: 25
-paginate_path: /blog/page:num
+paginate_path: /page:num
 
 # Vars
 name: Zander Martineau
 myname: Zander Martineau
 email: zander@martineau.tv
 socialusername: MrMartineau
+
+collections:
+ - work
+
+# defaults:
+#   -
+#     scope:
+#       path: "" # empty string for all files
+#     values:
+#       layout: "post"
+#   -
+#     scope:
+#       path: "work"
+#       type: "post"
+#     values:
+#       layout: "work"
