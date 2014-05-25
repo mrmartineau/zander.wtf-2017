@@ -3,13 +3,13 @@
 	text-align: center;
 	background-size: cover;
 	padding: 40px 20px;
-	background-position: center top;
+	background-position: center center;
 	background-repeat: no-repeat;
 
 	@include respond-min($breakpoint-mid) {
 	}
 
-	@include respond-min(850) {
+	@include respond-min($breakpoint-single-col) {
 		height: 100%;
 		min-height: 100%;
 		padding: 80px 2%;
@@ -21,7 +21,7 @@
 	position: relative;
 	@include clearfix;
 
-	@include respond-min(850) {
+	@include respond-min($breakpoint-single-col) {
 	height: 80%;
 	min-height: 600px;
 	}
@@ -35,7 +35,7 @@
 	@extend %home-item;
 	min-height: 420px;
 
-	@include respond-min(850) {
+	@include respond-min($breakpoint-single-col) {
 		width: 31%;
 		float: left;
 	}
@@ -94,21 +94,17 @@
 
 	&, * {
 		transition: $link-transition;
-		// position: relative;
 	}
 
 	@include respond-min($breakpoint-mid) {
 		width: 33.3333333%;
 		float: left;
+		min-height: 460px;
 	}
 
-	@include respond-min(850) {
+	@include respond-min($breakpoint-single-col) {
 		width: 23%;
 	}
-
-	// @include respond-min($breakpoint-mid) {
-	// 	min-height: 380px;
-	// }
 }
 .latestEntry-date {
 	text-transform: uppercase;
@@ -125,13 +121,12 @@
 	@include respond-min($breakpoint-wide) {
 		@include font-size(40);
 	}
-
 }
 .latestEntry-excerpt {
 	position: relative;
-
 }
 .latestEntry-cta {
+	position: relative;
 	width: 120px;
 	margin: 30px auto 0;
 	text-transform: uppercase;
@@ -145,8 +140,12 @@
 	@include respond-min($breakpoint-mid) {
 		position: absolute;
 		left: 50%;
-		bottom: 80px;
+		bottom: 40px;
 		margin-left: -60px;
+	}
+
+	@include respond-min($breakpoint-single-col) {
+		bottom: 80px;
 	}
 }
 
