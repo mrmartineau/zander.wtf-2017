@@ -1,0 +1,153 @@
+%home-item {
+	position: relative;
+	text-align: center;
+	background-size: cover;
+	padding: 40px 20px;
+	background-position: center top;
+	background-repeat: no-repeat;
+
+	@include respond-min($breakpoint-mid) {
+	}
+
+	@include respond-min(850) {
+		height: 100%;
+		min-height: 100%;
+		padding: 80px 2%;
+	}
+
+}
+
+.home-primary {
+	position: relative;
+	@include clearfix;
+
+	@include respond-min(850) {
+	height: 80%;
+	min-height: 600px;
+	}
+}
+
+/*
+   About me
+   ========================================================================== */
+.me {
+	background-image: url(/img/about/me.jpg);
+	@extend %home-item;
+	min-height: 420px;
+
+	@include respond-min(850) {
+		width: 31%;
+		float: left;
+	}
+}
+.me-name {
+	margin: 0;
+	@include font-size(27);
+	line-height: 1.2;
+
+	@include respond-min($breakpoint-wide) {
+		@include font-size(40);
+	}
+}
+.me-desc {
+	margin: 0;
+	@include font-size(22);
+	color: #818A92;
+}
+.me-logo {
+	margin-bottom: 20px;
+	width: 50px;
+	height: 33px;
+	display: inline-block;
+	background-size: contain;
+
+	@include respond-min($breakpoint-wide) {
+		width: 88px;
+		height: 58px;
+		margin-bottom: 40px;
+	}
+}
+
+
+/*
+   Latest entries
+   ========================================================================== */
+.latestEntry {
+	@extend %home-item;
+	overflow: hidden;
+
+	&, * {
+		transition: $link-transition;
+	}
+
+	&:hover {
+		.overlay--img {
+			transform: scale(1.2);
+		}
+	}
+
+	@include respond-min($breakpoint-mid) {
+		width: 33.3333333%;
+		float: left;
+	}
+
+	@include respond-min(850) {
+		width: 23%;
+	}
+}
+.latestEntry-link {
+	position: relative;
+	height: 100%;
+	display: block;
+
+	&, &:link, &:visited {
+		color: #fff;
+		color: rgba(#fff, 0.75);
+	}
+
+	&:hover, &:active {
+		color: #fff;
+		color: rgba(#fff, 0.75);
+	}
+
+	@include respond-min($breakpoint-mid) {
+		min-height: 380px;
+	}
+}
+.latestEntry-date {
+	text-transform: uppercase;
+	@include font-size(12);
+	font-weight: bold;
+}
+.latestEntry-title {
+	margin: 0 0 20px;
+	line-height: 1.2;
+	@include font-size(27);
+
+	@include respond-min($breakpoint-wide) {
+		@include font-size(40);
+	}
+
+}
+.latestEntry-excerpt {
+
+}
+.latestEntry-cta {
+	width: 120px;
+	margin: 30px auto 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	@include font-size(20);
+	border-color: #fff;
+	border-color: rgba(#fff, 0.8);
+	border-top: 2px solid;
+	padding-top: 30px;
+
+	@include respond-min($breakpoint-mid) {
+		position: absolute;
+		left: 50%;
+		bottom: 0%;
+		margin-left: -60px;
+	}
+}
+

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Global app/site styles
+   ========================================================================== */
+html,body {
+	height: 100%;
+}
+body {
+	background-color: $color-background;
+}
+
+
+/*
+   Overlay
+   ========================================================================== */
+.overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: $link-transition;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+.overlay--dark {
+	background-color: rgba(#000, 0.8);
+}

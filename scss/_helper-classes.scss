@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Utilities
+   Non-semantic helper classes
+   ========================================================================== */
+
+/**
+ * Clearfix
+ * See mixins/_utility.scss for a mixin version of this
+ */
+.clearfix {
+	zoom: 1;
+
+	&:before,
+	&:after {
+		display: table;
+		content: " ";
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+
+// For background image replacement
+.ir {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: 0;
+	direction: ltr;
+	display: block;
+	overflow: hidden;
+	text-align: left;
+	text-indent: -999em;
+}
+
+.ir br {
+	display: none;
+}
+
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+.is-hidden {
+	display: none !important;
+	visibility: hidden !important;
+}
+.is-shown { display: block; }
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+.is-visuallyHidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	// Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
+	&.focusable:active,
+	&.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+// Hide visually and from screenreaders, but maintain layout
+.is-invisible { visibility: hidden; }
+
+.l-floatLeft		{ float:left; }
+.l-floatRight		{ float:right; }
+.l-clear			{ clear:both; float:none; }
+
+.l-mb0 { margin-bottom: 0 !important;}
+.l-mt0 { margin-top:    0 !important;}
+
+
+/* ==========================================================================
+   Responsive Utilities
+   ========================================================================== */
+
+// IE10 Metro responsive
+// Required for Windows 8 Metro split-screen snapping with IE10
+//
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport{
+	width: device-width;
+}
+
+* {
+	-webkit-tap-highlight-color: $color-primary !important;
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea[contenteditable] {
+	-webkit-appearance: none;
+}
+
+
+// IE10 on Windows Phone 8
+// IE10 on WP8 doesn't report CSS pixels, but actual device pixels. In
+// other words, say on a Lumia, you'll get 768px as the device width,
+// meaning users will see the tablet styles and not phone styles.
+//
+// Alternatively you can override this with JS (see source below), but
+// we won't be doing that here given our limited scope.
+//
+// Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+@media screen and (max-width: 400px) {
+	@-ms-viewport{
+		width: 320px;
+	}
+}
