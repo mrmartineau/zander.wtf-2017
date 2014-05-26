@@ -33,25 +33,55 @@ title: Zander Martineau
 		<section class="work">
 			{% for post in site.work limit:2 %}
 				<article class="piece" id="{{post.meta.name}}">
-					<h1>{{post.title}}</h1>
-					<h3><a href="{{post.view.url}}" title="Go to {{post.view.text}}">{{post.view.text}}</a></h3>
-					{{post.content | markdownify}}
+					<div class="piece-inner piece-inner--{{post.meta.layout}}">
+						<h1 class="piece-title">{{post.title}}</h1>
+						<h3 class="piece-url"><a href="{{post.view.url}}" title="Go to {{post.view.text}}">{{post.view.text}}</a></h3>
 
-					<ul>
-						<li><b>Date:</b> <div>{{post.meta.date}}</div></li>
-						<li><b>Skills:</b> <div>{{post.meta.skills}}</div></li>
-						{% for credit in post.credits %}
-							<li><b>{{credit.title}}:</b> <div>{{credit.name}}</div></li>
-						{% endfor %}
-					</ul>
+						<div class="piece-infoContainer clearfix">
+							<div class="piece-infoContainer-desc">
+								{{post.content | markdownify}}
+							</div>
 
-					{% if post.images %}
-						{% for img in post.images %}
-							<img src="/img/projects/{{post.meta.name}}/{{img.src}}" alt="{{img.caption}}">
-						{% endfor %}
-					{% endif %}
+							<div class="piece-infoContainer-info clearfix">
+								<ul class="piece-infoContainer-info-list unstyled">
+									<li class="piece-infoContainer-info-list-item">
+									<b class="piece-infoContainer-info-list-item-key">Date:</b>
+									<div class="piece-infoContainer-info-list-item-value">{{post.meta.date}}</div></li>
+									<li class="piece-infoContainer-info-list-item">
+									<b class="piece-infoContainer-info-list-item-key">Skills:</b>
+									<div class="piece-infoContainer-info-list-item-value">{{post.meta.skills}}</div></li>
+									{% for credit in post.credits %}
+										<li class="piece-infoContainer-info-list-item">
+										<b class="piece-infoContainer-info-list-item-key">{{credit.title}}:</b>
+										<div class="piece-infoContainer-info-list-item-value">
+										{% if credit.url %}
+											<a href="{{credit.url}}">{{credit.name}}</a>
+										{% else %}
+											{{credit.name}}
+										{% endif %}
+										</div></li>
+									{% endfor %}
+								</ul>
 
+								{% if post.github %}
+									<div class="github-details">
+										<iframe src="http://ghbtns.com/github-btn.html?user={{post.github.user}}&repo={{post.github.repo}}&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
+										<iframe src="http://ghbtns.com/github-btn.html?user={{post.github.user}}&repo={{post.github.repo}}&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
+									</div>
+								{% endif %}
+							</div>
+						</div>
 
+						<div class="piece-shots piece-shots--{{post.meta.layout}}">
+							{% if post.images %}
+								{% for img in post.images %}
+									<figure class="piece-shots-shot piece-shots-shot--{{img.type}} piece-shots-shot--0{{forloop.index}}">
+										<img src="/img/projects/{{post.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
+									</figure>
+								{% endfor %}
+							{% endif %}
+						</div>
+					</div>
 				</article>
 			{% endfor %}
 		</section>

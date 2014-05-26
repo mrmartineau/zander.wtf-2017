@@ -1,0 +1,176 @@
+.piece {
+	position: relative;
+	margin: 0;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.piece-inner {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 5% 0 0;
+
+	@include respond-min($breakpoint-single-col) {
+		// padding: 5% 0 0;
+	}
+
+	@include respond-min($breakpoint-wide) {
+		// width: 90%;
+	}
+
+}
+.piece-inner--icon {
+	padding-bottom: 5%;
+}
+
+.piece-title {
+	margin: 0;
+	color: #fff;
+	text-transform: uppercase;
+	@include font-size(30);
+	line-height: 1.3;
+	font-weight: bold;
+	text-align: center;
+
+	@include respond-min($breakpoint-single-col) {
+		@include font-size(50);
+	}
+
+	@include respond-min($breakpoint-wide) {
+
+	}
+}
+.piece-url {
+	margin-bottom: 6%;
+	text-align: center;
+
+	@include respond-min($breakpoint-single-col) {
+
+	}
+
+	@include respond-min($breakpoint-wide) {
+
+	}
+}
+
+/*
+   Info
+   ========================================================================== */
+.piece-infoContainer {
+
+	@include respond-min($breakpoint-single-col) {
+		width: 85%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@include respond-min($breakpoint-wide) {
+
+	}
+
+}
+.piece-infoContainer-desc {
+	margin-bottom: $base-line-height + px;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	@include respond-min($breakpoint-single-col) {
+		float: left;
+		width: 48%;
+	}
+
+	@include respond-min($breakpoint-wide) {
+
+	}
+}
+.piece-infoContainer-info {
+
+	@include respond-min($breakpoint-single-col) {
+		float: right;
+		width: 48%;
+
+	}
+
+	@include respond-min($breakpoint-wide) {
+
+	}
+}
+.piece-infoContainer-info-list {
+	margin: 0 20px $base-line-height + px 0;
+}
+.piece-infoContainer-info-list-item {
+	position: relative;
+}
+.piece-infoContainer-info-list-item-key {
+	position: absolute;
+	width: 110px;
+}
+.piece-infoContainer-info-list-item-value {
+	margin-left: 120px;
+}
+
+
+/*
+   Shots
+   ========================================================================== */
+.piece-shots {
+	position: relative;
+
+	@include respond-min($breakpoint-single-col) {
+
+	}
+
+	@include respond-min($breakpoint-wide) {
+
+	}
+
+}
+.piece-shots-shot {
+	border-radius: 10px;
+	background-color: #ddd;
+	padding-top: 20px;
+}
+.piece-shots-shot--rwd {
+
+}
+.piece-shots-shot--narrow {
+	padding-bottom: 30px;
+	max-width: 120px;
+	margin: -150px auto $base-line-height + px;
+	position: relative;
+
+	@include respond-min($breakpoint-mid) {
+		max-width: 200px;
+		margin-top: -300px;
+	}
+
+	@include respond-min($breakpoint-single-col) {
+		position: absolute;
+		right: -30px;
+		top: 50%;
+		margin-top: -284px;
+		max-width: 320px;
+	}
+
+	@include respond-min($breakpoint-wide) {
+
+	}
+
+}
+.piece-shots-shot--wide {
+
+	@include respond-min($breakpoint-single-col) {
+
+	}
+
+	@include respond-min($breakpoint-wide) {
+
+	}
+
+}
+.piece-shots-shot-img {
+	display: block;
+}

@@ -1,20 +1,23 @@
 @mixin project-colours($projectID, $bgColour, $textColour, $linkColour, $linkHover) {
 
-	#{$projectID}.portfolio-pieces--item {
+	#{$projectID}.piece {
 		background-color: $bgColour;
 		color: $textColour;
 
-		h1, h1 a {
+		.piece-title,
+		.piece-title a {
 			color: $textColour;
 		}
 
-		a {
+		a:link,
+		a:visited {
 			color: $linkColour;
 
-			&:hover {
-				// color: $linkHover;
-				color: lighten($linkColour, 20%);
-			}
+		}
+		a:hover,
+		a:active {
+			// color: $linkHover;
+			color: lighten($linkColour, 20%);
 		}
 	}
 
