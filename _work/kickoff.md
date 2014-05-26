@@ -5,6 +5,7 @@ meta:
   name: kickoff
   date: Ongoing
   skills: Front-end
+  layout: icon
 
 view:
   text: tmwagency.github.io/kickoff
@@ -14,9 +15,12 @@ credits:
  - title: Developer
    name: Zander Martineau
  - title: Developer
-   name: "[Ashley Nolan](http://ashleynolan.co.uk)"
+   name: Ashley Nolan
+   url: http://ashleynolan.co.uk
 
-github: tmwagency/kickoff
+github: 
+  user: tmwagency
+  repo: kickoff
 ---
 Kickoff is a robust, adaptable and unopinionated front-end framework that is great starting point for any web site; we use for every project at TMW.
 
