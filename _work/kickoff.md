@@ -6,7 +6,9 @@ meta:
   date: Ongoing
   skills: Front-end
 
-view: "[tmwagency.github.io/kickoff](http://tmwagency.github.io/kickoff)"
+view:
+  text: tmwagency.github.io/kickoff
+  url: http://tmwagency.github.io/kickoff
 
 credits:
  - title: Developer

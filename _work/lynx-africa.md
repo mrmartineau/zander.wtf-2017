@@ -6,7 +6,9 @@ meta:
   date: "October 2013"
   skills: "Front-end development"
 
-view: "[lynxafrica18.tumblr.com](http://lynxafrica18.tumblr.com)"
+view:
+  text: "lynxafrica18.tumblr.com"
+  url: "http://lynxafrica18.tumblr.com"
 
 credits:
  - title: Designer
@@ -17,7 +19,7 @@ credits:
    name: "[Unilever](http://unilever.com)"
 images:
  - src: jimll.jpg
-   caption: 
-   type: 
+   caption:
+   type:
 ---
 The iconic Lynx Africa deoderant turns 18 this year and to celebrate I helped produce a Tumblr blog that publishes a new piece of artwork each day for 18 days.

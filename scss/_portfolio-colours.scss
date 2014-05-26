@@ -40,7 +40,7 @@
 @include project-colours('#sohofixed-identity', #000, #eee, #555, #fff);
 
 // Code
-@include project-colours('#choreographic-grid', $silver, #fff, $linkColorHover, #fff);
+@include project-colours('#choreographic-grid', $color-text, #fff, $color-link-hover, #fff);
 @include project-colours('#kickoff', #587ca0, #fff, #fff, #fff);
 @include project-colours('#javascript-less-links', $blue, #fff, #fff, #fff);
 @include project-colours('#validatr', $yellow, #000, #000, #000);
@@ -55,11 +55,11 @@
 
 
 #choreographic-grid {
-	background-image: url('#{$imgUIPath}/bg-grid.png');
+	background-image: url('#{$img-path}/ui/bg-grid.png');
 	background-position: center top;
 }
 
 #lynx-apollo {
-	background-image: url('#{$imgPath}/projects/lynx-apollo/stars.jpg');
+	background-image: url('#{$img-path}/projects/lynx-apollo/stars.jpg');
 	background-position: center top;
 }

@@ -32,9 +32,9 @@ title: Zander Martineau
 
 		<section class="work">
 			{% for post in site.work limit:2 %}
-				<article class="piece">
+				<article class="piece" id="{{post.meta.name}}">
 					<h1>{{post.title}}</h1>
-					<h3>{{post.view | markdownify}}</h3>
+					<h3><a href="{{post.view.url}}" title="Go to {{post.view.text}}">{{post.view.text}}</a></h3>
 					{{post.content | markdownify}}
 
 					<ul>
