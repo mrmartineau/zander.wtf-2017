@@ -8,26 +8,28 @@ title: Zander Martineau
 				<h1 class="me-name">Zander Martineau</h1>
 				<h2 class="me-desc">Creative Technologist, London</h2>
 			</section>
-			{% for post in site.posts limit:2 %}
-				<a href="{{post.url}}" title="Read {{post.title}}" class="latestEntry">
-					<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-0{{forloop.index}}.jpg)"></div>
+			<section class="latestEntries clearfix">
+				{% for post in site.posts limit:3 %}
+					<a href="{{post.url}}" title="Read {{post.title}}" class="latestEntry">
+						<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-0{{forloop.index}}.jpg)"></div>
+						<div class="overlay overlay--dark"></div>
+						<time class="latestEntry-date">{{post.date | date_to_string}}</time>
+						<h1 class="latestEntry-title">{{post.title}}</h1>
+						<p class="latestEntry-excerpt">{{post.excerpt}}</p>
+						<h3 class="latestEntry-cta">Read now</h3>
+					</a>
+				{% endfor %}
+
+				<!-- <a href="#" class="latestEntry">
+					<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-03.jpg)"></div>
 					<div class="overlay overlay--dark"></div>
-					<time class="latestEntry-date">{{post.date | date_to_string}}</time>
-					<h1 class="latestEntry-title">{{post.title}}</h1>
-					<p class="latestEntry-excerpt">{{post.excerpt}}</p>
+					<time class="latestEntry-date">16 Apr 2014</time>
+					<h1 class="latestEntry-title">Link to rest of blog</h1>
+					<p class="latestEntry-excerpt">Follow this link to visit the rest of the blog</p>
 					<h3 class="latestEntry-cta">Read now</h3>
-				</a>
-			{% endfor %}
-
-			<a href="#" class="latestEntry">
-				<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-03.jpg)"></div>
-				<div class="overlay overlay--dark"></div>
-				<time class="latestEntry-date">16 Apr 2014</time>
-				<h1 class="latestEntry-title">Link to rest of blog</h1>
-				<p class="latestEntry-excerpt">Follow this link to visit the rest of the blog</p>
-				<h3 class="latestEntry-cta">Read now</h3>
-			</a>
-
+				</a> -->
+				<a href="/blog" class="visitBlog">Link to rest of blog</a>
+			</section>
 		</section>
 
 		<section class="work">
@@ -43,17 +45,17 @@ title: Zander Martineau
 							</div>
 
 							<div class="piece-infoContainer-info clearfix">
-								<ul class="piece-infoContainer-info-list unstyled">
-									<li class="piece-infoContainer-info-list-item">
-									<b class="piece-infoContainer-info-list-item-key">Date:</b>
-									<div class="piece-infoContainer-info-list-item-value">{{post.meta.date}}</div></li>
-									<li class="piece-infoContainer-info-list-item">
-									<b class="piece-infoContainer-info-list-item-key">Skills:</b>
-									<div class="piece-infoContainer-info-list-item-value">{{post.meta.skills}}</div></li>
+								<ul class="piece-info-list unstyled">
+									<li class="piece-info-list-item">
+									<b class="piece-info-list-item-key">Date:</b>
+									<div class="piece-info-list-item-value">{{post.meta.date}}</div></li>
+									<li class="piece-info-list-item">
+									<b class="piece-info-list-item-key">Skills:</b>
+									<div class="piece-info-list-item-value">{{post.meta.skills}}</div></li>
 									{% for credit in post.credits %}
-										<li class="piece-infoContainer-info-list-item">
-										<b class="piece-infoContainer-info-list-item-key">{{credit.title}}:</b>
-										<div class="piece-infoContainer-info-list-item-value">
+										<li class="piece-info-list-item">
+										<b class="piece-info-list-item-key">{{credit.title}}:</b>
+										<div class="piece-info-list-item-value">
 										{% if credit.url %}
 											<a href="{{credit.url}}">{{credit.name}}</a>
 										{% else %}

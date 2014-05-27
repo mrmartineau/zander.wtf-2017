@@ -2,7 +2,9 @@
    Global app/site styles
    ========================================================================== */
 html,body {
-	height: 100%;
+	@include respond-min($breakpoint-single-col) {
+		height: 100%;
+	}
 }
 body {
 	background-color: $color-background;

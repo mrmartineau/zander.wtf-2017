@@ -6,9 +6,6 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 
-	@include respond-min($breakpoint-mid) {
-	}
-
 	@include respond-min($breakpoint-single-col) {
 		height: 100%;
 		min-height: 100%;
@@ -19,11 +16,10 @@
 
 .home-primary {
 	position: relative;
-	@include clearfix;
 
 	@include respond-min($breakpoint-single-col) {
-	height: 80%;
-	min-height: 600px;
+		height: 75%;
+		min-height: 600px;
 	}
 }
 
@@ -72,8 +68,16 @@
 /*
    Latest entries
    ========================================================================== */
+.latestEntries {
+
+	@include respond-min($breakpoint-single-col) {
+		height: 100%;
+		padding-bottom: 80px;
+		float: left;
+		width: 69%;
+	}
+}
 .latestEntry {
-	// height: 100%;
 	display: block;
 	@extend %home-item;
 	overflow: hidden;
@@ -100,10 +104,6 @@
 		width: 33.3333333%;
 		float: left;
 		min-height: 460px;
-	}
-
-	@include respond-min($breakpoint-single-col) {
-		width: 23%;
 	}
 }
 .latestEntry-date {
@@ -149,3 +149,14 @@
 	}
 }
 
+.visitBlog {
+	display: block;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	clear: both;
+
+	@include respond-min($breakpoint-single-col) {
+		clear: none;
+	}
+}
