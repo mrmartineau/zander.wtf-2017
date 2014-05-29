@@ -19,7 +19,7 @@
 
 	@include respond-min($breakpoint-single-col) {
 		height: 75%;
-		min-height: 600px;
+		min-height: 550px;
 	}
 }
 
@@ -72,7 +72,6 @@
 
 	@include respond-min($breakpoint-single-col) {
 		height: 100%;
-		padding-bottom: 80px;
 		float: left;
 		width: 69%;
 	}
@@ -154,9 +153,4 @@
 	height: 80px;
 	text-align: center;
 	line-height: 80px;
-	clear: both;
-
-	@include respond-min($breakpoint-single-col) {
-		clear: none;
-	}
 }

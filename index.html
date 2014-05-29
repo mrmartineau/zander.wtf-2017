@@ -19,20 +19,13 @@ title: Zander Martineau
 						<h3 class="latestEntry-cta">Read now</h3>
 					</a>
 				{% endfor %}
-
-				<!-- <a href="#" class="latestEntry">
-					<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-03.jpg)"></div>
-					<div class="overlay overlay--dark"></div>
-					<time class="latestEntry-date">16 Apr 2014</time>
-					<h1 class="latestEntry-title">Link to rest of blog</h1>
-					<p class="latestEntry-excerpt">Follow this link to visit the rest of the blog</p>
-					<h3 class="latestEntry-cta">Read now</h3>
-				</a> -->
-				<a href="/blog" class="visitBlog">Link to rest of blog</a>
 			</section>
 		</section>
+		<a href="/blog" class="visitBlog">Link to rest of blog</a>
 
 		<section class="work">
+			<h1 class="text-centre">Selected Work</h1>
+
 			{% for post in site.work limit:2 %}
 				<article class="piece" id="{{post.meta.name}}">
 					<div class="piece-inner piece-inner--{{post.meta.layout}}">
