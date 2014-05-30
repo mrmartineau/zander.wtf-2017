@@ -2,7 +2,7 @@
 	position: relative;
 	text-align: center;
 	background-size: cover;
-	padding: 40px 20px;
+	padding: 20px;
 	background-position: center center;
 	background-repeat: no-repeat;
 
@@ -49,6 +49,7 @@
 	margin: 0;
 	@include font-size(22);
 	color: #818A92;
+	// line-height: 1;
 }
 .me-logo {
 	margin-bottom: 20px;
@@ -149,8 +150,22 @@
 }
 
 .visitBlog {
+	position: relative;
 	display: block;
+	display: none;
 	height: 80px;
 	text-align: center;
 	line-height: 80px;
+	overflow: hidden;
+
+	&:hover {
+		.overlay--img {
+			transform: scale(1.2);
+		}
+	}
+}
+.visitBlog-copy {
+	position: relative;
+	color: #fff;
+	color: rgba(#fff, 0.8);
 }

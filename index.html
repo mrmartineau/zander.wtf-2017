@@ -21,16 +21,26 @@ title: Zander Martineau
 				{% endfor %}
 			</section>
 		</section>
-		<a href="/blog" class="visitBlog">Link to rest of blog</a>
+		<a href="/blog" class="visitBlog">
+			<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-02.jpg)"></div>
+			<div class="overlay overlay--dark"></div>
+			<div class="visitBlog-copy">Read more posts in the blog</div>
+		</a>
 
 		<section class="work">
-			<h1 class="text-centre">Selected Work</h1>
+			<h1 class="workTitle text-centre">Selected Work</h1>
 
-			{% for post in site.work limit:2 %}
+			{% for post in site.work order:meta.date %}
 				<article class="piece" id="{{post.meta.name}}">
 					<div class="piece-inner piece-inner--{{post.meta.layout}}">
 						<h1 class="piece-title">{{post.title}}</h1>
-						<h3 class="piece-url"><a href="{{post.view.url}}" title="Go to {{post.view.text}}">{{post.view.text}}</a></h3>
+						<h3 class="piece-url ellipsis">
+							{% if post.view.url %}
+								<a href="{{post.view.url}}" title="Go to {{post.view.text}}">{{post.view.text}}</a>
+							{% else %}
+								{{post.view.text}}
+							{% endif %}
+						</h3>
 
 						<div class="piece-infoContainer clearfix">
 							<div class="piece-infoContainer-desc">
@@ -48,7 +58,7 @@ title: Zander Martineau
 									{% for credit in post.credits %}
 										<li class="piece-info-list-item">
 										<b class="piece-info-list-item-key">{{credit.title}}:</b>
-										<div class="piece-info-list-item-value">
+										<div class="piece-info-list-item-value ellipsis">
 										{% if credit.url %}
 											<a href="{{credit.url}}">{{credit.name}}</a>
 										{% else %}
@@ -56,6 +66,9 @@ title: Zander Martineau
 										{% endif %}
 										</div></li>
 									{% endfor %}
+									{% if post.github %}<li class="piece-info-list-item">
+										<b class="piece-info-list-item-key">Github:</b>
+										<div class="piece-info-list-item-value ellipsis"><a href="https://github.com/{{post.github.user}}/{{post.github.repo}}">github.com/{{post.github.user}}/{{post.github.repo}}</a></div></li>{% endif %}
 								</ul>
 
 								{% if post.github %}
@@ -70,8 +83,10 @@ title: Zander Martineau
 						<div class="piece-shots piece-shots--{{post.meta.layout}}">
 							{% if post.images %}
 								{% for img in post.images %}
-									<figure class="piece-shots-shot piece-shots-shot--{{img.type}} piece-shots-shot--0{{forloop.index}}">
-										<img src="/img/projects/{{post.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
+									<figure class="piece-shots-shot piece-shots-shot--{{img.type}} piece-shots-shot--0{{forloop.index}}{% if post.meta.layout == 'icon' %} icon-{{img.class}}{% endif %}">
+										{% if post.meta.layout != 'icon' %}
+											<img src="/img/projects/{{post.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
+										{% endif %}
 									</figure>
 								{% endfor %}
 							{% endif %}

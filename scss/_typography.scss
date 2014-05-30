@@ -24,9 +24,15 @@
 // 1. Prevents iOS text size adjust after orientation change, without disabling user zoom
 // www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
 html {
-	font-size: $base-font-size + px;
 	-webkit-text-size-adjust: 100%; /* 1 */
 	-ms-text-size-adjust: 100%; /* 1 */
+
+	font-size: ($base-font-size - 4) + px;
+
+	@include respond-min($breakpoint-mid) {
+		font-size: $base-font-size + px;
+	}
+
 }
 
 // Body text
@@ -35,6 +41,7 @@ body {
 	@include font-size($base-font-size);
 	line-height: $base-leading;
 	color: $color-text;
+	font-variant-ligatures: common-ligatures;
 
 	// Two ways to smoothen type, they are disabled by default
 	// Enable only one of them if you need them
@@ -55,7 +62,7 @@ p {
 	font-family: $base-font-family;
 	@include font-size($base-font-size);
 	margin-top: 0;
-	margin-bottom: $base-line-height + px;
+	@include rem(margin-bottom, $base-line-height);
 
 	// Measure - ideally about 65 chars per line
 	// =========================================
@@ -85,13 +92,15 @@ h1, h2, h3, h4, h5, h6 {
 h1, .h1, .alpha {
 	@include font-size($h1-size);
 	margin-top: 0;
-	margin-bottom: ($base-line-height * 2) + px;
+	@include rem(margin-bottom, $base-line-height * 2);
+	// margin-bottom: ($base-line-height * 2) + px;
 }
 
 h2, .h2, .beta {
 	@include font-size($h2-size);
 	margin-top: 0;
-	margin-bottom: $base-line-height + px;
+	@include rem(margin-bottom, $base-line-height);
+	// margin-bottom: $base-line-height + px;
 }
 
 h3, .h3, .gamma {
@@ -126,7 +135,8 @@ h6, .h6, .zeta {
 * + h4, * + .h4, * + .delta,
 * + h5, * + .h5, * + .epsilon,
 * + h6, * + .h6, * + .zeta {
-	margin-top: $base-line-height + px;
+	@include rem(margin-top, $base-line-height);
+	// margin-top: $base-line-height + px;
 }
 
 /*

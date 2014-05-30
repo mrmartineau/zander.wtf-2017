@@ -1,3 +1,17 @@
+.workTitle {
+	margin-bottom: 0;
+	padding: 5% -0px;
+	// background: url(/img/latestentries/latestentry-03.jpg) center center no-repeat;
+	// -webkit-background-clip: text;
+	// // background-clip: text;
+	// -webkit-text-fill-color: transparent;
+	// text-fill-color: transparent;
+
+
+	@include respond-min($breakpoint-single-col) {
+		@include font-size(80);
+	}
+}
 .piece {
 	position: relative;
 	margin: 0;
@@ -42,16 +56,9 @@
 	}
 }
 .piece-url {
-	margin-bottom: 6%;
+	@include rem(margin-top, $base-line-height);
+	@include rem(margin-bottom, $base-line-height);
 	text-align: center;
-
-	@include respond-min($breakpoint-single-col) {
-
-	}
-
-	@include respond-min($breakpoint-wide) {
-
-	}
 }
 
 /*
@@ -63,10 +70,6 @@
 		width: 85%;
 		margin-left: auto;
 		margin-right: auto;
-	}
-
-	@include respond-min($breakpoint-wide) {
-
 	}
 
 }
@@ -81,10 +84,6 @@
 		float: left;
 		width: 48%;
 	}
-
-	@include respond-min($breakpoint-wide) {
-
-	}
 }
 .piece-infoContainer-info {
 
@@ -93,13 +92,9 @@
 		width: 48%;
 
 	}
-
-	@include respond-min($breakpoint-wide) {
-
-	}
 }
 .piece-info-list {
-	margin: 0 20px $base-line-height + px 0;
+
 }
 .piece-info-list-item {
 	position: relative;
@@ -112,12 +107,18 @@
 	margin-left: 120px;
 }
 
+.github-details {
+	margin-top: $base-line-height + px;
+}
+
 
 /*
    Shots
    ========================================================================== */
 .piece-shots {
 	position: relative;
+	margin-top: $base-line-height + px;
+	text-align: center;
 
 	@include respond-min($breakpoint-single-col) {
 
@@ -128,19 +129,39 @@
 	}
 
 }
-.piece-shots-shot {
-	border-radius: 10px;
-	background-color: #ddd;
-	padding-top: 20px;
+.piece-shots--icon {
+	width: 240px;
+	margin-left: auto;
+	margin-right: auto;
 }
-.piece-shots-shot--rwd {
+.piece-shots--rwd {
 
 }
+
+
+/*
+   Different type of shots
+   ========================================================================== */
+.piece-shots-shot {
+	padding-top: 20px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.piece-shots-shot--icon {
+	width: 240px;
+	height: 240px;
+	margin: 0 auto;
+	border-radius: 40px;
+}
+
 .piece-shots-shot--narrow {
-	padding-bottom: 30px;
+	padding-bottom: 40px;
 	max-width: 120px;
 	margin: -150px auto $base-line-height + px;
 	position: relative;
+	background-color: #444;
+	border-radius: 5px;
 
 	@include respond-min($breakpoint-mid) {
 		max-width: 200px;
@@ -153,6 +174,7 @@
 		top: 50%;
 		margin-top: -284px;
 		max-width: 320px;
+		border-radius: 10px;
 	}
 
 	@include respond-min($breakpoint-wide) {
@@ -161,15 +183,28 @@
 
 }
 .piece-shots-shot--wide {
+	border-radius: 5px 5px 0 0;
+	background-color: #ddd;
 
 	@include respond-min($breakpoint-single-col) {
-
+		border-radius: 10px 10px 0 0;
 	}
 
 	@include respond-min($breakpoint-wide) {
 
 	}
 
+}
+
+.piece-shots-shot--logo {
+	margin-bottom: $base-line-height + px;
+	border-radius: 5px;
+	overflow: hidden;
+	padding: 0;
+
+	@include respond-min($breakpoint-single-col) {
+		border-radius: 10px;
+	}
 }
 .piece-shots-shot-img {
 	display: block;
