@@ -40,7 +40,7 @@ module.exports = function (grunt) {
 		watch: {
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: ['sass:kickoff', 'sass:styleguide', 'autoprefixer:dist']
+				tasks: ['sass:kickoff', 'autoprefixer:dist']
 			},
 
 			js: {
@@ -66,8 +66,8 @@ module.exports = function (grunt) {
 					'_layouts/**/*.html',
 					'archive/**/*.html',
 					'_posts/**/*.md',
-					'_team/**/*.md',
-					'team/**/*.html',
+					'_work/**/*.md',
+					'work/**/*.html',
 					'_code/**/*.md',
 					'code/**/*.html',
 					'_drafts/**/*.md',
