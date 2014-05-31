@@ -8,16 +8,20 @@ title: Zander Martineau
 				<h1 class="me-name">Zander Martineau</h1>
 				<h2 class="me-desc">Creative Technologist, London</h2>
 			</section>
-			<section class="latestEntries clearfix">
+			<section class="entries entries--latest clearfix">
 				{% for post in site.posts limit:3 %}
-					<a href="{{post.url}}" title="Read {{post.title}}" class="latestEntry">
-						<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-0{{forloop.index}}.jpg)"></div>
-						<div class="overlay overlay--dark"></div>
-						<time class="latestEntry-date">{{post.date | date_to_string}}</time>
-						<h1 class="latestEntry-title">{{post.title}}</h1>
-						<p class="latestEntry-excerpt">{{post.excerpt}}</p>
-						<h3 class="latestEntry-cta">Read now</h3>
-					</a>
+					{% if post.post-type == 'link' %}
+						<a href="{{ post.link-to }}" title="Read {{post.title}}" class="listingEntry listingEntry--home listingEntry--external">
+					{% else %}
+						<a href="{{post.url}}" title="Read {{post.title}}" class="listingEntry listingEntry--home">
+					{% endif %}
+							<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-0{{forloop.index}}.jpg)"></div>
+							<div class="overlay overlay--dark"></div>
+							<time class="listingEntry-date">{{post.date | date_to_string}}</time>
+							<h1 class="listingEntry-title">{{post.title}}</h1>
+							<p class="listingEntry-excerpt">{{post.excerpt}}</p>
+							<h3 class="listingEntry-cta">Read now</h3>
+						</a>
 				{% endfor %}
 			</section>
 		</section>
