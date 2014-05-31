@@ -1,22 +1,21 @@
 ---
-layout: posts
+layout: default
 title: Blog - Zander Martineau
 pageid: blog
 ---
-
-{% for post in site.posts %}
-	{% if post.post-type == 'link' %}
-	<article class="entry entry--list entry--link">
-		<time class="entry--date text-centre" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
-		<h1 class="entry--title"><a href="{{ post.link-to }}" title="Read {{ post.title }}" rel="external">{{ post.title }}</a></h1>
-
-	{% else %}
-
-	<article class="entry entry--list">
-			<time class="entry--date text-centre" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
-			<h1 class="entry--title"><a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
-	{% endif %}
-
-		<p class="article--excerpt">{{post.excerpt}}</p>
-	</article>
-{% endfor %}
+<section class="entries entries--blogSection clearfix">
+	{% for post in site.posts %}
+		{% if post.post-type == 'link' %}
+			<a href="{{ post.link-to }}" title="Read {{post.title}}" class="listingEntry listingEntry--blogSection listingEntry--external">
+		{% else %}
+			<a href="{{post.url}}" title="Read {{post.title}}" class="listingEntry listingEntry--blogSection">
+		{% endif %}
+				<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-0{{forloop.index}}.jpg)"></div>
+				<div class="overlay overlay--dark"></div>
+				<time class="listingEntry-date">{{post.date | date_to_string}}</time>
+				<h1 class="listingEntry-title">{{post.title}}</h1>
+				<p class="listingEntry-excerpt">{{post.excerpt}}</p>
+				<h3 class="listingEntry-cta">Read now</h3>
+			</a>
+	{% endfor %}
+</section>
