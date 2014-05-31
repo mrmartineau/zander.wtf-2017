@@ -1,12 +1,6 @@
 {% include html_start.html %}
-	<body class="section-{{ page.pageid }}">
+	<body class="{{ page.pageid }}">
 
-		<!--  === MASTHEAD ===  -->
-		{% include masthead.html %}
-
-		<!--  === MAIN CONTENT ===  -->
-		<section id="main" role="main">
-			{{ content }}
-		</section>
+		{{ content }}
 
 {% include html_end.html %}
