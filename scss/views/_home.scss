@@ -9,7 +9,7 @@
 	@include respond-min($breakpoint-single-col) {
 		height: 100%;
 		min-height: 100%;
-		padding: 80px 2%;
+		padding: 80px 40px;
 	}
 
 }
@@ -69,85 +69,8 @@
 /*
    Latest entries
    ========================================================================== */
-.latestEntries {
 
-	@include respond-min($breakpoint-single-col) {
-		height: 100%;
-		float: left;
-		width: 69%;
-	}
-}
-.latestEntry {
-	display: block;
-	@extend %home-item;
-	overflow: hidden;
 
-	&, &:link, &:visited {
-		color: #fff;
-		color: rgba(#fff, 0.75);
-	}
-
-	&:hover, &:active {
-		color: #fff;
-		color: rgba(#fff, 0.75);
-
-		.overlay--img {
-			transform: scale(1.2);
-		}
-	}
-
-	&, * {
-		transition: $link-transition;
-	}
-
-	@include respond-min($breakpoint-mid) {
-		width: 33.3333333%;
-		float: left;
-		min-height: 460px;
-	}
-}
-.latestEntry-date {
-	text-transform: uppercase;
-	@include font-size(12);
-	font-weight: bold;
-	position: relative;
-}
-.latestEntry-title {
-	margin: 0 0 20px;
-	line-height: 1.2;
-	@include font-size(27);
-	position: relative;
-
-	@include respond-min($breakpoint-wide) {
-		@include font-size(40);
-	}
-}
-.latestEntry-excerpt {
-	position: relative;
-}
-.latestEntry-cta {
-	position: relative;
-	width: 120px;
-	margin: 30px auto 0;
-	text-transform: uppercase;
-	font-weight: bold;
-	@include font-size(20);
-	border-color: #fff;
-	border-color: rgba(#fff, 0.8);
-	border-top: 2px solid;
-	padding-top: 30px;
-
-	@include respond-min($breakpoint-mid) {
-		position: absolute;
-		left: 50%;
-		bottom: 40px;
-		margin-left: -60px;
-	}
-
-	@include respond-min($breakpoint-single-col) {
-		bottom: 80px;
-	}
-}
 
 .visitBlog {
 	position: relative;

@@ -1,0 +1,118 @@
+.entries,
+.entries--latest {
+	@include respond-min($breakpoint-single-col) {
+		height: 100%;
+	}
+}
+
+.entries {
+	@include respond-min($breakpoint-single-col) {
+		min-height: 550px;
+	}
+}
+
+.entries--latest {
+	@include respond-min($breakpoint-single-col) {
+		float: left;
+		width: 69%;
+	}
+}
+
+.entries--blogSection {
+	@include respond-min($breakpoint-single-col) {
+		display: flex;
+	}
+}
+
+.listingEntry {
+	display: block;
+	@extend %home-item;
+	overflow: hidden;
+
+	&, &:link, &:visited {
+		color: #fff;
+		color: rgba(#fff, 0.75);
+	}
+
+	&:hover, &:active {
+		color: #fff;
+		color: rgba(#fff, 0.75);
+
+		.overlay--img {
+			transform: scale(1.2);
+		}
+	}
+
+	&, * {
+		transition: $link-transition;
+	}
+
+	@include respond-min($breakpoint-mid) {
+		float: left;
+	}
+}
+
+.listingEntry--home {
+
+
+	@include respond-min($breakpoint-mid) {
+		width: 33.3333333%;
+		min-height: 460px;
+	}
+}
+.listingEntry--blogSection {
+
+	@include respond-min($breakpoint-mid) {
+		width: 33.3333333%;
+		max-width: 400px;
+		min-height: 460px;
+	}
+
+	@include respond-min($breakpoint-single-col) {
+		min-width: 400px;
+	}
+}
+
+
+.listingEntry-date {
+	text-transform: uppercase;
+	@include font-size(12);
+	font-weight: bold;
+	position: relative;
+}
+.listingEntry-title {
+	margin: 0 0 20px;
+	line-height: 1.2;
+	@include font-size(27);
+	position: relative;
+
+	@include respond-min($breakpoint-wide) {
+		@include font-size(40);
+	}
+}
+.listingEntry-excerpt {
+	position: relative;
+}
+.listingEntry-cta {
+	position: relative;
+	width: 120px;
+	margin: 30px auto 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	@include font-size(20);
+	border-color: #fff;
+	border-color: rgba(#fff, 0.8);
+	border-top: 2px solid;
+	padding-top: 30px;
+
+	@include respond-min($breakpoint-mid) {
+		position: absolute;
+		left: 50%;
+		bottom: 40px;
+		margin-left: -60px;
+	}
+
+	@include respond-min($breakpoint-single-col) {
+		bottom: 80px;
+	}
+}
