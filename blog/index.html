@@ -10,7 +10,7 @@ pageid: blog
 		{% else %}
 			<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--blogEntries">
 		{% endif %}
-				<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-0{{forloop.index}}.jpg)"></div>
+				<div class="overlay overlay--img" style="background-image: url({{post.image}})"></div>
 				<div class="overlay overlay--dark"></div>
 				<time class="verticalTile-date">{{post.date | date_to_string}}</time>
 				<h1 class="verticalTile-title">{{post.title}}</h1>

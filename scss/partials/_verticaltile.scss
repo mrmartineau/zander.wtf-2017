@@ -31,15 +31,17 @@
 	&, * {
 		transition: $link-transition;
 	}
-
-	@include respond-min($breakpoint-mid) {
-		float: left;
-	}
 }
 
 /*
    Variations
    ========================================================================== */
+.verticalTile--home,
+.verticalTile--blogEntries {
+	@include respond-min($breakpoint-mid) {
+		float: left;
+	}
+}
 .verticalTile--home {
 	@include respond-min($breakpoint-mid) {
 		width: 33.3333333%;
@@ -60,7 +62,6 @@
 }
 
 .verticalTile--blogEntry {
-
 	@include respond-min($breakpoint-single-col) {
 		position: fixed;
 		top: 0;
