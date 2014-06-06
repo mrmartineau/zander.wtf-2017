@@ -1,0 +1,16 @@
+.content {
+	position: relative;
+
+	@include respond-min($breakpoint-single-col) {
+		float: right;
+		width: 69%;
+	}
+}
+
+.content-inner {
+	margin: 20px;
+
+	@include respond-min($breakpoint-single-col) {
+		margin: 86px 50px 50px;
+	}
+}

@@ -11,16 +11,16 @@ title: Zander Martineau
 			<section class="entries entries--latest clearfix">
 				{% for post in site.posts limit:3 %}
 					{% if post.post-type == 'link' %}
-						<a href="{{ post.link-to }}" title="Read {{post.title}}" class="listingEntry listingEntry--home listingEntry--external">
+						<a href="{{ post.link-to }}" title="Read {{post.title}}" class="verticalTile verticalTile--home verticalTile--external">
 					{% else %}
-						<a href="{{post.url}}" title="Read {{post.title}}" class="listingEntry listingEntry--home">
+						<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--home">
 					{% endif %}
-							<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-0{{forloop.index}}.jpg)"></div>
+							<div class="overlay overlay--img" style="background-image: url({{post.image}})"></div>
 							<div class="overlay overlay--dark"></div>
-							<time class="listingEntry-date">{{post.date | date_to_string}}</time>
-							<h1 class="listingEntry-title">{{post.title}}</h1>
-							<p class="listingEntry-excerpt">{{post.excerpt}}</p>
-							<h3 class="listingEntry-cta">Read now</h3>
+							<time class="verticalTile-date">{{post.date | date_to_string}}</time>
+							<h1 class="verticalTile-title">{{post.title}}</h1>
+							<p class="verticalTile-excerpt">{{post.excerpt}}</p>
+							<h3 class="verticalTile-cta">Read now</h3>
 						</a>
 				{% endfor %}
 			</section>

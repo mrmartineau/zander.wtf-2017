@@ -1,47 +1,51 @@
----
-layout: posts
-pageid: blog
----
-<article class="entry">
-	<h3 class="entry--title">{{ page.title }}</h3>
-	<time class="entry--date text-centre">{{ page.date | date_to_string }}</time>
+{% include html_start.html %}
+	<body class="{{ page.pageid }}">
 
-	{% if page.image %}
-		<figure>
-			<img src="/img/posts/{{ page.image }}" alt="{{ page.title }}">
-		</figure>
-	{% endif %}
+		<article class="entry">
+			<div class="verticalTile verticalTile--blogEntry">
+				<div class="overlay overlay--img" style="background-image: url({{ page.image }})"></div>
+				<div class="overlay overlay--dark"></div>
+				<time class="verticalTile-date">{{page.date | date_to_string}}</time>
+				<h1 class="verticalTile-title">{{page.title}}</h1>
+				<p class="verticalTile-excerpt">{{page.excerpt}}</p>
+			</div>
 
-	{{ content }}
+			<div class="content">
+				<div class="content-inner">
+					{{ content }}
 
-	{% if page.comments %}
-		<div id="disqus_thread"></div>
-		<script type="text/javascript">
-		{% if page.comments_old %}
-			var disqus_shortname = 'rathersplendidblog';
-		{% else %}
-			var disqus_shortname = 'martineau-tv';
-		{% endif %}
-		{% if page.comments_id %}
-			var disqus_identifier = '{{ page.comments_id }}'; // required: replace example with your forum shortname
-		{% endif %}
-			(function() {
-				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-			})();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	{% endif %}
+					{% if page.comments %}
+						<div id="disqus_thread"></div>
+						<script type="text/javascript">
+						{% if page.comments_old %}
+							var disqus_shortname = 'rathersplendidblog';
+						{% else %}
+							var disqus_shortname = 'martineau-tv';
+						{% endif %}
+						{% if page.comments_id %}
+							var disqus_identifier = '{{ page.comments_id }}'; // required: replace example with your forum shortname
+						{% endif %}
+							(function() {
+								var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+								dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+								(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+							})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					{% endif %}
+				</div>
 
-</article>
+				<!-- Pagination links -->
+				<div class="pagination">
+					{% if page.previous %}
+						<a href="{{page.previous.url}}">Previous post</a>
+					{% endif %}
+					{% if page.next %}
+						<a href="{{page.next.url}}">Next post</a>
+					{% endif %}
+				</div>
+			</div>
+		</article>
 
-<!-- Pagination links -->
-<div class="pagination">
-	{% if page.previous %}
-		<a href="{{page.previous.url}}">Previous post</a>
-	{% endif %}
-	{% if page.next %}
-		<a href="{{page.next.url}}">Next post</a>
-	{% endif %}
-</div>
+
+{% include html_end.html %}
