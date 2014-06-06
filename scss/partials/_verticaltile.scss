@@ -1,0 +1,119 @@
+.verticalTile {
+	position: relative;
+	display: block;
+	text-align: center;
+	background-size: cover;
+	padding: 20px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+
+	@include respond-min($breakpoint-single-col) {
+		height: 100%;
+		min-height: 100%;
+		padding: 80px 30px;
+	}
+
+	&, &:link, &:visited {
+		color: #fff;
+		color: rgba(#fff, 0.75);
+	}
+
+	&:hover, &:active {
+		color: #fff;
+		color: rgba(#fff, 0.75);
+
+		.overlay--img {
+			transform: scale(1.2);
+		}
+	}
+
+	&, * {
+		transition: $link-transition;
+	}
+
+	@include respond-min($breakpoint-mid) {
+		float: left;
+	}
+}
+
+/*
+   Variations
+   ========================================================================== */
+.verticalTile--home {
+	@include respond-min($breakpoint-mid) {
+		width: 33.3333333%;
+		min-height: 460px;
+	}
+}
+
+.verticalTile--blogEntries {
+	@include respond-min($breakpoint-mid) {
+		width: 33.3333333%;
+		max-width: 400px;
+		min-height: 460px;
+	}
+
+	@include respond-min($breakpoint-single-col) {
+		min-width: 400px;
+	}
+}
+
+.verticalTile--blogEntry {
+
+	@include respond-min($breakpoint-single-col) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 31%;
+	}
+}
+
+
+/*
+   Sub items
+   ========================================================================== */
+.verticalTile-date {
+	text-transform: uppercase;
+	@include font-size(12);
+	font-weight: bold;
+	position: relative;
+}
+.verticalTile-title {
+	margin: 0 0 20px;
+	line-height: 1.2;
+	@include font-size(27);
+	position: relative;
+
+	@include respond-min($breakpoint-wide) {
+		@include font-size(40);
+	}
+}
+.verticalTile-excerpt {
+	position: relative;
+	margin-bottom: 0;
+}
+.verticalTile-cta {
+	position: relative;
+	width: 120px;
+	margin: 30px auto 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	@include font-size(20);
+	border-color: #fff;
+	border-color: rgba(#fff, 0.8);
+	border-top: 2px solid;
+	padding-top: 30px;
+
+	@include respond-min($breakpoint-mid) {
+		position: absolute;
+		left: 50%;
+		bottom: 40px;
+		margin-left: -60px;
+	}
+
+	@include respond-min($breakpoint-single-col) {
+		bottom: 80px;
+	}
+}
