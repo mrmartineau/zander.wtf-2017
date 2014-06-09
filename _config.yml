@@ -1,10 +1,10 @@
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: false
+highlighter: true
 permalink: /:year/:month/:title
 include: ['.htaccess']
-exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', 'index-static.php', 'index-handlebars.php', 'blog-src']
+exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', 'index-static.php', 'index-handlebars.php', 'blog-src', 'js-old']
 timezone: Europe/London
 
 paginate: 25

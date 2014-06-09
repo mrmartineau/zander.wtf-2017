@@ -3,7 +3,7 @@
 
 	@include respond-min($breakpoint-single-col) {
 		float: right;
-		width: 69%;
+		width: 57%;
 	}
 }
 
@@ -11,6 +11,7 @@
 	margin: 20px;
 
 	@include respond-min($breakpoint-single-col) {
+		max-width: 700px;
 		margin: 86px 50px 50px;
 	}
 }

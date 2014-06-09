@@ -19,6 +19,7 @@
 
 	@include respond-min($breakpoint-single-col) {
 		height: 75%;
+		height: 100%;
 		min-height: 550px;
 	}
 }
