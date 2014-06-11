@@ -1,6 +1,7 @@
 ---
 layout: work
 title: "Novalux Energy visual identity"
+date: 2012-03-01
 meta:
   name: novalux-logo
   date: March 2012
