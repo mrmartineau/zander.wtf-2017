@@ -33,9 +33,7 @@ title: Zander Martineau
 
 		<section class="work">
 			<h1 class="workTitle text-centre">Selected Work</h1>
-			<!-- {{ site.work | jsonify }} -->
-			{% assign sortedPosts = site.work | sort_by:title %}
-			{% for item in sortedPosts %}
+			{% for item in site.work reversed %}
 				<article class="piece" id="{{item.meta.name}}">
 					<div class="piece-inner piece-inner--{{item.meta.layout}}">
 						<h1 class="piece-title">{{item.title}}</h1>
