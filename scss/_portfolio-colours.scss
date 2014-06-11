@@ -28,7 +28,7 @@
 
 // Portfolio
 @include project-colours('#lynxafrica', #00723B, #fff, #fff, #fff);
-@include project-colours('#thebar', #ff5e00, #fff, #000, #fff);
+@include project-colours('#thebar', #ff5e00, #000, #fff, #000);
 @include project-colours('#lynx-apollo', #000, #fff, #4d8aa7, #fff);
 @include project-colours('#brother-campaigns', #031962, #fff, #F12EA1, #fff);
 @include project-colours('#knorr-mobile', #009242, #fff, #F6DA3F, #fff);
@@ -46,7 +46,7 @@
 
 // Code
 @include project-colours('#choreographic-grid', $color-text, #fff, $color-link-hover, #fff);
-@include project-colours('#kickoff', #587ca0, #fff, #fff, #fff);
+@include project-colours('#kickoff', #2d2d2d, #d3d0c8, #66cccc, #fff);
 @include project-colours('#javascript-less-links', $blue, #fff, #fff, #fff);
 @include project-colours('#validatr', $yellow, #000, #000, #000);
 
