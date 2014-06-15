@@ -29,3 +29,33 @@ body {
 	background-color: rgba(#000, 0.8);
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+	// background-color: $red;
+	margin: 10px 10px 10px 0;
+	background-color: #fff;
+}
+// ::-webkit-scrollbar-button {
+// 	background-color: $blue;
+// }
+::-webkit-scrollbar-track {
+	&:hover {
+		width: 20px;
+	}
+}
+::-webkit-scrollbar-track-piece  {
+
+}
+::-webkit-scrollbar-thumb {
+	background: #000;
+	cursor: pointer;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4);
+}
+::-webkit-scrollbar-corner       {
+
+}
+::-webkit-resizer                {
+
+}

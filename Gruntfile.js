@@ -138,8 +138,7 @@ module.exports = function (grunt) {
 				},
 				files: {
 					'css/kickoff.css'       : 'css/kickoff.css',
-					'css/kickoff-old-ie.css': 'css/kickoff-old-ie.css',
-					'css/styleguide.css'    : 'css/styleguide.css'
+					'css/kickoff-old-ie.css': 'css/kickoff-old-ie.css'
 				}
 			}
 		},
