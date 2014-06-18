@@ -1,26 +1,25 @@
 ---
 layout: work
-title: "Be an Energy Shopper"
-date: 2014-06-08
+title: Strepsils Xfactor Competition
+date: 2013-11-01
 meta:
-  name: goenergyshopping
-  date: March - April 2014
+  name: strepsils-xfactor
+  date: October - November 2013
   skills: "Front-end"
   layout: wide
 
 view:
-  text: goenergyshopping.co.uk
-  url: http://www.goenergyshopping.co.uk/
+  text: No longer online :(
 
 credits:
  - title: Designer
-   name: Simon Kinslow
+   name: Robert Sinderman
  - title: Agency
    name: TMW
    url: http://tmw.co.uk
  - title: Client
-   name: Ofgem
-   url: http://ofgem.gov.uk
+   name: Reckitt Benckiser
+   url: http://www.rb.com/
 
 images:
  - src: wide.jpg
@@ -30,5 +29,3 @@ images:
 
 ---
 Having won the pitch, TMW created a site for Ofgem, the government regulator for gas & electricity markets, to help consumers understand upcoming energy tariff changes.
-
-The site is completely hiDPi ready and makes liberal uses SVG graphics; grunticon was used to convert these to png fallbacks for users without SVG support.

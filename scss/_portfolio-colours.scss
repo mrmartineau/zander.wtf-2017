@@ -15,7 +15,7 @@
 		a:hover,
 		a:active {
 			// color: $linkHover;
-			color: lighten($linkColour, 20%);
+			color: lighten($linkColour, 15%);
 		}
 	}
 }
@@ -39,6 +39,7 @@
 @include project-colours('#conversocial', #4A9BDC, #000, #fff, #fff);
 @include project-colours('#sohofixed', #536077, #fff, #000, #fff);
 @include project-colours('#sohofixed-identity', #000, #eee, #555, #fff);
+@include project-colours('#strepsils-xfactor', #d22740, #fff, #E0FF3E, #fff);
 @include project-colours('#goenergyshopping', #d22a81, #fff, #E0FF3E, #fff);
 
 // Code
