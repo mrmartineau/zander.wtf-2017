@@ -30,71 +30,9 @@ title: Zander Martineau
 	<div class="overlay overlay--dark"></div>
 	<div class="visitBlog-copy">Read more posts in the blog</div>
 </a>
-
-<section class="work">
-	<h1 class="workTitle text-centre">Selected Work</h1>
-	{% for item in site.work reversed %}
-		<article class="piece" id="{{item.meta.name}}">
-			<div class="piece-inner piece-inner--{{item.meta.layout}}">
-				<h1 class="piece-title">{{item.title}}</h1>
-				<h3 class="piece-url ellipsis">
-					{% if item.view.url %}
-						<a href="{{item.view.url}}" title="Go to {{item.view.text}}">{{item.view.text}}</a>
-					{% else %}
-						{{item.view.text}}
-					{% endif %}
-				</h3>
-
-				<div class="piece-infoContainer clearfix">
-					<div class="piece-infoContainer-desc">
-						{{item.content | markdownify}}
-					</div>
-
-					<div class="piece-infoContainer-info clearfix">
-						<ul class="piece-info-list unstyled">
-							<li class="piece-info-list-item">
-							<b class="piece-info-list-item-key">Date:</b>
-							<div class="piece-info-list-item-value">{{item.meta.date}}</div></li>
-							<li class="piece-info-list-item">
-							<b class="piece-info-list-item-key">Skills:</b>
-							<div class="piece-info-list-item-value">{{item.meta.skills}}</div></li>
-							{% for credit in item.credits %}
-								<li class="piece-info-list-item">
-								<b class="piece-info-list-item-key">{{credit.title}}:</b>
-								<div class="piece-info-list-item-value ellipsis">
-								{% if credit.url %}
-									<a href="{{credit.url}}">{{credit.name}}</a>
-								{% else %}
-									{{credit.name}}
-								{% endif %}
-								</div></li>
-							{% endfor %}
-							{% if item.github %}<li class="piece-info-list-item">
-								<b class="piece-info-list-item-key">Github:</b>
-								<div class="piece-info-list-item-value ellipsis"><a href="https://github.com/{{item.github.user}}/{{item.github.repo}}">github.com/{{item.github.user}}/{{item.github.repo}}</a></div></li>{% endif %}
-						</ul>
-
-						{% if item.github %}
-							<div class="github-details">
-								<iframe src="http://ghbtns.com/github-btn.html?user={{item.github.user}}&repo={{item.github.repo}}&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
-								<iframe src="http://ghbtns.com/github-btn.html?user={{item.github.user}}&repo={{item.github.repo}}&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
-							</div>
-						{% endif %}
-					</div>
-				</div>
-
-				<div class="piece-shots piece-shots--{{item.meta.layout}}">
-					{% if item.images %}
-						{% for img in item.images %}
-							<figure class="piece-shots-shot piece-shots-shot--{{img.type}} piece-shots-shot--0{{forloop.index}}{% if item.meta.layout == 'icon' %} icon-{{img.class}}{% endif %}">
-								{% if item.meta.layout != 'icon' %}
-									<img src="/img/projects/{{item.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
-								{% endif %}
-							</figure>
-						{% endfor %}
-					{% endif %}
-				</div>
-			</div>
-		</article>
-	{% endfor %}
-</section>
+<nav class="footer text-centre">
+	<a href="/blog">Blog</a>
+	<a href="/work">Selected work</a>
+	<!-- <a href="/panoramas">Panoramas</a>
+	<a href="/records">Records</a> -->
+</nav>
