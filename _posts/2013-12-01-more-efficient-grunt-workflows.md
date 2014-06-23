@@ -6,6 +6,7 @@ categories:
 - code
 - grunt
 excerpt: "Useful tips for development with Grunt"
+image: https://farm4.staticflickr.com/3858/14239530388_82ce1a047c_z_d.jpg
 ---
 Most of my projects are fairly similar: I need to concatinate and compress a bunch of js files together; compile sass and fire-up a local server to test and preview.. Grunt.js is brilliant for this and I cannot tell you how much it has improved my workflow since I started using it this year. Along the way I have found a few time-savers that have greatly improved how I use Grunt so I thought I'd share them here with you.
 

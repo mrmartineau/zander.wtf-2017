@@ -4,6 +4,7 @@ title: "CSS3 Multi-column spanning"
 categories:
 - CSS
 excerpt: "A simple test of this handy CSS feature."
+image: https://farm5.staticflickr.com/4094/4850604091_63fca411ab_z_d.jpg
 ---
 The [CSS Multi-column Layout Module](http://www.w3.org/TR/css3-multicol/) has a rather interesting
 property called [‘column-span’](http://www.w3.org/TR/css3-multicol/#spanning-columns)
