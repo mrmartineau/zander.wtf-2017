@@ -3,7 +3,7 @@
 	display: block;
 	text-align: center;
 	background-size: cover;
-	padding: 20px;
+	padding: 20px 15px;
 	background-position: center center;
 	background-repeat: no-repeat;
 	overflow: hidden;
@@ -11,7 +11,7 @@
 	@include respond-min($breakpoint-single-col) {
 		height: 100%;
 		min-height: 100%;
-		padding: 80px 30px;
+		padding: 80px 15px;
 	}
 
 	&, &:link, &:visited {
@@ -25,6 +25,10 @@
 
 		.overlay--img {
 			transform: scale(1.2);
+		}
+
+		.cta {
+
 		}
 	}
 

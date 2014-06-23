@@ -33,7 +33,6 @@
 
 .masthead {
 	display: none;
-
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -57,7 +56,19 @@
 	a:hover, a:active {
 		color: $yellow;
 	}
+
+	&.is-active {
+		display: block;
+	}
 }
+
+// #masthead {
+// 	display: none;
+
+// 	&:target {
+// 		display: block;
+// 	}
+// }
 
 .masthead-section {
 	margin-top: 2%;
