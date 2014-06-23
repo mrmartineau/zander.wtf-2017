@@ -3,38 +3,30 @@
 */
 
 // Create a closure to maintain scope of the '$' and KO (Kickoff)
-;(function(KO, $) {
+;(function(KO) {
 
-	$(function() {
-		// Any globals go here in CAPS (but avoid if possible)
+	document.addEventListener('DOMContentLoaded', function(e) {
+		var navBtn = document.querySelector('.navBtn');
+		var masthead = document.querySelector('.masthead');
 
-		// follow a singleton pattern
-		// (http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript)
+		navBtn.addEventListener('click', function(e) {
+			e.preventDefault();
+			console.log(masthead.classList);
+			if (masthead.classList.contains('is-active')) {
+				masthead.classList.remove('is-active');
+				console.log("remove class");
+			} else {
+				masthead.classList.add('is-active');
+				console.log("add class");
+			}
+		});
 
 		KO.Config.init();
-
-	});// END DOC READY
-
-
-	/* Optional triggers
-
-	// WINDOW.LOAD
-	$(window).load(function() {
-
 	});
-
-	// WINDOW.RESIZE
-	$(window).resize(function() {
-
-	});
-
-	*/
 
 
 
 	KO.Config = {
-		variableX : '', // please don't keep me - only for example syntax!
-
 		init : function () {
 			console.debug('Kickoff is running');
 		}
@@ -53,4 +45,4 @@
 	};
 	*/
 
-})(window.KO = window.KO || {}, jQuery);
+})(window.KO = window.KO || {});
