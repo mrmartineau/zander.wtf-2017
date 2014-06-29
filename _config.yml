@@ -1,7 +1,7 @@
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: true
+highlighter: rouge
 permalink: /:year/:month/:title
 include: ['.htaccess']
 exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', 'index-static.php', 'index-handlebars.php', 'blog-src', 'js-old']

@@ -9,7 +9,7 @@
 	@include respond-min($breakpoint-single-col) {
 		height: 100%;
 		min-height: 100%;
-		padding: 80px 15px;
+		padding: 120px 15px 80px;
 	}
 
 }
@@ -18,7 +18,7 @@
 	position: relative;
 
 	@include respond-min($breakpoint-single-col) {
-		height: 90%;
+		height: 100%;
 		min-height: 550px;
 	}
 }
@@ -40,6 +40,7 @@
 	margin: 0;
 	@include font-size(27);
 	line-height: 1.2;
+	font-weight: normal;
 
 	@include respond-min($breakpoint-wide) {
 		@include font-size(40);
@@ -50,6 +51,7 @@
 	@include font-size(22);
 	color: #818A92;
 	// line-height: 1;
+	font-weight: normal;
 }
 .me-logo {
 	margin-bottom: 20px;

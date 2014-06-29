@@ -8,10 +8,65 @@
 }
 
 .content-inner {
-	margin: 5%;
+	margin: 7%;
 
 	@include respond-min($breakpoint-single-col) {
 		max-width: 700px;
 		margin: 86px 50px 50px;
 	}
+
+	a {
+		// border-bottom: 2px solid blue;
+		padding: 1px 3px;
+		background-color: lighten($color-background, 5%);
+
+		&:hover {
+			background-color: $yellow;
+		}
+	}
+}
+
+
+
+.pagination {
+	@include respond-min($breakpoint-single-col) {
+		margin-top: 0;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 43%;
+		z-index: 1;
+		border-top: 2px solid #fff;
+	}
+}
+.pagination-btn {
+	display: block;
+	width: 50%;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+
+	&, &:link, &:visited {
+		color: $color-background;
+		background-color: rgba(#000, 0.2);
+	}
+	&:hover, &:active {
+		color: darken($color-background, 10%);
+		background-color: rgba(#000, 0.6);
+	}
+}
+.pagination-btn--old {
+	float: left;
+}
+.pagination-btn--new {
+	float: right;
+	border-left: 2px solid #fff;
+}
+
+#disqus_thread {
+	margin-top: 60px;
+}
+
+.giantLink {
+
 }

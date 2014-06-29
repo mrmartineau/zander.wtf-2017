@@ -39,7 +39,7 @@ $base-font-family             : $sans-font-family;
 $alt-font-family              : $serif-font-family;
 
 $headings-font-family         : inherit; // empty to use Kickoff default $base-font-family
-$headings-font-weight         : normal;    // instead of browser default, bold
+$headings-font-weight         : bold;    // instead of browser default, bold
 
 
 /*
@@ -51,7 +51,7 @@ $breakpoint-narrow            : 400;  // Set in px
 $breakpoint-mid               : 640;  // Set in px
 $breakpoint-wide              : 1200;  // Set in px
 $breakpoint-huge              : 1600; // Set in px
-$breakpoint-single-col        : 850; // Break to single column
+$breakpoint-single-col        : 900; // Break to single column
 
 
 /*

@@ -4,19 +4,18 @@
 
 // Create a closure to maintain scope of the '$' and KO (Kickoff)
 ;(function(KO) {
-
 	document.addEventListener('DOMContentLoaded', function(e) {
 		var navBtn = document.querySelector('.navBtn');
-		var masthead = document.querySelector('.masthead');
+		var navFull = document.querySelector('.navFull');
 
 		navBtn.addEventListener('click', function(e) {
 			e.preventDefault();
-			console.log(masthead.classList);
-			if (masthead.classList.contains('is-active')) {
-				masthead.classList.remove('is-active');
+			console.log(navFull.classList);
+			if (navFull.classList.contains('is-active')) {
+				navFull.classList.remove('is-active');
 				console.log("remove class");
 			} else {
-				masthead.classList.add('is-active');
+				navFull.classList.add('is-active');
 				console.log("add class");
 			}
 		});

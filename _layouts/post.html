@@ -13,7 +13,12 @@
 
 			<div class="content">
 				<div class="content-inner">
+					{% if page.post-type == 'link' %}
+						<h2>Read post at </h2>
+						<a href="{{page.link-to}}" class="giantLink">{{page.link-to}}</a>
+					{% else %}
 					{{ content }}
+					{% endif %}
 
 					{% if page.comments %}
 						<div id="disqus_thread"></div>
@@ -37,12 +42,12 @@
 				</div>
 
 				<!-- Pagination links -->
-				<div class="pagination">
+				<div class="pagination clearfix">
 					{% if page.previous %}
-						<a href="{{page.previous.url}}">Previous post</a>
+						<a href="{{page.previous.url}}" class="pagination-btn pagination-btn--old">Older</a>
 					{% endif %}
 					{% if page.next %}
-						<a href="{{page.next.url}}">Next post</a>
+						<a href="{{page.next.url}}" class="pagination-btn pagination-btn--new">Newer</a>
 					{% endif %}
 				</div>
 			</div>

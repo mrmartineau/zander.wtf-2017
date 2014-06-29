@@ -1,10 +1,95 @@
-.navBtn {
-	border-radius: 6px;
-	border: 2px solid #000;
-	padding: 5px 3px;
+.navFull {
+	display: none;
 	position: fixed;
+	top: 60px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba($color-text, 0.9);
+	z-index: 99;
+	color: $color-background;
+
+	text-align: center;
+	padding: 50px 20px;
+	overflow: auto;
+
+	@include respond-min($breakpoint-mid) {
+		padding: 80px 5%;
+	}
+
+	&, a:link, a:visited {
+		color: $color-background;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	a:hover, a:active {
+		color: $yellow;
+	}
+
+	&.is-active {
+		display: block;
+	}
+
+	a {
+		@include font-size(30);
+	}
+
+	@include respond-min($breakpoint-mid) {
+		a {
+			@include font-size(50);
+		}
+	}
+}
+
+.navTop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 60px;
+	text-align: right;
+	line-height: 60px;
+	padding: 0px 20px;
+	z-index: 100;
+	background-color: #fff;
+}
+
+.navTop-ZM {
+	position: absolute;
+	left: 20px;
 	top: 15px;
-	left: 15px;
+	min-width: 46px;
+	height: 30px;
+	background-size: contain;
+
+	span {
+		opacity: 0;
+		margin-left: 55px;
+		line-height: 30px;
+		transition: $link-transition;
+		vertical-align: top;
+	}
+
+	&:hover {
+		span {
+			opacity: 1;
+		}
+	}
+}
+
+
+/*
+   Nav Button
+   ========================================================================== */
+.navBtn {
+	display: inline-block;
+	border-radius: 6px;
+	border: 2px solid $color-text;
+	padding: 5px 3px;
+	margin-left: 20px;
+	// position: absolute;
+	// top: 15px;
+	// left: 15px;
 	z-index: 100;
 	font-size: 0;
 	line-height: 1;
@@ -17,77 +102,16 @@
 		width: 11px;
 		height: 11px;
 		border-radius: 15px;
-		border: 2px solid #000;
+		border: 2px solid $color-text;
 		margin: 0 4px;
 		display: inline-block;
 	}
 
 	&:hover {
-		background-color: #000;
+		background-color: $color-text;
 
 		i {
 			border-color: #fff;
-		}
-	}
-}
-
-.masthead {
-	display: none;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: rgba(#000, 0.85);
-	z-index: 99;
-	color: #fff;
-
-	text-align: center;
-	padding: 60px 20px;
-	overflow: auto;
-
-	@include respond-min($breakpoint-mid) {
-		padding: 5%;
-	}
-
-	&, a:link, a:visited {
-		color: #fff;
-	}
-	a:hover, a:active {
-		color: $yellow;
-	}
-
-	&.is-active {
-		display: block;
-	}
-}
-
-// #masthead {
-// 	display: none;
-
-// 	&:target {
-// 		display: block;
-// 	}
-// }
-
-.masthead-section {
-	margin-top: 2%;
-}
-
-.nav {
-	&, a:link, a:visited {
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-
-	a {
-		display: block;
-		@include font-size(30);
-	}
-
-	@include respond-min($breakpoint-mid) {
-		a {
-			@include font-size(50);
 		}
 	}
 }

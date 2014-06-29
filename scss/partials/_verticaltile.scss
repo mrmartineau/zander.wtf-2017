@@ -22,14 +22,6 @@
 	&:hover, &:active {
 		color: #fff;
 		color: rgba(#fff, 0.75);
-
-		.overlay--img {
-			transform: scale(1.2);
-		}
-
-		.cta {
-
-		}
 	}
 
 	&, * {
@@ -44,6 +36,19 @@
 .verticalTile--blogEntries {
 	@include respond-min($breakpoint-mid) {
 		float: left;
+	}
+
+	&:hover, &:active {
+		.overlay--img {
+			transform: scale(1.2);
+		}
+
+		.verticalTile-cta {
+			&::after {
+				transform: scaleX(1.5);
+				visibility: visible;
+			}
+		}
 	}
 }
 .verticalTile--home {
@@ -68,7 +73,7 @@
 .verticalTile--blogEntry {
 	@include respond-min($breakpoint-single-col) {
 		position: fixed;
-		top: 0;
+		top: 60px;
 		left: 0;
 		bottom: 0;
 		width: 43%;
@@ -90,6 +95,7 @@
 	line-height: 1.2;
 	@include font-size(27);
 	position: relative;
+	font-weight: normal;
 
 	@include respond-min($breakpoint-wide) {
 		@include font-size(40);
@@ -106,10 +112,19 @@
 	text-transform: uppercase;
 	font-weight: bold;
 	@include font-size(20);
-	border-color: #fff;
-	border-color: rgba(#fff, 0.8);
-	border-top: 2px solid;
 	padding-top: 30px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		transform: scaleX(0.9);
+		background-color: #fff;
+		transition: $link-transition;
+	}
 
 	@include respond-min($breakpoint-mid) {
 		position: absolute;
