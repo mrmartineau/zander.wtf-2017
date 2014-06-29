@@ -6,7 +6,7 @@ categories:
 - Code
 - DevTools
 excerpt: ""
-image: https://farm4.staticflickr.com/3826/10676225676_592fbc5897_z_d.jpg
+image: https://farm6.staticflickr.com/5483/14311404330_bfb9b1d209_c.jpg
 ---
 
 Over the past few days I have (finally) started tinkering with [Grunt](http://gruntjs.com/) and one feature, [Source Maps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/), was not quite working for me. I had set up my Uglify task that concats, uglifies and creates a source map of the various files and all was well, that is, until I realised that these source maps were not updating along with the changes to my compiled javascript. I didn't realise quickly enough that Chrome (in my case, Canary) was caching these source maps despite the `Disable cache` option was enabled.

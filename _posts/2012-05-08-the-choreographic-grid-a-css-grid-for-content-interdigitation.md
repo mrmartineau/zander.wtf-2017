@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "The Choreographic Grid - a CSS grid for content interdigitation"
+title: "The Choreographic Grid"
 categories:
 - Code
 - CSS
 - Responsive
 link: https://github.com/mrmartineau/sublimetextsetup
-excerpt: "Find out more about my new CSS grid framework"
+excerpt: "A CSS grid framework for content interdigitation"
 image: https://farm4.staticflickr.com/3725/10676261784_fc2159cbfc_z_d.jpg
 ---
 
@@ -16,11 +16,11 @@ It is definitely a work in progress & there are still features I would like to a
 
 As well as the [usual grid](http://mrmartineau.github.com/Choreographic-Grid/test.html#standard), [centred columns](http://mrmartineau.github.com/Choreographic-Grid/test.html#centred), [source ordering](http://mrmartineau.github.com/Choreographic-Grid/test.html#source-ordering) & [offsetting](http://mrmartineau.github.com/Choreographic-Grid/test.html#offset), I have added two features: **Shunting** & **Splitting**.
 
-### Shunts ([demo link](http://mrmartineau.github.com/Choreographic-Grid/test.html#shunt))
+### Shunts [demo](http://mrmartineau.github.com/Choreographic-Grid/test.html#shunt)
 
 These are, typically, small columns on the end of a row that 'shunt' down to their own row when the viewport dimensions are reduced. The other columns in that row can then be resized to fill the leftover space from the shunted column.
 
-### Splits ([demo link](http://mrmartineau.github.com/Choreographic-Grid/test.html#split))
+### Splits [demo](http://mrmartineau.github.com/Choreographic-Grid/test.html#split)
 
 These are columns that sit beside each other on wider viewports but when the viewport dimensions are reduced, they stack on top of each other. This might seem like 'normal' responsive grid behaviour but the rest of the grid is still enforced (for want of a better word).
 

@@ -16,7 +16,17 @@ The plugin in question is called [grunt-contrib-watch](https://github.com/gruntj
 <img src="/img/posts/grunt-logo.svg" alt="Grunt logo" class="no-shadow">
 
 We are going to add a new subtask within the existing _watch_ task called **livereload** that monitors your generated CSS file(s) (or directory) for changes and then triggers a livereload. Make sure you include `options: { livereload: true }` otherwise the livereload server will not work. See below for what my livereload watch subtask looks like:
-{% gist 5734805 grunt-watch-livereload-subtask.js %}
+
+{% highlight javascript %}
+livereload: {
+	options: { livereload: true },
+	files: [
+		// When these files are changed, livereload is triggered
+		// Make sure this directory is the same as the one your site points to
+		'resources/css/styles.css'
+	]
+}
+{% endhighlight %}
 
 ### Install browser extensions
 Adding the subtask above is not enough, you will need to install the Livereload browser extension in order to see the styles live reload. It is available for [Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) and [Firefox](https://addons.mozilla.org/en-us/firefox/addon/livereload/). For information on how to use these extensions, please see their documentation.
@@ -26,4 +36,33 @@ Now all you need to do is run `grunt watch`, start editing your preprocessed CSS
 
 Below is an example of a full watch task with the included `scss`, `js` and `livereload` subtasks or you can see the `Gruntfile.js` that I use on this site, [here](https://github.com/mrmartineau/martineau.tv/blob/master/Gruntfile.js):
 
-<script src="https://gist.github.com/mrmartineau/5734805.js"></script>
+{% highlight javascript %}
+watch: {
+  scss: {
+    	options: {
+			nospawn: true,
+			interrupt: true
+		},
+		files: ['resources/scss/**/*.scss'],
+		tasks: ['sass:dev']
+	},
+
+	js: {
+		options: {
+			nospawn: true,
+			interrupt: true
+		},
+		files: [
+			'resources/js/*.js',
+			'resources/js/libs/**/*.js'
+		],
+		tasks: ['uglify']
+	},
+	livereload: {
+		options: { livereload: true },
+		files: [
+			'resources/css/*.css'
+		]
+	}
+}
+{% endhighlight %}

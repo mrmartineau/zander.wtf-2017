@@ -10,54 +10,39 @@ excerpt: "Tips for customising the only text editor you'll ever need."
 image: https://farm6.staticflickr.com/5506/10676467333_57099271fb_z_d.jpg
 ---
 
-**[UPDATE 11 May 2013]** This information is extremely out of date, please visit the wiki I created for up-to-date information: [https://github.com/mrmartineau/SublimeTextSetup/wiki](https://github.com/mrmartineau/SublimeTextSetup/wiki)
+**[UPDATE 11 May 2013]** This information is extremely out of date, please visit the wiki I created for up-to-date information: [github.com/mrmartineau/SublimeTextSetup/wiki](https://github.com/mrmartineau/SublimeTextSetup/wiki)
 
 **[UPDATE 15 Dec 2011]** Added some more plugins to the list.
 
 **[UPDATE 17 Dec 2011]** Added my key binding settings & 'Textmate-style' comment banner keyboard shortcut snippet
 
-Over the past few weeks I have been trying out the beta of Sublime Text
-2, a cross-platform text editor for Windows, Linux & OS X. I am not
-going to give an in-depth review of the app, many people have done that
-before me, but suffice it to say, I love it & think you should check it
-out too. **This post’s purpose is to help enhance your experience of it
-by providing info for extending & customising the app.**
+Over the past few weeks I have been trying out the beta of Sublime Text 2, a cross-platform text editor for Windows, Linux & OS X. I am not going to give an in-depth review of the app, many people have done that before me, but suffice it to say, I love it & think you should check it out too. **This post’s purpose is to help enhance your experience of it by providing info for extending & customising the app.**
 
-It should be known that I am a front-end developer so my suggestions
-will reflect that.
+It should be known that I am a front-end developer so my suggestions will reflect that.
 
 ## Plugins / Packages
 
 ### 1. [Package Control](http://wbond.net/sublime_packages/package_control) by [Will Bond](http://wbond.net/)
 
-The first package (as they’re known in Sublime), you should install is
-[Package Control](http://wbond.net/sublime_packages/package_control). It
-makes installing, updating & keeping track of packages painless. To
-install this package, follow these instructions:
+The first package (as they’re known in Sublime), you should install is [Package Control](http://wbond.net/sublime_packages/package_control). It makes installing, updating & keeping track of packages painless. To install this package, follow these instructions:
 
-Copy & paste the following into the Sublime Text 2 console. This is
-accessed via the ctrl+\` shortcut.
+Copy & paste the following into the Sublime Text 2 console. This is accessed via the ctrl+\` shortcut.
 
-	import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
+{% highlight python %}
+import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
+{% endhighlight %}
 
 Note: please check the [Package Control website](http://wbond.net/sublime_packages/package_control) for details prior to installing the package - as a rule, one should make sure they have the latest version of Sublime before installing.
 
-<figure>![](http://wbond.net/sublime_packages/img/package_control/install_package.png)</figure>
+![](http://wbond.net/sublime_packages/img/package_control/install_package.png)
 
-##### Installing packages through ‘Package Control’
+#### Installing packages through ‘Package Control’
 
-Bring up the Sublime prompt by pressing super+shift+p (super = Cmd (on
-Mac) or Windows (on PC)), start typing the word package & you should get
-a list of all the commands relating to installing, removing & managing
-packages. (Cheers Will)
+Bring up the Sublime prompt by pressing `super+shift+p` — super = Cmd (on Mac) or Windows (on PC) — start typing the word package & you should get a list of all the commands relating to installing, removing & managing packages. (Cheers Will)
 
-<figure>![](/img/posts/234.png)</figure>
+![](/img/posts/234.png)
 
-Navigate to the `Package Control:Install Package` item & hit enter, then
-browse the list & select the ones you want. After you paste the provided
-command into the console, you need to restart Sublime Text to finish the
-installation. Once Package Control is installed, future package
-installations are instantaneous.
+Navigate to the `Package Control:Install Package` item & hit enter, then browse the list & select the ones you want. After you paste the provided command into the console, you need to restart Sublime Text to finish the installation. Once Package Control is installed, future package installations are instantaneous.
 
 ### 2. [SublimeCodeIntel](https://github.com/Kronuz/SublimeCodeIntel)
 
@@ -66,25 +51,19 @@ for any coder. Install this through ‘Package Control’
 
 ### 3. [ZenCoding](https://bitbucket.org/sublimator/sublime-2-zencoding)
 
-Zen meets Sublime. Again, a definite must for any coder. Install this
-through ‘Package Control’.
+Zen meets Sublime. Again, a definite must for any coder. Install this through ‘Package Control’.
 
 ### 4. [HTML5](https://github.com/mrmartineau/HTML5) by [me](http://martineau.tv)
 
-I ported the HTML5 bundle from Textmate over to Sublime, this is the
-result. Install this through ‘Package Control’.
+I ported the HTML5 bundle from Textmate over to Sublime, this is the result. Install this through ‘Package Control’.
 
 ### 5. [Placeholders](https://github.com/mrmartineau/Placeholders) by [me](http://martineau.tv)
 
-Lorem ipsum, dummy content, placeholder HTML. This little package has
-what you need. Install this through ‘Package Control’.
+Lorem ipsum, dummy content, placeholder HTML. This little package has what you need. Install this through ‘Package Control’.
 
 ### 6. [jQuery](https://github.com/mrmartineau/Jquery) by [me](http://martineau.tv)
 
-Another port from a Textmate bundle, it is still a work in progress but
-does work & if anyone feels like lending a hand, I don’t mind. Download
-the source from Github & place the contents into a `jQuery` folder in
-`/Application Support/Sublime Text 2/Packages` (at least it is on a Mac!).
+Another port from a Textmate bundle, it is still a work in progress but does work & if anyone feels like lending a hand, I don’t mind. Download the source from Github & place the contents into a `jQuery` folder in `/Application Support/Sublime Text 2/Packages` (at least it is on a Mac!).
 
 ### 7. [SublimeTagmatcher](https://github.com/pyparadigm/SublimeTagmatcher) by [pyparadigm](https://github.com/pyparadigm)
 
@@ -92,9 +71,7 @@ If you click inside the begin tag, it will highlight the end tag, and vice versa
 
 ### 8. [Elastic Tabs Stops](https://github.com/adzenith/Sublime-plugins/blob/master/elastic_tabstops.py) by [adzenith](https://github.com/adzenith)
 
-Incredibly useful plugin to make tabstops expand or shrink to fit their
-contents. ([More info on elastic tab
-stops](http://nickgravgaard.com/elastictabstops/))
+Incredibly useful plugin to make tabstops expand or shrink to fit their contents. ([More info on elastic tab stops](http://nickgravgaard.com/elastictabstops/))
 
 ### 9. [Increase/Decrease number by delta\_value](https://github.com/rmaksim/Sublime-Text-2-Inc-Dec-Value) by [rmaksim](https://github.com/rmaksim)
 
