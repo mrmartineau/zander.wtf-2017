@@ -6,6 +6,9 @@ categories:
 - Code
 excerpt: "My recipe for staying up-to-date with web development news and trends"
 image: https://farm4.staticflickr.com/3828/10676527333_71aab96d33_z_d.jpg
+link:
+  url: "http://pinboard.in/u:MrMartineau/t:on-staying-current/"
+  text: "pinboard.in/u:MrMartineau/t:on-staying-current/"
 ---
 
 At [TMW](http://tmw.co.uk), I always ask interviewees how they keep up-to-date with the latest in front-end web goings-on. The answers I receive are varied but there's always a few recurring themes: Twitter and blogs - but which ones. I thought it would be a good idea to document my own 'stategy' for staying current, here it is.

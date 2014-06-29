@@ -8,6 +8,12 @@ categories:
 - open-source
 excerpt: "mrmartineau.co.uk site launch"
 image: https://farm8.staticflickr.com/7321/10676245574_556b2b6715_z_d.jpg
+github:
+  user: mrmartineau
+  repo: social-homepage
+link:
+  url: "http://mrmartineau.co.uk"
+  text: "mrmartineau.co.uk"
 ---
 
 I have just launched my own version of a social home page/business card site. Check it out at [mrmartineau.co.uk](http://mrmartineau.co.uk) and grab the code at [Github](https://github.com/mrmartineau/social-homepage)

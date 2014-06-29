@@ -8,6 +8,9 @@ categories:
 link: https://github.com/mrmartineau/sublimetextsetup
 excerpt: "A CSS grid framework for content interdigitation"
 image: https://farm4.staticflickr.com/3725/10676261784_fc2159cbfc_z_d.jpg
+github:
+  user: mrmartineau
+  repo: Choreographic-Grid
 ---
 
 After having read Trent Walton's article on [Content Choreography](http://trentwalton.com/2011/07/14/content-choreography/) again & working on a number of responsive sites, I felt that the current group of CSS grids was lacking in this department - [so I created my own](https://github.com/mrmartineau/Choreographic-Grid).
