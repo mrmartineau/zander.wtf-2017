@@ -92,4 +92,5 @@ $usingSplitsAndShunts         : false ; // Use Splits & Shunts for responsive we
    App-specific variables
    Add common vars here
    ========================================================================== */
-$link-transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+$link-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+// $link-transition: all 250ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */

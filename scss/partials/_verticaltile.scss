@@ -105,6 +105,17 @@
 	position: relative;
 	margin-bottom: 0;
 }
+
+.verticalTile-original,
+.verticalTile-link {
+	position: relative;
+	margin-top: 1.5em;
+	@include font-size(15);
+
+	a {
+		color: #fff;
+	}
+}
 .verticalTile-cta {
 	position: relative;
 	width: 120px;

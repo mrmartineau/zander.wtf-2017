@@ -24,6 +24,21 @@
 			background-color: $yellow;
 		}
 	}
+
+	img {
+		padding: 1em;
+		background-color: #fff;
+		display: block;
+
+		@include respond-min($breakpoint-single-col) {
+			padding: 1em 1em 1em 50px;
+			margin-left: -50px;
+		}
+
+		& + img {
+			margin-top: 1.5em;
+		}
+	}
 }
 
 

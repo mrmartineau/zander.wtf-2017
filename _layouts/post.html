@@ -9,16 +9,25 @@
 				<time class="verticalTile-date">{{page.date | date_to_string}}</time>
 				<h1 class="verticalTile-title">{{page.title}}</h1>
 				<p class="verticalTile-excerpt">{{page.excerpt}}</p>
+
+				{% if page.original %}
+					<p class="verticalTile-original">Originally posted at: <br> <a href="{{page.original.url}}">{{page.original.text}}</a></p>
+				{% endif %}
+
+				{% if page.link %}
+					<p class="verticalTile-link"><a href="{{page.link.url}}">{{page.link.text}}</a></p>
+				{% endif %}
+
+				{% if page.github %}
+					<div class="github-details">
+						<iframe src="http://ghbtns.com/github-btn.html?user={{page.github.user}}&repo={{page.github.repo}}&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
+					</div>
+				{% endif %}
 			</div>
 
 			<div class="content">
 				<div class="content-inner">
-					{% if page.post-type == 'link' %}
-						<h2>Read post at </h2>
-						<a href="{{page.link-to}}" class="giantLink">{{page.link-to}}</a>
-					{% else %}
 					{{ content }}
-					{% endif %}
 
 					{% if page.comments %}
 						<div id="disqus_thread"></div>
