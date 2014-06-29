@@ -50,7 +50,7 @@ Then [use it](https://github.com/tmwagency/generator-kickoff/blob/master/app/ind
 console.log(chalk.bold.yellow('message'));
 {% endhighlight%}
 
-<img src="http://labs.tmw.co.uk/img/blog/yeoman-tips/chalk.png" alt="Chalk colours in the Kickoff Yeoman generator">
+![Chalk colours in the Kickoff Yeoman generator](http://labs.tmw.co.uk/img/blog/yeoman-tips/chalk.png)
 
 If you would like to know more about different prompt/question styles, see the [Inquirer.js docs](https://github.com/SBoudrias/Inquirer.js). Kickoff's can be found [here](https://github.com/tmwagency/generator-kickoff/blob/3982752d18f4b83870ed9e7b38c4d9c39e41efa6/app/index.js#L38-L80).
 
@@ -72,7 +72,7 @@ Notice the preceeding comma before the conditional's content.
 JSON syntax is very strict, if a comma isn't there, or is in the wrong place, it will throw an error and npm will not install the dependencies, that is why I included the preceeding comma within the conditional. It might seem obvious but this logic needs to be self-contained and the surrounding code needs to be unaware of it, if it does not exist.
 
 ## Try the [Kickoff generator](https://www.npmjs.org/package/generator-kickoff)
-To install it, run: 
+To install it, run:
 
 {% highlight sh%}
 npm install -g generator-kickoff

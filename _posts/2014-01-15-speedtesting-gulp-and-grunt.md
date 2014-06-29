@@ -21,13 +21,14 @@ The gulp.js fork of Kickoff can be found at [github.com/tmwagency/kickoff/tree/g
 
 ### Sass compilation
 
-<img src="http://labs.tmw.co.uk/img/blog/kickoff-gulp-test/compare-sass.gif" alt="Grunt and gulp.js Sass compilation comparison">
+![Grunt and gulp.js Sass compilation comparison](http://labs.tmw.co.uk/img/blog/kickoff-gulp-test/compare-sass.gif)
 
 Gulp here is about twice as fast as Grunt at running the same task and immediately you can see what all the fuss is about. Grunt uses [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) and gulp.js uses [gulp-ruby-sass](https://github.com/sindresorhus/gulp-ruby-sass/) (both of which use Ruby) to compile. gulp-ruby-sass is slower than [gulp-sass](https://github.com/dlmanning/gulp-sass), but more stable and feature-rich so I will make the switch when it improves, so I reckon that the difference will be even greater when this happens. See the gulpfile settings for this [here](https://github.com/tmwagency/kickoff/blob/gulp/gulpfile.js#L51-L65).
 
 
 ### Javascript minification and concatination using Uglify.js
-<img src="http://labs.tmw.co.uk/img/blog/kickoff-gulp-test/compare-js.gif" alt="Grunt and gulp.js Javascript minification and concatination using Uglify.js">
+
+![Grunt and gulp.js Javascript minification and concatination using Uglify.js](http://labs.tmw.co.uk/img/blog/kickoff-gulp-test/compare-js.gif)
 
 The difference here is not that large but it is still impressive. See the gulpfile settings for this [here](https://github.com/tmwagency/kickoff/blob/gulp/gulpfile.js#L67-L83).
 
