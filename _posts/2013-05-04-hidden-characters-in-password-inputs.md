@@ -4,8 +4,8 @@ layout: post
 title: "How to fix hidden characters in password inputs in old IE"
 categories:
 - code
-excerpt: "A fix for an obscure problem I found recently."
-image: https://farm8.staticflickr.com/7336/10676410244_d9a21b9871_z_d.jpg
+excerpt: "A fix for an obscure problem I found recently"
+image: https://farm3.staticflickr.com/2918/14305350410_f88214a539_c.jpg
 ---
 
 I came across an interesting bug recently where, in **Internet Explorer (versions 6-8)**, the _bullet_ characters for an `input[type="password"]` were not showing up. I could see the cursor moving as if text was being entered but no result was being shown.

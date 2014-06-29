@@ -1,12 +1,12 @@
 ---
 comments: false
 layout: post
-title: "My social home page — mrmartineau.co.uk site launch"
+title: "My social home page"
 categories:
 - Note
 - github
 - open-source
-excerpt: ""
+excerpt: "mrmartineau.co.uk site launch"
 image: https://farm8.staticflickr.com/7321/10676245574_556b2b6715_z_d.jpg
 ---
 

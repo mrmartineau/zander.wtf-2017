@@ -6,7 +6,7 @@ categories:
 - code
 - jquery
 excerpt: "Why can't we serve separate versions for different browsers?"
-image: https://farm8.staticflickr.com/7336/13020135975_69cf829aa5_z_d.jpg
+image: https://farm4.staticflickr.com/3874/14482390592_b93daaf414_c.jpg
 ---
 The two most recent versions of jQuery: v2.0.2 and v1.10.1 have an identical API but are actually very different; v1.10.1 still supports older browsers, [specifically IE6-8](http://blog.jquery.com/2013/04/18/jquery-2-0-released/) (it includes a lot of fallback code that modern browsers do not need) while v2x does not. This means that jQuery v2x (83.5kb minified) is about 10% smaller in filesize than v1x (92.7kb minified) and we, as good front-end developers, can make sure that whomever is using a site that we've built, does not receive a version of jQuery that is too large for their browser and thereby reducing overall page weight.
 

@@ -5,7 +5,7 @@ categories:
 - Launch
 image: soho-fixed-header.png
 excerpt: ""
-image: https://farm4.staticflickr.com/3708/10676254236_8fe24cb998_z_d.jpg
+image: https://farm6.staticflickr.com/5472/14458611696_6c01265d21_c.jpg
 ---
 [Soho Fixed](http://sohofixed.com), the brainchild of my mate, Jolyon, has just been launched. The site showcases fixie bikes built from new & unique reconditioned parts. A few bikes are built each month & they sell on a first come, first serve basis - so you gotta be quick!
 
