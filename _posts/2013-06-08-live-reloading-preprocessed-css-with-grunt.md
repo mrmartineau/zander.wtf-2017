@@ -9,7 +9,7 @@ excerpt: "This is all you need to get Livereload working with Grunt."
 image: https://farm4.staticflickr.com/3780/13019864575_aedafb589a_z_d.jpg
 ---
 
-Having recently changed my development process from using the awesome [Codekit](http://incident57.com/codekit/) to [Grunt](http://gruntjs.com), I was frustrated that I no longer had live updates without a browser refresh when I made changes to my CSS; fortunately for me, there is a plugin for Grunt that solves this problem and, funnily enough, I happened to be using it already.
+Having recently changed my development process from using [Codekit](http://incident57.com/codekit/) to [Grunt.js](http://gruntjs.com), I was frustrated that I no longer had live updates without a browser refresh when I made changes to my CSS; fortunately for me, there is a plugin for Grunt that solves this problem and, funnily enough, I happened to be using it already.
 
 The plugin in question is called [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch), it is a common plugin developed by the maintainers of Grunt itself and has recently been updated (v 0.4.4) to allow live reloading to work in this way.
 
@@ -28,7 +28,7 @@ livereload: {
 }
 {% endhighlight %}
 
-### Install browser extensions
+### Install the Livereload browser extension
 Adding the subtask above is not enough, you will need to install the Livereload browser extension in order to see the styles live reload. It is available for [Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) and [Firefox](https://addons.mozilla.org/en-us/firefox/addon/livereload/). For information on how to use these extensions, please see their documentation.
 
 ### Run the watch task
