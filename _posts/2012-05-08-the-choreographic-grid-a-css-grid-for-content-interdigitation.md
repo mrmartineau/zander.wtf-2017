@@ -17,7 +17,7 @@ After having read Trent Walton's article on [Content Choreography](http://trentw
 
 It is definitely a work in progress & there are still features I would like to add but I thought I should get a sense check from you guys to see if its worth pursuing.
 
-As well as the [usual grid](http://mrmartineau.github.com/Choreographic-Grid/test.html#standard), [centred columns](http://mrmartineau.github.com/Choreographic-Grid/test.html#centred), [source ordering](http://mrmartineau.github.com/Choreographic-Grid/test.html#source-ordering) & [offsetting](http://mrmartineau.github.com/Choreographic-Grid/test.html#offset), I have added two features: **Shunting** & **Splitting**.
+As well as a [simple grid](http://mrmartineau.github.com/Choreographic-Grid/test.html#standard), [centred columns](http://mrmartineau.github.com/Choreographic-Grid/test.html#centred), [source ordering](http://mrmartineau.github.com/Choreographic-Grid/test.html#source-ordering) & [offsetting](http://mrmartineau.github.com/Choreographic-Grid/test.html#offset), I have added two features: **Shunting** & **Splitting**.
 
 ### Shunts [demo](http://mrmartineau.github.com/Choreographic-Grid/test.html#shunt)
 

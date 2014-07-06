@@ -3,8 +3,8 @@ comments: false
 layout: post
 title: "Speedtesting gulp.js and Grunt"
 original:
-  url: "http://labs.tmw.co.uk/2014/01/speedtesting-gulp-and-grunt"
-  text: "labs.tmw.co.uk"
+  url: "http://tech.tmw.co.uk/2014/01/speedtesting-gulp-and-grunt"
+  text: "tech.tmw.co.uk"
 categories:
 - gulp.js
 - grunt
@@ -21,14 +21,14 @@ The gulp.js fork of Kickoff can be found at [github.com/tmwagency/kickoff/tree/g
 
 ### Sass compilation
 
-![Grunt and gulp.js Sass compilation comparison](http://labs.tmw.co.uk/img/blog/kickoff-gulp-test/compare-sass.gif)
+![Grunt and gulp.js Sass compilation comparison](http://tech.tmw.co.uk/img/blog/kickoff-gulp-test/compare-sass.gif)
 
 Gulp here is about twice as fast as Grunt at running the same task and immediately you can see what all the fuss is about. Grunt uses [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) and gulp.js uses [gulp-ruby-sass](https://github.com/sindresorhus/gulp-ruby-sass/) (both of which use Ruby) to compile. gulp-ruby-sass is slower than [gulp-sass](https://github.com/dlmanning/gulp-sass), but more stable and feature-rich so I will make the switch when it improves, so I reckon that the difference will be even greater when this happens. See the gulpfile settings for this [here](https://github.com/tmwagency/kickoff/blob/gulp/gulpfile.js#L51-L65).
 
 
 ### Javascript minification and concatination using Uglify.js
 
-![Grunt and gulp.js Javascript minification and concatination using Uglify.js](http://labs.tmw.co.uk/img/blog/kickoff-gulp-test/compare-js.gif)
+![Grunt and gulp.js Javascript minification and concatination using Uglify.js](http://tech.tmw.co.uk/img/blog/kickoff-gulp-test/compare-js.gif)
 
 The difference here is not that large but it is still impressive. See the gulpfile settings for this [here](https://github.com/tmwagency/kickoff/blob/gulp/gulpfile.js#L67-L83).
 
@@ -39,7 +39,7 @@ Live Reload is an indispensable tool for us, both gulp.js and Grunt have plugins
 As you can see gulp.js is insanely fast, but that does not mean we are going to be making the switch any time soon. There are two plugins that we regularly use that aren't supported by gulp.js, these are [grunt-contrib-connect](https://github.com/gruntjs/grunt-contrib-connect) (for starting a static web server) and [grunt-jekyll](https://github.com/dannygarcia/grunt-jekyll) (for building our Jekyll sites). gulp.js just doesn't have the ecosystem and support that Grunt has; although the one man army of [Sindre Sorhus](https://twitter.com/sindresorhus) might be changing that!
 
 #### Update 16/01/2014
-It has come to my attention that people are misinterpreting this post slightly. My purpose was not to provide a scientific comparison of the two but more of a real world, anecdotal comparison, as [Luis Martins](http://labs.tmw.co.uk/2014/01/speedtesting-gulp-and-grunt/#comment-1202435929) states below, there seem to be significant speed gains using gulp.js.
+It has come to my attention that people are misinterpreting this post slightly. My purpose was not to provide a scientific comparison of the two but more of a real world, anecdotal comparison, as [Luis Martins](http://tech.tmw.co.uk/2014/01/speedtesting-gulp-and-grunt/#comment-1202435929) states below, there seem to be significant speed gains using gulp.js.
 
 It also seems that there was a misunderstanding, on my part, of what gulp.js is compared to Grunt. I did not realise initially that one could [write the code](https://gist.github.com/mollerse/8450954) (thanks [mollerse](https://github.com/mollerse)) for a static server within the gulpfile, negating the need for a specific plugin. The same could also be said of a specific Jekyll plugin.
 

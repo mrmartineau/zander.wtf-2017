@@ -12,7 +12,7 @@ The two most recent versions of jQuery: v2.0.2 and v1.10.1 have an identical API
 
 To solve this problem, we are going to use **conditonal comments**; and if you're familiar with [HTML5 Boilerplate](http://h5bp.com) you will have used these before, so all we need to do is provide one version for older browsers and one for new.
 
-{% highlight html %}
+```html
 <!--[if lte IE 8]>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="/js/libs/jquery.min.js"><\/script>')</script>
@@ -21,6 +21,6 @@ To solve this problem, we are going to use **conditonal comments**; and if you'r
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="/js/libs/jquery.2.min.js"><\/script>')</script>
 <!--<![endif]-->
-{% endhighlight %}
+```
 
 The first comment block above provides code for IE 6-8: `[if lte IE 8]` (if less than or equal to IE 8); the second provides code for IE 9+ and all other browsers: `[if gt IE 8]` (if greater than IE 8). You will see that I am also providing a local fallback version of each file in case the CDN version fails, this is consistent with the HTML5 boilerplate recommendation.

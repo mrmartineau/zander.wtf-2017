@@ -3,8 +3,8 @@ comments: false
 layout: post
 title: "Introducing Kickoff"
 original:
-  url: "http://labs.tmw.co.uk/2013/12/introducing-kickoff"
-  text: "labs.tmw.co.uk/2013/12/introducing-kickoff"
+  url: "http://tech.tmw.co.uk/2013/12/introducing-kickoff"
+  text: "tech.tmw.co.uk/2013/12/introducing-kickoff"
 categories:
 - kickoff
 excerpt: "I wrote an overview of Kickoff, the front-end framework I created, for the TMW Labs blog."
@@ -30,7 +30,7 @@ Here are a few sites using Kickoff:
 * The [BBC Goodfood](http://www.bbcgoodfood.com) cookery site
 * The Western Europe version of [uk.thebar.com](http://uk.thebar.com) cocktail site
 * [Strepsils Xfactor](http://strepsils.co.uk/xfactor) competition site
-* [labs.tmw.co.uk](http://labs.tmw.co.uk) - Woop Woop!
+* [tech.tmw.co.uk](http://tech.tmw.co.uk) - Woop Woop!
 
 We are very proud of Kickoff, it has helped our team become more efficient, improving workflow throughout the department. Give it a try on your projects and let us know how you get on.
 

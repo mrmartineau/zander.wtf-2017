@@ -22,7 +22,7 @@ The site is built on [Textpattern](http://textpattern.com) & as any self-respect
 #### Header & Nav
 The header & nav has an animated background. I used webkit's keyframe animation, see code for it below:
 
-{% highlight css %}
+```css
 @-keyframes bg-slide {
 	0% { background-position: left top;
 	}
@@ -38,14 +38,14 @@ The header & nav has an animated background. I used webkit's keyframe animation,
 header {
 	animation: bg-slide 25s 2 ease-in;
 }
-{% endhighlight %}
+```
 
 #### Nav hover effect
 It is so simple but looks great; on hover, I increased the
 `letter-spacing` (notice the different easing on hover & mouse out),
 here’s the code:
 
-{% highlight css %}
+```css
 nav a {
 	transition: all .4s ease-in;
 }
@@ -56,7 +56,7 @@ nav a:hover {
 	background-color: rgba(255,255,255,0.7);
 	letter-spacing: 10px;
 }
-{% endhighlight %}
+```
 
 
 #### Bike listing hover effect

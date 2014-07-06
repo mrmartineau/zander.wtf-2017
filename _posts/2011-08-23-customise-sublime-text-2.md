@@ -28,9 +28,9 @@ The first package (as they’re known in Sublime), you should install is [Packag
 
 Copy & paste the following into the Sublime Text 2 console. This is accessed via the ctrl+\` shortcut.
 
-{% highlight python %}
+```py
 import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
-{% endhighlight %}
+```
 
 Note: please check the [Package Control website](http://wbond.net/sublime_packages/package_control) for details prior to installing the package - as a rule, one should make sure they have the latest version of Sublime before installing.
 
@@ -122,17 +122,17 @@ User’). For example, here is mine in it’s entirety: [gist.github.com/mrmarti
 These are used by a variety of plugins & can be changed to whatever you like.
 
 Also, I just [found a pretty neat snippet](https://forrst.com/posts/Textmates_comment_banner_for_SublimeText2-PqE) used to create Textmate-style comment blocks. Paste this into your `Key Bindings - User` file (as I have already done above).
-{% highlight json %}
+```json
 	{ "keys": ["ctrl+shift+b"], "command": "insert_snippet", "args": {"contents": "${TM_COMMENT_START/s*$//} ==${1/./=/g}==${TM_COMMENT_END/^s*(.+)/ $1/}\n${TM_COMMENT_START/s*$//} = ${1:Banner} =${TM_COMMENT_END/^s*(.+)/ $1/}\n${TM_COMMENT_START/s*$//} ==${1/./=/g}==${TM_COMMENT_END/^s*(.+)/ $1/}"}}
-{% endhighlight %}
+```
 
 The comment banner looks like this:
 
-{% highlight html %}
+```html
 <!--  ==========  -->
 <!--  = Banner =  -->
 <!--  ==========  -->
-{% endhighlight %}
+```
 
 ## Syntax Themes
 

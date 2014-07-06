@@ -12,11 +12,11 @@ I came across an interesting bug recently where, in **Internet Explorer (version
 
 After many attempts to remedy this, I finally figured out the issue was with the font being used in this field. For some reason, the bullet character that is usually used could not be used by IE, even though it's actually present in the font and my font-stack provided a good few alternatives just in case there might be any issues. So, I added one simple rule to my CSS and it fixed the issue:
 
-{% highlight css %}
+```css
 input[type="password"] {
 	font-family: sans-serif;
 }
-{% endhighlight %}
+```
 
 I will be adding this to all projects from now on, and I recommend you do as well.
 
