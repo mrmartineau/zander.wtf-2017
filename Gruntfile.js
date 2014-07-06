@@ -82,6 +82,11 @@ module.exports = function (grunt) {
 				options: {
 					livereload: true
 				}
+			},
+
+			assets : {
+				files: ['img/**/*', '!img/posts/dist/**/*', '!img/projects/dist/**/*'],
+				tasks: ['newer:clean', 'newer:imagemin']
 			}
 		},
 
@@ -211,6 +216,25 @@ module.exports = function (grunt) {
 			}
 		},
 
+		imagemin: {
+			projects: {
+				files: [{
+					expand: true,
+					cwd: 'img/projects',
+					src: ['**/*.{png,jpg,gif}'],
+					dest: 'img/projects/dist/'
+				}]
+			},
+			posts: {
+				files: [{
+					expand: true,
+					cwd: 'img/posts',
+					src: ['**/*.{png,jpg,gif}'],
+					dest: 'img/posts/dist/'
+				}]
+			}
+		},
+
 
 		/**
 		 * CSSO
@@ -332,6 +356,11 @@ module.exports = function (grunt) {
 					{ expand: true, cwd: './js', src: ['./**/*.*'], dest: '_site/js' }
 				]
 			}
+		},
+
+		clean: {
+			postimages: ["img/posts/dist/**/*.*"],
+			projectimages: ["img/projects/dist/**/*.*"]
 		}
 	});
 
