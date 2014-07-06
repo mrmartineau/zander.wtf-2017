@@ -5,7 +5,9 @@ categories:
 - Code
 - CSS
 - Responsive
-link: https://github.com/mrmartineau/sublimetextsetup
+link:
+  url: "http://mrmartineau.github.io/Choreographic-Grid/test.html"
+  text: "mrmartineau.github.io/Choreographic-Grid/test.html"
 excerpt: "A CSS grid framework for content interdigitation"
 image: https://farm4.staticflickr.com/3725/10676261784_fc2159cbfc_z_d.jpg
 github:

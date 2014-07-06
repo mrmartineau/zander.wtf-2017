@@ -20,4 +20,4 @@ I have just launched my own version of a social home page/business card site. Ch
 
 ![mrmartineau.co.uk](/img/posts/236.png)
 
-On a technical note, I used the brilliant [Entypo icon font](http://entypo.com/) but also added to it because it lacked a couple of icons. I added a [Pinboard](https://pinboard.in/u:mrmartineau) logo, a [Codepen](http://codepen.io/mrmartineau) logo and the new [Github](http://github.com/MrMartineau) logo.
+On a technical note, I used the brilliant [Entypo icon font](http://entypo.com/) but also added to it because it lacked a couple of icons. I added logos for [Pinboard](https://pinboard.in/u:mrmartineau), [Codepen](http://codepen.io/mrmartineau) and [Github](http://github.com/MrMartineau).
