@@ -24,13 +24,19 @@
 // @include project-colours('#id', $bgColour, $textColour, $linkColour, $linkHover);
 
 // Portfolio
+@include project-colours('#trak', #2d2d2d, #d3d0c8, #66cccc, #fff);
+@include project-colours('#techtmw', #181830, #3498db, #fe7c08, #b95801);
+@include project-colours('#goenergyshopping', #d22a81, #fff, #E0FF3E, #fff);
+@include project-colours('#kickoff', #2d2d2d, #d3d0c8, #66cccc, #fff);
+@include project-colours('#strepsils-xfactor', #d22740, #fff, #E0FF3E, #fff);
+@include project-colours('#lynxafrica', #00723B, #fff, #fff, #fff);
 @include project-colours('#lynxafrica', #00723B, #fff, #fff, #fff);
 @include project-colours('#thebar', #ff5e00, #000, #fff, #000);
 @include project-colours('#lynx-apollo', #000, #fff, #4d8aa7, #fff);
 @include project-colours('#brother-campaigns', #031962, #fff, #F12EA1, #fff);
 @include project-colours('#knorr-mobile', #009242, #fff, #F6DA3F, #fff);
 @include project-colours('#drinkiq', #96C3AC, #1e4833, #803B22, #fff);
-@include project-colours('#purple-magazine', #B14798, #fff, #000, #fff);
+// @include project-colours('#purple-magazine', #B14798, #fff, #000, #fff);
 @include project-colours('#novalux', #0D9B8C, #fff, #042d29, #fff);
 @include project-colours('#novalux-logo', #0D204A, #fff, #41efdd, #fff);
 @include project-colours('#datasift', #51709A, #fff, #FF9933, #fff);
@@ -39,14 +45,10 @@
 @include project-colours('#conversocial', #4A9BDC, #000, #fff, #fff);
 @include project-colours('#sohofixed', #536077, #fff, #000, #fff);
 @include project-colours('#sohofixed-identity', #000, #eee, #555, #fff);
-@include project-colours('#strepsils-xfactor', #d22740, #fff, #E0FF3E, #fff);
-@include project-colours('#goenergyshopping', #d22a81, #fff, #E0FF3E, #fff);
 
 // Code
 @include project-colours('#choreographic-grid', $color-text, #fff, $color-link-hover, #fff);
-@include project-colours('#kickoff', #2d2d2d, #d3d0c8, #66cccc, #fff);
 @include project-colours('#javascript-less-links', $blue, #fff, #fff, #fff);
-@include project-colours('#validatr', $yellow, #000, #000, #000);
 
 // Sublime resources
 @include project-colours('#sublime-text-setup', #222, #f1f1f1, #777, #fff);

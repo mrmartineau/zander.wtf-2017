@@ -34,31 +34,11 @@ body {
 	width: 10px;
 	// background-color: $red;
 	margin: 10px 10px 10px 0;
-	background-color: #fff;
-	right: 5px;
-}
-// ::-webkit-scrollbar-button {
-// 	background-color: $blue;
-// }
-::-webkit-scrollbar-track {
-	&:hover {
-		width: 20px;
-	}
-}
-::-webkit-scrollbar-track-piece  {
-
+	background-color: darken($color-background, 10%);
 }
 ::-webkit-scrollbar-thumb {
-	background: #444;
+	background: #666;
 	cursor: pointer;
-	// border-radius: 20px;
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(255,0,0,0.4);
-}
-::-webkit-scrollbar-corner       {
-
-}
-::-webkit-resizer                {
-
+	// border-radius: 10px;
+	// width: 10px;
 }

@@ -11,7 +11,7 @@
 	@include respond-min($breakpoint-single-col) {
 		height: 100%;
 		min-height: 100%;
-		padding: 80px 15px;
+		padding: 40px 15px;
 	}
 
 	&, &:link, &:visited {
@@ -142,9 +142,5 @@
 		left: 50%;
 		bottom: 40px;
 		margin-left: -60px;
-	}
-
-	@include respond-min($breakpoint-single-col) {
-		bottom: 80px;
 	}
 }
