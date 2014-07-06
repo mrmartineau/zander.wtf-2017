@@ -64,4 +64,4 @@ For those browsers with support for CSS3 3d tranformations, I used a rather sple
 
 And that about wraps things up. Please visit the site & have a browse-around, I’d love to hear any thoughts you guys may have.
 
-![Bike page](/img/posts/230.png)
+![Bike page](/img/posts/dist/230.png)

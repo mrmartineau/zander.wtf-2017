@@ -18,6 +18,6 @@ link:
 
 I have just launched my own version of a social home page/business card site. Check it out at [mrmartineau.co.uk](http://mrmartineau.co.uk) and grab the code at [Github](https://github.com/mrmartineau/social-homepage)
 
-![mrmartineau.co.uk](/img/posts/236.png)
+![mrmartineau.co.uk](/img/posts/dist/236.png)
 
 On a technical note, I used the brilliant [Entypo icon font](http://entypo.com/) but also added to it because it lacked a couple of icons. I added logos for [Pinboard](https://pinboard.in/u:mrmartineau), [Codepen](http://codepen.io/mrmartineau) and [Github](http://github.com/MrMartineau).

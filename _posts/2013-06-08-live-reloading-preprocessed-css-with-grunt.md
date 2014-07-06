@@ -13,7 +13,7 @@ Having recently changed my development process from using [Codekit](http://incid
 
 The plugin in question is called [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch), it is a common plugin developed by the maintainers of Grunt itself and has recently been updated (v 0.4.4) to allow live reloading to work in this way.
 
-<img src="/img/posts/grunt-logo.svg" alt="Grunt logo" class="no-shadow">
+<img src="/img/posts/dist/grunt-logo.svg" alt="Grunt logo" class="no-shadow">
 
 We are going to add a new subtask within the existing _watch_ task called **livereload** that monitors your generated CSS file(s) (or directory) for changes and then triggers a livereload. Make sure you include `options: { livereload: true }` otherwise the livereload server will not work. See below for what my livereload watch subtask looks like:
 
