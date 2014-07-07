@@ -86,7 +86,7 @@ module.exports = function (grunt) {
 
 			assets : {
 				files: ['img/**/*', '!img/posts/dist/**/*', '!img/projects/dist/**/*'],
-				tasks: ['newer:clean', 'newer:imagemin']
+				tasks: ['clean', 'newer:imagemin']
 			}
 		},
 
