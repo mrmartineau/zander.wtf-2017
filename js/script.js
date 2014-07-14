@@ -10,12 +10,11 @@
 
 		navBtn.addEventListener('click', function(e) {
 			e.preventDefault();
-			console.log(navFull.classList);
-			if (navFull.classList.contains('is-active')) {
-				navFull.classList.remove('is-active');
+			if (document.body.classList.contains('is-nav-active')) {
+				document.body.classList.remove('is-nav-active');
 				console.log("remove class");
 			} else {
-				navFull.classList.add('is-active');
+				document.body.classList.add('is-nav-active');
 				console.log("add class");
 			}
 		});
