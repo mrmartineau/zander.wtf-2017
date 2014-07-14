@@ -27,7 +27,7 @@ html {
 	-webkit-text-size-adjust: 100%; /* 1 */
 	-ms-text-size-adjust: 100%; /* 1 */
 
-	font-size: ($base-font-size - 4) + px;
+	font-size: ($base-font-size - 3) + px;
 
 	@include respond-min($breakpoint-mid) {
 		font-size: $base-font-size + px;
