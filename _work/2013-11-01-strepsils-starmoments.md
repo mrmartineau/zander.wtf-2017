@@ -3,7 +3,7 @@ layout: work
 title: Strepsils Star Moments
 date: 2013-11-01
 meta:
-  name: strepsils-xfactor
+  name: strepsils-starmoments
   date: October - November 2013
   skills: "Front-end"
   layout: wide
@@ -28,6 +28,10 @@ credits:
    url: http://www.rb.com/
  - title: Client
    name: SYCO
+
+images:
+ - src: wide.jpg
+   type: wide
 
 ---
 Strepsils sooth your throat and allow you to keep your voice in tip top condition- thats why they make a perfect partner for The X Factor, and all of it’s dubious talents.
