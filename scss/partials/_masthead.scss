@@ -36,11 +36,13 @@
 .nav-menu {
 	a {
 		@include font-size(30);
+		line-height: 2;
 	}
 
 	@include respond-min($breakpoint-mid) {
 		a {
 			@include font-size(50);
+			line-height: 1.3;
 		}
 	}
 }
