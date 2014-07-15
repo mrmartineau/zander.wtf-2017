@@ -235,7 +235,7 @@ html {
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 1 */
-  font-size: 16px;
+  font-size: 17px;
 }
 @media screen and (min-width: 40em) {
   html {
@@ -2395,11 +2395,13 @@ body {
 .nav-menu a {
   font-size: 30px;
   font-size: 1.5rem;
+  line-height: 2;
 }
 @media screen and (min-width: 40em) {
   .nav-menu a {
     font-size: 50px;
     font-size: 2.5rem;
+    line-height: 1.3;
   }
 }
 
