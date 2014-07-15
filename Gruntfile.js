@@ -25,7 +25,7 @@ module.exports = function (grunt) {
 
 				// <%=config.js.fileList%>
 				fileList : [
-					'js/helpers/console.js',
+					'bower_components/trak/dist/trak.js',
 					'js/script.js'
 				]
 			}

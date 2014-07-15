@@ -16,12 +16,11 @@
 	}
 
 	a {
-		// border-bottom: 2px solid blue;
+		border-bottom: 2px solid #B2BABE;
 		padding: 1px 3px;
-		background-color: lighten($color-background, 5%);
 
 		&:hover {
-			background-color: $yellow;
+			background-color: #B2BABE;
 		}
 	}
 

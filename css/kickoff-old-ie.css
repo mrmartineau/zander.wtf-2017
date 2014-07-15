@@ -243,7 +243,7 @@ body {
   font-family: "colfax-web-1", "colfax-web-2", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.6;
   color: #2f353a;
   -webkit-font-variant-ligatures: common-ligatures;
      -moz-font-variant-ligatures: common-ligatures;
@@ -258,8 +258,8 @@ p {
   font-size: 20px;
   font-size: 1rem;
   margin-top: 0;
-  margin-bottom: 28px;
-  margin-bottom: 1.4rem;
+  margin-bottom: 32px;
+  margin-bottom: 1.6rem;
 }
 
 /*
@@ -279,16 +279,16 @@ h1, .h1, .alpha {
   font-size: 40px;
   font-size: 2rem;
   margin-top: 0;
-  margin-bottom: 56px;
-  margin-bottom: 2.8rem;
+  margin-bottom: 64px;
+  margin-bottom: 3.2rem;
 }
 
 h2, .h2, .beta {
   font-size: 30px;
   font-size: 1.5rem;
   margin-top: 0;
-  margin-bottom: 28px;
-  margin-bottom: 1.4rem;
+  margin-bottom: 32px;
+  margin-bottom: 1.6rem;
 }
 
 h3, .h3, .gamma {
@@ -327,8 +327,8 @@ h6, .h6, .zeta {
 * + h4, * + .h4, * + .delta,
 * + h5, * + .h5, * + .epsilon,
 * + h6, * + .h6, * + .zeta {
-  margin-top: 28px;
-  margin-top: 1.4rem;
+  margin-top: 40px;
+  margin-top: 2rem;
 }
 
 /*
@@ -362,10 +362,10 @@ ol {
 
 ul, ol {
   padding: 0;
-  margin: 0 0 28px 28px;
+  margin: 0 0 32px 32px;
 }
 ul ul, ul ol, ol ul, ol ol {
-  margin-left: 56px;
+  margin-left: 64px;
 }
 ul ul, ol ul {
   list-style-type: circle;
@@ -395,7 +395,7 @@ nav ul, nav ol {
    Definition lists
    ========================================================================== */
 dl {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 dt {
@@ -412,7 +412,7 @@ dt {
 }
 
 dd {
-  margin-left: 28px;
+  margin-left: 32px;
 }
 .dl-horizontal dd {
   margin-left: 240px;
@@ -422,7 +422,7 @@ dd {
    Miscellaneous rules
    ========================================================================== */
 hr {
-  margin: 28px 0;
+  margin: 32px 0;
   border: 0;
   border-top: 1px solid #b3b3b3;
   border-bottom: 1px solid #fff;
@@ -455,7 +455,7 @@ abbr.initialism {
    ========================================================================== */
 blockquote {
   padding-left: 10px;
-  margin: 28px;
+  margin: 32px;
   border-left: 4px solid #cccccc;
 }
 blockquote p {
@@ -490,7 +490,7 @@ blockquote:after {
 
 address {
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   font-style: normal;
 }
 
@@ -810,7 +810,7 @@ input[type="button"].btn--block {
     </ul>
    ========================================================================== */
 form {
-  margin: 0 0 28px;
+  margin: 0 0 32px;
 }
 
 /* Fieldset */
@@ -824,11 +824,11 @@ fieldset {
    Form inputs and groups
    ========================================================================== */
 .form-controlGroup {
-  margin-top: 14px;
+  margin-top: 16px;
   list-style-type: none;
 }
 legend + .form-controlGroup {
-  margin-top: 28px;
+  margin-top: 32px;
   -webkit-margin-top-collapse: separate;
 }
 
@@ -839,7 +839,7 @@ select,
 textarea {
   font-size: 20px;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.6;
   font-weight: normal;
   vertical-align: baseline;
   *vertical-align: middle;
@@ -881,7 +881,7 @@ select,
   margin-bottom: 9px;
   font-size: 20px;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.6;
   color: #4d4d4d;
   background-color: white;
   border: 1px solid #cccccc;
@@ -966,10 +966,10 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   font-size: 30px;
   font-size: 1.5rem;
-  line-height: 1.4;
+  line-height: 1.6;
   color: #4d4d4d;
   border: 0;
   border-bottom: 1px solid #eee;
@@ -1152,9 +1152,9 @@ textarea:focus:required:invalid:focus {
    Form actions
    ========================================================================== */
 .form-actions {
-  padding: 27px 20px 28px;
-  margin-top: 28px;
-  margin-bottom: 28px;
+  padding: 31px 20px 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   background-color: whitesmoke;
   border-top: 1px solid #ddd;
   zoom: 1;
@@ -1256,7 +1256,7 @@ textarea:focus:required:invalid:focus {
 
 .form-helpBlock {
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .form-helpInline {
@@ -1272,7 +1272,7 @@ textarea:focus:required:invalid:focus {
    * Code: https://gist.github.com/mrmartineau/6712577#file-labels-inline-html
    ========================================================================== */
 .form--horizontal .form-controlGroup {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   zoom: 1;
 }
 .form--horizontal .form-controlGroup:before, .form--horizontal .form-controlGroup:after {
@@ -1298,7 +1298,7 @@ textarea:focus:required:invalid:focus {
   margin-left: 0;
 }
 .form--horizontal .form-helpBlock {
-  margin-top: 14px;
+  margin-top: 16px;
   margin-bottom: 0;
 }
 .form--horizontal .form-actions {
@@ -1385,7 +1385,7 @@ img, object, embed, video {
    Add image to left or right
    ========================================================================== */
 .media-img {
-  margin-right: 28px;
+  margin-right: 32px;
 }
 
 /**
@@ -1393,7 +1393,7 @@ img, object, embed, video {
  */
 .media-img--rev {
   float: right;
-  margin-left: 28px;
+  margin-left: 32px;
 }
 
 .media-img img,
@@ -1441,7 +1441,7 @@ img, object, embed, video {
 
 .media-img {
   float: left;
-  margin-right: 28px;
+  margin-right: 32px;
 }
 
 /**
@@ -1449,7 +1449,7 @@ img, object, embed, video {
  */
 .media-img--rev {
   float: right;
-  margin-left: 28px;
+  margin-left: 32px;
 }
 
 .media-img img,
@@ -1607,7 +1607,7 @@ img, object, embed, video {
 	========================================================================== */
 .tabs {
   zoom: 1;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   border-bottom: 2px solid #1abc9c;
 }
 .tabs:before, .tabs:after {
@@ -1657,11 +1657,11 @@ table {
 
 .table {
   width: 100%;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 .table th, .table td {
   padding: 8px;
-  line-height: 1.4;
+  line-height: 1.6;
   text-align: left;
   vertical-align: top;
   border-top: 1px solid #dddddd;
@@ -1745,9 +1745,9 @@ code {
 
 pre {
   display: block;
-  padding: 13.5px;
-  margin: 14px 0;
-  line-height: 1.4;
+  padding: 15.5px;
+  margin: 16px 0;
+  line-height: 1.6;
   color: #222222;
   background-color: white;
   white-space: pre;
@@ -2539,11 +2539,11 @@ body {
   margin: 38px 50px 50px;
 }
 .content-inner a {
+  border-bottom: 2px solid #B2BABE;
   padding: 1px 3px;
-  background-color: #fefefe;
 }
 .content-inner a:hover {
-  background-color: #f1c40f;
+  background-color: #B2BABE;
 }
 .content-inner img {
   padding: 1em;
@@ -3320,10 +3320,10 @@ body {
 }
 
 .piece-url {
-  margin-top: 28px;
-  margin-top: 1.4rem;
-  margin-bottom: 28px;
-  margin-bottom: 1.4rem;
+  margin-top: 32px;
+  margin-top: 1.6rem;
+  margin-bottom: 32px;
+  margin-bottom: 1.6rem;
   text-align: center;
   font-weight: normal;
 }
@@ -3338,7 +3338,7 @@ body {
 }
 
 .piece-infoContainer-desc {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   float: left;
   width: 48%;
 }
@@ -3365,7 +3365,7 @@ body {
 }
 
 .github-details {
-  margin-top: 28px;
+  margin-top: 32px;
   position: relative;
 }
 
@@ -3374,7 +3374,7 @@ body {
    ========================================================================== */
 .piece-shots {
   position: relative;
-  margin-top: 28px;
+  margin-top: 32px;
   text-align: center;
 }
 
@@ -3430,7 +3430,7 @@ body {
 }
 
 .piece-shots-shot--logo {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   border-radius: 5px;
   overflow: hidden;
   padding: 0;

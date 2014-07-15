@@ -22,7 +22,7 @@ $h4-size                       : 20 !default; // .delta
 $h5-size                       : 16 !default; // .epsilon
 $h6-size                       : 14 !default; // .zeta
 
-$base-leading                  : 1.4;
+$base-leading                  : 1.6;
 $base-line-height              : round($base-font-size * $base-leading);
 
 // Useful to set here when bold webfonts come as 400 font-weight.

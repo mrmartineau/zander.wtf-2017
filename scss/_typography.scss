@@ -135,8 +135,7 @@ h6, .h6, .zeta {
 * + h4, * + .h4, * + .delta,
 * + h5, * + .h5, * + .epsilon,
 * + h6, * + .h6, * + .zeta {
-	@include rem(margin-top, $base-line-height);
-	// margin-top: $base-line-height + px;
+	@include rem(margin-top, $base-font-size * 2);
 }
 
 /*
