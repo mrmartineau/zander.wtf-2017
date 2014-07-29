@@ -32,6 +32,7 @@ body {
 
 ::-webkit-scrollbar {
 	width: 10px;
+	height: 10px;
 	// background-color: $red;
 	margin: 10px 10px 10px 0;
 	background-color: darken($color-background, 10%);

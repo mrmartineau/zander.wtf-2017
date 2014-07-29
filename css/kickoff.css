@@ -250,8 +250,8 @@ body {
   line-height: 1.6;
   color: #2f353a;
   -webkit-font-variant-ligatures: common-ligatures;
-     -moz-font-variant-ligatures: common-ligatures;
-          font-variant-ligatures: common-ligatures;
+  -moz-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
 }
 
 /*
@@ -1741,7 +1741,7 @@ pre {
   font-size: 0.8rem;
   color: #dd1144;
   -moz-tab-size: 3;
-       tab-size: 3;
+  tab-size: 3;
 }
 
 code {
@@ -2339,8 +2339,8 @@ body {
   bottom: 0;
   left: 0;
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-     -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-          transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -2352,6 +2352,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
   margin: 10px 10px 10px 0;
   background-color: #d7d7d7;
 }
@@ -2431,8 +2432,8 @@ body {
   margin-left: 55px;
   line-height: 30px;
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-     -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-          transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
   vertical-align: top;
 }
 @media screen and (min-width: 40em) {
@@ -2455,8 +2456,8 @@ body {
   font-size: 0;
   line-height: 1;
   -webkit-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-     -moz-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-          transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
   cursor: pointer;
   background-color: #fff;
   box-shadow: 0 0 0 2px #fff;
@@ -2474,8 +2475,8 @@ body {
 .navBtn:hover, .is-nav-active .navBtn {
   background-color: #2f353a;
   -webkit-transition: all 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-     -moz-transition: all 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-          transition: all 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -moz-transition: all 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 .navBtn:hover i, .is-nav-active .navBtn i {
   border-color: #fff;
@@ -2483,8 +2484,8 @@ body {
 .is-nav-active .navBtn .navBtn-left,
 .is-nav-active .navBtn .navBtn-right {
   -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-     -moz-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   height: 3px;
   width: 20px;
   position: absolute;
@@ -2496,21 +2497,21 @@ body {
 }
 .is-nav-active .navBtn .navBtn-left {
   -webkit-transform: rotate(-45deg);
-     -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .is-nav-active .navBtn .navBtn-middle {
   opacity: 0;
   -webkit-transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-     -moz-transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-          transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -moz-transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 .is-nav-active .navBtn .navBtn-right {
   -webkit-transform: rotate(45deg);
-     -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .navBtn-left {
@@ -3144,8 +3145,8 @@ body {
 }
 .verticalTile, .verticalTile * {
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-     -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-          transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /*
@@ -3161,17 +3162,17 @@ body {
 .verticalTile--blogEntries:hover .overlay--img,
 .verticalTile--blogEntries:active .overlay--img {
   -webkit-transform: scale(1.2);
-     -moz-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .verticalTile--home:hover .verticalTile-cta::after, .verticalTile--home:active .verticalTile-cta::after,
 .verticalTile--blogEntries:hover .verticalTile-cta::after,
 .verticalTile--blogEntries:active .verticalTile-cta::after {
   -webkit-transform: scaleX(1.5);
-     -moz-transform: scaleX(1.5);
-      -ms-transform: scaleX(1.5);
-          transform: scaleX(1.5);
+  -moz-transform: scaleX(1.5);
+  -ms-transform: scaleX(1.5);
+  transform: scaleX(1.5);
   visibility: visible;
 }
 
@@ -3266,13 +3267,13 @@ body {
   width: 100%;
   height: 2px;
   -webkit-transform: scaleX(0.9);
-     -moz-transform: scaleX(0.9);
-      -ms-transform: scaleX(0.9);
-          transform: scaleX(0.9);
+  -moz-transform: scaleX(0.9);
+  -ms-transform: scaleX(0.9);
+  transform: scaleX(0.9);
   background-color: #fff;
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-     -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-          transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 @media screen and (min-width: 40em) {
   .verticalTile-cta {
@@ -3375,9 +3376,9 @@ body {
 }
 .visitBlog:hover .overlay--img {
   -webkit-transform: scale(1.2);
-     -moz-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .visitBlog-copy {
