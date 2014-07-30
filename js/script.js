@@ -1,7 +1,6 @@
-/*	Author: Zander Martineau
-*/
-
-// Create a closure to maintain scope of the '$' and KO (Kickoff)
+/**
+ * Author: Zander Martineau
+ */
 ;(function() {
 	document.addEventListener('DOMContentLoaded', function() {
 		trak();
