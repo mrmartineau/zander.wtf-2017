@@ -2544,9 +2544,6 @@ body {
   background-color: #B2BABE;
 }
 .content-inner img {
-  padding: 0.2em 0.2em 0.2em 30px;
-  margin-left: -30px;
-  margin-right: -30px;
   background-color: #fff;
   display: block;
   padding: 0.2em 0.2em 0.2em 50px;
@@ -2580,9 +2577,9 @@ body {
   height: 100px;
   text-align: center;
   line-height: 100px;
-  -webkit-transition: all 200ms ease-in-out;
-     -moz-transition: all 200ms ease-in-out;
-          transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+     -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .pagination-btn, .pagination-btn:link, .pagination-btn:visited {
   color: #fff;
