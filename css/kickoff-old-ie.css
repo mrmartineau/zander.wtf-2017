@@ -3084,17 +3084,17 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
+  color: rgba(255, 255, 255, 0.85);
   height: 100%;
   min-height: 100%;
   padding: 40px 15px;
 }
-.verticalTile, .verticalTile:link, .verticalTile:visited {
+.verticalTile a:link, .verticalTile a:visited {
   color: #fff;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
 }
-.verticalTile:hover, .verticalTile:active {
+.verticalTile a:hover, .verticalTile a:active {
   color: #fff;
-  color: rgba(255, 255, 255, 0.75);
 }
 .verticalTile, .verticalTile * {
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -3108,6 +3108,18 @@ body {
 .verticalTile--home,
 .verticalTile--blogEntries {
   float: left;
+}
+.verticalTile--home, .verticalTile--home:link, .verticalTile--home:visited,
+.verticalTile--blogEntries,
+.verticalTile--blogEntries:link,
+.verticalTile--blogEntries:visited {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.85);
+}
+.verticalTile--home:hover, .verticalTile--home:active,
+.verticalTile--blogEntries:hover,
+.verticalTile--blogEntries:active {
+  color: #fff;
 }
 .verticalTile--home:hover .overlay--img, .verticalTile--home:active .overlay--img,
 .verticalTile--blogEntries:hover .overlay--img,
@@ -3179,10 +3191,6 @@ body {
   font-size: 15px;
   font-size: 0.75rem;
 }
-.verticalTile-original a,
-.verticalTile-link a {
-  color: #fff;
-}
 
 .verticalTile-cta {
   position: relative;
@@ -3213,6 +3221,16 @@ body {
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
      -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
           transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.verticalTile-imageCredit {
+  position: absolute;
+  bottom: 240px;
+  left: 0;
+  right: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  font-size: 0.75rem;
 }
 
 /* Examples: */

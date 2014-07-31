@@ -7,6 +7,7 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	overflow: hidden;
+	color: rgba(#fff, 0.85);
 
 	@include respond-min($breakpoint-single-col) {
 		height: 100%;
@@ -14,14 +15,12 @@
 		padding: 40px 15px;
 	}
 
-	&, &:link, &:visited {
-		color: #fff;
-		color: rgba(#fff, 0.75);
+	a:link, a:visited {
+		color: rgba(#fff, 0.85);
 	}
 
-	&:hover, &:active {
+	a:hover, a:active {
 		color: #fff;
-		color: rgba(#fff, 0.75);
 	}
 
 	&, * {
@@ -38,7 +37,14 @@
 		float: left;
 	}
 
+	&, &:link, &:visited {
+		color: #fff;
+		color: rgba(#fff, 0.85);
+	}
+
 	&:hover, &:active {
+		color: #fff;
+
 		.overlay--img {
 			transform: scale(1.2);
 		}
@@ -111,10 +117,6 @@
 	position: relative;
 	margin-top: 1.5em;
 	@include font-size(15);
-
-	a {
-		color: #fff;
-	}
 }
 .verticalTile-cta {
 	position: relative;
@@ -143,4 +145,13 @@
 		bottom: 40px;
 		margin-left: -60px;
 	}
+}
+
+.verticalTile-imageCredit {
+	position: absolute;
+	bottom: 240px;
+	left: 0;
+	right: 0;
+	color: rgba(#fff, 0.7);
+	@include font-size(15);
 }
