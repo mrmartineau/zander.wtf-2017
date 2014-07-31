@@ -74,8 +74,6 @@ module.exports = function (grunt) {
 					'css/**/*.css',
 					'js/**/*.js',
 					'img/**/*.*',
-					'*.html',
-					'*.md',
 					'Gruntfile.js'
 				],
 				tasks: 'jekyll',
