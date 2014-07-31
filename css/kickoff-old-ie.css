@@ -3090,7 +3090,6 @@ body {
   padding: 40px 15px;
 }
 .verticalTile a:link, .verticalTile a:visited {
-  color: #fff;
   color: rgba(255, 255, 255, 0.85);
 }
 .verticalTile a:hover, .verticalTile a:active {
