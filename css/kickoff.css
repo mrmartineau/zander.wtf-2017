@@ -250,8 +250,8 @@ body {
   line-height: 1.6;
   color: #2f353a;
   -webkit-font-variant-ligatures: common-ligatures;
-  -moz-font-variant-ligatures: common-ligatures;
-  font-variant-ligatures: common-ligatures;
+     -moz-font-variant-ligatures: common-ligatures;
+          font-variant-ligatures: common-ligatures;
 }
 
 /*
@@ -1741,7 +1741,7 @@ pre {
   font-size: 0.8rem;
   color: #dd1144;
   -moz-tab-size: 3;
-  tab-size: 3;
+       tab-size: 3;
 }
 
 code {
@@ -1766,13 +1766,6 @@ pre code {
   background-color: white;
   border: 0;
   white-space: inherit;
-}
-@media screen and (min-width: 56.25em) {
-  pre {
-    margin-left: -50px;
-    margin-right: -50px;
-    padding-left: 50px;
-  }
 }
 
 .pre--scrollable {
@@ -2339,8 +2332,8 @@ body {
   bottom: 0;
   left: 0;
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+     -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -2432,8 +2425,8 @@ body {
   margin-left: 55px;
   line-height: 30px;
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+     -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
   vertical-align: top;
 }
 @media screen and (min-width: 40em) {
@@ -2456,8 +2449,8 @@ body {
   font-size: 0;
   line-height: 1;
   -webkit-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  -moz-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+     -moz-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
   cursor: pointer;
   background-color: #fff;
   box-shadow: 0 0 0 2px #fff;
@@ -2475,8 +2468,8 @@ body {
 .navBtn:hover, .is-nav-active .navBtn {
   background-color: #2f353a;
   -webkit-transition: all 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -moz-transition: all 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: all 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+     -moz-transition: all 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition: all 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 .navBtn:hover i, .is-nav-active .navBtn i {
   border-color: #fff;
@@ -2484,8 +2477,8 @@ body {
 .is-nav-active .navBtn .navBtn-left,
 .is-nav-active .navBtn .navBtn-right {
   -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -moz-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+     -moz-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   height: 3px;
   width: 20px;
   position: absolute;
@@ -2497,21 +2490,21 @@ body {
 }
 .is-nav-active .navBtn .navBtn-left {
   -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .is-nav-active .navBtn .navBtn-middle {
   opacity: 0;
   -webkit-transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -moz-transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+     -moz-transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 .is-nav-active .navBtn .navBtn-right {
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .navBtn-left {
@@ -2578,7 +2571,7 @@ body {
 }
 
 .content-inner {
-  margin: 7%;
+  margin: 7% 30px;
 }
 @media screen and (min-width: 56.25em) {
   .content-inner {
@@ -2594,18 +2587,32 @@ body {
   background-color: #B2BABE;
 }
 .content-inner img {
-  padding: 1em;
+  padding: 0.2em 0.2em 0.2em 30px;
+  margin-left: -30px;
+  margin-right: -30px;
   background-color: #fff;
   display: block;
 }
 @media screen and (min-width: 56.25em) {
   .content-inner img {
-    padding: 1em 1em 1em 50px;
+    padding: 0.2em 0.2em 0.2em 50px;
     margin-left: -50px;
   }
 }
 .content-inner img + img {
   margin-top: 1.5em;
+}
+.content-inner pre {
+  margin-left: -30px;
+  margin-right: -30px;
+  padding-left: 30px;
+}
+@media screen and (min-width: 56.25em) {
+  .content-inner pre {
+    margin-left: -50px;
+    margin-right: -50px;
+    padding-left: 50px;
+  }
 }
 
 @media screen and (min-width: 56.25em) {
@@ -2626,14 +2633,28 @@ body {
   height: 100px;
   text-align: center;
   line-height: 100px;
+  -webkit-transition: all 200ms ease-in-out;
+     -moz-transition: all 200ms ease-in-out;
+          transition: all 200ms ease-in-out;
 }
 .pagination-btn, .pagination-btn:link, .pagination-btn:visited {
-  color: #f1f1f1;
-  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media screen and (min-width: 56.25em) {
+  .pagination-btn, .pagination-btn:link, .pagination-btn:visited {
+    color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
 .pagination-btn:hover, .pagination-btn:active {
-  color: #d7d7d7;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@media screen and (min-width: 56.25em) {
+  .pagination-btn:hover, .pagination-btn:active {
+    color: #d7d7d7;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }
 
 .pagination-btn--old {
@@ -3145,8 +3166,8 @@ body {
 }
 .verticalTile, .verticalTile * {
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+     -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /*
@@ -3162,17 +3183,17 @@ body {
 .verticalTile--blogEntries:hover .overlay--img,
 .verticalTile--blogEntries:active .overlay--img {
   -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+     -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .verticalTile--home:hover .verticalTile-cta::after, .verticalTile--home:active .verticalTile-cta::after,
 .verticalTile--blogEntries:hover .verticalTile-cta::after,
 .verticalTile--blogEntries:active .verticalTile-cta::after {
   -webkit-transform: scaleX(1.5);
-  -moz-transform: scaleX(1.5);
-  -ms-transform: scaleX(1.5);
-  transform: scaleX(1.5);
+     -moz-transform: scaleX(1.5);
+      -ms-transform: scaleX(1.5);
+          transform: scaleX(1.5);
   visibility: visible;
 }
 
@@ -3267,13 +3288,13 @@ body {
   width: 100%;
   height: 2px;
   -webkit-transform: scaleX(0.9);
-  -moz-transform: scaleX(0.9);
-  -ms-transform: scaleX(0.9);
-  transform: scaleX(0.9);
+     -moz-transform: scaleX(0.9);
+      -ms-transform: scaleX(0.9);
+          transform: scaleX(0.9);
   background-color: #fff;
   -webkit-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+     -moz-transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 @media screen and (min-width: 40em) {
   .verticalTile-cta {
@@ -3376,9 +3397,9 @@ body {
 }
 .visitBlog:hover .overlay--img {
   -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+     -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .visitBlog-copy {
