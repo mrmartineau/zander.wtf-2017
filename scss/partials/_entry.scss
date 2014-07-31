@@ -8,7 +8,7 @@
 }
 
 .content-inner {
-	margin: 7%;
+	margin: 7% 30px;
 
 	@include respond-min($breakpoint-single-col) {
 		max-width: 700px;
@@ -25,17 +25,32 @@
 	}
 
 	img {
-		padding: 1em;
+		padding: 0.2em 0.2em 0.2em 30px;
+		margin-left: -30px;
+		margin-right: -30px;
 		background-color: #fff;
 		display: block;
 
 		@include respond-min($breakpoint-single-col) {
-			padding: 1em 1em 1em 50px;
+			padding: 0.2em 0.2em 0.2em 50px;
 			margin-left: -50px;
 		}
 
 		& + img {
 			margin-top: 1.5em;
+		}
+	}
+
+	pre {
+		margin-left: -30px;
+		margin-right: -30px;
+		padding-left: 30px;
+
+
+		@include respond-min($breakpoint-single-col) {
+			margin-left: -50px;
+			margin-right: -50px;
+			padding-left: 50px;
 		}
 	}
 }
@@ -59,14 +74,24 @@
 	height: 100px;
 	text-align: center;
 	line-height: 100px;
+	transition: $link-transition;
 
 	&, &:link, &:visited {
-		color: $color-background;
-		background-color: rgba(#000, 0.2);
+		color: #fff;
+		background-color: rgba(#000, 0.6);
+
+		@include respond-min($breakpoint-single-col) {
+			color: $color-background;
+			background-color: rgba(#000, 0.2);
+		}
 	}
 	&:hover, &:active {
-		color: darken($color-background, 10%);
-		background-color: rgba(#000, 0.6);
+		background-color: rgba(#000, 0.8);
+
+		@include respond-min($breakpoint-single-col) {
+			color: darken($color-background, 10%);
+			background-color: rgba(#000, 0.6);
+		}
 	}
 }
 .pagination-btn--old {

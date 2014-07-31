@@ -35,6 +35,8 @@ pre {
 	// word-wrap: break-word;
 	overflow: auto;
 
+
+
 	// Account for some code outputs that place code tags in pre tags
 	& code {
 		padding: 0;
@@ -42,12 +44,6 @@ pre {
 		background-color: $color-pre-background;
 		border: 0;
 		white-space: inherit;
-	}
-
-	@include respond-min($breakpoint-single-col) {
-		margin-left: -50px;
-		margin-right: -50px;
-		padding-left: 50px;
 	}
 }
 
