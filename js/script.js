@@ -4,8 +4,8 @@
 ;(function() {
 	document.addEventListener('DOMContentLoaded', function() {
 		trak();
-
-		var navBtn = document.querySelector('.navBtn');
+		var swiftclick = SwiftClick.attach(document.body);
+		var navBtn     = document.querySelector('.navBtn');
 
 		navBtn.addEventListener('click', function(e) {
 			e.preventDefault();
@@ -16,6 +16,7 @@
 				trak.event('Navigation', 'Click', 'Open nav');
 			}
 		});
+
 	});
 
 })();
