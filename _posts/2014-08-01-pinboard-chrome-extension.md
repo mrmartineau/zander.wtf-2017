@@ -1,16 +1,16 @@
 ---
 layout: post
 title: "Pinboard.in Chrome Extension"
-excerpt: "An improved design & more responsive"
+excerpt: "An improved, more responsive design"
 image: https://farm6.staticflickr.com/5593/14695521096_a6755fd425_z.jpg
 link:
   url: "https://chrome.google.com/webstore/detail/pinboard-style/mmcabafimbenknlnlndkdfjgfkkljhmg"
   text: "Try the extension for yourself"
 comments: true
 ---
-I love [Pinboard](http://pinboard.in), in fact I think I may be a little obsessed with this simple bookmarking service however, I think its design could do with an update. I created a Chrome extension that cleans up the UI & improves the visual hierarchy and generally makes the site a little more pleasant to use than it already was.
+I love [Pinboard](http://pinboard.in), in fact I think I may be a little obsessed with this simple bookmarking service however, I think its design could do with an update. I created a Chrome extension that cleans up the UI, improves the visual hierarchy & generally makes the site a little more pleasant to use than it already was.
 
-![](/img/posts/pinboard-ext-1.png)
+![](/img/posts/pinboard-ext-1.jpg)
 
 #### Improvements:
 
@@ -20,7 +20,7 @@ I love [Pinboard](http://pinboard.in), in fact I think I may be a little obsesse
 * The colour scheme was muted slightly and the header
 * Stars are larger and clearer
 
-![](/img/posts/pinboard-ext-2.png)
+![](/img/posts/pinboard-ext-2.jpg)
 
 Re-styling the site was not without challenges though, the markup hardly has any classes or IDs, this meant that it was quite difficult to target certain elements when I needed to. Pinboard "just works" <sup>TM</sup>. It is a simple app that does one thing very well & having investigated the code I can see and appreciate the reasons behind the reluctance to update because if it ain't broke...
 
