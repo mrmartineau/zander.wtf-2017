@@ -182,12 +182,7 @@ module.exports = function (grunt) {
 					cwd   : 'img/src-min',
 					src   : ['*.svg', '*.png'],
 					dest  : 'img/icons'
-				}],
-				options: {
-					// customselectors: {
-					// 	"*": [".icon-$1:before"]
-					// }
-				}
+				}]
 			}
 		},
 
@@ -360,7 +355,48 @@ module.exports = function (grunt) {
 		clean: {
 			postimages: ["img/posts/dist/**/*.*"],
 			projectimages: ["img/projects/dist/**/*.*"]
-		}
+		},
+
+		'ftp-deploy': {
+			dev: {
+				auth: {
+					host: 'ftp.rathersplendid.net',
+					port: 21,
+					authKey: 'key1'
+				},
+				src: '_site',
+				dest: '/subdomains/dev.martineau.tv'
+			},
+			prod: {
+				auth: {
+					host: 'ftp.rathersplendid.net',
+					port: 21,
+					authKey: 'key1'
+				},
+				src: '_site',
+				dest: '/domains/martineau.tv/htdocs'
+			}
+		},
+
+		rsync: {
+			options: {
+				// these are my preferred arguments when using rsync
+				args: ['-avz', '--verbose', '--delete'],
+				// an array of files you'd like to exclude; usual suspects...
+				exclude: ['.git*', 'cache', 'logs'],
+				recursive: true
+			},
+			prod: {
+				options: {
+					// the dir you want to sync, in this case the current dir
+					src: '_site',
+					// where should it be synced to on the remote host?
+					dest: '/subdomains/dev.martineau.tv',
+					// what's the creds and host
+					host: 'zanderm@rathersplendid.net@ftp.rathersplendid.net'
+				}
+			}
+	}
 	});
 
 	// Load all the grunt tasks

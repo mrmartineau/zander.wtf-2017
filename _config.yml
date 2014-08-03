@@ -4,7 +4,7 @@ redcarpet:
 highlighter: rouge
 permalink: /:year/:month/:title
 include: ['.htaccess']
-exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', 'index-static.php', 'index-handlebars.php', 'blog-src', 'js-old']
+exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', '*.sketch', 'bower_components', 'README.md', 'bower.json']
 timezone: Europe/London
 
 paginate: 25
