@@ -23,14 +23,12 @@
 		text-transform: uppercase;
 	}
 	a:hover, a:active {
-		color: $yellow;
+		color: $color-link-hover-alt;
 	}
 
 	.is-nav-active & {
 		display: block;
 	}
-
-
 }
 
 .nav-menu {
@@ -85,7 +83,36 @@
 	}
 
 }
+.navTop-link {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0 10px;
+	display: none;
 
+	@include respond-min($breakpoint-mid) {
+		display: inline-block;
+	}
+
+	&:hover, &:active,
+	&.is-active {
+		color: $color-link-hover-alt;
+	}
+
+}
+
+.navTop-icon {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+	fill: $color-text;
+	transition: $link-transition;
+	margin-left: 10px;
+
+	&:hover {
+		fill: $color-link-hover-alt;
+	}
+}
 
 /*
    Nav Button
@@ -106,6 +133,11 @@
 	box-shadow: 0 0 0 2px #fff;
 	width: 70px;
 	text-align: center;
+
+	@include respond-min($breakpoint-mid) {
+		display: none;
+	}
+
 
 	i {
 		width: 11px;

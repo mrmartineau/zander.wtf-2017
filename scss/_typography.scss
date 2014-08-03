@@ -144,6 +144,7 @@ h6, .h6, .zeta {
 a {
 	color: $color-link-default;
 	text-decoration: none;
+	transition: $link-transition;
 
 	&:visited {
 		color: $color-link-visited;
