@@ -96,9 +96,9 @@
 	width: device-width;
 }
 
-* {
-	-webkit-tap-highlight-color: $color-primary !important;
-}
+// * {
+// 	-webkit-tap-highlight-color: $color-primary !important;
+// }
 
 /* A hack for HTML5 contenteditable attribute on mobile */
 textarea[contenteditable] {

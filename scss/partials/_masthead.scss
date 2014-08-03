@@ -67,11 +67,7 @@
 	background-size: contain;
 
 	span {
-		opacity: 0;
-		margin-left: 55px;
-		line-height: 30px;
-		transition: $link-transition;
-		vertical-align: top;
+		display: none;
 	}
 
 	@include respond-min($breakpoint-mid) {
@@ -80,13 +76,22 @@
 				opacity: 1;
 			}
 		}
+
+		span {
+			display: inline-block;
+			opacity: 0;
+			margin-left: 55px;
+			line-height: 30px;
+			transition: $link-transition;
+			vertical-align: top;
+		}
 	}
 
 }
 .navTop-link {
 	font-weight: bold;
 	text-transform: uppercase;
-	margin: 0 10px;
+	margin-left: 20px;
 	display: none;
 
 	@include respond-min($breakpoint-mid) {
@@ -97,7 +102,6 @@
 	&.is-active {
 		color: $color-link-hover-alt;
 	}
-
 }
 
 .navTop-icon {
@@ -107,7 +111,7 @@
 	vertical-align: middle;
 	fill: $color-text;
 	transition: $link-transition;
-	margin-left: 10px;
+	margin-left: 20px;
 
 	&:hover {
 		fill: $color-link-hover-alt;
