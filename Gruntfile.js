@@ -52,7 +52,7 @@ module.exports = function (grunt) {
 			livereload: {
 				options: { livereload: true },
 				files: [
-					'._site/css/*.css'
+					'_site/css/*.css'
 				]
 			},
 
@@ -104,7 +104,7 @@ module.exports = function (grunt) {
 					lineNumbers: false,
 					debugInfo : false,
 					precision : 8,
-					sourcemap: true
+					sourcemap: false
 				},
 				files: {
 					'css/kickoff.css'       : 'scss/kickoff.scss',
@@ -116,7 +116,7 @@ module.exports = function (grunt) {
 					unixNewlines: true,
 					style: 'expanded',
 					precision : 8,
-					sourcemap: true
+					sourcemap: false
 				},
 				files: {
 					'css/styleguide.css': 'scss/styleguide.scss'
@@ -138,7 +138,7 @@ module.exports = function (grunt) {
 					// the last 2 browsers, any browsers with >1% market share,
 					// and ensuring we support IE7 + 8 with prefixes
 					browsers: ['> 5%', 'last 4 versions', 'Firefox > 3.6', 'ie > 6'],
-					map: true
+					map: false
 				},
 				files: {
 					'css/kickoff.css'       : 'css/kickoff.css',
@@ -161,8 +161,7 @@ module.exports = function (grunt) {
 				beautify: false, // beautify: beautify your code for debugging/troubleshooting purposes
 				compress: false,
 				// report: 'gzip', // report: Show file size report
-				sourceMap: '<%=config.js.distDir%><%=config.js.distFile%>.map',
-				sourceMappingURL: '/<%=config.js.distFile%>.map',
+				sourceMap: false
 			},
 			js: {
 				src: '<%=config.js.fileList%>',
@@ -459,6 +458,7 @@ module.exports = function (grunt) {
 		'uglify',
 		'sass:kickoff',
 		'autoprefixer:dist',
+		'csso',
 		'connect',
 		'watch'
 	]);
