@@ -8,7 +8,7 @@ comments: true
 comments_id: 211
 comments_old: true
 excerpt: "An experiment at creating shapes with CSS"
-image: https://farm5.staticflickr.com/4139/4851230316_2fb479d3d9_z_d.jpg
+image: 4851230316_2fb479d3d9.jpg
 link:
   url: "http://rathersplendid.net/cssicons/"
   text: "Demo"

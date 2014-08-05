@@ -7,7 +7,7 @@ categories:
 - github
 - open-source
 excerpt: "mrmartineau.co.uk site launch"
-image: https://farm8.staticflickr.com/7321/10676245574_556b2b6715_z_d.jpg
+image: 10676245574_556b2b6715.jpg
 github:
   user: mrmartineau
   repo: social-homepage

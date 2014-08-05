@@ -2,7 +2,7 @@
 layout: post
 title: "Pinboard.in Chrome Extension"
 excerpt: "An improved, more responsive design"
-image: https://farm6.staticflickr.com/5593/14695521096_a6755fd425_z.jpg
+image: 14695521096_a6755fd425.jpg
 link:
   url: "https://chrome.google.com/webstore/detail/pinboard-style/mmcabafimbenknlnlndkdfjgfkkljhmg"
   text: "Try the extension for yourself"

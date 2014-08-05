@@ -8,7 +8,7 @@ original:
 categories:
 - kickoff
 excerpt: "I wrote an overview of Kickoff, the front-end framework I created, for the TMW Labs blog."
-image: https://farm6.staticflickr.com/5564/14424983722_085ce6256c_z_d.jpg
+image: 14424983722_085ce6256c.jpg
 github:
   user: tmwagency
   repo: kickoff

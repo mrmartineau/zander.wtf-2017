@@ -2,7 +2,7 @@
 layout: post
 title: "Sublime Text packages for Front-end web development"
 excerpt: "My recommended list"
-image: https://farm4.staticflickr.com/3922/14718550485_741c87352b_z.jpg
+image: 14718550485_741c87352b.jpg
 comments: true
 ---
 It has been a long time since I have written about Sublime Text & the benefits it provides me as a front-end developer. Its packages are one of the main reasons I haven't changed my text editor/IDE in over 3 years. I even created [a wiki](https://github.com/mrmartineau/SublimeTextSetupWiki/wiki/) (of sorts) to help users get up and running with the app and choosing the right packages for a given task. This post will only focus on the packages that I believe most users should be using for front-end development.

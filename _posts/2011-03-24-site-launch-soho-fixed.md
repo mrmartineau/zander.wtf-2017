@@ -5,7 +5,7 @@ categories:
 - Launch
 image: soho-fixed-header.png
 excerpt: ""
-image: https://farm6.staticflickr.com/5472/14458611696_6c01265d21_c.jpg
+image: 14458611696_6c01265d21.jpg
 link:
   url: "http://sohofixed.com"
   text: "sohofixed.com"

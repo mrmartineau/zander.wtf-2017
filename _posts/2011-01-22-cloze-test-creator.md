@@ -11,7 +11,7 @@ link:
   url: "http://martineau.tv/cloze/"
   text: "martineau.tv/cloze/"
 excerpt: ""
-image: https://farm5.staticflickr.com/4114/4851216242_b49a0b6cd8_z_d.jpg
+image: 4851216242_b49a0b6cd8.jpg
 ---
 My wife uses a simple version of a Cloze test when she teaches; she creates these tests using Word & a lot of copying & pasting.
 

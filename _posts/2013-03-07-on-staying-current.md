@@ -5,7 +5,7 @@ title: On staying current
 categories:
 - Code
 excerpt: "My recipe for staying up-to-date with web development news and trends"
-image: https://farm4.staticflickr.com/3828/10676527333_71aab96d33_z_d.jpg
+image: 10676527333_71aab96d33.jpg
 link:
   url: "http://pinboard.in/u:MrMartineau/t:on-staying-current/"
   text: "pinboard.in/u:MrMartineau/t:on-staying-current/"

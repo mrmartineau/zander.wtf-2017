@@ -5,7 +5,7 @@ excerpt: "Tips for those creating Yeoman generators"
 original:
   url: "http://tech.tmw.co.uk/2014/03/yeoman-generator-development-tips/"
   text: "tech.tmw.co.uk"
-image: https://farm6.staticflickr.com/5590/14504057513_0416b102d6_c.jpg
+image: 14482673202_51afdd2f01.jpg
 comments: true
 github:
   user: tmwagency

@@ -5,7 +5,7 @@ comments: true
 comments_id: 231
 comments_old: true
 excerpt: ""
-image: https://farm3.staticflickr.com/2926/14305389038_92c82a6246_c.jpg
+image: 14305389038_92c82a6246.jpg
 ---
 I recently read the A List Apart article, Testing Content by Angela Colter I thought about how to easily implement a Cloze test without too much hassle. It turns out that a Cloze test can be done on any content in a few minutes using jQuery & the awesome plugin Lettering.js.
 

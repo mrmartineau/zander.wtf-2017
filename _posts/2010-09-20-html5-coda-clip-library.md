@@ -5,7 +5,7 @@ comments: true
 comments_id: 225
 comments_old: true
 excerpt: ""
-image: https://farm8.staticflickr.com/7448/13020288133_2f493fc0bd_c.jpg
+image: 13020288133_2f493fc0bd.jpg
 link:
   url: "http://github.com/mrmartineau/HTML5-Coda-Clips"
   text: "Download the clips"

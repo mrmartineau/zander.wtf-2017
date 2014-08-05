@@ -8,7 +8,7 @@ original:
 categories:
 - gulp.js
 - grunt
-image: https://farm4.staticflickr.com/3849/14403140136_3354d5b41b_c.jpg
+image: 14403140136_3354d5b41b.jpg
 excerpt: "Using the Kickoff framework, I compare two of the most popular client-side task runners"
 ---
 [gulp.js](http://gulpjs.com/) is the new hot young thing on the front-end circuit; it is a task runner similar to [Grunt](http://gruntjs.com). There are many anecdotal reports saying that gulp.js is far quicker than Grunt at performing similar tasks so naturally I wanted to see this for myself using [Kickoff](http://tmwagency.github.io/kickoff/) – the front-end framework we use at TMW – as a Guinea Pig.

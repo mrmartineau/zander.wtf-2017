@@ -6,7 +6,7 @@ categories:
 - code
 - grunt
 excerpt: "This is all you need to get Livereload working with Grunt."
-image: https://farm4.staticflickr.com/3780/13019864575_aedafb589a_z_d.jpg
+image: 13019864575_aedafb589a.jpg
 ---
 
 Having recently changed my development process from using [Codekit](http://incident57.com/codekit/) to [Grunt.js](http://gruntjs.com), I was frustrated that I no longer had live updates without a browser refresh when I made changes to my CSS; fortunately for me, there is a plugin for Grunt that solves this problem and, funnily enough, I happened to be using it already.

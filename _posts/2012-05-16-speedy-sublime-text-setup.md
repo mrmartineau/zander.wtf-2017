@@ -7,7 +7,7 @@ link:
   url: "https://github.com/mrmartineau/SublimeTextSetupWiki"
   text: "github.com/mrmartineau/SublimeTextSetupWiki"
 excerpt: "I created a wiki to speed up Sublime Text setup, click above to find out more."
-image: https://farm4.staticflickr.com/3852/14295135299_773720db99_c.jpg
+image: 14295135299_773720db99.jpg
 github:
   user: mrmartineau
   repo: SublimeTextSetupWiki
