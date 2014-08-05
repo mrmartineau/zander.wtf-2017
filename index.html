@@ -15,7 +15,7 @@ title: Zander Martineau
 			{% else %}
 				<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--home">
 			{% endif %}
-					<div class="overlay overlay--img" style="background-image: url({{post.image}})"></div>
+					<div class="overlay overlay--img" style="background-image: url(/img/posts/bg/{{post.image}})"></div>
 					<div class="overlay overlay--dark"></div>
 					<time class="verticalTile-date">{{post.date | date_to_string}}</time>
 					<h1 class="verticalTile-title">{{post.title}}</h1>
