@@ -74,7 +74,7 @@ module.exports = function (grunt) {
 					'_drafts/**/*.md',
 					'css/**/*.css',
 					'js/**/*.js',
-					'img/**/*.*',
+					'img/**/*',
 					'Gruntfile.js'
 				],
 				tasks: 'jekyll',
@@ -83,10 +83,10 @@ module.exports = function (grunt) {
 				}
 			},
 
-			assets : {
-				files: ['img/**/*', '!img/posts/dist/**/*', '!img/projects/dist/**/*'],
-				tasks: ['clean', 'newer:imagemin']
-			}
+			// assets : {
+			// 	files: ['img/**/*', '!img/posts/dist/**/*', '!img/projects/dist/**/*'],
+			// 	tasks: ['clean', 'newer:imagemin']
+			// }
 		},
 
 
