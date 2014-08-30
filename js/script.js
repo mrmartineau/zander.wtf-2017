@@ -17,6 +17,8 @@
 			}
 		});
 
+		scrollConverter.activate();
+
 	});
 
 })();
