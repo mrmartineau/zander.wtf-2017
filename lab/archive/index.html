@@ -1,0 +1,20 @@
+---
+layout: posts
+title: Blog index - Zander Martineau
+pageid: blog
+---
+
+{% for post in site.posts %}
+	{% if post.post-type == 'link' %}
+	<article class="entry entry--list entry--link">
+		<time class="entry--date text-centre" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+		<h1 class="entry--title"><a href="{{ post.link-to }}" title="Read {{ post.title }}" rel="external">{{ post.title }}</a></h1>
+
+	{% else %}
+
+	<article class="entry entry--list">
+		<time class="entry--date text-centre" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+		<h1 class="entry--title"><a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
+	{% endif %}
+	</article>
+{% endfor %}
