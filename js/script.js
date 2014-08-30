@@ -17,7 +17,7 @@
 			}
 		});
 
-		scrollConverter.activate();
+		// scrollConverter.activate();
 
 	});
 
