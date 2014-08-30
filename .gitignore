@@ -3,16 +3,14 @@ _site
 node_modules
 bower_components
 .scssc
-mtv.sublime-workspace
-mtv.sublime-project
 christmas2012
 christmas2010
 new-house
 pf
-martineau.tv-update.sublime-project
-martineau.tv-update.sublime-workspace
-martineautv.sublime-project
-martineautv.sublime-workspace
+*.sublime-project
+*.sublime-workspace
 
 .ftppass
 css/*.css
+*.map
+img/**/dist/*
