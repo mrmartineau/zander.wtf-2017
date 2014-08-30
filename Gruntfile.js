@@ -374,7 +374,8 @@ module.exports = function (grunt) {
 					authKey: 'key1'
 				},
 				src: '_site',
-				dest: '/domains/martineau.tv/htdocs'
+				dest: '/domains/martineau.tv/htdocs',
+				exclusions: ['img/**/dist/**.*']
 			}
 		},
 
@@ -443,10 +444,12 @@ module.exports = function (grunt) {
 	 * run jshint, uglify and sass:production
 	 */
 	grunt.registerTask('deploy', [
+		'jekyll',
 		'uglify',
 		'sass:kickoff',
 		'autoprefixer:dist',
-		'csso'
+		'csso',
+		'ftp-deploy:prod'
 	]);
 
 
@@ -462,19 +465,5 @@ module.exports = function (grunt) {
 		'csso',
 		'connect',
 		'watch'
-	]);
-
-	/**
-	 * TODO:
-	 * Need task to update all grunt dependencies
-	 * Need task to download all bower dependencies
-	 */
-
-	//Travis CI to test build
-	grunt.registerTask('travis', [
-		'jshint',
-		'uglify',
-		'sass:kickoff',
-		'autoprefixer:dist'
 	]);
 };
