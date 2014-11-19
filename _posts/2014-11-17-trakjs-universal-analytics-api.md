@@ -10,31 +10,33 @@ image: 15676360182_1f2011cb84_m.jpg
 ---
 Whether you use Google Analytics or another provider, adding tracking events to a site is often a painful experience. Events usually have to be defined in javascript which can make it tricky to dynamically change parameters based on certain criteria. Wouldn't it be nice to define events within the markup so that hundreds of click events can be left free from your javasript code? Trak.js does just that.
 
-**trak.js** is an API wrapper for your analytics APIs. By default it uses the Google Universal Analytics but you can override this with the older ga.js or Google Tag Manager if you wish. You can even add custom event trackers as well, instead of GA.
+Put simply, **trak.js** is a wrapper for any analytics API. By default it uses Google Universal Analytics but you can override this with the older ga.js or Google Tag Manager if you wish, or you can even add custom event trackers as well, instead of Google Analytics.
 
 ## Using trak.js
 There are two main ways to use trak.js, as data-* attributes in your markup or in your javascript code.
 
 ### data-* attr implementation:
+
 ```html
 <a href="#pagehref" data-trak='{"category":"Test category","action":"Test action","label":"Test label"}' title="1 title">link</a>
 ```
 
 ### Javascript implementation
+
 ```js
 trak.event({
-  category: 'engagement',
-  action: 'signpost',
-  label: 'page.href'
+	category: 'engagement',
+	action: 'signpost',
+	label: 'page.href'
 });
 
 trak.event({
-  category: 'engagement',
-  action: 'signpost',
-  label: 'page.href',
-  value: 10,
-  nonInteraction: true,
-  eventName: 'This is a Google Tag Manager event name'
+	category: 'engagement',
+	action: 'signpost',
+	label: 'page.href',
+	value: 10,
+	nonInteraction: true,
+	eventName: 'This is a Google Tag Manager event name'
 });
 ```
 
@@ -62,15 +64,20 @@ If any property is left `undefined`, the browser's default value will be used in
 ```html
 <!-- page.href wildcard -->
 <a href="#" data-trak='{"category":"Rating","action":"page.href","label":"Up"}'>link</a>
+
 <!-- page.title wildcard -->
 <a href="#" data-trak='{"category":"Rating","action":"page.title","label":"Up"}'>link</a>
+
 <!-- link.href wildcard -->
 <a href="#" data-trak='{"category":"Rating","action":"link.href","label":"Up"}'>link</a>
+
 <!-- link.title wildcard -->
 <a href="#" data-trak='{"category":"Rating","action":"link.title","label":"Up"}'>link</a>
+
 <!-- referrer wildcard -->
 <a href="#" data-trak='{"category":"Rating","action":"document.referrer","label":"Up"}'>link</a>
 ```
+
 
 ## Getting the Library
 ### Direct downloads
