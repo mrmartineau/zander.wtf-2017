@@ -1,7 +1,6 @@
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
-# highlighter: rouge
 permalink: /:year/:month/:title
 include: ['.htaccess']
 exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', '*.sketch', 'bower_components', 'README.md', 'bower.json']
