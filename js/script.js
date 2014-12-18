@@ -3,7 +3,8 @@
  */
 ;(function() {
 	document.addEventListener('DOMContentLoaded', function() {
-		trak();
+		trak.start();
+
 		var swiftclick = SwiftClick.attach(document.body);
 		var navBtn     = document.querySelector('.navBtn');
 
