@@ -360,7 +360,7 @@ module.exports = function (grunt) {
 		'ftp-deploy': {
 			dev: {
 				auth: {
-					host: 'ftp.rathersplendid.net',
+					host: '188.65.112.140',
 					port: 21,
 					authKey: 'key1'
 				},
@@ -369,13 +369,13 @@ module.exports = function (grunt) {
 			},
 			prod: {
 				auth: {
-					host: 'ftp.rathersplendid.net',
+					host: '188.65.112.140',
 					port: 21,
 					authKey: 'key1'
 				},
 				src: '_site',
 				dest: '/domains/martineau.tv/htdocs',
-				exclusions: ['img/**/dist/**.*']
+				exclusions: ['img/*/dist/*']
 			}
 		},
 
@@ -394,7 +394,7 @@ module.exports = function (grunt) {
 					// where should it be synced to on the remote host?
 					dest: '/subdomains/dev.martineau.tv',
 					// what's the creds and host
-					host: 'zanderm@rathersplendid.net@ftp.rathersplendid.net'
+					host: 'zanderm@rathersplendid.net@188.65.112.140'
 				}
 			}
 	}
