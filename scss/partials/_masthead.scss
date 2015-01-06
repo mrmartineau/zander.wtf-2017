@@ -100,7 +100,9 @@
 
 	&:hover, &:active,
 	&.is-active {
-		color: $color-link-hover-alt;
+		span {
+			border-bottom: 3px solid;
+		}
 	}
 }
 
