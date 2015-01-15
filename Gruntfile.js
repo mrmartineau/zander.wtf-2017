@@ -42,12 +42,12 @@ module.exports = function (grunt) {
 		watch: {
 			scss: {
 				files: ['scss/**/*.scss'],
-				tasks: ['sass:kickoff', 'autoprefixer:dist', 'csso']
+				tasks: ['sass:kickoff', 'autoprefixer:dist', 'csso', 'copy:css']
 			},
 
 			js: {
 				files: ['<%=config.js.fileList%>', 'Gruntfile.js'],
-				tasks: ['uglify']
+				tasks: ['uglify', 'copy:js']
 			},
 
 			livereload: {
@@ -73,10 +73,7 @@ module.exports = function (grunt) {
 					'_blog/**/*.md',
 					'blog/**/*.html',
 					'_drafts/**/*.md',
-					'css/**/*.css',
-					'js/**/*.js',
-					'img/**/*',
-					'Gruntfile.js'
+					'img/**/*'
 				],
 				tasks: 'jekyll',
 				options: {
