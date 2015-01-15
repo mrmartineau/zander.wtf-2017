@@ -29,10 +29,6 @@ credits:
  - title: Client
    name: SYCO
 
-images:
- - src: wide.jpg
-   type: wide
-
 ---
 Strepsils sooth your throat and allow you to keep your voice in tip top condition- thats why they make a perfect partner for The X Factor, and all of it’s dubious talents.
 
