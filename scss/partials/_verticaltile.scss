@@ -67,22 +67,26 @@
 .verticalTile--blogEntries {
 	@include respond-min($breakpoint-mid) {
 		width: 33.3333333%;
-		max-width: 400px;
+		max-width: $vertical-tile-width;
 		min-height: 460px;
 	}
 
 	@include respond-min($breakpoint-single-col) {
-		min-width: 400px;
+		min-width: $vertical-tile-width;
 	}
 }
 
 .verticalTile--blogEntry {
+	@include respond-min($breakpoint-nav-switch) {
+		margin-left: $nav-wide-width;
+	}
+
 	@include respond-min($breakpoint-single-col) {
 		position: fixed;
-		top: 60px;
-		left: 0;
 		bottom: 0;
 		width: 43%;
+		padding-left: $nav-wide-width + 15;
+		margin-left: 0;
 	}
 }
 
