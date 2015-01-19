@@ -17,6 +17,8 @@ Emmet (previously known as Zen Coding) is a web-developer’s toolkit that can g
 ### [SublimeLinter](https://sublime.wbond.net/packages/SublimeLinter)
 Interactive code linting framework for Sublime Text 3. Installation instructions can be found at [here](http://sublimelinter.readthedocs.org/en/latest/installation.html) and each language needs its own plugin, see a list [here](https://sublime.wbond.net/search/sublimelinter).
 
+[scsslint](https://packagecontrol.io/packages/SublimeLinter-contrib-scss-lint) & [jshint](https://packagecontrol.io/packages/SublimeLinter-jshint) are particularly useful.
+
 ### [jQuery](https://sublime.wbond.net/packages/jQuery)
 This package provides snippets for most of jQuery's methods making the API even easier to use.
 
