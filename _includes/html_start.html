@@ -3,8 +3,36 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>{{ page.title }}</title>
-		<meta name="description" content="This is the personal blog of Zander Martineau">
+
+
+		{% assign title = page.title %}
+
+		{% if page.section == 'blog' %}
+			{% if page.type == 'article' %}
+				{% assign section = ' - an article by Zander Martineau' %}
+			{% else %}
+				{% assign section = ' - articles by Zander Martineau' %}
+			{% endif %}
+		{% endif %}
+
+		<title>{{ title }}{{ section }}</title>
+
+		{% if page.excerpt %}
+			<meta name="description" content="{{ page.excerpt }}">
+			<meta name="twitter:description" content="{{ page.excerpt }}" />
+			<meta property="og:description" content="{{ page.excerpt }}" />
+		{% elsif page.section == 'work' %}
+			<meta name="description" content="Web and design work by Zander Martineau">
+			<meta name="twitter:description" content="Web and design work by Zander Martineau" />
+			<meta property="og:description" content="Web and design work by Zander Martineau" />
+		{% else %}
+			<meta name="description" content="This site belongs to Zander Martineau">
+			<meta name="twitter:description" content="This site belongs to Zander Martineau" />
+			<meta property="og:description" content="This site belongs to Zander Martineau" />
+		{% endif %}
+
+
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/css/kickoff.css">
 
@@ -29,7 +57,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
 
 		<meta property="og:site_name" content="Zander Martineau's portfolio and blog" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://martineau.tv" />
+		<meta property="og:url" content="http://martineau.tv{{page.url}}" />
 		<meta property="og:locale" content="en_GB" />
 		<meta name="twitter:site" content="@mrmartineau">
 	</head>

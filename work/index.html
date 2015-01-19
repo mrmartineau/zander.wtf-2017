@@ -1,10 +1,9 @@
 ---
 layout: default
-title: Zander Martineau
+title: Selected work by Zander Martineau
 section: work
 ---
-<section class="work">
-	<!-- <h1 class="workTitle text-centre">Selected Work</h1> -->
+<section class="{{ page.section }} {{ page.type }}">
 	{% for item in site.work reversed %}
 		<article class="piece" id="{{item.meta.name}}">
 			<div class="piece-inner piece-inner--{{item.meta.layout}}">

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Blog - Zander Martineau
+title: The Blog
 pageid: blog
 section: blog
 ---
-<section class="entries entries--blog clearfix">
+<section class="{{ page.section }} {{ page.type }} entries entries--blog clearfix">
 	{% for post in site.posts %}
 		{% if post.post-type == 'link' %}
 			<a href="{{ post.link-to }}" title="Read {{post.title}}" class="verticalTile verticalTile--blogEntries verticalTile--external">

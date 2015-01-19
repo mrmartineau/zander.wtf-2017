@@ -1,5 +1,9 @@
+---
+section: blog
+type: article
+---
 {% include html_start.html %}
-	<body class="{{ page.pageid }} post">
+	<body class="{{ page.section }} {{ page.type }} post">
 		{% include masthead.html %}
 
 		<article class="entry clearfix">
