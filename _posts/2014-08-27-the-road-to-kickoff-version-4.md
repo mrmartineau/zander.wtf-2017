@@ -11,6 +11,8 @@ original:
   text: "tech.tmw.co.uk"
 image: 3341937639_f3d8379ce0_n.jpg
 ---
+**UPDATE:** The content in this post is out-of-date, Kickoff v4 has now been released. Please go to the [Kickoff site](//tmwagency.github.io/kickoff) to see all the new updates.
+
 The upcoming release of Kickoff, version 4, has been in development for the past few months. As well as fixing a number of bugs, we have improved both the Sass and the JavaScript structure of the framework, removing a fair bit of old and unnecessary code.
 
 Our focus with this release was to help make the framework more intuitive and more powerful. While we realise that Kickoff is probably not meant for beginners, it should still be easy to navigate and get to grips with.

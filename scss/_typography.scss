@@ -176,7 +176,7 @@ ul, ol {
 
 	& ul,
 	& ol {
-		margin-left: ($base-line-height * 2) + px;
+		margin-left: $base-line-height + px;
 	}
 
 	& ul {

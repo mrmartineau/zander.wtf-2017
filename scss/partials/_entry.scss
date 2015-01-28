@@ -24,6 +24,7 @@
 	a {
 		border-bottom: 2px solid $color-link-hover-alt;
 		padding: 1px 3px;
+		word-wrap: break-word;
 
 		&:hover {
 			background-color: $color-link-hover-alt;
