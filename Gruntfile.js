@@ -53,7 +53,8 @@ module.exports = function (grunt) {
 			livereload: {
 				options: { livereload: true },
 				files: [
-					'_site/css/*.css'
+					'_site/css/*.css',
+					'_site/**/*.html'
 				]
 			},
 
@@ -66,13 +67,14 @@ module.exports = function (grunt) {
 				files: [
 					'_includes/**/*.html',
 					'_layouts/**/*.html',
-					'archive/**/*.html',
 					'_posts/**/*.md',
 					'_work/**/*.md',
-					'work/**/*.html',
 					'_blog/**/*.md',
-					'blog/**/*.html',
 					'_drafts/**/*.md',
+					'work/**/*.html',
+					'blog/**/*.html',
+					'search/**/*.html',
+					'*.html',
 					'img/**/*'
 				],
 				tasks: 'jekyll',
