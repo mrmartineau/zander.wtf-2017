@@ -99,16 +99,13 @@ module.exports = function (grunt) {
 		sass: {
 			kickoff: {
 				options: {
-					unixNewlines: true,
-					style: 'expanded',
-					lineNumbers: false,
-					debugInfo : false,
+					outputStyle: 'expanded',
 					precision : 8,
-					sourcemap: false
+					sourcemap: true
 				},
 				files: {
-					'css/kickoff.css'       : 'scss/kickoff.scss',
-					'css/kickoff-old-ie.css': 'scss/kickoff-old-ie.scss'
+					'css/temp/kickoff.css'       : 'scss/kickoff.scss',
+					'css/temp/kickoff-old-ie.css': 'scss/kickoff-old-ie.scss'
 				}
 			},
 			styleguide: {
@@ -141,8 +138,8 @@ module.exports = function (grunt) {
 					map: false
 				},
 				files: {
-					'css/kickoff.css'       : 'css/kickoff.css',
-					'css/kickoff-old-ie.css': 'css/kickoff-old-ie.css'
+					'css/kickoff.css'       : 'css/temp/kickoff.css',
+					'css/kickoff-old-ie.css': 'css/temp/kickoff-old-ie.css'
 				}
 			}
 		},
