@@ -373,6 +373,16 @@ module.exports = function (grunt) {
 				src: '_site',
 				dest: '/domains/martineau.tv/htdocs',
 				exclusions: ['img/*/dist/*']
+			},
+			content: {
+				auth: {
+					host: '188.65.112.140',
+					port: 21,
+					authKey: 'key1'
+				},
+				src: '_site',
+				dest: '/domains/martineau.tv/htdocs',
+				exclusions: ['img']
 			}
 		},
 
