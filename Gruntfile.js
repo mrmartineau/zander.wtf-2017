@@ -404,7 +404,21 @@ module.exports = function (grunt) {
 					host: 'zanderm@rathersplendid.net@188.65.112.140'
 				}
 			}
-	}
+		},
+
+		uncss: {
+			dist: {
+				options: {
+					timeout      : 1000,
+					htmlroot     : '_site',
+					report       : 'min',
+					media        : ['(min-width: 1300px)'],
+				},
+				files: {
+					'css/uncss.css': ['_site/index.html', '_site/blog/index.html', '_site/work/index.html', '_site/2014/08/pinboard-chrome-extension/index.html']
+				}
+			}
+		}
 	});
 
 	// Load all the grunt tasks
@@ -456,7 +470,7 @@ module.exports = function (grunt) {
 		'sass:kickoff',
 		'autoprefixer:dist',
 		'csso',
-		'ftp-deploy:prod'
+		'ftp-deploy:content'
 	]);
 
 
