@@ -1,15 +1,12 @@
 .content {
 	position: relative;
 
-
 	@include respond-min($breakpoint-nav-switch) {
 		margin-left: $nav-wide-width;
 	}
 
 	@include respond-min($breakpoint-single-col) {
-		float: right;
-		width: 57%;
-		margin-left: 0;
+		margin-left: $nav-wide-width + 400px;
 	}
 }
 
@@ -67,10 +64,10 @@
 		position: fixed;
 		bottom: 0;
 		left: 0;
-		width: 43%;
+		width: 400px;
 		z-index: 1;
 		border-top: 2px solid #fff;
-		padding-left: $nav-wide-width;
+		margin-left: $nav-wide-width;
 	}
 }
 .pagination-btn {

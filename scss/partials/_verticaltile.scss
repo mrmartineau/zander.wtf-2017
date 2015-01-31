@@ -10,34 +10,14 @@
 	color: rgba(#fff, 0.85);
 
 	@include respond-min($breakpoint-single-col) {
-		height: 100%;
-		min-height: 100%;
-		padding: 40px 15px;
+		padding: 40px;
 	}
 
-	a:link, a:visited {
-		color: rgba(#fff, 0.85);
-	}
-
-	a:hover, a:active {
-		color: #fff;
-	}
-
-	&, * {
-		transition: all 300ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
-	}
-}
-
-/*
-   Variations
-   ========================================================================== */
-.verticalTile--home,
-.verticalTile--blogEntries {
-	@include respond-min($breakpoint-mid) {
-		float: left;
-	}
-
-	&, &:link, &:visited {
+	&,
+	&:link,
+	&:visited,
+	a:link,
+	a:visited {
 		color: #fff;
 		color: rgba(#fff, 0.85);
 	}
@@ -45,27 +25,24 @@
 	&:hover, &:active {
 		color: #fff;
 
-		.overlay--img {
-			transform: scale(1.1);
-		}
-
 		.verticalTile-cta {
-			&::after {
-				transform: scaleX(1.5);
+			opacity: 1;
+
+			&:after {
 				visibility: visible;
 			}
 		}
 	}
-}
-.verticalTile--home {
-	@include respond-min($breakpoint-mid) {
-		width: 33.3333333%;
-		min-height: 460px;
+
+	&, * {
+		transition: all 600ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
 	}
 }
 
-.verticalTile--blogEntries {
+
+.verticalTile--list {
 	@include respond-min($breakpoint-mid) {
+		float: left;
 		width: 33.3333333%;
 		max-width: $vertical-tile-width;
 		min-height: 460px;
@@ -73,20 +50,33 @@
 
 	@include respond-min($breakpoint-single-col) {
 		min-width: $vertical-tile-width;
+		height: 100%;
+		min-height: 100%;
+		padding: 40px;
+	}
+
+	&:hover, &:active {
+		.overlay--img {
+			transform: scale(1.05);
+		}
+		.overlay--dark {
+			background-color: rgba(#000, 0.65);
+		}
 	}
 }
+
 
 .verticalTile--blogEntry {
 	@include respond-min($breakpoint-nav-switch) {
 		margin-left: $nav-wide-width;
+		padding: 40px;
 	}
 
 	@include respond-min($breakpoint-single-col) {
 		position: fixed;
+		top: 0;
 		bottom: 0;
-		width: 43%;
-		padding-left: $nav-wide-width + 15;
-		margin-left: 0;
+		width: 400px;
 	}
 }
 
@@ -131,14 +121,18 @@
 	@include font-size(20);
 	padding-top: 30px;
 
-	&::after {
+	@include respond-min($breakpoint-mid) {
+		opacity: 0;
+	}
+
+	&:after {
 		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 2px;
-		transform: scaleX(0.9);
+		transform: scaleX(1);
 		background-color: #fff;
 		transition: $link-transition;
 	}
@@ -158,4 +152,24 @@
 	right: 0;
 	color: rgba(#fff, 0.7);
 	@include font-size(15);
+}
+
+
+/*
+   Overlay
+   ========================================================================== */
+.overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: $link-transition;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+.overlay--dark {
+	background-color: rgba(#000, 0.8);
 }

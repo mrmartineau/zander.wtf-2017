@@ -3,7 +3,7 @@ layout: default
 title: The personal site of Zander Martineau, a front-end developer from London
 ---
 <section class="home-primary clearfix">
-	<section class="me">
+	<section class="me verticalTile verticalTile--list">
 		<div class="me-logo icon-ZM"></div>
 		<h1 class="me-name">(Alex|Z)ander Martineau</h1>
 		<h2 class="me-desc">Front-end development, London</h2>
@@ -11,9 +11,9 @@ title: The personal site of Zander Martineau, a front-end developer from London
 	<section class="entries entries--blog clearfix">
 		{% for post in site.posts %}
 			{% if post.post-type == 'link' %}
-				<a href="{{ post.link-to }}" title="Read {{post.title}}" class="verticalTile verticalTile--blogEntries verticalTile--external">
+				<a href="{{ post.link-to }}" title="Read {{post.title}}" class="verticalTile verticalTile--list verticalTile--blogEntries verticalTile--external">
 			{% else %}
-				<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--blogEntries">
+				<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--list verticalTile--blogEntries">
 			{% endif %}
 					<div class="overlay overlay--img" style="background-image: url(/img/posts/bg/{{post.image}})"></div>
 					<div class="overlay overlay--dark"></div>
@@ -25,8 +25,3 @@ title: The personal site of Zander Martineau, a front-end developer from London
 		{% endfor %}
 	</section>
 </section>
-<a href="/blog" class="visitBlog">
-	<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-02.jpg)"></div>
-	<div class="overlay overlay--dark"></div>
-	<div class="visitBlog-copy">Read more posts in the blog</div>
-</a>
