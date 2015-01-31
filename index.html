@@ -8,12 +8,12 @@ title: The personal site of Zander Martineau, a front-end developer from London
 		<h1 class="me-name">(Alex|Z)ander Martineau</h1>
 		<h2 class="me-desc">Front-end development, London</h2>
 	</section>
-	<section class="entries entries--latest clearfix">
-		{% for post in site.posts limit:3 %}
+	<section class="entries entries--blog clearfix">
+		{% for post in site.posts %}
 			{% if post.post-type == 'link' %}
-				<a href="{{ post.link-to }}" title="Read {{post.title}}" class="verticalTile verticalTile--home verticalTile--external">
+				<a href="{{ post.link-to }}" title="Read {{post.title}}" class="verticalTile verticalTile--blogEntries verticalTile--external">
 			{% else %}
-				<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--home">
+				<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--blogEntries">
 			{% endif %}
 					<div class="overlay overlay--img" style="background-image: url(/img/posts/bg/{{post.image}})"></div>
 					<div class="overlay overlay--dark"></div>
