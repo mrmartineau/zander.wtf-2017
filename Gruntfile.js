@@ -27,7 +27,7 @@ module.exports = function (grunt) {
 				fileList : [
 					'bower_components/swiftclick/js/libs/swiftclick.js',
 					'bower_components/trak/dist/trak.js',
-					// 'js/scrollConverter.js',
+					'js/scrollConverter.js',
 					'js/script.js'
 				]
 			}
