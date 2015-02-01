@@ -40,7 +40,6 @@
 	font-weight: normal;
 }
 .me-logo {
-	// margin-bottom: 20px;
 	width: 50px;
 	height: 33px;
 	display: inline-block;
@@ -48,13 +47,4 @@
 	position: absolute;
 	bottom: 1em;
 	right: 1em;
-	// left: 50%;
-	// margin-left: -25px;
-
-	@include respond-min($breakpoint-wide) {
-		width: 88px;
-		height: 58px;
-		// margin-bottom: 40px;
-		// margin-left: -44px;
-	}
 }
