@@ -70,6 +70,7 @@ module.exports = function (grunt) {
 					'_posts/**/*.md',
 					'_work/**/*.md',
 					'_blog/**/*.md',
+					'_lab/**/*.md',
 					'_drafts/**/*.md',
 					'work/**/*.html',
 					'blog/**/*.html',
@@ -244,6 +245,25 @@ module.exports = function (grunt) {
 					open: true,
 					livereload: true,
 					base: './_site'
+				}
+			}
+		},
+
+		/**
+		 * browserSync
+		 * http://www.browsersync.io/docs/options/
+		 * http://www.browsersync.io/docs/grunt/
+		 */
+		browserSync: {
+			serve: {
+				bsFiles: {
+					src: ['_site/css/*.css', '_site/js/*.js', '_site/**/*.html']
+				},
+				options: {
+					watchTask: true,
+					server: {
+						baseDir: "./_site"
+					}
 				}
 			}
 		},
@@ -480,7 +500,7 @@ module.exports = function (grunt) {
 		'sass:kickoff',
 		'autoprefixer:dist',
 		'csso',
-		'connect',
+		'browserSync:serve',
 		'watch'
 	]);
 };
