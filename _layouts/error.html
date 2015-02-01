@@ -1,0 +1,33 @@
+---
+section: error
+type: article
+---
+{% include html_start.html %}
+	<body class="{{ page.section }} {{ page.type }} post">
+		{% include masthead.html %}
+
+		<article class="entry clearfix">
+	<div class="verticalTile verticalTile--blogEntry">
+		<div class="overlay overlay--img" style="background-image: url(http://www.sub-tv.co.uk/pics/SkyDigital/bars_MB1_europe_17_7_2000.jpg)"></div>
+		<div class="overlay overlay--dark"></div>
+		<h1 class="verticalTile-title">This page does not exist</h1>
+		<p class="verticalTile-excerpt">Either I screwed up my deployments again or the link is wrong.</p>
+	</div>
+
+	<div class="content">
+		<div class="content-inner">
+			<p>I should have the site back up in no time, but if I don't, why not try:</p>
+			<ul>
+				<li>refreshing the page a few more times.</li>
+				<li><a href="http://news.layervault.com">reading Designer News</a></li>
+				<li><a href="http://xkcd.com">reading the latest XKCD comic</a></li>
+				<li><a href="http://codepen.io/popular/">view the most popular Codepen demos</a></li>
+				<li><a href="https://github.com/trending">see what's trending on Github</a></li>
+			</ul>
+
+			<p>Let me know about it so that I can fix the problem. <a href="http://twitter.com/MrMartineau">Tweet me</a></p>
+		</div>
+	</div>
+</article>
+
+{% include html_end.html %}
