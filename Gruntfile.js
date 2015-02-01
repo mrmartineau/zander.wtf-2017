@@ -359,7 +359,7 @@ module.exports = function (grunt) {
 					authKey: 'key1'
 				},
 				src: '_site',
-				dest: '/domains/martineau.tv/htdocs',
+				dest: '/public_html',
 				exclusions: ['img/*/dist/*']
 			},
 			content: {
@@ -369,7 +369,7 @@ module.exports = function (grunt) {
 					authKey: 'key1'
 				},
 				src: '_site',
-				dest: '/domains/martineau.tv/htdocs',
+				dest: '/public_html',
 				exclusions: ['img']
 			}
 		},
@@ -459,6 +459,14 @@ module.exports = function (grunt) {
 		'autoprefixer:dist',
 		'csso',
 		'ftp-deploy:content'
+	]);
+	grunt.registerTask('deployall', [
+		'jekyll',
+		'uglify',
+		'sass:kickoff',
+		'autoprefixer:dist',
+		'csso',
+		'ftp-deploy:prod'
 	]);
 
 
