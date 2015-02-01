@@ -33,14 +33,15 @@ type: article
 				<div class="content-inner">
 					{{ content }}
 
-					{% include aboutme.html %}
-
 					{% if page.comments %}
 						<div class="comments">
-							<a href="#" class="btn btn--comments loadComments">Show Comments</a>
+							<a href="#" class="btn btn--primary btn--block loadComments">Show Comments</a>
 							<div id="disqus_thread" class="is-hidden"></div>
 						</div>
 					{% endif %}
+
+					{% include aboutme.html %}
+
 				</div>
 
 				<!-- Pagination links -->
