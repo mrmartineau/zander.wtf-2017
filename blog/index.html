@@ -7,9 +7,9 @@ section: blog
 <section class="{{ page.section }} {{ page.type }} entries entries--blog clearfix">
 	{% for post in site.posts %}
 		{% if post.post-type == 'link' %}
-			<a href="{{ post.link-to }}" title="Read {{post.title}}" class="verticalTile verticalTile--blogEntries verticalTile--external">
+			<a href="{{ post.link-to }}" title="Read {{post.title}}" class="verticalTile verticalTile--list verticalTile--external">
 		{% else %}
-			<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--blogEntries">
+			<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--list">
 		{% endif %}
 				<div class="overlay overlay--img" style="background-image: url(/img/posts/bg/{{post.image}})"></div>
 				<div class="overlay overlay--dark"></div>
