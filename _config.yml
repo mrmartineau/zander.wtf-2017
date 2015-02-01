@@ -6,9 +6,6 @@ include: ['.htaccess']
 exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', '*.sketch', 'bower_components', 'README.md', 'bower.json']
 timezone: Europe/London
 
-paginate: 25
-paginate_path: /page:num
-
 # Vars
 name: Zander Martineau
 myname: Zander Martineau
