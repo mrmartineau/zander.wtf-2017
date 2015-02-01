@@ -10,8 +10,14 @@ original:
   url: "http://tech.tmw.co.uk/2014/08/the-road-to-kickoff-version-4/"
   text: "tech.tmw.co.uk"
 image: 3341937639_f3d8379ce0_n.jpg
+
+github:
+  user: tmwagency
+  repo: kickoff
 ---
 **UPDATE:** The content in this post is out-of-date, Kickoff v4 has now been released. Please go to the [Kickoff site](//tmwagency.github.io/kickoff) to see all the new updates.
+
+---
 
 The upcoming release of Kickoff, version 4, has been in development for the past few months. As well as fixing a number of bugs, we have improved both the Sass and the JavaScript structure of the framework, removing a fair bit of old and unnecessary code.
 
