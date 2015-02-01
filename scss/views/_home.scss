@@ -13,6 +13,7 @@
 .me {
 	background-image: url(/img/about/me.jpg);
 	min-height: 420px;
+	padding: 40px;
 
 	@include respond-max($breakpoint-single-col) {
 		float: none;
