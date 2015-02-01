@@ -77,11 +77,9 @@
 	position: absolute;
 	left: 20px;
 	top: 15px;
-
 	width: 46px;
 	height: 30px;
 	background-size: contain;
-
 
 	span {
 		display: none;
@@ -93,6 +91,8 @@
 		position: static;
 
 		&:hover {
+			animation: wiggle 200ms linear 1;
+
 			span {
 				opacity: 1;
 			}
@@ -148,6 +148,7 @@
 
 	&:hover {
 		fill: $color-link-hover-alt;
+		animation: wiggle 200ms linear 1;
 	}
 
 	@include respond-min($breakpoint-nav-switch) {

@@ -22,7 +22,10 @@ body {
 	}
 }
 
-
+@keyframes wiggle {
+	25% {transform:rotate(-7deg);}
+	75% {transform:rotate(7deg);}
+}
 
 
 ::-webkit-scrollbar {
