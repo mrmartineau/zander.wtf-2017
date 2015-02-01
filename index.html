@@ -1,19 +1,21 @@
 ---
 layout: default
 title: The personal site of Zander Martineau, a front-end developer from London
+section: home
+pageid: home
 ---
 <section class="home-primary clearfix">
-	<section class="me">
-		<div class="me-logo icon-ZM"></div>
+	<section class="me verticalTile verticalTile--list">
 		<h1 class="me-name">(Alex|Z)ander Martineau</h1>
 		<h2 class="me-desc">Front-end development, London</h2>
+		<div class="me-logo"><svg viewBox="0 0 88 58" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="M59.408 31.569l-15.45-31.569h-42.95v11.931h26.031l-27.038 34.22v11.849h49.248l-6.047-11.931h-26.491l22.731-28.679 14.257 27.685h11.42l9.111-17.731v30.657h13.771v-58h-13.057l-15.534 31.569z" fill-rule="evenodd"/></svg></div>
 	</section>
-	<section class="entries entries--latest clearfix">
-		{% for post in site.posts limit:3 %}
+	<section id="blog" class="entries entries--blog clearfix">
+		{% for post in site.posts %}
 			{% if post.post-type == 'link' %}
-				<a href="{{ post.link-to }}" title="Read {{post.title}}" class="verticalTile verticalTile--home verticalTile--external">
+				<a href="{{ post.link-to }}" title="Read {{post.title}}" class="verticalTile verticalTile--list verticalTile--blogEntries verticalTile--external">
 			{% else %}
-				<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--home">
+				<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--list verticalTile--blogEntries">
 			{% endif %}
 					<div class="overlay overlay--img" style="background-image: url(/img/posts/bg/{{post.image}})"></div>
 					<div class="overlay overlay--dark"></div>
@@ -25,8 +27,3 @@ title: The personal site of Zander Martineau, a front-end developer from London
 		{% endfor %}
 	</section>
 </section>
-<a href="/blog" class="visitBlog">
-	<div class="overlay overlay--img" style="background-image: url(/img/latestentries/latestentry-02.jpg)"></div>
-	<div class="overlay overlay--dark"></div>
-	<div class="visitBlog-copy">Read more posts in the blog</div>
-</a>

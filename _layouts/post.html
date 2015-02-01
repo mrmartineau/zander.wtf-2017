@@ -33,27 +33,15 @@ type: article
 				<div class="content-inner">
 					{{ content }}
 
+					{% if page.comments %}
+						<div class="comments">
+							<a href="#" class="btn btn--primary btn--block loadComments">Show Comments</a>
+							<div id="disqus_thread" class="is-hidden"></div>
+						</div>
+					{% endif %}
+
 					{% include aboutme.html %}
 
-					{% if page.comments %}
-						<div id="disqus_thread"></div>
-						<script type="text/javascript">
-						{% if page.comments_old %}
-							var disqus_shortname = 'rathersplendidblog';
-						{% else %}
-							var disqus_shortname = 'martineau-tv';
-						{% endif %}
-						{% if page.comments_id %}
-							var disqus_identifier = '{{ page.comments_id }}'; // required: replace example with your forum shortname
-						{% endif %}
-							(function() {
-								var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-								dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-								(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-							})();
-						</script>
-						<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-					{% endif %}
 				</div>
 
 				<!-- Pagination links -->

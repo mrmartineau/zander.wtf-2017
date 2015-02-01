@@ -53,7 +53,8 @@ module.exports = function (grunt) {
 			livereload: {
 				options: { livereload: true },
 				files: [
-					'_site/css/*.css'
+					'_site/css/*.css',
+					'_site/**/*.html'
 				]
 			},
 
@@ -66,13 +67,14 @@ module.exports = function (grunt) {
 				files: [
 					'_includes/**/*.html',
 					'_layouts/**/*.html',
-					'archive/**/*.html',
 					'_posts/**/*.md',
 					'_work/**/*.md',
-					'work/**/*.html',
 					'_blog/**/*.md',
-					'blog/**/*.html',
 					'_drafts/**/*.md',
+					'work/**/*.html',
+					'blog/**/*.html',
+					'search/**/*.html',
+					'*.html',
 					'img/**/*'
 				],
 				tasks: 'jekyll',
@@ -97,27 +99,13 @@ module.exports = function (grunt) {
 		sass: {
 			kickoff: {
 				options: {
-					unixNewlines: true,
-					style: 'expanded',
-					lineNumbers: false,
-					debugInfo : false,
+					outputStyle: 'expanded',
 					precision : 8,
-					sourcemap: false
+					sourceMap: false
 				},
 				files: {
-					'css/kickoff.css'       : 'scss/kickoff.scss',
-					'css/kickoff-old-ie.css': 'scss/kickoff-old-ie.scss'
-				}
-			},
-			styleguide: {
-				options: {
-					unixNewlines: true,
-					style: 'expanded',
-					precision : 8,
-					sourcemap: false
-				},
-				files: {
-					'css/styleguide.css': 'scss/styleguide.scss'
+					'css/temp/kickoff.css' : 'scss/kickoff.scss',
+					'css/temp/styleguide.css': 'scss/styleguide.scss'
 				}
 			}
 		},
@@ -135,12 +123,12 @@ module.exports = function (grunt) {
 					// Task-specific options go here - we are supporting
 					// the last 2 browsers, any browsers with >1% market share,
 					// and ensuring we support IE7 + 8 with prefixes
-					browsers: ['> 5%', 'last 4 versions', 'Firefox > 3.6', 'ie > 6'],
+					browsers: ['> 5%', 'last 2 versions', 'ie > 8'],
 					map: false
 				},
 				files: {
-					'css/kickoff.css'       : 'css/kickoff.css',
-					'css/kickoff-old-ie.css': 'css/kickoff-old-ie.css'
+					'css/kickoff.css' : 'css/temp/kickoff.css',
+					'css/styleguide.css': 'css/temp/styleguide.css'
 				}
 			}
 		},
@@ -235,8 +223,8 @@ module.exports = function (grunt) {
 		csso: {
 			dist: {
 				files: {
-					'css/kickoff.css'       : 'css/kickoff.css',
-					'css/kickoff-old-ie.css': 'css/kickoff-old-ie.css'
+					'css/kickoff.css'   : 'css/kickoff.css',
+					'css/styleguide.css': 'css/styleguide.css'
 				},
 
 			}
@@ -338,9 +326,9 @@ module.exports = function (grunt) {
 				]
 			},
 			css : {
-				files: {
-					'_site/css/kickoff.css': 'css/kickoff.css'
-				}
+				files: [
+					{ expand: true, cwd: './css', src: ['./**/*.*'], dest: '_site/css' }
+				]
 			},
 			js: {
 				files: [
@@ -371,7 +359,7 @@ module.exports = function (grunt) {
 					authKey: 'key1'
 				},
 				src: '_site',
-				dest: '/domains/martineau.tv/htdocs',
+				dest: '/public_html',
 				exclusions: ['img/*/dist/*']
 			},
 			content: {
@@ -381,7 +369,7 @@ module.exports = function (grunt) {
 					authKey: 'key1'
 				},
 				src: '_site',
-				dest: '/domains/martineau.tv/htdocs',
+				dest: '/public_html',
 				exclusions: ['img']
 			}
 		},
@@ -471,6 +459,14 @@ module.exports = function (grunt) {
 		'autoprefixer:dist',
 		'csso',
 		'ftp-deploy:content'
+	]);
+	grunt.registerTask('deployall', [
+		'jekyll',
+		'uglify',
+		'sass:kickoff',
+		'autoprefixer:dist',
+		'csso',
+		'ftp-deploy:prod'
 	]);
 
 

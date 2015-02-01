@@ -1,20 +1,17 @@
 .content {
 	position: relative;
 
-
 	@include respond-min($breakpoint-nav-switch) {
 		margin-left: $nav-wide-width;
 	}
 
 	@include respond-min($breakpoint-single-col) {
-		float: right;
-		width: 57%;
-		margin-left: 0;
+		margin-left: $nav-wide-width + 400px;
 	}
 }
 
 .content-inner {
-	margin: 7% 30px;
+	margin: 7%;
 
 	@include respond-min($breakpoint-single-col) {
 		max-width: 700px;
@@ -28,6 +25,15 @@
 
 		&:hover {
 			background-color: $color-link-hover-alt;
+		}
+	}
+
+	a.btn--primary {
+		padding-right:1.5em;
+		padding-left: 1.5em;
+
+		&:hover {
+			background-color: transparent;
 		}
 	}
 
@@ -67,10 +73,10 @@
 		position: fixed;
 		bottom: 0;
 		left: 0;
-		width: 43%;
+		width: 400px;
 		z-index: 1;
 		border-top: 2px solid #fff;
-		padding-left: $nav-wide-width;
+		margin-left: $nav-wide-width;
 	}
 }
 .pagination-btn {
@@ -107,10 +113,6 @@
 	border-left: 2px solid #fff;
 }
 
-#disqus_thread {
-	margin-top: 60px;
-}
-
-.giantLink {
-
+.comments {
+	margin: 30px 0;
 }
