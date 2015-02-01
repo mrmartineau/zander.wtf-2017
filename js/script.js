@@ -5,8 +5,8 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		trak.start();
 
-		var swiftclick = SwiftClick.attach(document.body);
-		var navBtn     = document.querySelector('.navBtn');
+		var swiftclick        = SwiftClick.attach(document.body);
+		var navBtn            = document.querySelector('.navBtn');
 		var commentsToggleBtn = document.querySelector('.loadComments');
 		var disqusEl          = document.querySelector('#disqus_thread');
 
@@ -20,7 +20,7 @@
 			}
 		});
 
-		scrollConverter.activate();
+		// scrollConverter.activate();
 
 
 		commentsToggleBtn.addEventListener('click', toggleComments);
@@ -33,7 +33,7 @@
 		}
 
 		function viewComments() {
-			console.log("scroll me down", window.scrollY);
+			window.scrollY += 200;
 		}
 
 		function loadJS( src, cb ){
