@@ -5,8 +5,8 @@ pageid: lab
 section: lab
 ---
 <section class="entries entries--blog clearfix">
-	{% for item in site.lab reversed %}
-		<a href="{{item.url}}" title="Read {{item.title}}" class="verticalTile verticalTile--blogEntries">
+	{% for item in site.lab %}
+		<a href="{{item.url}}" title="Read {{item.title}}" class="verticalTile verticalTile--list">
 			<div class="overlay overlay--img" style="background-image: url(/img/posts/bg/{{item.image}})"></div>
 			<div class="overlay overlay--dark"></div>
 			<h1 class="verticalTile-title">{{item.title}}</h1>

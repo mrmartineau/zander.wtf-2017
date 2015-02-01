@@ -16,8 +16,10 @@ email: zander@martineau.tv
 socialusername: MrMartineau
 
 collections:
- - work
- - lab
+  work:
+  lab:
+    output: true
+    permalink: /lab/:path/
 
 # defaults:
 #   -

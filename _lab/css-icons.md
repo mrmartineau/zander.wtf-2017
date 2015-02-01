@@ -4,25 +4,24 @@ title: "Pure CSS Icons"
 excerpt: "An experiment at creating shapes with CSS"
 image: 4851230316_2fb479d3d9.jpg
 link:
-  url: "/blog/"
+  url: /2010/04/pure-css-icons/
   text: "Article"
 css: css-icons.css
 ---
-
 <div id="container" class="clearfix">
 	<div class="wrapper" style="font-size:12px;">
 
 		<h3>RSS (without border)</h3>
 		<div id="rss_icon_main" class="outside gap">
-		    <a href="http://rathersplendid.net"><span class="outer_ring"></span>
-		    <span class="middle_ring"></span>
-		    <span class="circle"></span></a>
+			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<span class="middle_ring"></span>
+			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<h3>RSS (with Border)</h3>
 		<div id="rss_icon_wrapper" class="gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="http://rathersplendid.net"><span class="outer_ring"></span>
+					<a href="//martineau.tv"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -31,15 +30,15 @@ css: css-icons.css
 		<h3>32px RSS</h3>
 		<p>The dimensions for this and the 16px icon are fixed.</p>
 		<div id="rss_icon_main" class="outside px32 gap">
-		    <a href="http://rathersplendid.net"><span class="outer_ring"></span>
-		    <span class="middle_ring"></span>
-		    <span class="circle"></span></a>
+			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<span class="middle_ring"></span>
+			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<h3>32px RSS with border</h3>
 		<div id="rss_icon_wrapper" class="px32 gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="http://rathersplendid.net"><span class="outer_ring"></span>
+					<a href="//martineau.tv"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -47,9 +46,9 @@ css: css-icons.css
 
 		<h3>16px RSS</h3>
 		<div id="rss_icon_main" class="outside px16 gap">
-		    <a href="http://rathersplendid.net"><span class="outer_ring"></span>
-		    <span class="middle_ring"></span>
-		    <span class="circle"></span></a>
+			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<span class="middle_ring"></span>
+			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<!--div id="heart" class="gap">
@@ -123,14 +122,14 @@ css: css-icons.css
 	<!-- Wrapper 2 -->
 	<div class="wrapper" style="font-size:7px;">
 		<div id="rss_icon_main" class="outside gap">
-		    <a href="http://rathersplendid.net"><span class="outer_ring"></span>
-		    <span class="middle_ring"></span>
-		    <span class="circle"></span></a>
+			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<span class="middle_ring"></span>
+			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<div id="rss_icon_wrapper" class="gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="http://rathersplendid.net"><span class="outer_ring"></span>
+					<a href="//martineau.tv"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -138,14 +137,14 @@ css: css-icons.css
 
 
 		<div id="rss_icon_main" class="outside px32 gap">
-		    <a href="http://rathersplendid.net"><span class="outer_ring"></span>
-		    <span class="middle_ring"></span>
-		    <span class="circle"></span></a>
+			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<span class="middle_ring"></span>
+			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<div id="rss_icon_wrapper" class="px32 gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="http://rathersplendid.net"><span class="outer_ring"></span>
+					<a href="//martineau.tv"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -153,9 +152,9 @@ css: css-icons.css
 
 
 		<div id="rss_icon_main" class="outside px16 gap">
-		    <a href="http://rathersplendid.net"><span class="outer_ring"></span>
-		    <span class="middle_ring"></span>
-		    <span class="circle"></span></a>
+			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<span class="middle_ring"></span>
+			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<div id="heart_two" class="gap">
@@ -212,14 +211,14 @@ css: css-icons.css
 
 	<div class="wrapper" style="font-size:3px;">
 		<div id="rss_icon_main" class="outside gap">
-		    <a href="http://rathersplendid.net"><span class="outer_ring"></span>
-		    <span class="middle_ring"></span>
-		    <span class="circle"></span></a>
+			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<span class="middle_ring"></span>
+			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<div id="rss_icon_wrapper" class="gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="http://rathersplendid.net"><span class="outer_ring"></span>
+					<a href="//martineau.tv"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -227,14 +226,14 @@ css: css-icons.css
 
 
 		<div id="rss_icon_main" class="outside px32 gap">
-		    <a href="http://rathersplendid.net"><span class="outer_ring"></span>
-		    <span class="middle_ring"></span>
-		    <span class="circle"></span></a>
+			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<span class="middle_ring"></span>
+			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<div id="rss_icon_wrapper" class="px32 gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="http://rathersplendid.net"><span class="outer_ring"></span>
+					<a href="//martineau.tv"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -242,9 +241,9 @@ css: css-icons.css
 
 
 		<div id="rss_icon_main" class="outside px16 gap">
-		    <a href="http://rathersplendid.net"><span class="outer_ring"></span>
-		    <span class="middle_ring"></span>
-		    <span class="circle"></span></a>
+			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<span class="middle_ring"></span>
+			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<!--div id="heart" class="gap">
