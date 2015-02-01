@@ -65,13 +65,13 @@ module.exports = function (grunt) {
 
 			jekyll : {
 				files: [
-					'_includes/**/*.html',
-					'_layouts/**/*.html',
-					'_posts/**/*.md',
-					'_work/**/*.md',
-					'_blog/**/*.md',
-					'_lab/**/*.md',
-					'_drafts/**/*.md',
+					'_includes/*.html',
+					'_layouts/*.html',
+					'_posts/*.md',
+					'_work/*.md',
+					'_blog/*.md',
+					'_lab/*.md',
+					'_drafts/*.md',
 					'work/**/*.html',
 					'blog/**/*.html',
 					'search/**/*.html',
