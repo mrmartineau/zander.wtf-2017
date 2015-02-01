@@ -12,6 +12,14 @@
    ========================================================================== */
 .me {
 	background-image: url(/img/about/me.jpg);
+	min-height: 420px;
+
+	@include respond-max($breakpoint-single-col) {
+		float: none;
+		width: 100%;
+		min-width: 100%;
+	}
+
 }
 .me-name {
 	margin: 0;
