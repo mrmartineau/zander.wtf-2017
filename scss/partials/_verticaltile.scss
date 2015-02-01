@@ -3,11 +3,15 @@
 	display: block;
 	text-align: center;
 	background-size: cover;
-	padding: 20px 15px;
+	padding: 30px;
 	background-position: center center;
 	background-repeat: no-repeat;
 	overflow: hidden;
 	color: rgba(#fff, 0.85);
+
+	@include respond-min($breakpoint-mid) {
+		padding: 20px 15px;
+	}
 
 	@include respond-min($breakpoint-single-col) {
 		padding: 40px;
