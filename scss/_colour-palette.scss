@@ -104,4 +104,4 @@ $info-background               : #d9edf7;
 $info-border                   : darken(adjust-hue($info-background, -10), 7%);
 
 // <hr> border colour
-$hr-border                     : lighten(#000, 70%);
+$hr-border                     : $color-link-hover-alt;
