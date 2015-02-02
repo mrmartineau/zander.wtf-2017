@@ -11,21 +11,25 @@ github:
   user: tmwagency
   repo: trak.js
 ---
-**UPDATE:** Trak.js has been updated since this post was written so some aspects may be out-of-date. Please visit the [trak.js repo](//github.com/tmwagency/trak.js) for the latest documentation.
-
----
-
 Whether you use Google Analytics or another provider, adding tracking events to a site is often a painful experience. Events usually have to be defined in javascript which can make it tricky to dynamically change parameters based on certain criteria. Wouldn't it be nice to define events within the markup so that hundreds of click events can be left free from your javasript code? Trak.js does just that.
 
 Put simply, **trak.js** is a wrapper for any analytics API. By default it uses Google Universal Analytics but you can override this with the older ga.js or Google Tag Manager if you wish, or you can even add custom event trackers as well, instead of Google Analytics.
 
 ## Using trak.js
-There are two main ways to use trak.js, as data-* attributes in your markup or in your javascript code.
+There are two main ways to use trak.js, as `data-trak` attributes in your markup or in your javascript code.
 
-### data-* attr implementation:
+### data-trak attr implementation:
 
 ```html
 <a href="#pagehref" data-trak='{"category":"Test category","action":"Test action","label":"Test label"}' title="1 title">link</a>
+```
+
+### Custom trigger type (new as of v0.4.0)
+`data-trak` attrs can also define a custom trigger type instead of `click`. Now `mouseover`, `touchstart`, `focus`, `blur` or any other valid event can be used to trigger a trak event. Just add `"trigger": "eventName"` to the options object. See below for an example of this using the `focus` event:
+
+```html
+<!-- Triggered on focus -->
+<a data-trak='{"trigger":"focus","category":"Test category","action":"Test action","label":"Test label"}' href="#pagehref">Custom trigger type</a>
 ```
 
 ### Javascript implementation
@@ -54,13 +58,14 @@ trak.event({
 **action**: A string value of the action value to set<br>
 **label**: A string value of the label value to set<br>
 **value**: An integer<br>
+**trigger**: A string value of a valid event name: `click`, `focus`, `mouseover` etc<br>
 **nonInteraction**: An integer<br>
 **eventName**: A string value used only with Google Tag Manager. Define your GTM event name here
 
 If any property is left `undefined`, the browser's default value will be used instead.
 
-## Wildcards:
-**trak.js** introduces the concept of wildcards when working with your events, this makes it extremely easy to use more complex values in your events. There are a number of wildcards available for both the data-* attr and js implentation. These can be used to specify certain options like the page title, the url, the current anchor's href value and a few others.
+## Wildcards
+**trak.js** introduces the concept of wildcards when working with your events, this makes it extremely easy to use more complex values in your events. There are a number of wildcards available for both the `data-trak` attr and js implentation. These can be used to specify certain options like the page title, the url, the current anchor's href value and a few others.
 
 * **`page.href`** wildcard uses `window.location.href` as the value.
 * **`page.title`** wildcard uses `document.title` as the value.
