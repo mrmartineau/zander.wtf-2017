@@ -52,43 +52,6 @@ var CONFIG = {
 	]
 };
 
-// Lint JavaScript
-gulp.task('jshint', function () {
-	return gulp.src(CONFIG.JS.FILELIST)
-		.pipe(reload({stream: true, once: true}))
-		.pipe($.jshint())
-		.pipe($.jshint.reporter('jshint-stylish'))
-		.pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
-});
-
-// Optimize Images
-// gulp.task('images', function () {
-// 	return gulp.src('app/images/**/*')
-// 		.pipe($.cache($.imagemin({
-// 			progressive: true,
-// 			interlaced: true
-// 		})))
-// 		.pipe(gulp.dest('dist/images'))
-// 		.pipe($.size({title: 'images'}));
-// });
-
-// Copy All Files At The Root Level (app)
-gulp.task('copy:css', function () {
-	return gulp.src([
-			'css/*'
-		], {
-			dot: true
-		})
-		.pipe(gulp.dest('_site/css'))
-		.pipe($.size({title: 'copy:css'}));
-});
-
-// Copy Web Fonts To Dist
-gulp.task('fonts', function () {
-	return gulp.src(['app/fonts/**'])
-		.pipe(gulp.dest('dist/fonts'))
-		.pipe($.size({title: 'fonts'}));
-});
 
 
 // Compile and Automatically Prefix Stylesheets
@@ -105,15 +68,28 @@ gulp.task('styles', function () {
 			}))
 		.pipe($.sourcemaps.write())
 		.pipe($.autoprefixer({browsers: CONFIG.AUTOPREFIXER_BROWSERS}))
-		.pipe(gulp.dest('.tmp/styles'))
+		// .pipe(gulp.dest('.tmp/styles'))
+
 		// Concatenate And Minify Styles
 		.pipe($.if('*.css', $.csso()))
 		.pipe(gulp.dest('css'))
-		.pipe($.size({title: 'styles'}))
-		.pipe(browserSync.reload({stream:true}));
+		.pipe($.size({title: 'styles'}));
 });
 
 
+// COPY CSS
+gulp.task('copy:css', function () {
+	return gulp.src([
+			'css/*'
+		], {
+			dot: true
+		})
+		.pipe(gulp.dest('_site/css'))
+		.pipe($.size({title: 'copy:css'}))
+		.pipe(browserSync.reload({stream:true}));
+});
+
+// JAVASCRIPT
 gulp.task('js', function() {
 	return gulp.src(CONFIG.JS.FILELIST)
 		.pipe($.changed('.tmp/js', {extension: '.js'}))
@@ -131,44 +107,6 @@ gulp.task('jekyll', function () {
 	build.on('exit', browserSync.reload);
 });
 
-// Scan Your HTML For Assets & Optimize Them
-// gulp.task('html', function () {
-// 	var assets = $.useref.assets({searchPath: '{.tmp,app}'});
-
-// 	return gulp.src('app/**/*.html')
-// 		.pipe(assets)
-// 		// Concatenate And Minify JavaScript
-// 		.pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
-// 		// Remove Any Unused CSS
-// 		// Note: If not using the Style Guide, you can delete it from
-// 		// the next line to only include styles your project uses.
-// 		.pipe($.if('*.css', $.uncss({
-// 			html: [
-// 				'app/index.html',
-// 				'app/styleguide.html'
-// 			],
-// 			// CSS Selectors for UnCSS to ignore
-// 			ignore: [
-// 				/.navdrawer-container.open/,
-// 				/.app-bar.open/
-// 			]
-// 		})))
-// 		// Concatenate And Minify Styles
-// 		// In case you are still using useref build blocks
-// 		.pipe($.if('*.css', $.csso()))
-// 		.pipe(assets.restore())
-// 		.pipe($.useref())
-// 		// Update Production Style Guide Paths
-// 		.pipe($.replace('components/components.css', 'components/main.min.css'))
-// 		// Minify Any HTML
-// 		.pipe($.if('*.html', $.minifyHtml()))
-// 		// Output Files
-// 		.pipe(gulp.dest('dist'))
-// 		.pipe($.size({title: 'html'}));
-// });
-
-// Clean Output Directory
-gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
 
 // Watch Files For Changes & Reload
 gulp.task('serve', ['styles', 'js', 'jekyll'], function () {
@@ -198,10 +136,13 @@ gulp.task('serve', ['styles', 'js', 'jekyll'], function () {
 			'./search/**/*.html',
 			'./*.html'
 		], ['jekyll']);
-	gulp.watch(['scss/**/*.scss'], ['styles', 'copy:css', browserSync.reload]);
+	gulp.watch(['scss/**/*.scss'], ['styles']);
+	gulp.watch(['css/*.css'], ['copy:css']);
 	gulp.watch(['js/**/*.js'], ['jshint']);
 	// gulp.watch(['img/**/*'], browserSync.reload);
 });
+
+
 
 // Build and serve the output from the dist build
 // gulp.task('serve:dist', ['default'], function () {
@@ -216,10 +157,25 @@ gulp.task('serve', ['styles', 'js', 'jekyll'], function () {
 // 	});
 // });
 
+
+
+// Clean Output Directory
+gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
+
+
+// Copy Web Fonts To Dist
+gulp.task('fonts', function () {
+	return gulp.src(['app/fonts/**'])
+		.pipe(gulp.dest('dist/fonts'))
+		.pipe($.size({title: 'fonts'}));
+});
+
+
 // Build Production Files, the Default Task
 gulp.task('default', ['clean'], function (cb) {
 	runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'copy'], cb);
 });
+
 
 // Run PageSpeed Insights
 gulp.task('pagespeed', function (cb) {
@@ -231,6 +187,28 @@ gulp.task('pagespeed', function (cb) {
 		// key: 'YOUR_API_KEY'
 	}, cb);
 });
+
+
+// Lint JavaScript
+gulp.task('jshint', function () {
+	return gulp.src(CONFIG.JS.FILELIST)
+		.pipe(reload({stream: true, once: true}))
+		.pipe($.jshint())
+		.pipe($.jshint.reporter('jshint-stylish'))
+		.pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+});
+
+
+// Optimize Images
+// gulp.task('images', function () {
+// 	return gulp.src('app/images/**/*')
+// 		.pipe($.cache($.imagemin({
+// 			progressive: true,
+// 			interlaced: true
+// 		})))
+// 		.pipe(gulp.dest('dist/images'))
+// 		.pipe($.size({title: 'images'}));
+// });
 
 // Load custom tasks from the `tasks` directory
 // try { require('require-dir')('tasks'); } catch (err) { console.error(err); }
