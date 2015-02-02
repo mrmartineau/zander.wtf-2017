@@ -127,8 +127,8 @@ gulp.task('js', function() {
 
 
 gulp.task('jekyll', function () {
-	require('child_process').spawn('jekyll', ['build'], {stdio: 'inherit'});
-	// build.on('exit', cb);
+	var build = require('child_process').spawn('jekyll', ['build', '--future'], {stdio: 'inherit'});
+	build.on('exit', browserSync.reload);
 });
 
 // Scan Your HTML For Assets & Optimize Them
@@ -171,7 +171,7 @@ gulp.task('jekyll', function () {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
 
 // Watch Files For Changes & Reload
-gulp.task('serve', ['styles', 'js'], function () {
+gulp.task('serve', ['styles', 'js', 'jekyll'], function () {
 	browserSync({
 		notify: false,
 		// Customize the BrowserSync console logging prefix
@@ -197,10 +197,10 @@ gulp.task('serve', ['styles', 'js'], function () {
 			'./blog/**/*.html',
 			'./search/**/*.html',
 			'./*.html'
-		], ['jekyll', browserSync.reload]);
+		], ['jekyll']);
 	gulp.watch(['scss/**/*.scss'], ['styles', 'copy:css', browserSync.reload]);
 	gulp.watch(['js/**/*.js'], ['jshint']);
-	gulp.watch(['img/**/*'], browserSync.reload);
+	// gulp.watch(['img/**/*'], browserSync.reload);
 });
 
 // Build and serve the output from the dist build
