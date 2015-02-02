@@ -24,7 +24,7 @@ There are two main ways to use trak.js, as `data-trak` attributes in your markup
 <a href="#pagehref" data-trak='{"category":"Test category","action":"Test action","label":"Test label"}' title="1 title">link</a>
 ```
 
-### Custom trigger type (new as of v0.4.0)
+#### Custom trigger type (new as of v0.4.0)
 `data-trak` attrs can also define a custom trigger type instead of `click`. Now `mouseover`, `touchstart`, `focus`, `blur` or any other valid event can be used to trigger a trak event. Just add `"trigger": "eventName"` to the options object. See below for an example of this using the `focus` event:
 
 ```html
