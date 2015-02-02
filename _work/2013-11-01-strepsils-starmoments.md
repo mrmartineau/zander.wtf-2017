@@ -1,5 +1,4 @@
 ---
-layout: work
 title: Strepsils Star Moments
 date: 2013-11-01
 meta:

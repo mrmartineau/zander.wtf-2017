@@ -1,5 +1,4 @@
 ---
-layout: work
 title: "Soho Fixed"
 date: 2011-01-02
 meta:

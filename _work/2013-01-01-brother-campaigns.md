@@ -1,5 +1,4 @@
 ---
-layout: work
 title: "Brother Printers"
 date: 2013-01-01
 meta:

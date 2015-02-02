@@ -1,5 +1,4 @@
 ---
-layout: work
 title: "Soho Fixed visual identity"
 date: 2011-01-01
 meta:
