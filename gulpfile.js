@@ -46,21 +46,15 @@ var CONFIG = {
 	},
 
 	AUTOPREFIXER_BROWSERS : [
-		'ie >= 10',
-		'ie_mob >= 10',
-		'ff >= 30',
-		'chrome >= 34',
-		'safari >= 7',
-		'opera >= 23',
-		'ios >= 7',
-		'android >= 4.4',
-		'bb >= 10'
+		'> 5%',
+		'last 2 versions',
+		'ie > 8'
 	]
 };
 
 // Lint JavaScript
 gulp.task('jshint', function () {
-	return gulp.src('app/scripts/**/*.js')
+	return gulp.src(CONFIG.JS.FILELIST)
 		.pipe(reload({stream: true, once: true}))
 		.pipe($.jshint())
 		.pipe($.jshint.reporter('jshint-stylish'))
@@ -68,26 +62,25 @@ gulp.task('jshint', function () {
 });
 
 // Optimize Images
-gulp.task('images', function () {
-	return gulp.src('app/images/**/*')
-		.pipe($.cache($.imagemin({
-			progressive: true,
-			interlaced: true
-		})))
-		.pipe(gulp.dest('dist/images'))
-		.pipe($.size({title: 'images'}));
-});
+// gulp.task('images', function () {
+// 	return gulp.src('app/images/**/*')
+// 		.pipe($.cache($.imagemin({
+// 			progressive: true,
+// 			interlaced: true
+// 		})))
+// 		.pipe(gulp.dest('dist/images'))
+// 		.pipe($.size({title: 'images'}));
+// });
 
 // Copy All Files At The Root Level (app)
-gulp.task('copy', function () {
+gulp.task('copy:css', function () {
 	return gulp.src([
-		'app/*',
-		'!app/*.html',
-		'node_modules/apache-server-configs/dist/.htaccess'
-	], {
-		dot: true
-	}).pipe(gulp.dest('dist'))
-		.pipe($.size({title: 'copy'}));
+			'css/*'
+		], {
+			dot: true
+		})
+		.pipe(gulp.dest('_site/css'))
+		.pipe($.size({title: 'copy:css'}));
 });
 
 // Copy Web Fonts To Dist
@@ -97,18 +90,20 @@ gulp.task('fonts', function () {
 		.pipe($.size({title: 'fonts'}));
 });
 
+
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
 	// For best performance, don't add Sass partials to `gulp.src`
 	return gulp.src([
-		'scss/kickoff.scss',
-		'scss/styleguide.scss'
-	])
-		.pipe($.changed('.tmp/styles', {extension: '.css'}))
-		.pipe($.sass({
-			precision: 10,
-			onError: console.error.bind(console, 'Sass error:')
-		}))
+			'scss/**/*.scss'
+		])
+		// .pipe($.changed('.tmp/styles', {extension: '.css'}))
+		.pipe($.sourcemaps.init())
+			.pipe($.sass({
+				precision: 10,
+				onError: console.error.bind(console, 'Sass error:')
+			}))
+		.pipe($.sourcemaps.write())
 		.pipe($.autoprefixer({browsers: CONFIG.AUTOPREFIXER_BROWSERS}))
 		.pipe(gulp.dest('.tmp/styles'))
 		// Concatenate And Minify Styles
@@ -132,25 +127,8 @@ gulp.task('js', function() {
 
 
 gulp.task('jekyll', function () {
-	gulp.src([
-			'./_includes/*.html',
-			'./_layouts/*.html',
-			'./_posts/*.md',
-			'./_work/*.md',
-			'./_blog/*.md',
-			'./_lab/*.md',
-			'./_drafts/*.md',
-			'./work/**/*.html',
-			'./blog/**/*.html',
-			'./search/**/*.html',
-			'./*.html'
-		])
-		.pipe($.jekyll({
-			source: './',
-			destination: './_site/',
-			bundleExec: true
-		}))
-		.pipe(gulp.dest('./_site/'));
+	require('child_process').spawn('jekyll', ['build'], {stdio: 'inherit'});
+	// build.on('exit', cb);
 });
 
 // Scan Your HTML For Assets & Optimize Them
@@ -193,7 +171,7 @@ gulp.task('jekyll', function () {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
 
 // Watch Files For Changes & Reload
-gulp.task('serve', ['styles', 'js', 'jekyll'], function () {
+gulp.task('serve', ['styles', 'js'], function () {
 	browserSync({
 		notify: false,
 		// Customize the BrowserSync console logging prefix
@@ -202,27 +180,41 @@ gulp.task('serve', ['styles', 'js', 'jekyll'], function () {
 		// Note: this uses an unsigned certificate which on first access
 		//       will present a certificate warning in the browser.
 		// https: true,
-		server: ['.tmp', 'app']
+		server: {
+			baseDir: "./_site"
+		}
 	});
 
-	gulp.watch(['app/**/*.html'], reload);
-	gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-	gulp.watch(['app/scripts/**/*.js'], ['jshint']);
-	gulp.watch(['app/images/**/*'], reload);
+	gulp.watch([
+			'./_includes/*.html',
+			'./_layouts/*.html',
+			'./_posts/*.md',
+			'./_work/*.md',
+			'./_blog/*.md',
+			'./_lab/*.md',
+			'./_drafts/*.md',
+			'./work/**/*.html',
+			'./blog/**/*.html',
+			'./search/**/*.html',
+			'./*.html'
+		], ['jekyll', browserSync.reload]);
+	gulp.watch(['scss/**/*.scss'], ['styles', 'copy:css', browserSync.reload]);
+	gulp.watch(['js/**/*.js'], ['jshint']);
+	gulp.watch(['img/**/*'], browserSync.reload);
 });
 
 // Build and serve the output from the dist build
-gulp.task('serve:dist', ['default'], function () {
-	browserSync({
-		notify: false,
-		logPrefix: 'WSK',
-		// Run as an https by uncommenting 'https: true'
-		// Note: this uses an unsigned certificate which on first access
-		//       will present a certificate warning in the browser.
-		// https: true,
-		server: 'dist'
-	});
-});
+// gulp.task('serve:dist', ['default'], function () {
+// 	browserSync({
+// 		notify: false,
+// 		logPrefix: 'WSK',
+// 		// Run as an https by uncommenting 'https: true'
+// 		// Note: this uses an unsigned certificate which on first access
+// 		//       will present a certificate warning in the browser.
+// 		// https: true,
+// 		server: 'dist'
+// 	});
+// });
 
 // Build Production Files, the Default Task
 gulp.task('default', ['clean'], function (cb) {
