@@ -14,6 +14,7 @@ socialusername: MrMartineau
 
 collections:
   work:
+    output: false
   lab:
     output: true
     permalink: /lab/:path/
