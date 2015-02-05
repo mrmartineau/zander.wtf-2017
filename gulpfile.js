@@ -87,6 +87,19 @@ gulp.task('copy:css', function () {
 });
 
 
+// COPY JS
+gulp.task('copy:js', function () {
+	return gulp.src([
+			'js/*'
+		], {
+			dot: true
+		})
+		.pipe(gulp.dest('_site/js'))
+		.pipe($.size({title: 'copy:js'}))
+		.pipe(browserSync.reload({stream:true}));
+});
+
+
 // JAVASCRIPT
 gulp.task('js', function() {
 	return gulp.src(jsFiles)
@@ -107,7 +120,7 @@ gulp.task('jekyll', function () {
 
 
 // Watch Files For Changes & Reload
-gulp.task('serve', ['styles', 'js', 'jekyll'], function () {
+gulp.task('serve', ['styles', 'copy:css', 'js', 'copy:js', 'jekyll'], function () {
 	browserSync({
 		notify: false,
 		// Customize the BrowserSync console logging prefix
@@ -137,6 +150,7 @@ gulp.task('serve', ['styles', 'js', 'jekyll'], function () {
 	gulp.watch(['scss/**/*.scss'], ['styles']);
 	gulp.watch(['css/*.css'], ['copy:css']);
 	gulp.watch(['js/**/*.js'], ['jshint']);
+	gulp.watch(['js/app.js'], ['copy:js']);
 	// gulp.watch(['img/**/*'], browserSync.reload);
 });
 
