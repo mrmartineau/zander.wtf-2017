@@ -22,15 +22,14 @@
 
 		// scrollConverter.activate();
 
-
-		commentsToggleBtn.addEventListener('click', toggleComments);
-
 		function toggleComments(e) {
 			e.preventDefault();
 			commentsToggleBtn.classList.toggle('is-hidden');
 			disqusEl.classList.toggle('is-hidden');
 			loadJS('//' + disqus_shortname + '.disqus.com/embed.js', viewComments);
 		}
+
+		commentsToggleBtn.addEventListener('click', toggleComments);
 
 		function viewComments() {
 			window.scrollY += 200;
