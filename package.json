@@ -41,6 +41,7 @@
     "gulp-uncss": "^1.0.0",
     "gulp-useref": "^1.1.1",
     "jshint-stylish": "^1.0.0",
+    "node-notifier": "^4.1.0",
     "opn": "^1.0.1",
     "psi": "^1.0.4",
     "require-dir": "^0.1.0",
