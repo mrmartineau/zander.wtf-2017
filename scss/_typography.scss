@@ -20,6 +20,20 @@
    * http://modularscale.com/
    * http://lamb.cc/typograph/
    ========================================================================== */
+@font-face {
+	font-family: Colfax;
+	font-weight: normal;
+	src: url('fonts/ColfaxWebRegularSub.woff') format('woff');
+}
+
+@font-face {
+	font-family: Colfax;
+	font-weight: bold;
+	src: url('fonts/ColfaxWebBoldSub.woff') format('woff');
+}
+
+
+
 
 // 1. Prevents iOS text size adjust after orientation change, without disabling user zoom
 // www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
