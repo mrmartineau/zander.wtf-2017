@@ -36,6 +36,7 @@ var CONFIG = {
 	]
 };
 
+var jsFiles = CONFIG.JS.LIBS.concat(CONFIG.JS.FILELIST);
 
 
 // Compile and Automatically Prefix Stylesheets
@@ -88,7 +89,7 @@ gulp.task('copy:css', function () {
 
 // JAVASCRIPT
 gulp.task('js', function() {
-	return gulp.src(CONFIG.JS.FILELIST)
+	return gulp.src(jsFiles)
 		.pipe($.changed('.tmp/js', {extension: '.js'}))
 		.pipe($.sourcemaps.init())
 			.pipe($.concat('app.min.js'))
