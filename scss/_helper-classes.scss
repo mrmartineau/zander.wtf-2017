@@ -7,17 +7,10 @@
  * Clearfix
  * See mixins/_utility.scss for a mixin version of this
  */
-.clearfix {
-	zoom: 1;
-
-	&:before,
-	&:after {
-		display: table;
-		content: " ";
-	}
-	&:after {
-		clear: both;
-	}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 
