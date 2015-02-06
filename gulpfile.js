@@ -9,12 +9,16 @@ var browserSync = require('browser-sync');
 var pagespeed   = require('psi');
 var reload      = browserSync.reload;
 var notifier    = require('node-notifier');
+var browserify  = require('browserify');
+var uglify      = require('gulp-uglify');
+var transform   = require('vinyl-transform');
 
 
 var CONFIG = {
 	JS : {
+		SRCFILE : 'js/zander.js', // CONFIG.JS.SRCFILE
 		DISTDIR : 'js/dist/', // CONFIG.JS.DISTDIR
-		DISTFILE : 'app.min.js', // CONFIG.JS.DISTFILE
+		DISTFILE : 'zander.js', // CONFIG.JS.DISTFILE
 		LIBS : [ // CONFIG.JS.LIBS
 			'bower_components/swiftclick/js/libs/swiftclick.js',
 			'bower_components/trak/dist/trak.js',
@@ -87,30 +91,38 @@ gulp.task('copy:css', function () {
 });
 
 
+// JAVASCRIPT
+gulp.task('browserify', function () {
+	var browserified = transform(function(filename) {
+		var b = browserify(filename);
+		return b.bundle();
+	});
+
+	return gulp.src(CONFIG.JS.SRCFILE)
+		.pipe(browserified)
+		.pipe($.uglify())
+		.pipe(gulp.dest(CONFIG.JS.DISTDIR))
+		.pipe(browserSync.reload({stream:true}));
+});
+
+
 // COPY JS
 gulp.task('copy:js', function () {
-	return gulp.src([
-			'js/*'
-		], {
+	return gulp.src([CONFIG.JS.DISTDIR + CONFIG.JS.DISTFILE], {
 			dot: true
 		})
-		.pipe(gulp.dest('_site/js'))
+		.pipe(gulp.dest('_site/' + CONFIG.JS.DISTDIR))
 		.pipe($.size({title: 'copy:js'}))
 		.pipe(browserSync.reload({stream:true}));
 });
 
 
-// JAVASCRIPT
-gulp.task('js', function() {
-	return gulp.src(jsFiles)
-		.pipe($.changed('.tmp/js', {extension: '.js'}))
-		.pipe($.sourcemaps.init())
-			.pipe($.concat('app.min.js'))
-		.pipe($.sourcemaps.write())
-		.pipe($.uglify())
-		.pipe(gulp.dest(CONFIG.JS.DISTDIR))
-		.pipe($.size({title: 'js'}));
-});
+
+
+// gulp.task('watchify', function(callback) {
+// 	// Start browserify task with devMode === true
+// 	browserifyTask(callback, true);
+// });
 
 
 gulp.task('jekyll', function () {
@@ -119,8 +131,8 @@ gulp.task('jekyll', function () {
 });
 
 
-// Watch Files For Changes & Reload
-gulp.task('serve', ['styles', 'copy:css', 'js', 'copy:js', 'jekyll'], function () {
+// Serve site, watch files for changes & reload
+gulp.task('serve', ['styles', 'copy:css', 'browserify', 'copy:js', 'jekyll'], function () {
 	browserSync({
 		notify: false,
 		// Customize the BrowserSync console logging prefix
@@ -149,8 +161,8 @@ gulp.task('serve', ['styles', 'copy:css', 'js', 'copy:js', 'jekyll'], function (
 		], ['jekyll']);
 	gulp.watch(['scss/**/*.scss'], ['styles']);
 	gulp.watch(['css/*.css'], ['copy:css']);
-	gulp.watch(['js/**/*.js'], ['jshint']);
-	gulp.watch(['js/app.js'], ['copy:js']);
+	gulp.watch(['js/**/*.js', '!js/dist/zander.js'], ['browserify']);
+	gulp.watch(['js/dist/zander.js'], ['copy:js']);
 	// gulp.watch(['img/**/*'], browserSync.reload);
 });
 
