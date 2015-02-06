@@ -15,3 +15,4 @@ css/*.css
 *.map
 img/**/dist/*
 css/temp/*
+js/dist/zander.js
