@@ -15,9 +15,12 @@ Before you install any other packages, make sure you install Package Control fir
 Emmet (previously known as Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow. Find out more at http://emmet.io
 
 ### [SublimeLinter](https://sublime.wbond.net/packages/SublimeLinter)
-Interactive code linting framework for Sublime Text 3. Installation instructions can be found at [here](http://sublimelinter.readthedocs.org/en/latest/installation.html) and each language needs its own plugin, see a list [here](https://sublime.wbond.net/search/sublimelinter).
+Interactive code linting framework for Sublime Text 3. Installation instructions can be found at [here](http://sublimelinter.readthedocs.org/en/latest/installation.html) and each language needs its own plugin, see a list [here](https://sublime.wbond.net/search/sublimelinter). Linters that I find particularly useful are:
 
-[scsslint](https://packagecontrol.io/packages/SublimeLinter-contrib-scss-lint) & [jshint](https://packagecontrol.io/packages/SublimeLinter-jshint) are particularly useful.
+* [scsslint](https://packagecontrol.io/packages/SublimeLinter-contrib-scss-lint)
+* [jshint](https://packagecontrol.io/packages/SublimeLinter-jshint)
+* [jscs](https://packagecontrol.io/packages/SublimeLinter-jscs)
+* [csslint](https://packagecontrol.io/packages/SublimeLinter-csslint)
 
 ### [jQuery](https://sublime.wbond.net/packages/jQuery)
 This package provides snippets for most of jQuery's methods making the API even easier to use.
@@ -26,11 +29,10 @@ This package provides snippets for most of jQuery's methods making the API even 
 Increase / decrease numbers (integer and fractional), dates, hex color values, opposite relations or cycled enumerations on the configured value & a bonus - string actions (upper, lower, capitalize). See my extended settings [here](https://github.com/mrmartineau/SublimeText3UserSettings/blob/master/inc_dec_value.sublime-settings).
 
 ### [ColorHighlighter](https://sublime.wbond.net/packages/Color%20Highlighter)
-ColorHighlighter is a plugin for the Sublime text 2 and 3, which underlays selected hexadecimal colorcodes (like “#FFFFFF”, “rgb(255,255,255)”, “white”, etc.) with their real color. Also, plugin adds color picker to easily modify colors.
+ColorHighlighter is a plugin for the Sublime text 2 and 3, which underlays selected hexadecimal colorcodes (like `#FFFFFF`, `rgb(255,255,255)`, `white`, etc.) with their real color. Also, plugin adds color picker to easily modify colors.
 
-### [Convert case](https://sublime.wbond.net/packages/Case%20Conversion)
-It converts the current word/token between pascal,
-camel, snake, dot, dash (hyphen) cases, and separated words.
+### [Case Conversion](https://sublime.wbond.net/packages/Case%20Conversion)
+It converts the current word/token between pascal, camel, snake, dot, dash (hyphen) cases, and separated words.
 
 ### [BracketHighlighter](https://sublime.wbond.net/packages/BracketHighlighter)
 Bracket and tag highlighter for Sublime Text
@@ -41,16 +43,22 @@ An alignment plugin using regular expression
 ### [MultiEditUtils](https://sublime.wbond.net/packages/MultiEditUtils)
 A Sublime Text Plugin which enhances editing of multiple selections.
 
+### [MoveText](https://packagecontrol.io/packages/MoveText)
+Select text and move it around using the keyboard, or setup a text 'tunnel' to move code from one location to another.
+
+### [EditorConfig](https://packagecontrol.io/packages/EditorConfig)
+Helps developers maintain consistent coding styles between different editors. Find out more at [editorconfig.com](http://editorconfig.com)
+
 ## For the user interface
 
 ### [SideBarEnhancements](https://sublime.wbond.net/packages/SideBarEnhancements)
 Enhancements to Sublime Text sidebar. Files and folders.
 
+### [Modific](https://sublime.wbond.net/packages/Modific)
+Highlight lines changed since the last commit (supports Git, SVN, Bazaar, Mercurial and TFS).
+
 ### [Origami](https://sublime.wbond.net/packages/Origami)
 Split the window however you like! Create new panes, delete panes, move and clone views from pane to pane.
-
-### [Modific](https://sublime.wbond.net/packages/Modific)
-Highlight lines changed since the last commit (supports Git, SVN, Bazaar, Mercurial and TFS)
 
 ### [Soda Theme](https://sublime.wbond.net/packages/Theme%20-%20Soda)
 Dark and light custom UI themes for Sublime Text. I use the dark version, it is my preferred UI theme. A list of other themes can be found [here](https://github.com/mrmartineau/SublimeTextSetupWiki/wiki/Interface-Themes)
@@ -69,19 +77,31 @@ Sublime Plugin with sticky tabs, more tab closing options, and additional menu i
 
 ## For specific syntaxes
 
-### [SCSS](https://sublime.wbond.net/packages/SCSS)
-A Sass & SCSS syntax package for Sublime Text.
+### [Syntax Highlighting for Sass](https://packagecontrol.io/packages/Syntax%20Highlighting%20for%20Sass)
+Syntax highlighting package for both SCSS and Sass on Sublime Text.
 
 ### [Sass Snippets](https://sublime.wbond.net/packages/SASS%20Snippets)
 Sass Snippets for Sublime
 
-### [CSS3 Syntax](https://sublime.wbond.net/packages/CSS3_Syntax)
-This package improves Sublime's default syntax highlighting for CSS.
+### [Babel](https://packagecontrol.io/packages/Babel)
+This is an improved syntax package for **Javascript**. Language definitions for ES6+ JavaScript with React JSX syntax extensions.
 
-### [JavaScriptNext](https://sublime.wbond.net/packages/JavaScriptNext%20-%20ES6%20Syntax)
-This is an improved syntax package for Javascript. It builds on the language files commonly used and adds more fine grained matching and also includes new features from ECMAScript 6 like modules, succinct methods, arrow functions, classes, generators, and accessors (ES5).
+### [JavaScript & NodeJS Snippets](https://packagecontrol.io/packages/JavaScript%20%26%20NodeJS%20Snippets)
+To set it as the default syntax for a particular extension:
 
-If you want to use it for every js file, create or open a javascript file, then you need to click the syntax name in the bottom right corner of Sublime, then click 'Open all with current extension as', then select JavascriptNext - ES6 > JavascriptNext.
+1. Open a file with that extension
+2. Select View from the menu
+3. Then `Syntax` -> `Open all with current extension as...` -> `Babel` -> `JavaScript (Babel)`
+4. Repeat this for each extension (e.g.: `.js` and `.jsx`).
+
+### [Node Requirer](https://packagecontrol.io/packages/NodeRequirer)
+This plugin allows you to easily require node modules without having to worry about relative paths. It parses your project to allow you to require any local module or dependency listed in your package.json. In addition, it allows you to include node core modules.
+
+### [JSCS Formatter](https://packagecontrol.io/packages/JSCS-Formatter)
+Plugin to autoformat your javascript code according to the JSCS configuration files you already have.
+
+### [HTML Mustache](https://packagecontrol.io/packages/HTML%20Mustache)
+Adds HTML Mustache as a language to Sublime, with snippets. Syntax file obtained from mwunsch's sublime repo. Supports .mustache, .hjs, and .hgn (Hogan) files.
 
 ### [Liquid](https://sublime.wbond.net/packages/Liquid)
 Liquid Templates in Sublime. Useful if you develop Jekyll sites.
