@@ -5,6 +5,8 @@
 # this logic there: http://httpd.apache.org/docs/current/howto/htaccess.html.
 
 Redirect 301 /blog/ /
+Redirect 301 /cloze http://zander.io/cloze-test
+
 
 # ##############################################################################
 # # CROSS-ORIGIN RESOURCE SHARING (CORS)                                       #
