@@ -8,7 +8,7 @@ original:
   text: "tech.tmw.co.uk"
 image: 15676360182_1f2011cb84_m.jpg
 github:
-  user: tmwagency
+  user: mrmartineau
   repo: trak.js
 ---
 Whether you use Google Analytics or another provider, adding tracking events to a site is often a painful experience. Events usually have to be defined in javascript which can make it tricky to dynamically change parameters based on certain criteria. Wouldn't it be nice to define events within the markup so that hundreds of click events can be left free from your javasript code? Trak.js does just that.
@@ -93,8 +93,8 @@ If any property is left `undefined`, the browser's default value will be used in
 
 ## Getting the Library
 ### Direct downloads
-- [Minified](https://raw.githubusercontent.com/tmwagency/trak.js/master/dist/trak.min.js) (~481 B gzipped)
-- [Unminified](https://raw.githubusercontent.com/tmwagency/trak.js/master/dist/trak.js) (~1.7 KB gzipped)
+- [Minified](https://raw.githubusercontent.com/mrmartineau/trak.js/master/dist/trak.min.js) (~481 B gzipped)
+- [Unminified](https://raw.githubusercontent.com/mrmartineau/trak.js/master/dist/trak.js) (~1.7 KB gzipped)
 
 ### Bower
 `bower install trak`
@@ -104,4 +104,4 @@ If any property is left `undefined`, the browser's default value will be used in
 
 
 ## More information
-More information and the full documentation can be found at our repository on [Github](https://github.com/tmwagency/trak.js). Also, options can be overridden; there's a debug mode; and most importantly, almost any other analytics APIs can be used.
+More information and the full documentation can be found at our repository on [Github](https://github.com/mrmartineau/trak.js). Also, options can be overridden; there's a debug mode; and most importantly, almost any other analytics APIs can be used.
