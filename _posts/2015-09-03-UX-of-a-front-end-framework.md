@@ -2,12 +2,12 @@
 comments: true
 layout: post
 title: "The UX of a front-end framework"
-excerpt: ""
+excerpt: "How we focused on our user's for the latest of Kickoff"
 image: 16923893738_bb436e3ec2_m.jpg
 ---
-Back in May 2015 we [released v5.0.0 of Kickoff](https://github.com/TryKickoff/kickoff/releases/tag/5.0.0), the focus of this release was to improve the framework's UX. What does that mean? Can you have UX on a framework or a set of files? I believe you can, and here’s how we did it.
+Back in May we [released v5.0.0 of Kickoff](https://github.com/TryKickoff/kickoff/releases/tag/5.0.0), the focus of this release was to improve the framework's UX. What does that mean? Can you have UX on a framework or a set of files? I believe you can, and here’s how we did it.
 
-Kickoff is predominantly used at my place of work, [TMW](http://tmwunlimited.com), but increasingly it is being used by more and more people. This means that we need to be more considered when changing things but we now have to focus on how it will be used by a wider community. Files should be where you expect; ‘things’ should be named in an intuitive manner; and the all important download/install had to be as easy as possible and we realised we needed to improve various things.
+Kickoff is predominantly used at my place of work, [TMW](http://tmwunlimited.com), but increasingly it is being used by more and more developers and other agencies. This means that we need to be more considered when changing things but we now have to focus on how it will be used by a wider community. Files should be where you expect; ‘things’ should be named in an intuitive manner; and the all important download/install has to be as easy as possible and we realised we needed to improve various things.
 
 ## File/folder structure
 Pre version 5, Kickoff's folder structure looked something like this:
@@ -26,9 +26,9 @@ Pre version 5, Kickoff's folder structure looked something like this:
 └── testing
 ```
 
-Can you see `css`, `img`, `scss` & `js` in the root of the project? On one hand, it is easy to find them :thumbsup:, but on the other, it is a messy structure because there are source files mixed with compiled code. The compiled Javascript lived inside the `js` folder but the compiled scss lives in the `css` folder.. :confused:
+Can you see `css`, `img`, `scss` & `js` in the root of the project? On one hand, its easy to find them :thumbsup:, but on the other, it is a messy structure because there are source files mixed with compiled code. The compiled Javascript lived inside the `js` folder but the compiled scss lived in the `css` folder.. :confused:
 
-To fix this, we moved all these into an `assets` folder, but separated the source code and compiled/dist code. We think this is more useful because there is now a separation of concerns & if you have a continuous deployment workflow you can deploy an entire directory and leave the source files behind, see below for the updated tree:
+To fix this, we moved all these into an `assets` folder, but separated the source code and compiled/dist code. We decided that this would be more useful as there is now a separation of concerns & if you have a continuous deployment workflow you can deploy an entire directory and leave the source files behind. See below for the updated tree:
 
 ```
 .
@@ -56,7 +56,7 @@ To fix this, we moved all these into an `assets` folder, but separated the sourc
 Other changes to folder naming should help developers to know where to look without having studied the frameworks's details. More recently, the `scss` folder [has been changed](https://github.com/TryKickoff/kickoff/issues/53) for just this reason.
 
 ## User onboarding
-We have been pushing our [Yeoman generator](https://github.com/TryKickoff/generator-kickoff), as the primary way to start using Kickoff, for quite some time but from this release it really does make sense to use it to get your project started. Yeoman's interface is simple, just type `yo kickoff` (after having installed the Kickoff generator `npm install -g generator-kickoff`) and you are then asked a few questions about your project and intended workflow. These help get you further more quickly but also enable developers to understand the options available to them in a simple way.
+We have been pushing our [Yeoman generator](https://github.com/TryKickoff/generator-kickoff) as the primary way to start using Kickoff, for quite some time but from this release it really does make sense to use it to get your project started. Yeoman's interface is simple, just type `yo kickoff` in your command prompt (after having installed the Kickoff generator `npm install -g generator-kickoff`) and you are then asked a few questions about your project and intended workflow. These help get you further more quickly but also enable developers to understand the options available to them in a simple way.
 
 As an example, the generator asks if you would like to use Browserify or a simple file concatenation workflow and then generates the correct boilerplate files and grunt config. Below are all the questions that the generator asks:
 
@@ -66,15 +66,15 @@ As an example, the generator asks if you would like to use Browserify or a simpl
 1. Does this project support IE8?
 1. Use Browserify?
 1. Choose your javascript namespace (default is `KO`)
-1. Which javascript libraries would you like to use? jQuery v1.x/2.x, trak.js, Swiftclick & Cookies are the options
+1. Which javascript libraries would you like to use? *jQuery v1.x/2.x, trak.js, Swiftclick & Cookies are the options*
 1. Include Kickoff's styleguide?
 1. Use Kickoff [Statix](https://github.com/trykickoff/statix)?
 1. Use Grunticon?
 1. Include some default Javascript shims? (These are generated by the `grunt shimly` command)
 
 ## Documentation
-Lest we forget one of the most important parts of any open-source project, documentation and examples. Kickoff's documentation lives on it's website at [trykickoff.github.io/](http://trykickoff.github.io/) but also within the code itself. Almost every `js`, `scss` & `html` file have been commented with usage guidelines or some form of help. Examples are also extremely useful to developers which is why we provide many demos of our CSS components.
+Lest we forget one of the most important parts of any open-source project — documentation and examples. Kickoff's documentation lives on it's website at [trykickoff.github.io/](http://trykickoff.github.io/) but also within the code itself. Almost every `js`, `scss` & `html` file has been commented with usage guidelines or some form of help. Examples are also extremely useful to developers which is why we provide many demos of our CSS components.
 
 To see the v5.0.0 release notes, please visit [github.com/TryKickoff/kickoff/releases](https://github.com/TryKickoff/kickoff/releases)
 
-If you maintain your own framework or work on a large project, have a think about if it is easy for new developers to intuit where files go or where CSS is written.
+If you maintain your own framework or work on a large project, have a think about the UX of your project — how easy is it for new developers to intuit where files go or where CSS is written? Some small changes can make a big difference.
