@@ -1,9 +1,9 @@
 ---
 comments: true
 layout: post
-title: "The UX of a front-end framework"
-excerpt: "How we focused on our user's for the latest of Kickoff"
-image: 16923893738_bb436e3ec2_m.jpg
+title: "Improving the UX of a front-end framework"
+excerpt: "How we focused on our users for the latest of Kickoff"
+image: 16488545384_d25c2ab1c2_z.jpg
 ---
 Back in May we [released v5.0.0 of Kickoff](https://github.com/TryKickoff/kickoff/releases/tag/5.0.0), the focus of this release was to improve the framework's UX. What does that mean? Can you have UX on a framework or a set of files? I believe you can, and here’s how we did it.
 
@@ -75,6 +75,6 @@ As an example, the generator asks if you would like to use Browserify or a simpl
 ## Documentation
 Lest we forget one of the most important parts of any open-source project — documentation and examples. Kickoff's documentation lives on it's website at [trykickoff.github.io](http://trykickoff.github.io/) but also within the code itself. Almost every `js`, `scss` & `html` file has been commented with usage guidelines or some form of help. Examples are also extremely useful to developers which is why we provide many demos of our CSS components.
 
-To see the v5.0.0 release notes, please visit [github.com/TryKickoff/kickoff/releases](https://github.com/TryKickoff/kickoff/releases)
+To see the v5.0.0 release notes, please visit the [Kickoff releases page](https://github.com/TryKickoff/kickoff/releases) on Github.
 
 If you maintain your own framework or work on a large project, have a think about the UX of your project — how easy is it for new developers to intuit where files go or where CSS is written? Some small changes can make a big difference.
