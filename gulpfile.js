@@ -17,14 +17,6 @@ var CONFIG = {
 		SRCFILE : 'js/zander.js', // CONFIG.JS.SRCFILE
 		DISTDIR : 'js/dist/', // CONFIG.JS.DISTDIR
 		DISTFILE : 'zander.js', // CONFIG.JS.DISTFILE
-		LIBS : [ // CONFIG.JS.LIBS
-			'bower_components/swiftclick/js/libs/swiftclick.js',
-			'bower_components/trak/dist/trak.js',
-			// 'js/scrollConverter.js',
-		],
-		FILELIST : [ // CONFIG.JS.FILELIST
-			'js/script.js'
-		]
 	},
 
 	CSS : {
@@ -37,8 +29,6 @@ var CONFIG = {
 		'ie > 8'
 	]
 };
-
-var jsFiles = CONFIG.JS.LIBS.concat(CONFIG.JS.FILELIST);
 
 
 // Compile and Automatically Prefix Stylesheets
@@ -59,19 +49,8 @@ gulp.task('styles', function () {
 		// Concatenate And Minify Styles
 		.pipe($.if('*.css', $.csso()))
 		.pipe(gulp.dest('css'))
-		.pipe(
-			$.notify({
-				onLast: true,
-				title: 'Build CSS styles completed',
-				message: function () {
-					return 'Total size ' + s.prettySize;
-				}
-			})
-		)
-		.pipe($.size({title: 'styles'}));
-
-		// Not needed here because we are using jekyll
-		// .pipe(browserSync.reload({stream:true}));
+		.pipe($.size({title: 'styles'}))
+		.pipe(browserSync.reload({stream:true}));
 
 });
 
@@ -103,34 +82,8 @@ gulp.task('browserify', function () {
 		.pipe(browserSync.reload({stream:true}));
 });
 
-
-// COPY JS
-gulp.task('copy:js', function () {
-	return gulp.src([CONFIG.JS.DISTDIR + CONFIG.JS.DISTFILE], {
-			dot: true
-		})
-		.pipe(gulp.dest('_site/' + CONFIG.JS.DISTDIR))
-		.pipe($.size({title: 'copy:js'}))
-		.pipe(browserSync.reload({stream:true}));
-});
-
-
-
-
-// gulp.task('watchify', function(callback) {
-// 	// Start browserify task with devMode === true
-// 	browserifyTask(callback, true);
-// });
-
-
-gulp.task('jekyll', function () {
-	var build = require('child_process').spawn('jekyll', ['build', '--future'], {stdio: 'inherit'});
-	build.on('exit', browserSync.reload);
-});
-
-
 // Serve site, watch files for changes & reload
-gulp.task('serve', ['styles', 'copy:css', 'browserify', 'copy:js', 'jekyll'], function () {
+gulp.task('watcher', ['styles', 'copy:css', 'browserify'], function () {
 	browserSync({
 		notify: false,
 		// Customize the BrowserSync console logging prefix
@@ -144,47 +97,15 @@ gulp.task('serve', ['styles', 'copy:css', 'browserify', 'copy:js', 'jekyll'], fu
 		}
 	});
 
-	gulp.watch([
-			'./_includes/*.html',
-			'./_layouts/*.html',
-			'./_posts/*.md',
-			'./_work/*.md',
-			'./_blog/*.md',
-			'./_lab/*.md',
-			'./_drafts/*.md',
-			'./work/**/*.html',
-			'./blog/**/*.html',
-			'./search/**/*.html',
-			'./*.html'
-		], ['jekyll']);
 	gulp.watch(['scss/**/*.scss'], ['styles']);
 	gulp.watch(['css/*.css'], ['copy:css']);
 	gulp.watch(['js/**/*.js', '!js/dist/zander.js'], ['browserify']);
-	gulp.watch(['js/dist/zander.js'], ['copy:js']);
+	// gulp.watch(['js/dist/zander.js'], ['copy:js']);
 	// gulp.watch(['img/**/*'], browserSync.reload);
 });
 
 
 // Build Production Files, the Default Task
 gulp.task('default', function (cb) {
-	runSequence('styles', ['jshint', 'js'], cb);
-});
-
-
-// Run PageSpeed Insights
-gulp.task('pagespeed', function (cb) {
-	// Update the below URL to the public URL of your site
-	pagespeed.output('martineau.tv', {
-		strategy: 'mobile',
-	}, cb);
-});
-
-
-// Lint JavaScript
-gulp.task('jshint', function () {
-	return gulp.src(CONFIG.JS.FILELIST)
-		.pipe(reload({stream: true, once: true}))
-		.pipe($.jshint())
-		.pipe($.jshint.reporter('jshint-stylish'))
-		.pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+	runSequence('styles', ['js'], cb);
 });
