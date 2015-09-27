@@ -24,6 +24,7 @@
 // @include project-colours('#id', $bgColour, $textColour, $linkColour, $linkHover);
 
 // Portfolio
+@include project-colours('#depdoc', rgb(28, 28, 28), #d3d0c8, #66cccc, #fff);
 @include project-colours('#trak', #2d2d2d, #d3d0c8, #66cccc, #fff);
 @include project-colours('#techtmw', #181830, #3498db, #fe7c08, #b95801);
 @include project-colours('#goenergyshopping', #d22a81, #fff, #E0FF3E, #fff);
