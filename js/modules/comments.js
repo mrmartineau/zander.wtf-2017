@@ -1,4 +1,4 @@
-var loadJS = require('./loadJS.js');
+var loadJS = require('./loadJS');
 
 function Comments() {
 	var commentsToggleBtn = document.querySelector('.loadComments');
