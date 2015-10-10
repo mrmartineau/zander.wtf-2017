@@ -5,7 +5,7 @@ section: work
 ---
 <section class="{{ page.section }} {{ page.type }}">
 	{% for item in site.work reversed %}
-		<article class="piece" id="{{item.meta.name}}">
+		<article class="piece piece--{{item.type}}" id="{{item.meta.name}}">
 			<div class="piece-inner piece-inner--{{item.meta.layout}}">
 				<h1 class="piece-title">{{item.title}}</h1>
 				<h3 class="piece-url ellipsis">
