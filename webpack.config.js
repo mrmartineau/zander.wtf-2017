@@ -1,18 +1,13 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var autoprefixer = require('autoprefixer');
-var precss = require('precss');
+// var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+
+
+var browserslist = '["> 5%", "last 2 versions", "firefox > 3.6", "ie > 7"]';
 
 // https://github.com/petehunt/webpack-howto#6-feature-flags
-// definePlugin takes raw strings and inserts them, so you can put strings of JS if you want.
-
-// if (__DEV__) {
-//   console.warn('Extra logging');
-// }
-// // ...
-// if (__PRERELEASE__) {
-//   showSecretFeature();
-// }
+// if (__DEV__)
+// if (__PRERELEASE__)
 
 module.exports = {
 	entry: './js/zander.js',
@@ -30,11 +25,11 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.css$/,
-				loader: ExtractTextPlugin.extract('style-loader?sourceMap', 'css-loader', 'autoprefixer-loader?browsers=ie 6-8')
+				loader: ExtractTextPlugin.extract('style-loader', 'css-loader?minimize&sourceMap!autoprefixer-loader?{browsers:'+ browserslist +'}')
 			},
 			{
 				test: /\.scss$/,
-				loader: ExtractTextPlugin.extract('style-loader?sourceMap', 'css-loader!sass-loader')
+				loader: ExtractTextPlugin.extract('style-loader', 'css-loader?minimize&sourceMap!autoprefixer-loader?{browsers:'+ browserslist +'}!sass-loader?sourceMap')
 			}
 		]
 	},
@@ -50,9 +45,5 @@ module.exports = {
 		})
 	],
 
-	devtool: 'sourcemap',
-
-	postcss: function () {
-		return [autoprefixer, precss];
-	}
+	devtool: 'sourcemap'
 };
