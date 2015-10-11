@@ -2,6 +2,8 @@
  * Author: Zander Martineau
  */
 
+var css = require('../scss/kickoff');
+
 var SwiftClick     = require('swiftclick');
 var trak           = require('trak.js');
 
