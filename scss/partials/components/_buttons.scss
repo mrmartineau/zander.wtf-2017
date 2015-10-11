@@ -34,14 +34,10 @@
 	// line-height: 2.5;           /* [7] */
 	// height:      2.5em;         /* [7] */
 	padding: .5em 1.5em !important;        /* [7] */
-
 	overflow:visible;           /* [8] */
 	text-align: center;
-
-	// You may want to change this
 	background-color: $btn-background;
-
-	@include user-select(none);
+	user-select: none;
 
 	&, &:hover, &:active, &:focus, &:visited {
 		text-decoration: none;
