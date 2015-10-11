@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-// var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 
 var browserslist = '["> 5%", "last 2 versions", "firefox > 3.6", "ie > 7"]';
@@ -42,6 +42,14 @@ module.exports = {
 		new webpack.DefinePlugin({
 			__DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
 			__PRERELEASE__: JSON.stringify(JSON.parse(process.env.BUILD_PRERELEASE || 'false'))
+		}),
+		new BrowserSyncPlugin({
+			host: 'localhost',
+			port: 3000,
+			server: {
+				baseDir: ['_site']
+			},
+			files: ["_site/*.css", "_site/js/*.js"]
 		})
 	],
 
