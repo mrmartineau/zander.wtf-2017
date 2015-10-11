@@ -1,14 +1,11 @@
 var webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 var precss = require('precss');
 
 // https://github.com/petehunt/webpack-howto#6-feature-flags
 // definePlugin takes raw strings and inserts them, so you can put strings of JS if you want.
-var definePlugin = new webpack.DefinePlugin({
-	__DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
-	__PRERELEASE__: JSON.stringify(JSON.parse(process.env.BUILD_PRERELEASE || 'false'))
-});
+
 // if (__DEV__) {
 //   console.warn('Extra logging');
 // }
@@ -18,11 +15,11 @@ var definePlugin = new webpack.DefinePlugin({
 // }
 
 module.exports = {
-	entry: "./js/zander.js",
+	entry: './js/zander.js',
 
 	output: {
 		path: __dirname,
-		filename: "js/dist/zander.js"
+		filename: 'js/dist/zander.js'
 	},
 
 	resolve: {
@@ -33,11 +30,11 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.css$/,
-				loader: ExtractTextPlugin.extract('style-loader', 'css-loader', 'autoprefixer-loader?browsers=last 2 versions')
+				loader: ExtractTextPlugin.extract('style-loader?sourceMap', 'css-loader', 'autoprefixer-loader?browsers=ie 6-8')
 			},
 			{
 				test: /\.scss$/,
-				loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+				loader: ExtractTextPlugin.extract('style-loader?sourceMap', 'css-loader!sass-loader')
 			}
 		]
 	},
@@ -47,8 +44,13 @@ module.exports = {
 			publicPath: '/css/',
 			allChunks: true
 		}),
-		definePlugin
+		new webpack.DefinePlugin({
+			__DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
+			__PRERELEASE__: JSON.stringify(JSON.parse(process.env.BUILD_PRERELEASE || 'false'))
+		})
 	],
+
+	devtool: 'sourcemap',
 
 	postcss: function () {
 		return [autoprefixer, precss];
