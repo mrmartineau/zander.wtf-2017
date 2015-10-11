@@ -1,1 +1,13 @@
-<svg width="420" height="200" viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h200L100 140l100 60H0L100 60 0 0zm220 0v200h200V0L320 100 220 0z" fill="#FFF" fill-rule="evenodd"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="420px" height="200px" viewBox="0 0 420 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 1 Copy + Path 2 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Path-1-Copy-+-Path-2-Copy" sketch:type="MSLayerGroup" fill="#FFFFFF">
+            <path d="M220,0 L220,200 L420,200 L420,0 L320,200 L220,0 Z" id="Path-2-Copy" sketch:type="MSShapeGroup"></path>
+            <path d="M0,0 L200,0 L94,147 L200,200 L0,200 L106,53 L0,0 Z" id="Path-1-Copy" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
