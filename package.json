@@ -1,36 +1,34 @@
 {
-  "name": "Martineau.tv",
-  "title": "Martineau.tv",
-  "description": "Zander Martineau's personal website",
-  "version": "0.5.0",
-  "homepage": "http://martineau.tv",
-  "author": {
-    "name": "Zander Martineau",
-    "url": "http://martineau.tv"
-  },
-  "engines": {
-    "node": ">=0.6"
-  },
-  "dependencies": {
-    "lite-ready": "^1.0.4",
-    "swiftclick": "^1.1.5",
-    "trak.js": "^0.5.2"
-  },
-  "devDependencies": {
-    "autoprefixer": "^6.0.3",
-    "css-loader": "^0.19.0",
-    "extract-text-webpack-plugin": "^0.8.2",
-    "node-sass": "^3.2.0",
-    "precss": "^1.2.3",
-    "sass-loader": "^3.0.0",
-    "style-loader": "^0.12.3",
-    "url-loader": "^0.5.6",
-    "webpack": "^1.11.0"
-  },
-  "keywords": [],
-  "scripts": {
-    "compile": "webpack --progress --colors",
-    "deploy": "webpack -p",
-    "watch": "BUILD_DEV=1 BUILD_PRERELEASE=1 webpack --progress --colors --watch"
-  }
+	"name": "Martineau.tv",
+	"title": "Martineau.tv",
+	"description": "Zander Martineau's personal website",
+	"version": "0.5.0",
+	"homepage": "http://martineau.tv",
+	"author": {
+		"name": "Zander Martineau",
+		"url": "http://martineau.tv"
+	},
+	"engines": {
+		"node": ">=0.6"
+	},
+	"dependencies": {
+		"lite-ready": "^1.0.4",
+		"swiftclick": "^1.1.5",
+		"trak.js": "^0.5.2"
+	},
+	"devDependencies": {
+		"autoprefixer-loader": "^3.1.0",
+		"css-loader": "^0.19.0",
+		"extract-text-webpack-plugin": "^0.8.2",
+		"node-sass": "^3.2.0",
+		"sass-loader": "^3.0.0",
+		"style-loader": "^0.12.3",
+		"webpack": "^1.11.0"
+	},
+	"keywords": [],
+	"scripts": {
+		"compile": "webpack --progress --colors",
+		"deploy": "webpack -p",
+		"watch": "BUILD_DEV=1 BUILD_PRERELEASE=1 webpack --progress --colors --watch"
+	}
 }
