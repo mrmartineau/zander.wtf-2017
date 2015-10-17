@@ -4,12 +4,11 @@ This is my personal portfolio and blog.
 
 ## Development
 
-```sh
-jekyll build --watch
-```
+Install [concurrently](https://www.npmjs.com/package/concurrently) `npm i -g concurrently`
 
-```sh
-npm run watch
+Run:
+````sh
+npm start
 ```
 
 ## Deployment

@@ -32,6 +32,8 @@
   "scripts": {
     "compile": "webpack --progress --colors",
     "deploy": "webpack -p",
-    "watch": "BUILD_DEV=1 BUILD_PRERELEASE=1 webpack --progress --colors --watch"
+    "watch": "BUILD_DEV=1 BUILD_PRERELEASE=1 webpack --progress --colors --watch",
+    "jekyll": "jekyll build --watch",
+    "start": "concurrent 'npm run watch' 'npm run jekyll'"
   }
 }
