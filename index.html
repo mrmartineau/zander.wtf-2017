@@ -8,9 +8,7 @@ pageid: home
 	<section class="me verticalTile verticalTile--list">
 		<h1 class="me-name">Zander Martineau</h1>
 		<h2 class="me-desc">Front-end developer <br>based in London</h2>
-		<div class="me-logo">
-			<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"><path d="M220 0v200h200V0L320 200 220 0zM0 0h200L94 147l106 53H0L106 53 0 0z" fill="#FFF" fill-rule="evenodd"/></svg>
-		</div>
+		<svg class="me-logo"><use xlink:href="#icon-zmLogo"></use></svg>
 	</section>
 	<section id="blog" class="entries entries--blog clearfix">
 		{% for post in site.posts %}
