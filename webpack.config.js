@@ -30,6 +30,10 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				loader: ExtractTextPlugin.extract('style-loader', 'css-loader?minimize&sourceMap!autoprefixer-loader?{browsers:'+ browserslist +'}!sass-loader?sourceMap')
+			},
+			{
+					test: /.*\/zander\/.*\.js$/,
+					loader: "uglify"
 			}
 		]
 	},
