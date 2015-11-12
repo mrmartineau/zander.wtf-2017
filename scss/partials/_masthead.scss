@@ -98,10 +98,14 @@
 .masthead-social {
 	display: inline-block;
 	vertical-align: top;
+	position: absolute;
+	top: 370px;
+	left: 10px;
 
 	@include respond-min($breakpoint-nav-switch) {
 		position: absolute;
 		bottom: 1em;
+		top: auto;
 		left: 0;
 		right: 0;
 	}
@@ -110,7 +114,7 @@
 .navTop-icon {
 	display: inline-block;
 	vertical-align: middle;
-	fill: $color-text;
+	fill: #fff;
 	transition: $link-transition;
 	margin-left: 10px;
 
@@ -120,19 +124,15 @@
 	}
 
 	&, svg {
-		width: 25px;
-		height: 25px;
+		width: 35px;
+		height: 35px;
 	}
 
 	@include respond-min($breakpoint-nav-switch) {
+		fill: $color-text;
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 20px;
 		display: block;
-
-		&, svg {
-			width: 35px;
-			height: 35px;
-		}
 	}
 }
