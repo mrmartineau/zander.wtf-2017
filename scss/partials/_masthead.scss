@@ -98,9 +98,12 @@
 .masthead-social {
 	display: inline-block;
 	vertical-align: top;
-	position: absolute;
-	top: 370px;
-	left: 10px;
+
+	.home & {
+		position: absolute;
+		top: 370px;
+		left: 10px;
+	}
 
 	@include respond-min($breakpoint-nav-switch) {
 		position: absolute;
@@ -114,9 +117,14 @@
 .navTop-icon {
 	display: inline-block;
 	vertical-align: middle;
-	fill: #fff;
 	transition: $link-transition;
-	margin-left: 10px;
+	margin-left: 5px;
+	fill: $color-text;
+
+	.home & {
+		fill: #fff;
+		margin-left: 10px;
+	}
 
 	&:hover {
 		fill: $color-link-hover-alt;
