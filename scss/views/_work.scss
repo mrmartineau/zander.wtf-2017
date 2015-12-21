@@ -101,6 +101,7 @@
 	position: relative;
 	margin-top: $base-line-height + px;
 	text-align: center;
+	perspective: 1200px;
 }
 .piece-shots--icon {
 	width: 240px;
@@ -116,6 +117,7 @@
 	padding: 2% 0 0;
 	display: inline-block;
 	vertical-align: bottom;
+	transform: rotateX(10deg);
 }
 
 .piece-shots-shot--icon {
