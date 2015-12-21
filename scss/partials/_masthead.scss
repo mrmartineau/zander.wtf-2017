@@ -24,6 +24,7 @@
 
 	.is-nav-active & {
 		position: fixed;
+		will-change: transform;
 	}
 
 
@@ -37,6 +38,7 @@
 		height: auto;
 		line-height: 50px;
 		padding: 0;
+		will-change: transform;
 	}
 
 	svg {
