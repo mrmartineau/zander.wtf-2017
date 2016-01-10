@@ -1,4 +1,6 @@
 ---
+section: blog
+type: article
 layout: post
 title: "Coda Clip Library for HTML5"
 comments: true

@@ -1,5 +1,7 @@
 ---
 comments: true
+section: blog
+type: article
 layout: post
 title: "Use Shuttle to boost your development"
 excerpt: Great menubar app for bash shortcuts

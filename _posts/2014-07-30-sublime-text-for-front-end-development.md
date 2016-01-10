@@ -1,4 +1,6 @@
 ---
+section: blog
+type: article
 layout: post
 title: "Sublime Text packages for Front-end web development"
 excerpt: "My recommended list"

@@ -1,4 +1,6 @@
 ---
+section: blog
+type: article
 layout: post
 title: "Quick & dirty Cloze content test with the Lettering.js jQuery plugin"
 comments: true

@@ -1,4 +1,6 @@
 ---
+section: blog
+type: article
 layout: post
 title: "Soho Fixed launches"
 categories:

@@ -1,6 +1,8 @@
 ---
-comments: true
+section: blog
+type: article
 layout: post
+comments: true
 title: "How to painlessly move Kickoff’s assets directory"
 excerpt: "#tipsForKickoff"
 image: IMG_4438.jpg

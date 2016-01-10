@@ -1,5 +1,7 @@
 ---
 comments: true
+section: blog
+type: article
 layout: post
 title: "Improving the UX of a front-end framework"
 excerpt: "How we focused on our users for the latest version of Kickoff"

@@ -1,4 +1,6 @@
 ---
+section: blog
+type: article
 layout: post
 title: "Pinboard.in Chrome Extension"
 excerpt: "An improved, more responsive design"

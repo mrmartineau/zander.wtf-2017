@@ -1,5 +1,7 @@
 ---
 comments: false
+section: blog
+type: article
 layout: post
 title: "How to fix hidden characters in password inputs in old IE"
 categories:

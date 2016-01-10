@@ -1,4 +1,6 @@
 ---
+section: blog
+type: article
 layout: post
 title: "Pure CSS Icons"
 categories:

@@ -1,5 +1,7 @@
 ---
 comments: true
+section: blog
+type: article
 layout: post
 title: "Two versions of jQuery?"
 categories:

@@ -1,4 +1,6 @@
 ---
+section: blog
+type: article
 layout: post
 title: "Tooling around"
 excerpt: "Are we focusing too much on the tools and not the output?"

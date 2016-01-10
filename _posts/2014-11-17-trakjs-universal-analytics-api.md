@@ -1,5 +1,7 @@
 ---
 comments: true
+section: blog
+type: article
 layout: post
 title: "Improve website event tracking with trak.js"
 excerpt: Add tracking events more easily with our new library

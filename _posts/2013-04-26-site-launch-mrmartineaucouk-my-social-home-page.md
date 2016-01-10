@@ -1,5 +1,7 @@
 ---
 comments: false
+section: blog
+type: article
 layout: post
 title: "My social home page"
 categories:

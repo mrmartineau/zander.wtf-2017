@@ -1,4 +1,6 @@
 ---
+section: blog
+type: article
 layout: post
 title: "Yeoman Generator Development Tips"
 excerpt: "Tips for those creating Yeoman generators"

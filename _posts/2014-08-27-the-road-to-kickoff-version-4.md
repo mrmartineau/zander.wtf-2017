@@ -1,5 +1,7 @@
 ---
 comments: true
+section: blog
+type: article
 layout: post
 title: "The road to Kickoff version 4"
 excerpt: What's in store for the next release of Kickoff

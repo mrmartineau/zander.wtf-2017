@@ -1,5 +1,7 @@
 ---
 comments: true
+section: blog
+type: article
 layout: post
 title: "My process for using SVG on the web"
 excerpt: "hiDPI workflow for modern websites"
