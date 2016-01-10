@@ -101,10 +101,15 @@
 	display: inline-block;
 	vertical-align: top;
 
-	.home & {
-		position: absolute;
-		top: 370px;
-		left: 10px;
+	@include respond-max($breakpoint-nav-switch) {
+		line-height: 56px;
+		margin-left: 10px;
+
+		.home & {
+			position: absolute;
+			top: 370px;
+			left: 10px;
+		}
 	}
 
 	@include respond-min($breakpoint-nav-switch) {
@@ -123,9 +128,11 @@
 	margin-left: 5px;
 	fill: $color-text;
 
-	.home & {
-		fill: #fff;
-		margin-left: 10px;
+	@include respond-max($breakpoint-nav-switch) {
+		.home & {
+			fill: #fff;
+			margin-left: 10px;
+		}
 	}
 
 	&:hover {
@@ -134,8 +141,13 @@
 	}
 
 	&, svg {
-		width: 35px;
-		height: 35px;
+		width: 20px;
+		height: 20px;
+
+		@include respond-min($breakpoint-nav-switch) {
+			width: 35px;
+			height: 35px;
+		}
 	}
 
 	@include respond-min($breakpoint-nav-switch) {
