@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "lite-ready": "^1.0.4",
-    "swiftclick": "^1.1.5",
     "trak.js": "^0.5.2"
   },
   "devDependencies": {
