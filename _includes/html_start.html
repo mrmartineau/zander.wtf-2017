@@ -18,17 +18,14 @@
 		<title>{{ title }}{{ section }}</title>
 
 		{% if page.excerpt %}
-			<meta name="description" content="{{ page.excerpt }}">
+			<meta name="description" property="og:description" content="{{ page.excerpt }}">
 			<meta name="twitter:description" content="{{ page.excerpt }}" />
-			<meta property="og:description" content="{{ page.excerpt }}" />
 		{% elsif page.section == 'work' %}
-			<meta name="description" content="Web and design work by Zander Martineau">
+			<meta name="description" property="og:description" content="Web and design work by Zander Martineau">
 			<meta name="twitter:description" content="Web and design work by Zander Martineau" />
-			<meta property="og:description" content="Web and design work by Zander Martineau" />
 		{% else %}
-			<meta name="description" content="This site belongs to Zander Martineau">
+			<meta name="description" property="og:description" content="This site belongs to Zander Martineau">
 			<meta name="twitter:description" content="This site belongs to Zander Martineau" />
-			<meta property="og:description" content="This site belongs to Zander Martineau" />
 		{% endif %}
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
