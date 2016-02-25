@@ -3,8 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-
 		{% assign title = page.title %}
 
 		{% if page.section == 'blog' %}
@@ -14,20 +12,21 @@
 				{% assign section = ' - articles by Zander Martineau' %}
 			{% endif %}
 		{% endif %}
-
 		<title>{{ title }}{{ section }}</title>
-
-		{% if page.excerpt %}
-			<meta name="description" property="og:description" content="{{ page.excerpt }}">
-			<meta name="twitter:description" content="{{ page.excerpt }}" />
-		{% elsif page.section == 'work' %}
-			<meta name="description" property="og:description" content="Web and design work by Zander Martineau">
-			<meta name="twitter:description" content="Web and design work by Zander Martineau" />
-		{% else %}
-			<meta name="description" property="og:description" content="This site belongs to Zander Martineau">
-			<meta name="twitter:description" content="This site belongs to Zander Martineau" />
+		
+		{% if page.excerpt 
+		%}<meta name="description" property="og:description" content="{{ page.excerpt }}">
+		<meta name="twitter:description" content="{{ page.excerpt }}" />
+	{% elsif page.section == 'work' 
+		%}<meta name="description" property="og:description" content="Web and design work by Zander Martineau">
+	{% else 
+		%}<meta name="description" property="og:description" content="This site belongs to Zander Martineau">{%
+		endif %}
+		
+		{% if page.original %}
+		<link rel="canonical" href="{{page.original.url}}" />
 		{% endif %}
-
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/css/kickoff.css">
 
