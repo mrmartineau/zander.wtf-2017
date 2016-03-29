@@ -2,6 +2,8 @@ permalink: /:year/:month/:title/
 include: ['.htaccess']
 exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', '*.sketch', 'bower_components', 'README.md', 'bower.json']
 timezone: Europe/London
+gems: ['emoji']
+emoji_dir: /img/emoji
 
 # Vars
 name: Zander Martineau
