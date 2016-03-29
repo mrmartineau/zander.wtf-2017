@@ -1,5 +1,6 @@
 {% include html_start.html %}
 	<body class="{{ page.section }}">
-		{% include masthead.html %}
-		{{ content }}
-	{% include html_end.html %}
+		{{ content | emojify }}
+		{% include scripts.html %}
+	</body>
+</html>
