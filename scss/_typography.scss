@@ -99,6 +99,10 @@ h1, h2, h3, h4, h5, h6 {
 	& small {
 		font-weight: normal;
 	}
+
+	code {
+		font-size: 80%;
+	}
 }
 
 // Use the helper classes to emulate styles for another element
