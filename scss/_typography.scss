@@ -190,7 +190,7 @@ ol { list-style-type: decimal }
 // Add a .unstyled class to unordered/ordered lists if you want them to have bullets/numbers
 ul, ol {
 	padding: 0;
-	margin: 0 0 ($base-line-height + px) ($base-line-height + px);
+	margin: 0 0 ($base-line-height + px) 0;
 
 	& ul,
 	& ol {

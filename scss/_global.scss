@@ -80,7 +80,8 @@ img:not(.emoji) {
 	vertical-align: middle;
 }
 
-.full {
+.full,
+div.highlighter-rouge {
 	position: relative;
 
 	&--dark {
@@ -97,11 +98,11 @@ img:not(.emoji) {
 	}
 
 	&--code {
-		background-color: #f2f2f2;
+		background-color: $color-frame;
 
 		&:before,
 		&:after {
-			background-color: #f2f2f2;
+			background-color: $color-frame;
 		}
 	}
 
@@ -124,6 +125,14 @@ img:not(.emoji) {
 	}
 }
 
+div.highlighter-rouge {
+	background-color: $color-pre-background;
+
+	&:before,
+	&:after {
+		background-color: $color-pre-background;
+	}
+}
 
 .contentList {}
 
