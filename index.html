@@ -4,26 +4,23 @@ title: The personal site of Zander Martineau, a front-end developer from London
 section: home
 pageid: home
 ---
-<section class="home-primary clearfix">
-	<section class="me verticalTile verticalTile--list">
-		<h1 class="me-name">Zander Martineau</h1>
-		<h2 class="me-desc">Front-end developer <br>based in London</h2>
-		<svg class="me-logo"><use xlink:href="#icon-zmLogo"></use></svg>
-	</section>
-	<section id="blog" class="entries entries--blog clearfix">
-		{% for post in site.posts %}
-			{% if post.post-type == 'link' %}
-				<a href="{{ post.link-to }}" title="Read {{post.title}}" class="verticalTile verticalTile--list verticalTile--blogEntries verticalTile--external">
-			{% else %}
-				<a href="{{post.url}}" title="Read {{post.title}}" class="verticalTile verticalTile--list verticalTile--blogEntries">
-			{% endif %}
-					<div class="overlay overlay--img" style="background-image: url(/img/posts/bg/{{post.image}})"></div>
-					<div class="overlay overlay--dark"></div>
-					<time class="verticalTile-date">{{post.date | date_to_string}}</time>
-					<h1 class="verticalTile-title">{{post.title}}</h1>
-					<p class="verticalTile-excerpt">{{post.excerpt}}</p>
-					<h3 class="verticalTile-cta">Read now</h3>
-				</a>
-		{% endfor %}
-	</section>
-</section>
+
+<main>
+	<header class="header">
+		<h1>{{ site.name }}</h1>
+	</header>
+
+	<div class="l-container content">
+
+		<h2 class="sectionHeading">Articles</h2>
+		<div class="contentList">
+			{% assign posts = site.posts %}
+			{% include posts-by-year.html %}
+		</div>
+
+		<h2 class="sectionHeading">Code</h2>
+
+
+		<h2 class="sectionHeading">Projects</h2>
+	</div>
+</main>
