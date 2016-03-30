@@ -17,14 +17,13 @@ pre {
 code {
 	padding: 2px 4px;
 	color: $color-code;
-	background-color: $color-code-background;
 	// white-space: nowrap;
 }
 
 // Blocks of code
 pre {
 	display: block;
-	padding: ($base-line-height - 1) / 2 + px;
+	padding: ($common-spacing / 2) 0;
 	margin: ($base-line-height / 2 + px) 0;
 	line-height: $base-leading;
 	color: $color-pre;
