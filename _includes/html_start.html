@@ -41,18 +41,4 @@
 		<meta property="og:locale" content="en_GB" />
 		<meta name="twitter:site" content="@mrmartineau">
 
-		{% if page.section == 'blog' %}
-			{% if page.comments %}
-				<script>
-					{% if page.comments_old %}
-						var disqus_shortname = 'rathersplendidblog';
-					{% else %}
-						var disqus_shortname = 'martineau-tv';
-					{% endif %}
-					{% if page.comments_id %}
-						var disqus_identifier = '{{ page.comments_id }}'; // required: replace example with your forum shortname
-					{% endif %}
-				</script>
-			{% endif %}
-		{% endif %}
 	</head>

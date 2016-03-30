@@ -7,3 +7,20 @@
 		ga('create', 'UA-621491-22', 'auto');
 		ga('send', 'pageview');
 	</script> -->
+
+{% if page.comments %}
+	<script>
+		function loadJS( src, cb ){var ref = window.document.getElementsByTagName( "script" )[ 0 ];var script = window.document.createElement( "script" );script.src = src;script.async = true;ref.parentNode.insertBefore( script, ref );if (cb && typeof(cb) === "function") {script.onload = cb;}return script;}
+
+		{% if page.comments_old %}
+			var disqus_shortname = 'rathersplendidblog';
+		{% else %}
+			var disqus_shortname = 'martineau-tv';
+		{% endif %}
+		{% if page.comments_id %}
+			var disqus_identifier = '{{ page.comments_id }}'; // required: replace example with your forum shortname
+		{% endif %}
+
+		loadJS('//' + disqus_shortname + '.disqus.com/embed.js');
+	</script>
+{% endif %}
