@@ -10,7 +10,7 @@ original:
   text: "trykickoff.com"
 image: "outoffocus_bus_at__piccadillycircus___london._Taken_with_my__SonyA6000__london.jpg"
 ---
-Kickoff doesn't include responsive helper classes by default, but I (Zander) created some for a recent project. Assuming your Sass breakpoint variables (in [_variables.scss](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/_variables.scss#L56-L64)) look something like this:
+Kickoff doesn't include responsive helper classes by default, but I created some for a recent project. Assuming your Sass breakpoint variables (in [_variables.scss](https://github.com/TryKickoff/kickoff/blob/master/assets/src/scss/_variables.scss#L56-L64)) look something like this:
 
 ```scss
 /**
@@ -21,7 +21,7 @@ Kickoff doesn't include responsive helper classes by default, but I (Zander) cre
  */
 $bp-narrow            : 500;  // Set in px
 $bp-mid               : 750;  // Set in px
-$bp-wide              : 1000;  // Set in px
+$bp-wide              : 1000; // Set in px
 $bp-huge              : 1250; // Set in px
 ```
 
