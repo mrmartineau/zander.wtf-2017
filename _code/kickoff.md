@@ -34,3 +34,9 @@ images:
 Developed in partnership with [Ash Nolan](http://ashleynolan.co.uk/) at TMW, Kickoff is a robust, adaptable and unopinionated front-end framework that is great starting point for any web site; we use it on all of our front-end projects at TMW.
 
 The framework includes a Sass-based, CSS framework (with all the usual resets and mixins), a responsive grid system; beautiful typographic styles; javascript plugins, utilities and a great set of boilerplates for most eventualities. This means that our devs can get up and running as quickly as possible and not have to worry about this tedious initial step.
+
+- Framework
+- Docs site
+- Yeoman Generator
+- Stickers
+- Guidelines
