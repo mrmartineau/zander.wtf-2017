@@ -9,6 +9,7 @@ original:
   url: "http://trykickoff.com/2016/02/12/how-to-create-custom-grids-with-kickoff.html"
   text: "trykickoff.com"
 image: "london__underground__piccadillycircus__outoffocus.jpg"
+comments: true
 ---
 Kickoff comes bundled with a a simple, but fully responsive, grid system and a similar, but crucially different, Block Grid system. Why the need for two; What does each grid do; and how can you create you own versions of these grids if you have complex design requirements?
 
