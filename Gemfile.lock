@@ -1,0 +1,23 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.4.0)
+    fastimage (2.0.0)
+      addressable (~> 2)
+    gemoji (2.1.0)
+    kramdown (1.10.0)
+    mini_portile2 (2.0.0)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  fastimage
+  gemoji
+  kramdown
+  nokogiri
+
+BUNDLED WITH
+   1.11.2
