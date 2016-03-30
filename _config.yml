@@ -13,10 +13,14 @@ socialusername: MrMartineau
 
 collections:
   work:
-    output: false
+    output: true
+    permalink: /work/:path/
   lab:
     output: true
     permalink: /lab/:path/
+  code:
+    output: true
+    permalink: /code/:path/
 
 # defaults:
 #   -
