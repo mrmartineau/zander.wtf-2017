@@ -3,7 +3,7 @@ title: "Brother Printers"
 date: 2013-01-01
 meta:
   name: brother-campaigns
-  date: September 2012 - Jan 2013
+  date: Sept 2012 - Jan 2013
   skills: "Front-end: parallax, webperf"
   layout: wide
 

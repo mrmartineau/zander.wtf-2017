@@ -3,7 +3,7 @@ title: Strepsils Star Moments
 date: 2013-11-01
 meta:
   name: strepsils-starmoments
-  date: October - November 2013
+  date: Oct - Nov 2013
   skills: "Front-end"
   layout: wide
 

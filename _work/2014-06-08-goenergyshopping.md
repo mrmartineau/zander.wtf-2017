@@ -3,7 +3,7 @@ title: "Be an Energy Shopper"
 date: 2014-06-08
 meta:
   name: goenergyshopping
-  date: March - April 2014
+  date: Mar - Apr 2014
   skills: "Front-end"
   layout: wide
 
