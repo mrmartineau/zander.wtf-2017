@@ -1,6 +1,4 @@
 source "https://rubygems.org"
 
+gem 'jekyll'
 gem 'gemoji'
-gem 'nokogiri'
-gem 'fastimage'
-gem 'kramdown'
