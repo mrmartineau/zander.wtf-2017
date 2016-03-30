@@ -17,12 +17,9 @@ layout: default
 
 			{% if page.comments %}
 				<div class="comments">
-					<a href="#" class="btn btn--primary btn--block loadComments">Show Comments</a>
-					<div id="disqus_thread" class="is-hidden"></div>
+					<div id="disqus_thread"></div>
 				</div>
 			{% endif %}
-
-			{% include aboutme.html %}
 
 			<!-- Pagination links -->
 			<div class="pagination clearfix">
@@ -33,6 +30,10 @@ layout: default
 					<a href="{{page.next.url}}" class="pagination-btn pagination-btn--new">Newer</a>
 				{% endif %}
 			</div>
+
+			<hr>
+
+			{% include aboutme.html %}
 		</div>
 	</article>
 </main>
