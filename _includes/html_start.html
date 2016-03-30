@@ -5,28 +5,25 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		{% assign title = page.title %}
 
-		{% if page.section == 'blog' %}
-			{% if page.type == 'article' %}
-				{% assign section = ' - an article by Zander Martineau' %}
-			{% else %}
-				{% assign section = ' - articles by Zander Martineau' %}
-			{% endif %}
+		{% if page.path contains '_posts' %}
+			{% assign section = ' - an article by Zander Martineau' %}
 		{% endif %}
+
 		<title>{{ title }}{{ section }}</title>
-		
-		{% if page.excerpt 
-		%}<meta name="description" property="og:description" content="{{ page.excerpt }}">
-		<meta name="twitter:description" content="{{ page.excerpt }}" />
-	{% elsif page.section == 'work' 
-		%}<meta name="description" property="og:description" content="Development & design work by Zander Martineau">
-	{% else 
-		%}<meta name="description" property="og:description" content="Zander Martineau - Front-end developer from London">{%
+
+		{% if page.excerpt
+			%}<meta name="description" property="og:description" content="{{ title }} - {{ page.excerpt }}">
+			<meta name="twitter:description" content="{{ title }} - {{ page.excerpt }}" />
+		{% elsif page.path contains '_work' %}
+			%}<meta name="description" property="og:description" content="Development & design work by Zander Martineau">
+		{% else
+			%}<meta name="description" property="og:description" content="Zander Martineau - Front-end developer from London">{%
 		endif %}
-		
+
 		{% if page.original %}
 		<link rel="canonical" href="{{page.original.url}}" />
 		{% endif %}
-		
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/css/kickoff.css">
 
