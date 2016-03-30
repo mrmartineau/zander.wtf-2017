@@ -100,7 +100,7 @@ With media queries it is even easier to change these widths based on the viewpor
 ```scss
 .featuredItem {
 	// width 100% by default
-	@include respond-min(300) {
+	@include respond-min(300) { // Kickoff's media-query mixin
 		@include column(3);
 	}
 

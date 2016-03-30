@@ -71,9 +71,7 @@ Some simple conditionals were needed in the Gruntfile, package.json and the inde
 <% if (jsLibs == 'jquery') { %>,"jquery": true<% } %>
 ```
 
-Notice the preceeding comma before the conditional's content.
-
-JSON syntax is very strict, if a comma isn't there, or is in the wrong place, it will throw an error and npm will not install the dependencies, that is why I included the preceeding comma within the conditional. It might seem obvious but this logic needs to be self-contained and the surrounding code needs to be unaware of it, if it does not exist.
+Notice the preceeding comma before the conditional's content? JSON syntax is very strict, if a comma isn't there, or is in the wrong place, it will throw an error and npm will not install the dependencies, that is why I included the preceeding comma within the conditional. It might seem obvious but this logic needs to be self-contained and the surrounding code needs to be unaware of it, if it does not exist.
 
 ## Try the [Kickoff generator](https://www.npmjs.org/package/generator-kickoff)
 To install it, run:

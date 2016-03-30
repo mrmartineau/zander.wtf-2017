@@ -15,6 +15,7 @@ It has been a long time since I have written about Sublime Text & the benefits i
 Before you install any other packages, make sure you install Package Control first. It makes installing and keeping packages up-to-date really simple.
 
 ## For writing code
+
 ### [Emmet](https://sublime.wbond.net/packages/Emmet)
 Emmet (previously known as Zen Coding) is a web-developer’s toolkit that can greatly improve your HTML & CSS workflow. Find out more at http://emmet.io
 

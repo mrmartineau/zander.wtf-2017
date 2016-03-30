@@ -23,7 +23,10 @@ There are two main ways to use trak.js, as `data-trak` attributes in your markup
 ### data-trak attr implementation:
 
 ```html
-<a href="#pagehref" data-trak='{"category":"Test category","action":"Test action","label":"Test label"}' title="1 title">link</a>
+<a href="#pagehref"
+	data-trak='{"category":"Test category","action":"Test action"}'
+	title="1 title">
+	link</a>
 ```
 
 #### Custom trigger type (new as of v0.4.0)
@@ -31,7 +34,9 @@ There are two main ways to use trak.js, as `data-trak` attributes in your markup
 
 ```html
 <!-- Triggered on focus -->
-<a data-trak='{"trigger":"focus","category":"Test category","action":"Test action","label":"Test label"}' href="#pagehref">Custom trigger type</a>
+<a href="#pagehref"
+	data-trak='{"trigger":"focus","category":"Test category","action":"Test action"}'>
+	Custom trigger type</a>
 ```
 
 ### Javascript implementation
@@ -77,33 +82,40 @@ If any property is left `undefined`, the browser's default value will be used in
 
 ```html
 <!-- page.href wildcard -->
-<a href="#" data-trak='{"category":"Rating","action":"page.href","label":"Up"}'>link</a>
+<a href="#"
+	data-trak='{"category":"Rating","action":"page.href","label":"Up"}'>
+	link</a>
 
 <!-- page.title wildcard -->
-<a href="#" data-trak='{"category":"Rating","action":"page.title","label":"Up"}'>link</a>
+<a href="#"
+	data-trak='{"category":"Rating","action":"page.title","label":"Up"}'>
+	link</a>
 
 <!-- link.href wildcard -->
-<a href="#" data-trak='{"category":"Rating","action":"link.href","label":"Up"}'>link</a>
+<a href="#"
+	data-trak='{"category":"Rating","action":"link.href","label":"Up"}'>
+	link</a>
 
 <!-- link.title wildcard -->
-<a href="#" data-trak='{"category":"Rating","action":"link.title","label":"Up"}'>link</a>
+<a href="#"
+	data-trak='{"category":"Rating","action":"link.title","label":"Up"}'>
+	link</a>
 
 <!-- referrer wildcard -->
-<a href="#" data-trak='{"category":"Rating","action":"document.referrer","label":"Up"}'>link</a>
+<a href="#"
+	data-trak='{"category":"Rating","action":"document.referrer","label":"Up"}'>
+	link</a>
 ```
 
 
 ## Getting the Library
+
 ### Direct downloads
 - [Minified](https://raw.githubusercontent.com/mrmartineau/trak.js/master/dist/trak.min.js) (~481 B gzipped)
 - [Unminified](https://raw.githubusercontent.com/mrmartineau/trak.js/master/dist/trak.js) (~1.7 KB gzipped)
 
-### Bower
-`bower install trak`
-
 ### NPM
 `npm install trak.js --save`
-
 
 ## More information
 More information and the full documentation can be found at our repository on [Github](https://github.com/mrmartineau/trak.js). Also, options can be overridden; there's a debug mode; and most importantly, almost any other analytics APIs can be used.

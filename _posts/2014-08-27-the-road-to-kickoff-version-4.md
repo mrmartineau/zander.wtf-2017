@@ -17,7 +17,7 @@ github:
   user: tmwagency
   repo: kickoff
 ---
-**UPDATE:** The content in this post is out-of-date, Kickoff v4 has now been released. Please go to the [Kickoff site](//tmwagency.github.io/kickoff) to see all the new updates.
+**UPDATE:** The content in this post is out-of-date, Kickoff v4 has now been released. Please go to the [Kickoff site](http://trykickoff.com) to see all the new updates.
 
 ---
 
