@@ -28,7 +28,7 @@ Usage:
 			<a href="{{post.url}}" title='Read "{{post.title}}"'>
 		{% endif %}
 			<div>{{post.title}}</div>
-			<time>{{post.date | date: "%Y" }}</time>
+			<time>{{post.meta.date }}</time>
 		</a>
 	</li>
 {% endfor %}
