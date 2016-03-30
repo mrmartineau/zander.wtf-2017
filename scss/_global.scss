@@ -1,9 +1,8 @@
 html {
 	border: ($common-spacing / 2) solid $color-frame;
 	background-color: $color-background;
-	font-family: times, serif;
 
-	@media screen and (min-width: 600px) {
+	@include respond-min($breakpoint-mid) {
 		border-width: $common-spacing;
 	}
 
@@ -17,7 +16,7 @@ html {
 		background-color: $color-frame;
 		z-index: 1000;
 
-		@media screen and (min-width: 600px) {
+		@include respond-min($breakpoint-mid) {
 			height: $common-spacing;
 		}
 	}
@@ -47,8 +46,26 @@ main {
 	background-color: $color-frame;
 	padding: 3rem 0;
 
+	.l-container {
+		display: flex;
+		flex-direction: column;
+	}
+
 	h1 {
 		margin: 0;
+		order: 1;
+
+		@include respond-max($breakpoint-mid) {
+			@include font-size(50);
+		}
+	}
+
+	time {
+		order: -1;
+		text-transform: uppercase;
+		@include font-size(12);
+		font-weight: bold;
+		opacity: .7;
 	}
 }
 
@@ -137,7 +154,7 @@ div.highlighter-rouge {
 .contentList {}
 
 .contentList-group {
-	@include respond-min(600) {
+	@include respond-min($breakpoint-mid) {
 		display: flex;
 	}
 
@@ -147,7 +164,7 @@ div.highlighter-rouge {
 }
 
 .contentList-group-year {
-	@include respond-min(600) {
+	@include respond-min($breakpoint-mid) {
 		width: 25%;
 	}
 }
@@ -157,7 +174,7 @@ div.highlighter-rouge {
 	padding: 0;
 	list-style-type: none;
 
-	@include respond-min(600) {
+	@include respond-min($breakpoint-mid) {
 		width: 75%;
 	}
 }
@@ -186,7 +203,7 @@ div.highlighter-rouge {
 }
 
 .sectionHeading {
-	@include respond-min(600) {
+	@include respond-min($breakpoint-mid) {
 		margin-left: 25%;
 	}
 }
