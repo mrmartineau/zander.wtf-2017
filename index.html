@@ -21,8 +21,15 @@ pageid: home
 		</div>
 
 		<h2 class="sectionHeading">Code</h2>
-
+		<div class="contentList">
+			{% assign posts = site.code %}
+			{% include posts.html %}
+		</div>
 
 		<h2 class="sectionHeading">Projects</h2>
+		<div class="contentList">
+			{% assign posts = site.work %}
+			{% include posts.html %}
+		</div>
 	</div>
 </main>
