@@ -1,0 +1,41 @@
+.footer {
+	background-color: $blue;
+}
+
+.footer-links-icon {
+	display: inline-block;
+	vertical-align: middle;
+	transition: $default-transition;
+	margin-left: 5px;
+	fill: $color-text;
+
+	@include respond-max(mid) {
+		.home & {
+			fill: #fff;
+			margin-left: 10px;
+		}
+	}
+
+	&:hover {
+		fill: $color-link-hover-alt;
+		animation: wiggle 200ms linear 1;
+	}
+
+	&, svg {
+		width: 20px;
+		height: 20px;
+
+		@include respond-min(mid) {
+			width: 35px;
+			height: 35px;
+		}
+	}
+
+	@include respond-min(mid) {
+		fill: $color-text;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+		display: block;
+	}
+}
