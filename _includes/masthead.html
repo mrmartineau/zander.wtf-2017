@@ -1,33 +1,11 @@
-{% include icons.html %}
 <header id="masthead" class="masthead">
 
-	<nav class="navTop">
-		<a href="/" class="navTop-ZM">
-			<svg class="navTop-ZM-logo"><use xlink:href="#icon-zmLogo"></use></svg>
-			<span>Zander Martineau</span>
-		</a>
+	<a href="/" class="logo">
+		<svg class="logo-icon"><use xlink:href="#icon-zmLogo"></use></svg>
+		<span>Zander Martineau</span>
+	</a>
 
-		<a href="/#blog" class="navTop-link{% if page.section == 'blog' or page.layout == 'post' or page.section == 'home' %} is-active{% endif %}">Blog</a>
-		<a href="/work" class="navTop-link{% if page.section == 'work' %} is-active{% endif %}">Work</a>
-
-		<div class="masthead-social">
-
-			<a href="http://twitter.com/mrmartineau" title="Follow Zander on Twitter" class="navTop-icon">
-				<svg><use xlink:href="#icon-twitter"></use></svg>
-				<span class="is-visuallyHidden">Twitter</span>
-			</a>
-
-			<a href="http://github.com/mrmartineau" title="View Zander's open source code on Github" class="navTop-icon">
-				<svg><use xlink:href="#icon-github"></use></svg>
-				<span class="is-visuallyHidden">Github</span>
-			</a>
-
-			<a href="https://www.npmjs.com/~mrmartineau" title="View Zander's npm packages" class="navTop-icon">
-				<svg><use xlink:href="#icon-npm"></use></svg>
-				<span class="is-visuallyHidden">npm</span>
-			</a>
-
-		</div>
-	</nav>
+	<a href="/#articles" class="masthead-link{% if page.section == 'blog' or page.layout == 'post' or page.section == 'home' %} is-active{% endif %}">Blog</a>
+	<a href="/work" class="masthead-link{% if page.section == 'work' %} is-active{% endif %}">Work</a>
 
 </header>
