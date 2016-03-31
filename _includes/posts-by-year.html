@@ -35,7 +35,10 @@ Usage:
 		{% else %}
 			<a href="{{post.url}}" title='Read "{{post.title}}"'>
 		{% endif %}
-			<div>{{post.title}}</div>
+			<div>
+				<div class="contentList-group-items-item-title">{{post.title}}</div>
+				{% if post.excerpt %}<div class="contentList-group-items-item-excerpt">{{post.excerpt}}</div>{% endif %}
+			</div>
 			<time>{{post.date | date: "%-d %b" }}</time>
 		</a>
 	</li>

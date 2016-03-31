@@ -202,6 +202,11 @@ div.highlighter-rouge {
 	}
 }
 
+.contentList-group-items-item-excerpt {
+	font-size: 70%;
+	color: fade-out($color-primary, .2);
+}
+
 .sectionHeading {
 	@include respond-min($breakpoint-mid) {
 		margin-left: 25%;
