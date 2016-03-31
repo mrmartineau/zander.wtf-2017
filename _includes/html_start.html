@@ -26,6 +26,9 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
+		{% if page.path contains 'styleguide' %}
+			<link rel="stylesheet" href="/assets/dist/css/styleguide.css">
+		{% endif %}
 
 		<!-- Mobile & Fav Icons -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicons/zm-144.png">

@@ -1,0 +1,242 @@
+---
+layout: default
+title: Styleguide
+---
+<main>
+	{% include header.html name=page.title %}
+
+	<div class="l-container">
+
+		<!-- Logo -->
+		<div class="sg-page">
+			<div class="l-container">
+				<h2 class="sg-sectionHeading">Logo</h2>
+				<img src="http://i.imgur.com/PiqudTY.png">
+			</div>
+		</div>
+
+
+		<!-- Swatches -->
+		<div class="sg-page">
+			<div class="l-container">
+				<h2 class="sg-sectionHeading">Swatches</h2>
+
+				<div class="g">
+					<div>
+						<div class="sg-swatch sg-color-primary">
+							<div class="sg-swatch-color"></div>
+							<code>$color-primary</code>
+						</div>
+					</div>
+					<div>
+						<div class="sg-swatch sg-color-secondary">
+							<div class="sg-swatch-color"></div>
+							<code>$color-secondary</code>
+						</div>
+					</div>
+					<div>
+						<div class="sg-swatch sg-color-highlight">
+							<div class="sg-swatch-color"></div>
+							<code>$color-highlight</code>
+						</div>
+					</div>
+					<div>
+						<div class="sg-swatch sg-color-text">
+							<div class="sg-swatch-color"></div>
+							<code>$color-text</code>
+						</div>
+					</div>
+					<div>
+						<div class="sg-swatch sg-color-background">
+							<div class="sg-swatch-color"></div>
+							<code>$color-bg</code>
+						</div>
+					</div>
+					<div>
+						<div class="sg-swatch sg-color-border">
+							<div class="sg-swatch-color"></div>
+							<code>$color-border</code>
+						</div>
+					</div>
+					<div>
+						<div class="sg-swatch sg-color-link">
+							<div class="sg-swatch-color"></div>
+							<code>$color-link-default</code>
+						</div>
+					</div>
+					<div>
+						<div class="sg-swatch sg-color-link-hover">
+							<div class="sg-swatch-color"></div>
+							<code>$color-link-hover</code>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- Typography -->
+		<div class="sg-page">
+			<div class="l-container">
+				<h2 class="sg-sectionHeading">Typography</h2>
+
+				<!-- Headings -->
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Primary typeface</h3>
+				<div class="g">
+					<div class="g-span4 g-col sg-typeSpecimen sg-typeSpecimen--primary sg-typeSpecimen--giant">
+						ABC
+					</div>
+
+					<div class="g-span8 g-col">
+						<div class="sg-typeSpecimen sg-typeSpecimen--primary">ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>
+							abcdefghijklmnopqrstuvwxyz <br>
+							0123456789 (.,:;?!£$@*&)
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- Typography examples -->
+		<div class="sg-page">
+			<div class="l-container">
+				<h2 class="sg-sectionHeading">Typography examples</h2>
+				<div class="g">
+					<div class="g-span6 g-col">
+						<h3 class="sg-interfaceType sg-interfaceType--subtle">Headings</h3>
+						<h1>Heading 1</h1>
+						<h2>Heading 2</h2>
+						<h3>Heading 3</h3>
+						<h4>Heading 4</h4>
+						<h5>Heading 5</h5>
+						<h6>Heading 6</h6>
+					</div>
+					<div class="g-span6 g-col">
+						<h3 class="sg-interfaceType sg-interfaceType--subtle">Paragraphs</h3>
+						<p>Donec sed odio dui. Curabitur <a href="">blandit tempus</a> porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur <b>purus sit amet fermentum</b>.</p>
+						<p>Donec sed odio dui. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum.</p>
+					</div>
+				</div>
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Typeface sizes</h3>
+				<div class="g">
+					<div class="g-span6 g-col">
+						<div class="sg-type sg-type-micro"><div class="sg-type-item">Example text</div> <code>$type-micro</code></div>
+						<div class="sg-type sg-type-smallest"><div class="sg-type-item">Example text</div> <code>$type-smallest</code></div>
+						<div class="sg-type sg-type-smaller"><div class="sg-type-item">Example text</div> <code>$type-smaller</code></div>
+						<div class="sg-type sg-type-small"><div class="sg-type-item">Example text</div> <code>$type-small</code></div>
+						<div class="sg-type sg-type-base"><div class="sg-type-item">Example text</div> <code>$type-base</code></div>
+					</div>
+					<div class="g-span6 g-col">
+						<div class="sg-type sg-type-mid"><div class="sg-type-item">Example text</div> <code>$type-mid</code></div>
+						<div class="sg-type sg-type-large"><div class="sg-type-item">Example text</div> <code>$type-large</code></div>
+						<div class="sg-type sg-type-largest"><div class="sg-type-item">Example text</div> <code>$type-largest</code></div>
+						<div class="sg-type sg-type-jumbo"><div class="sg-type-item">Example text</div> <code>$type-jumbo</code></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- Components -->
+		<div class="sg-page">
+			<div class="l-container">
+				<h2 class="sg-sectionHeading">Components</h2>
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Buttons</h3>
+
+				<div class="sg-spacer">
+					<a href="#" class="btn">Normal button</a>
+				</div>
+
+				<div class="sg-spacer">
+					<a href="#" class="btn btn--primary">Primary button</a>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- Icons -->
+		<div class="sg-page">
+			<div class="l-container">
+				<h2 class="sg-sectionHeading">Icons</h2>
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Interface icons</h3>
+				<div class="l-blockGrid l-blockGrid--3 l-blockGrid--2--narrow">
+					<div class="l-blockGrid-item">
+						<div class="icon-sg icon-social-instagram"></div>
+						<code>.icon-social-instagram</code>
+					</div>
+					<div class="l-blockGrid-item">
+						<div class="icon-sg icon-social-twitter"></div>
+						<code>.icon-social-twitter</code>
+					</div>
+					<div class="l-blockGrid-item">
+						<div class="icon-sg icon-social-pinterest"></div>
+						<code>.icon-social-pinterest</code>
+					</div>
+					<div class="l-blockGrid-item">
+						<div class="icon-sg icon-social-facebook"></div>
+						<code>.icon-social-facebook</code>
+					</div>
+					<div class="l-blockGrid-item">
+						<div class="icon-sg icon-social-youtube"></div>
+						<code>.icon-social-youtube</code>
+					</div>
+					<div class="l-blockGrid-item">
+						<div class="icon-sg icon-email"></div>
+						<code>.icon-email</code>
+					</div>
+				</div>
+
+				<h3 class="sg-interfaceType sg-interfaceType--subtle">Favicons</h3>
+
+				<div class="sg-favicon">
+					<img src="http://i.imgur.com/hoxPrcd.png" alt="" width="16">
+					<code>16x16</code>
+				</div>
+				<div class="sg-favicon">
+					<img src="http://i.imgur.com/9bZyqGl.png" alt="" width="32">
+					<code>32x32</code>
+				</div>
+				<div class="sg-favicon">
+					<img src="http://i.imgur.com/eq7Utng.png" alt="" width="60">
+					<code>60x60</code>
+				</div>
+				<div class="sg-favicon">
+					<img src="http://i.imgur.com/hDxUWMa.png" alt="" width="152">
+					<code>152x152</code>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- Please add more to this to keep your styleguide useful -->
+
+		<!-- Add more here :) -->
+		<!-- <div class="sg-page">
+			<div class="l-container">
+				<h2 class="sg-sectionHeading">More stuff</h2>
+
+			</div>
+		</div> -->
+
+
+	</div>
+
+	<footer class="sg-footer text-centre sg-interfaceType">
+		<div class="l-container">
+			<img src="http://i.imgur.com/LaKkj7X.png" alt="Kickoff logo">
+			<br>
+			This styleguide is generated by the <a href="http://trykickoff.com">Kickoff</a> framework.
+			<br>
+			Find out more about <a href="http://trykickoff.com">Kickoff</a>.
+		</div>
+	</footer>
+</main>
