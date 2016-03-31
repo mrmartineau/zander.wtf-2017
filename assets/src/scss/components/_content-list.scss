@@ -1,16 +1,24 @@
 .contentList {}
 
 .contentList-group {
-	@include respond-min(mid) {
-		display: flex;
+	& + & {
+		margin-top: $common-spacing;
 	}
 
-	& + & {
-		margin-top: 4rem;
+	@include respond-min(mid) {
+		border-top: 1px solid $grayDark;
+		display: flex;
+
+		& + & {
+			margin-top: -1px;
+		}
 	}
+
 }
 
 .contentList-group-year {
+	padding: .4em 0;
+
 	@include respond-min(mid) {
 		width: 25%;
 	}
@@ -29,11 +37,7 @@
 .contentList-group-items-item {
 	display: block;
 	padding: .4em 0;
-	border-bottom: 1px solid;
-
-	&:first-child {
-		border-top: 1px solid;
-	}
+	border-bottom: 1px solid $grayDark;
 
 	a {
 		display: flex;
