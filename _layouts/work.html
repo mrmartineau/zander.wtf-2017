@@ -1,0 +1,82 @@
+---
+section: work
+layout: default
+---
+
+<main>
+	<header class="header">
+		<div class="l-container">
+			<h1 class="header-title">{{page.title}}</h1>
+			<div class="header-meta">
+				{% if post.view.url %}
+					<a href="{{post.view.url}}" title="Go to {{post.view.text}}">{{post.view.text}}</a>
+				{% else %}
+					{{post.view.text}}
+				{% endif %}
+			</div>
+		</div>
+	</header>
+
+	<article class="piece piece--{{post.type}}" id="{{post.meta.name}}">
+		<div class="piece-inner piece-inner--{{post.meta.layout}}">
+
+				{{post}}
+			<div class="piece-infoContainer clearfix">
+				<div class="piece-infoContainer-desc">
+					{{ content | markdownify }}
+				</div>
+
+
+				<div class="piece-infoContainer-info clearfix">
+					<ul class="piece-info-list unstyled">
+						<li class="piece-info-list-item">
+							<b class="piece-info-list-item-key">Date:</b>
+							<div class="piece-info-list-item-value">{{post.meta.date}}</div>
+						</li>
+						<li class="piece-info-list-item">
+							<b class="piece-info-list-item-key">Skills:</b>
+							<div class="piece-info-list-item-value">{{post.meta.skills}}</div>
+						</li>
+						{% for credit in post.credits %}
+							<li class="piece-info-list-item">
+							<b class="piece-info-list-item-key">{{credit.title}}:</b>
+							<div class="piece-info-list-item-value ellipsis">
+							{% if credit.url %}
+								<a href="{{credit.url}}">{{credit.name}}</a>
+							{% else %}
+								{{credit.name}}
+							{% endif %}
+							</div></li>
+						{% endfor %}
+						{% if post.github %}<li class="piece-info-list-item">
+							<b class="piece-info-list-item-key">Github:</b>
+							<div class="piece-info-list-item-value ellipsis"><a href="https://github.com/{{post.github.user}}/{{post.github.repo}}">github.com/{{post.github.user}}/{{post.github.repo}}</a></div></li>{% endif %}
+					</ul>
+
+					{% if post.github %}
+						<div class="github-details">
+							<iframe src="http://ghbtns.com/github-btn.html?user={{post.github.user}}&repo={{post.github.repo}}&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
+							<iframe src="http://ghbtns.com/github-btn.html?user={{post.github.user}}&repo={{post.github.repo}}&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+
+			{% if post.images %}
+			<div class="piece-shots piece-shots--{{post.meta.layout}}">
+
+				{% for img in post.images %}
+					<figure class="piece-shots-shot piece-shots-shot--{{img.type}} piece-shots-shot--0{{forloop.index}}{% if post.meta.layout == 'icon' %} icon-{{img.class}}{% endif %}">
+						{% if post.meta.layout != 'icon' %}
+							<img src="/img/projects/{{post.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
+						{% endif %}
+					</figure>
+				{% endfor %}
+
+			</div>
+			{% endif %}
+		</div>
+	</article>
+</main>
+
+
