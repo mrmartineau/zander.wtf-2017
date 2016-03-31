@@ -33,7 +33,7 @@ html {
 		left: 0;
 		height: ($common-spacing / 2);
 		background-color: $color-frame;
-		z-index: 1000;
+		z-index: $z-frame;
 
 		@include respond-min(mid) {
 			height: $common-spacing;
