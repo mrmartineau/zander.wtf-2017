@@ -24,14 +24,14 @@
 // @include project-colours('#id', $bgColour, $textColour, $linkColour, $linkHover);
 
 // Portfolio
-@include project-colours('#depdoc', rgb(28, 28, 28), #d3d0c8, #66cccc, #fff);
+// @include project-colours('#depdoc', rgb(28, 28, 28), #d3d0c8, #66cccc, #fff);
 @include project-colours('#trak', #2d2d2d, #d3d0c8, #66cccc, #fff);
-@include project-colours('#techtmw', #181830, #3498db, #fe7c08, #b95801);
+// @include project-colours('#techtmw', #181830, #3498db, #fe7c08, #b95801);
 @include project-colours('#goenergyshopping', #d22a81, #fff, #E0FF3E, #fff);
-@include project-colours('#kickoff', #181830, #fff, #FE7C08, darken(#FE7C08, 10%));
+// @include project-colours('#kickoff', #181830, #fff, #FE7C08, darken(#FE7C08, 10%));
 @include project-colours('#strepsils-starmoments', #d22740, #fff, #E0FF3E, #fff);
 @include project-colours('#lynxafrica', #00723B, #fff, #fff, #fff);
-@include project-colours('#lynxafrica', #00723B, #fff, #fff, #fff);
+// @include project-colours('#lynxafrica', #00723B, #fff, #fff, #fff);
 @include project-colours('#thebar', #ff5e00, #000, #fff, #000);
 @include project-colours('#lynx-apollo', #000, #fff, #4d8aa7, #fff);
 @include project-colours('#brother-campaigns', #031962, #fff, #F12EA1, #fff);
@@ -48,22 +48,22 @@
 @include project-colours('#sohofixed-identity', #000, #eee, #555, #fff);
 
 // Code
-@include project-colours('#choreographic-grid', $color-text, #fff, $color-link-hover, #fff);
-@include project-colours('#javascript-less-links', $blue, #fff, #fff, #fff);
+// @include project-colours('#choreographic-grid', $color-text, #fff, $color-link-hover, #fff);
+// @include project-colours('#javascript-less-links', $blue, #fff, #fff, #fff);
 
 // Sublime resources
-@include project-colours('#sublime-text-setup', #222, #f1f1f1, #777, #fff);
-@include project-colours('#sass-snippets', #be67d1, #fff, #000, #fff);
-@include project-colours('#jquery', #2c6ca7, #fff, #fff, #fff);
-@include project-colours('#placeholders', #f8d498, #a95d0e, #d87712, #fff);
-@include project-colours('#html5', #d25b40, #fff, #fff, #fff);
+// @include project-colours('#sublime-text-setup', #222, #f1f1f1, #777, #fff);
+// @include project-colours('#sass-snippets', #be67d1, #fff, #000, #fff);
+// @include project-colours('#jquery', #2c6ca7, #fff, #fff, #fff);
+// @include project-colours('#placeholders', #f8d498, #a95d0e, #d87712, #fff);
+// @include project-colours('#html5', #d25b40, #fff, #fff, #fff);
 
 
 
-#choreographic-grid {
-	background-image: url('#{$img-path}/ui/bg-grid.png');
-	background-position: center top;
-}
+// #choreographic-grid {
+// 	background-image: url('#{$img-path}/ui/bg-grid.png');
+// 	background-position: center top;
+// }
 
 #lynx-apollo {
 	background-image: url('#{$img-path}/projects/lynx-apollo/stars.jpg');
