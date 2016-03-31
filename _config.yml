@@ -22,15 +22,9 @@ collections:
     output: true
     permalink: /code/:path/
 
-# defaults:
-#   -
-#     scope:
-#       path: "" # empty string for all files
-#     values:
-#       layout: "post"
-#   -
-#     scope:
-#       path: "work"
-#       type: "post"
-#     values:
-#       layout: "work"
+defaults:
+  -
+    scope:
+      path: "work"
+    values:
+      layout: "work"
