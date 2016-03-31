@@ -2,7 +2,11 @@
 	<body class="{{ page.section }}">
 		{% include icons.html %}
 
+		{% include masthead.html %}
+
 		{{ content | emojify }}
+
+		{% include footer.html %}
 
 		{% include scripts.html %}
 	</body>
