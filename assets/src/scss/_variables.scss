@@ -25,7 +25,7 @@ $leading-base                  : 1.5;
 $line-height-base              : round($font-size-base * $leading-base); // 20 * 1.4
 $baseline                      : $line-height-base * 1px;
 
-$type-scale                    : 1.25; // Major third
+$type-scale                    : 1.333; // Major third
 
 $type-micro                    : modular-scale($font-size-base, -4, $type-scale);
 $type-smallest                 : modular-scale($font-size-base, -3, $type-scale);
