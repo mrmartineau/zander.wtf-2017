@@ -1,0 +1,181 @@
+/**
+ * Global app/site styles
+ */
+body {
+	background-color: $color-bg;
+}
+
+/**
+ * Default layout container
+ */
+.l-container {
+	padding-left: #{$layout-margin}px;
+	padding-right: #{$layout-margin}px;
+	width: 95%;
+	max-width: #{$layout-max-width}px;
+	margin: 0 auto;
+}
+
+
+html {
+	border: ($common-spacing / 2) solid $color-frame;
+	background-color: $color-bg;
+
+	@include respond-min(mid) {
+		border-width: $common-spacing;
+	}
+
+	&:before,
+	&:after {
+		content: '';
+		position: fixed;
+		right: 0;
+		left: 0;
+		height: ($common-spacing / 2);
+		background-color: $color-frame;
+		z-index: 1000;
+
+		@include respond-min(mid) {
+			height: $common-spacing;
+		}
+	}
+
+	&:before {
+		top: 0;
+	}
+
+	&:after {
+		bottom: 0;
+		left: 0;
+	}
+}
+
+main {
+	overflow: hidden;
+}
+
+.l-container {
+	width: 90%;
+	max-width: 35rem;
+	margin: 0 auto;
+}
+
+.header {
+	text-align: center;
+	background-color: $color-frame;
+	padding: 3rem 0;
+
+	.l-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	h1 {
+		margin: 0;
+		order: 1;
+
+		@include respond-max(mid) {
+			@include font-size(50);
+		}
+	}
+
+	time {
+		order: -1;
+		text-transform: uppercase;
+		@include font-size(12);
+		font-weight: bold;
+		opacity: .7;
+	}
+}
+
+.content {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	&--article {
+		a:not([class]) {
+			border-bottom: 2px solid $color-link-hover-alt;
+			padding: 1px 3px;
+			word-wrap: break-word;
+
+			&:hover {
+				background-color: $color-link-hover-alt;
+			}
+		}
+	}
+
+	img:not(.emoji) {
+		max-width: calc(100% + 100px);
+		left: -50px;
+		position: relative;
+	}
+}
+
+
+.emoji {
+	width: 35px;
+	vertical-align: middle;
+}
+
+.full,
+div.highlighter-rouge {
+	position: relative;
+
+	&--dark {
+		background-color: $color-primary;
+		color: #fff;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+
+		&:before,
+		&:after {
+			background-color: $color-primary;
+		}
+
+	}
+
+	&--code {
+		background-color: $color-frame;
+
+		&:before,
+		&:after {
+			background-color: $color-frame;
+		}
+	}
+
+
+	&:before,
+	&:after {
+		content: '';
+		width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+	}
+
+	&:before {
+		right: 100%;
+	}
+
+	&:after {
+		left: 100%;
+	}
+}
+
+div.highlighter-rouge {
+	background-color: $pre-bgColor;
+
+	&:before,
+	&:after {
+		background-color: $pre-bgColor;
+	}
+}
+
+
+
+.sectionHeading {
+	@include respond-min(mid) {
+		margin-left: 25%;
+	}
+}
+

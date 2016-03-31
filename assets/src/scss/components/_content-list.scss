@@ -1,0 +1,55 @@
+.contentList {}
+
+.contentList-group {
+	@include respond-min(mid) {
+		display: flex;
+	}
+
+	& + & {
+		margin-top: 4rem;
+	}
+}
+
+.contentList-group-year {
+	@include respond-min(mid) {
+		width: 25%;
+	}
+}
+
+.contentList-group-items {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	@include respond-min(mid) {
+		width: 75%;
+	}
+}
+
+.contentList-group-items-item {
+	display: block;
+	padding: .4em 0;
+	border-bottom: 1px solid;
+
+	&:first-child {
+		border-top: 1px solid;
+	}
+
+	a {
+		display: flex;
+		justify-content: space-between;
+		text-decoration: none;
+	}
+
+	time {
+		white-space: nowrap;
+		opacity: .5;
+		font-size: 80%;
+		margin-left: 20px;
+	}
+}
+
+.contentList-group-items-item-excerpt {
+	font-size: 70%;
+	opacity: .6;
+}

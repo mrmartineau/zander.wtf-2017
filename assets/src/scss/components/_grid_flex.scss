@@ -1,0 +1,154 @@
+/**
+ * The Kickoff Flexbox Grid
+ * =================================
+ * Default grid styles
+ * Media queries
+ */
+
+/* Import Grid helpers and mixins */
+@import "../mixins/grid-helpers";
+
+
+/**
+ * Basic Usage:
+ * =================================
+	<div class="g">
+		<div class="g-col g-span4 g-span6--mid"></div>
+		<div class="g-col g-span8 g-span6--mid"></div>
+	</div>
+ */
+.g {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+	.g-col {
+		display: block;
+
+		// By default, evenly distribute columns
+		// n.b. to support non-flexbox browsers, you should always add .g-spanx
+		flex: 1 0 0;
+
+		.g--stacked > & {
+			flex-basis: 100%;
+		}
+	}
+
+/**
+ * Gutter calcs – applied to grid columns in our grid (direct descendants only)
+ * Default: pixels (can look at changing to percentage)
+ * Usage: gutterCalc() or gutterCalc(false)
+ */
+$g-gutter-half: gutterCalc() / 2;
+
+.g--gutter {
+	margin-left: - $g-gutter-half;
+	margin-right: - $g-gutter-half;
+
+	& > .g-col {
+		margin-left: $g-gutter-half;
+		margin-right: $g-gutter-half;
+	}
+}
+
+
+/**
+ * .g--equalHeight – Equal Height Child Elements
+ */
+.g--equalHeight {
+	> .g-col {
+		display: flex;
+
+		& > * {
+			flex-basis: 100%;
+		}
+	}
+}
+
+
+/**
+ * Alignment
+ * Modifier classes to move our grid elements around
+ */
+.g--alignBottom    { align-items: flex-end; }
+.g--alignRight     { justify-content: flex-end; }
+.g--alignCenter    { justify-content: center; }
+.g--alignCenter--v { align-items: center; }
+
+
+/**
+ * Centering
+ * Centers an individual column, rather than the entire grid
+ */
+.g-col--centered {
+	margin: 0 auto;
+}
+
+
+/**
+ * Add fallbacks for non-flexbox supporting browsers (for example, IE8/9)
+ */
+@if $use-legacy-grid {
+	.no-flexbox {
+		.g {
+			width: 100%;
+			margin: 0 auto;
+			@include clearfix;
+		}
+
+		.g-col {
+			float: left;
+			min-height: 1px;
+			position: relative;
+			clear: none;
+			box-sizing: border-box;
+		}
+
+		.g--stacked .g-col {
+			width: 100%;
+		}
+
+		// For guttering, we remove negative margins and switch to only using left margins, taking these off on the first-child
+		.g--gutter {
+			margin-left: 0;
+			margin-right: 0;
+
+			& > .g-col {
+				margin-left: gutterCalc();
+				margin-right: 0;
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	} //end .no-flexbox
+
+}
+
+
+
+/**
+ * Grid Span classes (for different breakpoints)
+ *
+ * Applied by using .g-spanx to .g-col elements, where x is the number of columns
+ */
+
+@include gridSpanHelper; // Default sizes
+
+// Responsive sizes only generated if $responsive-grid-sizes == true
+@if $responsive-grid-sizes {
+	//loop through our breakpoints
+	@each $name, $value in $breakpoints {
+		@include respond-min($value) {
+			@include gridSpanHelper($name);
+		}
+	}
+}
+
+@each $name, $value in $breakpoints {
+	.g--stack--#{$name} {
+		@include grid-stack($value);
+	}
+}

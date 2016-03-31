@@ -1,0 +1,55 @@
+/**
+ * Global Color palette
+ * - Generic colors
+ * - Color scheme
+ * - Common colors
+ * - Links
+ * - Text selection
+ * - <hr>
+ * - Any others..
+ */
+
+// Generic colors
+$blue                         : #08D9D6;
+$green                        : #16c98d;
+$red                          : #fa5e5b;
+$yellow                       : #feef6d;
+$orange                       : #fe7c08;
+$pink                         : #FF2E63;
+$purple                       : #8e44ad;
+$gray                         : #EAEAEA;
+$dark                         : #252A34;
+
+// Color Scheme
+$color-primary                : $blue;
+$color-secondary              : $pink;
+$color-highlight              : $yellow;
+
+// Common colors
+$color-text                   : #252A34;
+$color-bg                     : $gray;
+$color-border                 : #ddd;
+$color-frame                  : #fff;
+
+
+// Links
+$color-link-default           : $dark;
+$color-link-visited           : $color-link-default;
+$color-link-hover             : $color-secondary;
+$color-link-active            : $color-secondary;
+$color-link-hover-alt         : #B2BABE;
+
+// Text Selection
+$color-selection              : #fff;
+$color-selection-bg           : $color-primary;
+
+
+// <hr> border color
+$hr-border                    : lighten(#000, 70%);
+
+// 3rd party brand colors - find more at brandcolors.net
+$color-twitter                : #55acee;
+$color-facebook               : #3b5998;
+$color-youtube                : #cd201f;
+$color-pinterest              : #bd081c;
+$color-instagram              : #3f729b;
