@@ -16,23 +16,60 @@
     "trak.js": "^0.5.2"
   },
   "devDependencies": {
-    "autoprefixer-loader": "^3.1.0",
-    "browser-sync": "^2.9.11",
-    "browser-sync-webpack-plugin": "^1.0.0",
-    "css-loader": "^0.19.0",
-    "extract-text-webpack-plugin": "^0.8.2",
-    "node-sass": "^3.2.0",
-    "sass-loader": "^3.0.0",
-    "style-loader": "^0.12.3",
-    "uglify-loader": "^1.2.0",
-    "webpack": "^1.11.0"
+    "autoprefixer": "^6.3.3",
+    "babel-plugin-transform-object-assign": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "cssnano": "^3.5.2",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-grunticon": "^2.2.2",
+    "grunt-newer": "^1.1.2",
+    "grunt-shimly": "^1.0.1",
+    "imagemin-gifsicle": "^4.2.0",
+    "imagemin-jpegtran": "^4.3.1",
+    "imagemin-mozjpeg": "^5.1.0",
+    "imagemin-optipng": "^4.3.0",
+    "imagemin-pngquant": "^4.2.2",
+    "jshint-stylish": "^2.1.0",
+    "imagemin-svgo": "^4.2.0",
+    "load-grunt-configs": "^0.4.3",
+    "load-grunt-tasks": "^3.4.1",
+    "minifyify": "^7.3.2",
+    "postscss": "^1.2.3"
+  },
+  "optionalDependencies": {
+    "browser-sync": "^2.11.1",
+    "eslint-config-airbnb": "^6.1.0",
+    "grunt-browser-sync": "^2.1.3",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^18.0.0",
+    "grunt-filesizegzip": "^0.2.0",
+    "opn": "^4.0.1",
+    "grunt-scss-lint": "^0.3.8"
   },
   "keywords": [],
   "scripts": {
-    "compile": "webpack --progress --colors",
-    "deploy": "webpack -p",
-    "watch": "BUILD_DEV=1 BUILD_PRERELEASE=1 webpack --progress --colors --watch",
-    "jekyll": "jekyll build --watch",
-    "start": "concurrent 'npm run watch' 'npm run jekyll'"
+    "test": "",
+
+    "start": "concurrent 'grunt' 'npm run jekyll'",
+
+    "install": "gem install bundler && bundle install && npm i -g grunt-cli && npm prune && npm install --no-optional",
+
+    "predeploy": "npm run install",
+    "deploy": "jekyll build && grunt compile --release",
+
+    "jekyll": "jekyll build --watch"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-object-assign"
+    ]
   }
 }
