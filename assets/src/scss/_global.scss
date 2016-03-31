@@ -69,23 +69,23 @@ main {
 		display: flex;
 		flex-direction: column;
 	}
+}
 
-	h1 {
-		margin: 0;
-		order: 1;
+.header-title {
+	margin: 0;
+	order: 1;
 
-		@include respond-max(mid) {
-			@include font-size(50);
-		}
+	@include respond-max(mid) {
+		@include font-size(50);
 	}
+}
 
-	time {
-		order: -1;
-		text-transform: uppercase;
-		@include font-size(12);
-		font-weight: bold;
-		opacity: .7;
-	}
+.header-meta {
+	order: -1;
+	text-transform: uppercase;
+	@include font-size(12);
+	font-weight: bold;
+	opacity: .7;
 }
 
 .content {
