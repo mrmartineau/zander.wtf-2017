@@ -91,6 +91,24 @@ main {
 div.highlighter-rouge {
 	position: relative;
 
+
+	&:before,
+	&:after {
+		content: '';
+		width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+	}
+
+	&:before {
+		right: 100%;
+	}
+
+	&:after {
+		left: 100%;
+	}
+
 	&--dark {
 		background-color: $color-primary;
 		color: #fff;
@@ -113,22 +131,16 @@ div.highlighter-rouge {
 		}
 	}
 
+	&--kickoff {
+		background-color: #181830;
+		color: #FE7C08;
+		margin: $common-spacing 0;
+		padding: $common-spacing 0;
 
-	&:before,
-	&:after {
-		content: '';
-		width: 100%;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-	}
-
-	&:before {
-		right: 100%;
-	}
-
-	&:after {
-		left: 100%;
+		&:before,
+		&:after {
+			background-color: #181830;
+		}
 	}
 }
 
