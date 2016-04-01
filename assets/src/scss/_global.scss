@@ -60,34 +60,6 @@ main {
 	margin: 0 auto;
 }
 
-.header {
-	text-align: center;
-	background-color: $color-frame;
-	padding: 3rem 0;
-
-	.l-container {
-		display: flex;
-		flex-direction: column;
-	}
-}
-
-.header-title {
-	margin: 0;
-	order: 1;
-
-	@include respond-max(mid) {
-		@include font-size(50);
-	}
-}
-
-.header-meta {
-	order: -1;
-	text-transform: uppercase;
-	@include font-size(12);
-	font-weight: bold;
-	opacity: .7;
-}
-
 .content {
 	padding-top: 2rem;
 	padding-bottom: 2rem;

@@ -1,0 +1,37 @@
+.header {
+	text-align: center;
+	background-color: $color-frame;
+	padding: 3rem 0;
+
+	.l-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+}
+
+.header-title {
+	margin: 0;
+	order: 1;
+
+	@include respond-max(mid) {
+		@include font-size(50);
+	}
+
+	&--work {
+		// text-transform: uppercase;
+	}
+}
+
+.header-meta {
+	order: -1;
+	text-transform: uppercase;
+	@include font-size(12);
+	font-weight: bold;
+	opacity: .7;
+}
+
+.header-subtitle {
+	order: 2;
+	opacity: .7;
+}
