@@ -20,18 +20,19 @@ Usage:
 <div class="contentList-group">
 	<aside class="contentList-group-year"></aside>
 	<ul class="contentList-group-items">
-{% for post in posts reversed %}
-	<li class="contentList-group-items-item">
-		{% if post.post-type == 'link' %}
-			<a href="{{ post.link-to }}" title='Read "{{post.title}}"'>
-		{% else %}
-			<a href="{{post.url}}" title='Read "{{post.title}}"'>
-		{% endif %}
-			<div>{{post.title}}</div>
-			<time>{{post.meta.date }}</time>
-		</a>
-	</li>
-{% endfor %}
+
+	{% for post in posts reversed %}
+		<li class="contentList-group-items-item">
+			{% if post.post-type == 'link' %}
+				<a href="{{ post.link-to }}" title='Go to "{{post.title}}"'>
+			{% else %}
+				<a href="{{post.url}}" title='Read "{{post.title}}"'>
+			{% endif %}
+				<div>{{post.title}}</div>
+				<time>{{post.date | date: "%b %Y" }}</time>
+			</a>
+		</li>
+	{% endfor %}
 
 	</ul> <!-- /contentList-group-items -->
 </div> <!-- /contentList-group -->
