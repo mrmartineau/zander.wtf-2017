@@ -27,10 +27,10 @@ info:
    url: http://www.linkedin.com/profile/view?id=50420509
  - key: Designer
    value: Simon Kinslow
-   url: http://www.simonkinslow.com/
+   url: http://www.simonkinslow.com
  - key: Agency
    value: TMW
-   url: http://tmw.co.uk
+   url: http://tmwunlimited.com
  - key: Client
    value: Diageo
    url: http://diageo.com

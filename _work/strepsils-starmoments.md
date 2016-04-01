@@ -20,7 +20,7 @@ info:
    value: Robert Sinderman
  - key: Agency
    value: TMW
-   url: http://tmw.co.uk
+   url: http://tmwunlimited.com
  - key: Brand
    value: Strepsils
    url: http://www.strepsils.co.uk
