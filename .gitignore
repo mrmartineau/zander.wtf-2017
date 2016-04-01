@@ -1,4 +1,7 @@
 _site
+assets/dist/**/*
+assets/temp/*
+
 .sass-cache
 node_modules
 bower_components
@@ -10,9 +13,5 @@ pf
 *.sublime-project
 *.sublime-workspace
 
-.ftppass
-css/*.css
 *.map
-img/**/dist/*
-css/temp/*
-js/dist/zander.js
+
