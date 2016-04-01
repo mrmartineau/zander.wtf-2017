@@ -41,6 +41,7 @@
 		@include font-size(50);
 	}
 }
+
 .piece-url {
 	@include rem(margin-top, $line-height-base);
 	@include rem(margin-bottom, $line-height-base);
@@ -82,10 +83,10 @@
 }
 .piece-info-list-item-key {
 	position: absolute;
-	width: 110px;
+	width: 150px;
 }
 .piece-info-list-item-value {
-	margin-left: 120px;
+	margin-left: 160px;
 }
 
 .github-details {
