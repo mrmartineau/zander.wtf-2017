@@ -19,8 +19,6 @@ layout: default
 
 	<article class="piece piece--{{post.type}}" id="{{post.meta.name}}">
 		<div class="piece-inner piece-inner--{{post.meta.layout}}">
-
-				{{post}}
 			<div class="piece-infoContainer clearfix">
 				<div class="piece-infoContainer-desc">
 					{{ content | markdownify }}
@@ -29,25 +27,19 @@ layout: default
 
 				<div class="piece-infoContainer-info clearfix">
 					<ul class="piece-info-list unstyled">
-						<li class="piece-info-list-item">
-							<b class="piece-info-list-item-key">Date:</b>
-							<div class="piece-info-list-item-value">{{post.meta.date}}</div>
-						</li>
-						<li class="piece-info-list-item">
-							<b class="piece-info-list-item-key">Skills:</b>
-							<div class="piece-info-list-item-value">{{post.meta.skills}}</div>
-						</li>
-						{% for credit in post.credits %}
+						{% for info in post.info %}
 							<li class="piece-info-list-item">
-							<b class="piece-info-list-item-key">{{credit.title}}:</b>
-							<div class="piece-info-list-item-value ellipsis">
-							{% if credit.url %}
-								<a href="{{credit.url}}">{{credit.name}}</a>
-							{% else %}
-								{{credit.name}}
-							{% endif %}
-							</div></li>
+								<b class="piece-info-list-item-key">{{info.key}}:</b>
+								<div class="piece-info-list-item-value ellipsis">
+								{% if info.url %}
+									<a href="{{info.url}}">{{info.value}}</a>
+								{% else %}
+									{{info.value}}
+								{% endif %}
+								</div>
+							</li>
 						{% endfor %}
+
 						{% if post.github %}<li class="piece-info-list-item">
 							<b class="piece-info-list-item-key">Github:</b>
 							<div class="piece-info-list-item-value ellipsis"><a href="https://github.com/{{post.github.user}}/{{post.github.repo}}">github.com/{{post.github.user}}/{{post.github.repo}}</a></div></li>{% endif %}
@@ -61,6 +53,12 @@ layout: default
 					{% endif %}
 				</div>
 			</div>
+
+			{% if post.logos %}
+				{% for logo in post.logos %}
+					<img class="piece-shots-logo" src="/img/projects/{{post.meta.name}}/{{logo.src}}" alt="{{logo.caption}}" class="piece-shots-shot-img">
+				{% endfor %}
+			{% endif %}
 
 			{% if post.images %}
 			<div class="piece-shots piece-shots--{{post.meta.layout}}">

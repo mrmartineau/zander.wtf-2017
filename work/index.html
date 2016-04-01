@@ -23,23 +23,19 @@ section: work
 
 					<div class="piece-infoContainer-info clearfix">
 						<ul class="piece-info-list unstyled">
-							<li class="piece-info-list-item">
-							<b class="piece-info-list-item-key">Date:</b>
-							<div class="piece-info-list-item-value">{{item.meta.date}}</div></li>
-							<li class="piece-info-list-item">
-							<b class="piece-info-list-item-key">Skills:</b>
-							<div class="piece-info-list-item-value">{{item.meta.skills}}</div></li>
-							{% for credit in item.credits %}
+							{% for info in item.info %}
 								<li class="piece-info-list-item">
-								<b class="piece-info-list-item-key">{{credit.title}}:</b>
-								<div class="piece-info-list-item-value ellipsis">
-								{% if credit.url %}
-									<a href="{{credit.url}}">{{credit.name}}</a>
-								{% else %}
-									{{credit.name}}
-								{% endif %}
-								</div></li>
+									<b class="piece-info-list-item-key">{{info.key}}:</b>
+									<div class="piece-info-list-item-value ellipsis">
+									{% if info.url %}
+										<a href="{{info.url}}">{{info.value}}</a>
+									{% else %}
+										{{info.value}}
+									{% endif %}
+									</div>
+								</li>
 							{% endfor %}
+
 							{% if item.github %}<li class="piece-info-list-item">
 								<b class="piece-info-list-item-key">Github:</b>
 								<div class="piece-info-list-item-value ellipsis"><a href="https://github.com/{{item.github.user}}/{{item.github.repo}}">github.com/{{item.github.user}}/{{item.github.repo}}</a></div></li>{% endif %}
@@ -54,12 +50,18 @@ section: work
 					</div>
 				</div>
 
+				{% if item.logos %}
+					{% for logo in item.logos %}
+						<img class="piece-shots-logo" src="/assets/dist/img/projects/{{item.meta.name}}/{{logo.src}}" alt="{{logo.caption}}" class="piece-shots-shot-img">
+					{% endfor %}
+				{% endif %}
+
 				<div class="piece-shots piece-shots--{{item.meta.layout}}">
 					{% if item.images %}
 						{% for img in item.images %}
 							<figure class="piece-shots-shot piece-shots-shot--{{img.type}} piece-shots-shot--0{{forloop.index}}{% if item.meta.layout == 'icon' %} icon-{{img.class}}{% endif %}">
 								{% if item.meta.layout != 'icon' %}
-									<img src="/img/projects/{{item.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
+									<img src="/assets/dist/img/projects/{{item.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
 								{% endif %}
 							</figure>
 						{% endfor %}

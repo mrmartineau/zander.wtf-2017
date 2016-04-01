@@ -3,22 +3,34 @@ title: "Novalux Energy website"
 date: 2012-03-02
 meta:
   name: novalux
-  date: March 2012
-  skills: "Design, front-end & back-end"
   layout: wide
 
 view:
   text: novaluxenergy.com
   url: http://novaluxenergy.com
 
-credits:
- - title: Client
-   name: Novalux
+info:
+ - key: Date
+   value: March 2012
+ - key: Skills
+   value: "Design, front-end & back-end"
+ - key: Client
+   value: Novalux
    url: http://novaluxenergy.com
 
 images:
  - src: wide.jpg
    type: wide
 
+logos:
+ - src: logo-light.jpg
+   type: logo
+   caption: Logo on light background
+ - src: logo-dark.jpg
+   type: logo
+   caption: Logo on dark background
+
 ---
-Novalux's visual identity helped form the basis for their website design. I also designed the site and developed it using the ExpressionEngine CMS. It makes use of some great web fonts, it is set in [Proxima Nova](http://www.ms-studio.com/FontSales/proximanova.html) and [Clarendon](http://fontdeck.com/font/clarendonurw/light).
+Novalux Energy Solutions are experts in providing renewable and cost-effective energy solutions to businesses across the world. I was given the task of creating their visual identity and the design and development of their corporate website.
+
+Typography on the site is set in [Proxima Nova](http://www.ms-studio.com/FontSales/proximanova.html) and [Clarendon](http://fontdeck.com/font/clarendonurw/light) and it was developed using the ExpressionEngine CMS.

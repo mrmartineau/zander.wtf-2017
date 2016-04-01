@@ -3,34 +3,36 @@ title: "The Bar"
 date: 2013-09-01
 meta:
   name: thebar
-  date: Feb - Sept 2013
-  skills: Front-end development; asset font creation
   layout: rwd
 
 view:
   text: uk.thebar.com
   url: http://uk.thebar.com
 
-credits:
- - title: Dev (F/E)
-   name: Zander Martineau
- - title: Dev (F/E)
-   name: Nic Bell
+info:
+ - key: Date
+   value: Feb - Sept 2013
+ - key: Skills
+   value: Front-end development; asset font creation
+ - key: Dev (F/E)
+   value: Zander Martineau
+ - key: Dev (F/E)
+   value: Nic Bell
    url: http://nicbell.net/
- - title: Dev (B/E)
-   name: Martin Georgiev
+ - key: Dev (B/E)
+   value: Martin Georgiev
    url: http://www.linkedin.com/profile/view?id=17683453
- - title: Dev (B/E)
-   name: Matthew Basson
+ - key: Dev (B/E)
+   value: Matthew Basson
    url: http://www.linkedin.com/profile/view?id=50420509
- - title: Designer
-   name: Simon Kinslow
+ - key: Designer
+   value: Simon Kinslow
    url: http://www.simonkinslow.com/
- - title: Agency
-   name: TMW
+ - key: Agency
+   value: TMW
    url: http://tmw.co.uk
- - title: Client
-   name: Diageo
+ - key: Client
+   value: Diageo
    url: http://diageo.com
 
 images:

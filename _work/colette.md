@@ -10,12 +10,16 @@ meta:
 view:
   text: Pitch
 
-credits:
- - title: Agency
-   name: NEVERBLAND
+info:
+ - key: Date
+   value: June 2011
+ - key: Skills
+   value: Design
+ - key: Agency
+   value: NEVERBLAND
    url: http://neverbland.com
- - title: Client
-   name: Colette
+ - key: Client
+   value: Colette
    url: colette.fr
 
 images:

@@ -3,8 +3,6 @@ title: "Lynx Africa 18th Anniversary"
 date: 2013-09-01
 meta:
   name: lynxafrica
-  date: "October 2013"
-  skills: "Front-end development"
   layout: rwd
 
 view:
@@ -12,13 +10,17 @@ view:
   url: "http://lynxafrica18.tumblr.com"
 
 credits:
- - title: Designer
-   name: Andrew Turk
- - title: Agency
-   name: TMW
+ - key: Date
+   value: October 2013
+ - key: Skills
+   value: Front-end development; asset font creation
+ - key: Designer
+   value: Andrew Turk
+ - key: Agency
+   value: TMW
    url: http://tmw.co.uk
- - title: Client
-   name: Unilever
+ - key: Client
+   value: Unilever
    url: http://unilever.com
 
 images:

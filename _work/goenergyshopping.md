@@ -3,22 +3,24 @@ title: "Be an Energy Shopper"
 date: 2014-06-08
 meta:
   name: goenergyshopping
-  date: Mar - Apr 2014
-  skills: "Front-end"
   layout: wide
 
 view:
   text: goenergyshopping.co.uk
   url: http://www.goenergyshopping.co.uk/
 
-credits:
- - title: Designer
-   name: Simon Kinslow
- - title: Agency
-   name: TMW
+info:
+ - key: Date
+   value: Mar - Apr 2014
+ - key: Skills
+   value: Front-end development
+ - key: Designer
+   value: Simon Kinslow
+ - key: Agency
+   value: TMW
    url: http://tmw.co.uk
- - title: Client
-   name: Ofgem
+ - key: Client
+   value: Ofgem
    url: http://ofgem.gov.uk
 
 images:

@@ -1,23 +1,26 @@
 ---
 title: "Shift 4"
 date: 2011-10-01
+
 meta:
   name: shift-4
-  date: October 2011
-  skills: "Design and front-end development"
   layout: rwd
 
 view:
-  text: no longer online :(
+  text: no longer online
 
-credits:
- - title: Developer
-   name: Maciej Garycki
- - title: Agency
-   name: NEVERBLAND
+info:
+ - key: Date
+   value: October 2011
+ - key: Skills
+   value: Design and front-end development
+ - key: Developer
+   value: Maciej Garycki
+ - key: Agency
+   value: NEVERBLAND
    url: http://neverbland.com
- - title: Client
-   name: Shift 4
+ - key: Client
+   value: Shift 4
    url: http://shift-4.co.uk
 
 images:

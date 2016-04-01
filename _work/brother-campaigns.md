@@ -3,22 +3,24 @@ title: "Brother Printers"
 date: 2013-01-01
 meta:
   name: brother-campaigns
-  date: Sept 2012 - Jan 2013
-  skills: "Front-end: parallax, webperf"
   layout: wide
 
 view:
   text: campaigns.brother.co.uk
   url: http://campaigns.brother.co.uk
 
-credits:
- - title: Designer
-   name: Dawn Jenner
- - title: Agency
-   name: TMW
+info:
+ - key: Date
+   value: Sept 2012 - Jan 2013
+ - key: Skills
+   value: "Front-end: Parallax scrolling, web performance & HTML5 Geolocation API"
+ - key: Designer
+   value: Dawn Jenner
+ - key: Agency
+   value: TMW
    url: http://tmw.co.uk
- - title: Client
-   name: Brother Industries
+ - key: Client
+   value: Brother Industries
    url: http://brother.co.uk
 
 images:

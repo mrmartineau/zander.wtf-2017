@@ -3,30 +3,32 @@ title: Strepsils Star Moments
 date: 2013-11-01
 meta:
   name: strepsils-starmoments
-  date: Oct - Nov 2013
-  skills: "Front-end"
   layout: wide
 
 view:
   text: No longer online :(
 
-credits:
- - title: AD
-   name: Marcus Aitman
+info:
+ - key: Date
+   value: Oct - Nov 2013
+ - key: Skills
+   value: Front-end development
+ - key: AD
+   value: Marcus Aitman
    url: http://www.marcusjonaitman.com/
- - title: Designer
-   name: Robert Sinderman
- - title: Agency
-   name: TMW
+ - key: Designer
+   value: Robert Sinderman
+ - key: Agency
+   value: TMW
    url: http://tmw.co.uk
- - title: Brand
-   name: Strepsils
+ - key: Brand
+   value: Strepsils
    url: http://www.strepsils.co.uk
- - title: Client
-   name: Reckitt Benckiser
+ - key: Client
+   value: Reckitt Benckiser
    url: http://www.rb.com/
- - title: Client
-   name: SYCO
+ - key: Client
+   value: SYCO
 
 ---
 Strepsils sooth your throat and allow you to keep your voice in tip top condition- thats why they make a perfect partner for The X Factor, and all of it’s dubious talents.
