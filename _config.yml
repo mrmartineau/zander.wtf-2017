@@ -23,8 +23,7 @@ collections:
     permalink: /code/:path/
 
 defaults:
-  -
-    scope:
+  - scope:
       path: "work"
     values:
       layout: "work"

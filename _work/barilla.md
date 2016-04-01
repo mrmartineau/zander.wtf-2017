@@ -1,5 +1,5 @@
 ---
-title: "Barilla"
+title: Barilla
 date: 2016-03-01
 meta:
   name: barilla
