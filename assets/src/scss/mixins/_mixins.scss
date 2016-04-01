@@ -35,3 +35,10 @@
 
 // Module naming helpers
 @import "module-naming-helpers";
+
+// Fancy underlines
+@mixin fancyLinks($underline, $bg) {
+		background-image: linear-gradient(to bottom, transparent 81%, $underline 81%, $underline 85.5%, transparent 85.5%);
+		text-decoration: none;
+		text-shadow: 0 0.03em $bg, 0 -0.03em $bg, 0.06em 0 $bg, 0 -0.06em $bg, 0.03em 0 $bg, -0.03em 0 $bg, 0.06em 0 $bg, -0.06em 0 $bg, 0.09em 0 $bg, -0.09em 0 $bg, 0.12em 0 $bg, -0.12em 0 $bg, 0.15em 0 $bg, -0.15em 0 $bg;
+}
