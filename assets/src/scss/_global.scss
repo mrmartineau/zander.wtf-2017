@@ -146,6 +146,16 @@ div.highlighter-rouge {
 .sectionHeading {
 	@include respond-min(mid) {
 		margin-left: 25%;
+
+		&:before {
+			content: '';
+			display: block;
+			content: " ";
+			height: ($common-spacing + 30);  /* Give height of your fixed element */
+			margin-top: -($common-spacing + 30); /* Give negative margin of your fixed element */
+			visibility: hidden;
+		}
+
 	}
 }
 
