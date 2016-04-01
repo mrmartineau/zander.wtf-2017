@@ -66,13 +66,11 @@ main {
 
 	&--article {
 		a:not([class]) {
-			border-bottom: 2px solid $color-link-hover-alt;
 			padding: 1px 3px;
 			word-wrap: break-word;
 
-			&:hover {
-				background-color: $color-link-hover-alt;
-			}
+			// Fancy underlines
+			@include fancyLinks($color-secondary, $color-bg);
 		}
 	}
 
