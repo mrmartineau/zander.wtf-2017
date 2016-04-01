@@ -10,19 +10,25 @@ pageid: home
 
 	<div class="l-container content">
 
-		<h2 class="sectionHeading">Articles</h2>
+		<h2 id="articles" class="sectionHeading">Articles</h2>
 		<div class="contentList">
 			{% assign posts = site.posts %}
 			{% include posts-by-year.html %}
 		</div>
 
-		<h2 class="sectionHeading">Code</h2>
+		<div id="kickoff" class="full full--kickoff">
+			<h2 class="sectionHeading">Kickoff</h2>
+			<p>Kickoff is</p>
+
+		</div>
+
+		<h2 id="code" class="sectionHeading">Code</h2>
 		<div class="contentList">
 			{% assign posts = site.code %}
 			{% include posts.html %}
 		</div>
 
-		<h2 class="sectionHeading">Projects</h2>
+		<h2 id="projects" class="sectionHeading">Projects</h2>
 		<div class="contentList">
 			{% assign posts = site.work %}
 			{% include posts.html %}
