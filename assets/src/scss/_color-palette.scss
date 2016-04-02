@@ -9,16 +9,18 @@
  * - Any others..
  */
 
+// Using this color scheme: http://www.colorhunt.co/c/15830
+
 // Generic colors
-$blue                         : #08D9D6;
+$blue                         : #3FC1C9;
 $green                        : #16c98d;
 $red                          : #fa5e5b;
 $yellow                       : #feef6d;
 $orange                       : #fe7c08;
-$pink                         : #FF2E63;
+$pink                         : #FC5185;
 $purple                       : #8e44ad;
-$gray                         : #EAEAEA;
-$dark                         : #252A34;
+$gray                         : #F5F5F5;
+$dark                         : #364F6B;
 $grayDark                     : darken($gray, 15%);
 
 // Color Scheme
@@ -27,7 +29,7 @@ $color-secondary              : $pink;
 $color-highlight              : $yellow;
 
 // Common colors
-$color-text                   : #252A34;
+$color-text                   : $dark;
 $color-bg                     : $gray;
 $color-border                 : #ddd;
 $color-frame                  : #fff;
@@ -46,7 +48,7 @@ $color-selection-bg           : $color-primary;
 
 
 // <hr> border color
-$hr-border                    : lighten(#000, 70%);
+$hr-border                    : $dark;
 
 // 3rd party brand colors - find more at brandcolors.net
 $color-twitter                : #55acee;
