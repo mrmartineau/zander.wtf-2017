@@ -31,15 +31,15 @@ Usage:
 
 	<li class="contentList-group-items-item">
 		{% if post.post-type == 'link' %}
-			<a href="{{ post.link-to }}" title='Read "{{post.title}}"'>
+			<a class="infoLink" href="{{ post.link-to }}" title='Read "{{post.title}}"'>
 		{% else %}
-			<a href="{{post.url}}" title='Read "{{post.title}}"'>
+			<a class="infoLink" href="{{post.url}}" title='Read "{{post.title}}"'>
 		{% endif %}
-			<div>
-				<div class="contentList-group-items-item-title">{{post.title}}</div>
-				{% if post.excerpt %}<div class="contentList-group-items-item-excerpt">{{post.excerpt}}</div>{% endif %}
+			<div class="infoLink-content">
+				<div class="infoLink-content-title">{{post.title}}</div>
+				{% if post.excerpt %}<div class="infoLink-content-excerpt">{{post.excerpt}}</div>{% endif %}
 			</div>
-			<time>{{post.date | date: "%-d %b" }}</time>
+			<time class="infoLink-date">{{post.date | date: "%-d %b" }}</time>
 		</a>
 	</li>
 

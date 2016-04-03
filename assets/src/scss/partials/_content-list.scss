@@ -38,22 +38,4 @@
 	display: block;
 	padding: .4em 0;
 	border-bottom: 1px solid $grayDark;
-
-	a {
-		display: flex;
-		justify-content: space-between;
-		text-decoration: none;
-	}
-
-	time {
-		white-space: nowrap;
-		opacity: .5;
-		font-size: 80%;
-		margin-left: 20px;
-	}
-}
-
-.contentList-group-items-item-excerpt {
-	font-size: 70%;
-	opacity: .6;
 }
