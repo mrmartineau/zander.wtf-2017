@@ -1,5 +1,29 @@
-<header class="header">
-	<div class="l-container">
-		<h1 class="header-title">{{ include.name }}</h1>
+<header class="header {{ include.class }}" {% if include.img %}style="background-image:url({{ include.bg }})"{% endif %}>
+	<div class="header-inner l-container">
+
+		{% if include.title %}
+			<h1 class="header-title">{{ include.title }}</h1>
+		{% endif %}
+
+		{% if include.img %}
+			<div class="header-img" style="background-image: url({{ include.img }});"></div>
+		{% endif %}
+
+		{% if page.path contains '_posts' %}
+			<time datetime="{{ page.date | date_to_xmlschema }}" class="header-meta">{{ page.date | date_to_long_string }}</time>
+		{% endif %}
+
+		{% if include.subtitle %}
+			<h2 class="header-subtitle">{{ include.subtitle }}</h2>
+		{% endif %}
+
+		{% if page.original %}
+			<p class="header-canonical">Originally posted at <a href="{{ page.original.url }}">{{ page.original.text }}</a></p>
+		{% endif %}
+
+		{% if include.copy %}
+			<p class="header-copy">{{ include.copy }}</p>
+		{% endif %}
+
 	</div>
 </header>
