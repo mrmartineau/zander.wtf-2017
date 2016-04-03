@@ -1,18 +1,34 @@
 .header {
+	position: relative;
 	text-align: center;
 	background-color: $color-frame;
 	padding: 3rem 0;
+	background-size: cover;
+	background-position: center center;
 
-	.l-container {
+	.header-inner {
 		display: flex;
 		flex-direction: column;
 	}
 
+	// &--home {
+	// 	padding: 6rem 0;
+	// }
+}
+
+.header-img {
+	width: 8rem;
+	height: 8rem;
+	background-size: cover;
+	background-position: center center;
+	margin: 0 auto 1rem;
+	order: 1;
+	border-radius: 50%;
 }
 
 .header-title {
 	margin: 0;
-	order: 1;
+	order: 2;
 
 	@include respond-max(mid) {
 		@include font-size(50);
@@ -32,6 +48,22 @@
 }
 
 .header-subtitle {
-	order: 2;
+	order: 3;
+	opacity: .8;
+	margin-top: 0;
+	@include font-size($type-mid);
+}
+
+.header-canonical {
+	order: 4;
 	opacity: .7;
+	@include font-size($type-smaller);
+	margin-bottom: 0;
+	margin-top: .5rem;
+}
+
+.header-copy {
+	order: 4;
+	margin-bottom: 0;
+	// margin-top: $baseline;
 }
