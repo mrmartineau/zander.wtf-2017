@@ -3,7 +3,9 @@ layout: default
 title: Selected work by Zander Martineau
 section: work
 ---
-<section class="{{ page.section }} {{ page.type }}">
+<main class="{{ page.section }} {{ page.type }}">
+	{% include header.html title=page.title %}
+
 	{% for item in site.work reversed %}
 		<article class="piece piece--{{item.type}}" id="{{item.meta.name}}">
 			<div class="piece-inner piece-inner--{{item.meta.layout}}">
@@ -70,4 +72,4 @@ section: work
 			</div>
 		</article>
 	{% endfor %}
-</section>
+</main>

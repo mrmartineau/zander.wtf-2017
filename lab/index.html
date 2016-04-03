@@ -4,7 +4,9 @@ title: Lab - Zander Martineau
 pageid: lab
 section: lab
 ---
-<section class="entries entries--blog clearfix">
+<main class="entries entries--blog clearfix">
+	{% include header.html title=page.title %}
+
 	{% for item in site.lab %}
 		<a href="{{item.url}}" title="Read {{item.title}}" class="verticalTile verticalTile--list">
 			<div class="overlay overlay--img" style="background-image: url(/img/posts/bg/{{item.image}})"></div>
@@ -14,4 +16,4 @@ section: lab
 			<h3 class="verticalTile-cta">Read now</h3>
 		</a>
 	{% endfor %}
-</section>
+</main>
