@@ -1,17 +1,9 @@
 .masthead {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
+	position: relative;
 	background-color: $color-frame;
 	z-index: $z-frame;
-	padding: 1rem ($common-spacing / 2);
 	display: flex;
 	justify-content: space-between;
-
-	@include respond-min(mid) {
-		padding: 1rem $common-spacing;
-	}
 }
 
 .logo {
@@ -21,46 +13,40 @@
 	// height: 35px;
 
 	&:hover {
-		animation: wiggle 200ms linear 1;
-		fill: $color-link-hover-alt;
+		// animation: wiggle 200ms linear 1;
+
+		svg {
+			fill: $color-link-hover;
+		}
 	}
-
-	span {
-		display: none;
-		opacity: 0;
-		margin-left: 55px;
-		line-height: 30px;
-		transition: $default-transition;
-		vertical-align: top;
-	}
-
-	// @include respond-min(mid) {
-	// 	display: block;
-	// 	margin: 40px auto 20px;
-	// 	position: static;
-
-	// }
 }
 
 .logo-icon {
-	width: 80px;
-	height: 40px;
-	fill: $color-secondary;
+	width: 50px;
+	height: 30px;
+	fill: $dark;
 	vertical-align: middle;
 
-	// @include respond-min(mid) {
-	// 	height: $common-spacing;
-	// }
+	@include respond-min(mid) {
+		width: 80px;
+		height: 40px;
+	}
 }
 
 
-.nav { }
+.nav {
+	text-align: right;
+}
 
 .nav-link {
 	// text-transform: uppercase;
 	margin-left: 10px;
 	display: inline-block;
 	@include font-size($type-small);
+
+	// @include respond-min(mid) {
+	// 	@include font-size($type-small);
+	// }
 
 	&.is-active {
 		color: $color-secondary;
