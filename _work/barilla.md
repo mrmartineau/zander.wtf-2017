@@ -31,6 +31,8 @@ info:
 images:
  - src: wide.jpg
    type: wide
+ - src: skinny.jpg
+   type: narrow
 ---
 
 - Global platform
