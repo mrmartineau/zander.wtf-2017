@@ -132,14 +132,14 @@ div.highlighter-rouge {
 	}
 
 	&--kickoff {
-		background-color: #181830;
-		color: #FE7C08;
+		background-color: $kickoff-blue;
+		color: $kickoff-orange;
 		margin: $common-spacing 0;
 		padding: $common-spacing 0;
 
 		&:before,
 		&:after {
-			background-color: #181830;
+			background-color: $kickoff-blue;
 		}
 	}
 }
@@ -158,16 +158,42 @@ div.highlighter-rouge {
 .sectionHeading {
 	@include respond-min(mid) {
 		margin-left: 25%;
-
-		&:before {
-			content: '';
-			display: block;
-			content: " ";
-			height: ($common-spacing + 30);  /* Give height of your fixed element */
-			margin-top: -($common-spacing + 30); /* Give negative margin of your fixed element */
-			visibility: hidden;
-		}
-
 	}
 }
 
+.offsetAnchor {
+	&:before {
+		content: '';
+		display: block;
+		content: " ";
+		height: ($common-spacing + 30);  /* Give height of your fixed element */
+		margin-top: -($common-spacing + 30); /* Give negative margin of your fixed element */
+		visibility: hidden;
+	}
+}
+
+
+// Kickoff
+.full--kickoff {
+	a:not([class]) {
+		color: $kickoff-orange;
+		@include fancyLinks(#fff, $kickoff-blue);
+
+		&:hover {
+			color: #fff;
+			// opacity: 0.7;
+		}
+	}
+}
+
+.kickoffLogo {
+	width: 220px;
+	height: 62px;
+	margin: 0 auto 1rem;
+	display: block;
+
+	@include respond-min(mid) {
+		width: 300px;
+		height: 150px;
+	}
+}
