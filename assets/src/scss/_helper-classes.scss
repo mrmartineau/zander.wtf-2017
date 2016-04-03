@@ -91,7 +91,7 @@
  */
 
 * {
-	-webkit-tap-highlight-color: $color-primary !important;
+	-webkit-tap-highlight-color: rgba($color-primary, 0) !important;
 }
 
 /* A hack for HTML5 contenteditable attribute on mobile */
@@ -120,4 +120,55 @@ textarea[contenteditable] {
 // See https://adactio.com/journal/10019 for more info
 a, button, input, select, textarea, label, summary {
 	touch-action: manipulation;
+}
+
+/**
+ * Responsive helper classes to show/hide content based on our media-queries
+ */
+.u-showBelowNarrow {
+	@include respond-min(narrow) {
+		display: none;
+	}
+}
+
+.u-showBelowMid {
+	@include respond-min(mid) {
+		display: none;
+	}
+}
+
+.u-showBelowWide {
+	@include respond-min(wide) {
+		display: none;
+	}
+}
+
+.u-showBelowHuge {
+	@include respond-min(huge) {
+		display: none;
+	}
+}
+
+.u-showAboveNarrow {
+	@include respond-max(narrow) {
+		display: none;
+	}
+}
+
+.u-showAboveMid {
+	@include respond-max(mid) {
+		display: none;
+	}
+}
+
+.u-showAboveWide {
+	@include respond-max(wide) {
+		display: none;
+	}
+}
+
+.u-showAboveHuge {
+	@include respond-max(huge) {
+		display: none;
+	}
 }
