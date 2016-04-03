@@ -55,7 +55,7 @@ layout: default
 
 			{% if page.logos %}
 				{% for logo in page.logos %}
-					<img class="piece-shots-logo" src="/img/projects/{{page.meta.name}}/{{logo.src}}" alt="{{logo.caption}}" class="piece-shots-shot-img">
+					<img class="piece-shots-logo" src="/assets/dist/img/projects/{{page.meta.name}}/{{logo.src}}" alt="{{logo.caption}}" class="piece-shots-shot-img">
 				{% endfor %}
 			{% endif %}
 
@@ -65,7 +65,7 @@ layout: default
 				{% for img in page.images %}
 					<figure class="piece-shots-shot piece-shots-shot--{{img.type}} piece-shots-shot--0{{forloop.index}}{% if page.meta.layout == 'icon' %} icon-{{img.class}}{% endif %}">
 						{% if page.meta.layout != 'icon' %}
-							<img src="/img/projects/{{page.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
+							<img src="/assets/dist/img/projects/{{page.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
 						{% endif %}
 					</figure>
 				{% endfor %}
