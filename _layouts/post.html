@@ -5,12 +5,7 @@ layout: default
 ---
 <main>
 	<article class="article">
-		<header class="header header--article">
-			<div class="l-container">
-				<h1 class="header-title">{{page.title}}</h1>
-				<time datetime="{{ page.date | date_to_xmlschema }}" class="header-meta">{{ page.date | date_to_long_string }}</time>
-			</div>
-		</header>
+		{% include header.html title=page.title subtitle=page.excerpt class="header--article" %}
 
 		<div class="content content--article l-container">
 			{{ content | emojify }}
