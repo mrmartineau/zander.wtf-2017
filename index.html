@@ -1,34 +1,39 @@
 ---
 layout: default
-title: The personal site of Zander Martineau, a front-end developer from London
+title: I'm Zander, a front-end developer from London.
 section: home
 pageid: home
 ---
-
 <main>
-	{% include header.html name=site.name %}
+	{% include header.html class="header--home" copy=page.title logo=true img="/assets/dist/img/about/avatar.jpg" %}
 
 	<div class="l-container content">
 
-		<h2 id="articles" class="sectionHeading">Articles</h2>
+		<h2 id="articles" class="sectionHeading offsetAnchor">Articles</h2>
 		<div class="contentList">
 			{% assign posts = site.posts %}
 			{% include posts-by-year.html %}
 		</div>
 
-		<div id="kickoff" class="full full--kickoff">
-			<h2 class="sectionHeading">Kickoff</h2>
-			<p>Kickoff is</p>
+		<a id="kickoff" class="offsetAnchor"></a>
+		<div class="full full--kickoff">
+			<h2 class="is-visuallyHidden">Kickoff</h2>
+			<svg class="kickoffLogo">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-kickoff"></use>
+			</svg>
 
+			<p>Kickoff is an open-source front-end framework that I co-created and maintain. It has been a major focus of mine for the past four years while working at <a href="http://tmwunlimited.com">TMW</a>. Rather than be all things to all people, we have endeavored to focus on ensuring the framework is as robust and helpful so that developers at the agency, and beyond, can focus on what matters most — making awesome websites!</p>
+
+			<h4>Find out more at <a href="http://trykickoff.com">trykickoff.com</a> or at our <a href="http://github.com/TryKickoff/">Github organisation</a></h4>
 		</div>
 
-		<h2 id="code" class="sectionHeading">Code</h2>
+		<h2 id="code" class="sectionHeading offsetAnchor">Code</h2>
 		<div class="contentList">
 			{% assign posts = site.code %}
 			{% include posts.html %}
 		</div>
 
-		<h2 id="projects" class="sectionHeading">Projects</h2>
+		<h2 id="projects" class="sectionHeading offsetAnchor">Projects</h2>
 		<div class="contentList">
 			{% assign posts = site.work %}
 			{% include posts.html %}
