@@ -3,18 +3,7 @@ section: work
 layout: default
 ---
 <main>
-	<header class="header">
-		<div class="l-container">
-			<h1 class="header-title header-title--work">{{page.title}}</h1>
-			<div class="header-subtitle">
-				{% if page.view.url %}
-					<a href="{{page.view.url}}" title="Go to {{page.view.text}}">{{page.view.text}}</a>
-				{% else %}
-					{{page.view.text}}
-				{% endif %}
-			</div>
-		</div>
-	</header>
+	{% include header.html title=page.title subtitle=page.view.text %}
 
 	<article class="piece piece--{{page.type}}" id="{{page.meta.name}}">
 		<div class="piece-inner piece-inner--{{page.meta.layout}}">
