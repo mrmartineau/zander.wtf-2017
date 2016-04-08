@@ -16,14 +16,23 @@
 	// }
 }
 
-.header-img {
+.header-img,
+.header-logo {
 	width: 8rem;
-	height: 8rem;
 	background-size: cover;
 	background-position: center center;
 	margin: 0 auto 1rem;
 	order: 1;
+}
+
+.header-img {
+	height: 8rem;
 	border-radius: 50%;
+}
+
+.header-logo {
+	fill: $color-secondary;
+	height: 4rem;
 }
 
 .header-title {
