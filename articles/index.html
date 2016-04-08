@@ -1,0 +1,16 @@
+---
+layout: default
+title: Articles
+---
+<main>
+	{% include header.html class="header--home" copy=page.title logo=true %}
+
+	<div class="l-container content">
+
+		<h2 id="articles" class="sectionHeading offsetAnchor">Articles</h2>
+		<div class="contentList">
+			{% assign posts = site.posts %}
+			{% include posts-by-year.html %}
+		</div>
+	</div>
+</main>
