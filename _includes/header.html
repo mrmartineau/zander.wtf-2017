@@ -1,6 +1,10 @@
 <header class="header {{ include.class }}" {% if include.img %}style="background-image:url({{ include.bg }})"{% endif %}>
 	<div class="header-inner l-container">
 
+		{% if include.logo %}
+			<svg class="header-logo"><use xlink:href="#icon-zmLogo"></use></svg>
+		{% endif %}
+
 		{% if include.title %}
 			<h1 class="header-title">{{ include.title }}</h1>
 		{% endif %}
