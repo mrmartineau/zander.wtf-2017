@@ -10,14 +10,35 @@
 	}
 }
 
-.footer-links-item {
+
+.footer-hr {
+	content: '';
+	width: 40%;
+	border-top: 2px solid $grayDark;
+}
+
+.navFooter-link {
+	white-space: nowrap;
+	margin-right: 1rem;
+}
+
+.u-slash {
+	display: inline-block;
 	margin-left: 1rem;
 	margin-right: 1rem;
-	white-space: nowrap;
+}
 
+.avatar {
+	display: block;
+	background-image: url(/assets/dist/img/about/avatar.jpg);
+	background-size: cover;
+	background-position: center center;
+	margin: 0 auto 1rem;
+	order: 1;
+	border-radius: 50% 10%;
+}
 
-
-	&:first-child {
-		margin-left: 0;
-	}
+.avatar--lrg {
+	width: 6rem;
+	height: 6rem;
 }
