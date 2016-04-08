@@ -12,6 +12,7 @@
 		@include font-size(80);
 	}
 }
+
 .piece {
 	position: relative;
 	margin: 0;
@@ -25,6 +26,7 @@
 	margin: 0 auto;
 	padding: 8% 0 0;
 }
+
 .piece-inner--icon {
 	padding-bottom: 5%;
 }
@@ -102,7 +104,11 @@
 	position: relative;
 	margin-top: $line-height-base + px;
 	text-align: center;
-	perspective: 1200px;
+	perspective: 300px;
+
+	@include respond-min(mid) {
+		perspective: 1200px;
+	}
 }
 .piece-shots--icon {
 	width: 240px;
