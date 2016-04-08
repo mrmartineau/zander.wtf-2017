@@ -8,14 +8,14 @@
 			color: $textColour;
 		}
 
-		a:link,
-		a:visited {
-			color: $linkColour;
+		a:not([class]) {
+			color: $textColour;
+			@include fancyLinks($textColour, $bgColour);
 		}
+
 		a:hover,
 		a:active {
-			// color: $linkHover;
-			color: lighten($linkColour, 15%);
+			color: $linkColour;
 		}
 	}
 }
