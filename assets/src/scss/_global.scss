@@ -87,73 +87,6 @@ main {
 	vertical-align: middle;
 }
 
-.full,
-div.highlighter-rouge {
-	position: relative;
-
-
-	&:before,
-	&:after {
-		content: '';
-		width: 100%;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-	}
-
-	&:before {
-		right: 100%;
-	}
-
-	&:after {
-		left: 100%;
-	}
-
-	&--dark {
-		background-color: $color-primary;
-		color: #fff;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-
-		&:before,
-		&:after {
-			background-color: $color-primary;
-		}
-
-	}
-
-	&--code {
-		background-color: $color-frame;
-
-		&:before,
-		&:after {
-			background-color: $color-frame;
-		}
-	}
-
-	&--kickoff {
-		background-color: $kickoff-blue;
-		color: $kickoff-orange;
-		margin: $common-spacing 0;
-		padding: $common-spacing 0;
-
-		&:before,
-		&:after {
-			background-color: $kickoff-blue;
-		}
-	}
-}
-
-div.highlighter-rouge {
-	background-color: $pre-bgColor;
-
-	&:before,
-	&:after {
-		background-color: $pre-bgColor;
-	}
-}
-
-
 
 .sectionHeading {
 	@include respond-min(mid) {
@@ -174,17 +107,6 @@ div.highlighter-rouge {
 
 
 // Kickoff
-.full--kickoff {
-	a:not([class]) {
-		color: $kickoff-orange;
-		@include fancyLinks(#fff, $kickoff-blue);
-
-		&:hover {
-			color: #fff;
-		}
-	}
-}
-
 .kickoffLogo {
 	width: 220px;
 	height: 62px;
