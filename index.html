@@ -5,11 +5,11 @@ section: home
 pageid: home
 ---
 <main>
-	{% include header.html class="header--home" copy=page.title logo=true img="/assets/dist/img/about/avatar.jpg" %}
+	{% include header.html class="header--home" copy=page.title logo=true %}
 
 	<div class="l-container content">
 
-		<h2 id="articles" class="sectionHeading offsetAnchor">Articles</h2>
+		<a id="articles" class="offsetAnchor"></a>
 		<div class="contentList">
 			{% assign posts = site.posts %}
 			{% include posts-by-year.html %}
@@ -27,16 +27,27 @@ pageid: home
 			<h4>Find out more at <a href="http://trykickoff.com">trykickoff.com</a> or at our <a href="http://github.com/TryKickoff/">Github organisation</a></h4>
 		</div>
 
+		<a id="projects" class="offsetAnchor"></a>
+		<!-- <div class="full full--projects"> -->
+			<h2 class="sectionHeading">Projects</h2>
+			<div class="contentList">
+				{% for post in site.work limit:1 %}
+					{{post.title}}
+				{% endfor %}
+
+				<!--
+					Show the latest project here, kind of like Frank Chimero's featured articles
+				 -->
+				{% assign posts = site.work %}
+				{% include posts.html %}
+			</div>
+		<!-- </div> -->
+
 		<h2 id="code" class="sectionHeading offsetAnchor">Code</h2>
 		<div class="contentList">
 			{% assign posts = site.code %}
 			{% include posts.html %}
 		</div>
 
-		<h2 id="projects" class="sectionHeading offsetAnchor">Projects</h2>
-		<div class="contentList">
-			{% assign posts = site.work %}
-			{% include posts.html %}
-		</div>
 	</div>
 </main>
