@@ -1,33 +1,46 @@
 <footer role="contentinfo" class="footer">
 	<div class="l-container">
-		{% include aboutme.html %}
 
-		<hr class="footer-hr">
+		{% if page.path != 'index.html' %}
+			<div class="aboutMe">
+				<div class="avatar avatar--lrg">
+					<img src="/assets/dist/img/about/avatar.jpg" alt="" class="is-visuallyHidden" aria-label="hidden">
+				</div>
+
+				{{ site.bio | markdownify }}
+			</div>
+
+			<hr class="footer-hr">
+		{% endif %}
+
+		{% include nav.html class="nav--footer" extras=true %}
 
 		<nav class="navSocial">
-			<a href="http://twitter.com/mrmartineau" title="Follow Zander on Twitter" class="navFooter-link">Twitter</a>
-			<!-- <span class="u-slash">/</span> -->
-			<a href="http://github.com/mrmartineau" title="View Zander's open source code on Github" class="navFooter-link">Github</a>
-			<!-- <span class="u-slash">/</span> -->
-			<a href="https://www.npmjs.com/~mrmartineau" title="View Zander's npm packages" class="navFooter-link">npm</a>
-			<!-- <span class="u-slash">/</span> -->
-			<a href="/styleguide" title="View this site's style guide" class="navFooter-link">Style guide</a>
-			<!-- <span class="u-slash">/</span> -->
-			<a href="http://github.com/mrmartineau/martineau.tv" title="Fork this site's source code" class="navFooter-link">Source</a>
+			<a href="http://twitter.com/mrmartineau" title="Follow Zander on Twitter" class="navSocial-link">
+				<svg class="navSocial-link-icon icon-twitter">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
+				</svg>
+			</a>
+
+			<a href="http://github.com/mrmartineau" title="View Zander's open source code on Github" class="navSocial-link">
+				<svg class="navSocial-link-icon icon-github">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-github"></use>
+				</svg>
+				<span class="is-visuallyHidden">Github</span>
+			</a>
+
+			<a href="https://www.npmjs.com/~mrmartineau" title="View Zander's npm packages" class="navSocial-link">
+				<svg class="navSocial-link-icon icon-npm">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-npm"></use>
+				</svg>
+			</a>
+
+			<a href="https://libraries.io/github/mrmartineau" title="View Zander's on Libraries.io" class="navSocial-link">
+				<svg class="navSocial-link-icon icon-libsio">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-libsio"></use>
+				</svg>
+			</a>
 		</nav>
 
-		<nav class="navFooter">
-			<a href="/#articles" class="navFooter-link{% if page.section == 'blog' or page.layout == 'post' %} is-active{% endif %}">Articles</a>
-			<!-- <span class="u-slash">/</span> -->
-
-			<a href="/#projects" class="navFooter-link{% if page.section == 'work' %} is-active{% endif %}">Projects</a>
-			<!-- <span class="u-slash">/</span> -->
-
-			<a href="/#kickoff" class="navFooter-link{% if page.section == 'work' %} is-active{% endif %}">Kickoff</a>
-			<!-- <span class="u-slash">/</span> -->
-
-			<a href="/#code" class="navFooter-link{% if page.section == 'work' %} is-active{% endif %}">Code</a>
-			<!-- <span class="u-slash">/</span> -->
-		</nav>
 	</div>
 </footer>

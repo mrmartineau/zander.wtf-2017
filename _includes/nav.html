@@ -1,0 +1,14 @@
+<nav class="nav {{ include.class }}">
+	<a href="/" class="nav-link{% if page.path contains '_posts' %} is-active{% endif %}">Articles</a>
+
+	<a href="/work" class="nav-link{% if page.section == 'work' %} is-active{% endif %}">Work</a>
+
+	<a href="/#kickoff" class="nav-link">Kickoff</a>
+
+	{% if include.extras %}
+		<a href="/styleguide" title="View this site's style guide" class="nav-link">Style guide</a>
+
+		<a href="http://github.com/mrmartineau/martineau.tv" title="Fork this site's source code" class="nav-link">Source</a>
+
+	{% endif %}
+</nav>

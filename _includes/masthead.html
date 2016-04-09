@@ -6,14 +6,6 @@
 		<!-- <span class="u-showAboveMid">Zander</span><span class="u-showBelowMid">Z&er</span> Martineau -->
 	</a>
 
-	<nav class="nav">
-		<a href="/#articles" class="nav-link{% if page.section == 'blog' or page.layout == 'post' %} is-active{% endif %}">Articles</a>
-
-		<a href="/#projects" class="nav-link{% if page.section == 'work' %} is-active{% endif %}">Projects</a>
-
-		<a href="/#kickoff" class="nav-link{% if page.section == 'work' %} is-active{% endif %}">Kickoff</a>
-
-		<a href="/#code" class="nav-link{% if page.section == 'work' %} is-active{% endif %}">Code</a>
-	</nav>
+	{% include nav.html class="nav--masthead" %}
 
 </header>
