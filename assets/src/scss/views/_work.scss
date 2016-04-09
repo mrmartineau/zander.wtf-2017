@@ -50,7 +50,11 @@
    Info
    ========================================================================== */
 .piece-infoContainer {
+	display: flex;
+	flex-direction: column;
+
 	@include respond-min(wide) {
+		display: block;
 		width: 85%;
 		margin-left: auto;
 		margin-right: auto;
@@ -59,20 +63,22 @@
 }
 .piece-infoContainer-desc {
 	margin-bottom: $line-height-base + px;
+	order: 1;
 
 	p:last-child {
 		margin-bottom: 0;
 	}
+}
+
+.piece-infoContainer-info {
+	order: 2;
 
 	@include respond-min(wide) {
-		float: left;
-		width: 48%;
-	}
-}
-.piece-infoContainer-info {
-	@include respond-min(wide) {
+		// order: 0;
 		float: right;
 		width: 48%;
+		margin-bottom: $common-spacing * 2;
+		margin-left: $common-spacing;
 	}
 }
 .piece-info-list-item {
