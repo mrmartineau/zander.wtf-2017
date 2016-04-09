@@ -16,7 +16,6 @@
 	// }
 }
 
-.header-avatar,
 .header-img,
 .header-logo {
 	width: 8rem;
@@ -76,6 +75,10 @@
 	order: 4;
 	margin-bottom: 0;
 	// margin-top: $baseline;
+	//
+	:last-child {
+		margin-bottom: 0;
+	}
 
 	a:not([class]) {
 		padding: 1px 3px;
