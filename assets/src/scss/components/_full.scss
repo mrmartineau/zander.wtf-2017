@@ -46,6 +46,8 @@ div.highlighter-rouge {
 		background-color: $kickoff-blue;
 		color: $kickoff-orange;
 		padding: $common-spacing 0;
+		margin-top: $common-spacing;
+		margin-bottom: -2rem;
 
 		&:before,
 		&:after {
