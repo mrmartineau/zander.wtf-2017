@@ -1,6 +1,7 @@
 ---
 title: "Trak.js"
 date: 2014-04-01
+excerpt: Analytics
 meta:
   name: trak
   date: Ongoing
@@ -23,5 +24,8 @@ credits:
 github:
   user: mrmartineau
   repo: trak.js
+
+npm:
+  package: trak.js
 ---
 **trak.js** is a wrapper for any analytics API. By default it uses Google Universal Analytics but you can override this with the older ga.js or Google Tag Manager if you wish, or you can even add custom event trackers as well, instead of Google Analytics.

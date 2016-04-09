@@ -1,6 +1,7 @@
 ---
 title: depdoc
 date: 2015-09-27
+excerpt: Automatic dependency documentation generator
 meta:
   name: depdoc
   date: Ongoing
@@ -26,6 +27,9 @@ credits:
 github:
   user: mrmartineau
   repo: depdoc
+
+npm:
+  package: depdoc
 ---
 **depdoc** simply scans your `package.json`'s dependencies property and returns some simple information about each item. It is meant to allow developers an easy way to document their project using the dependencies as a starting point.
 

@@ -1,6 +1,7 @@
 ---
 title: "Kickoff Front-end framework"
 date: 2015-11-01
+excerpt: Framework
 meta:
   name: kickoff
   date: Ongoing
@@ -26,6 +27,9 @@ credits:
 github:
   user: trykickoff
   repo: kickoff
+
+npm:
+  package: kickoff-framework
 
 images:
  - src: 01.gif
