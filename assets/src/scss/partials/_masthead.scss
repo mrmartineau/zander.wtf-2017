@@ -33,26 +33,6 @@
 	}
 }
 
-
-.nav {
-	text-align: right;
-}
-
-.nav-link {
-	// text-transform: uppercase;
-	margin-left: 10px;
-	display: inline-block;
-	@include font-size($type-small);
-
-	// @include respond-min(mid) {
-	// 	@include font-size($type-small);
-	// }
-
-	&.is-active {
-		color: $color-secondary;
-	}
-}
-
 .footer-social {
 	display: inline-block;
 	vertical-align: top;
