@@ -16,6 +16,7 @@
 	// }
 }
 
+.header-avatar,
 .header-img,
 .header-logo {
 	width: 8rem;
@@ -31,7 +32,7 @@
 }
 
 .header-logo {
-	fill: $color-secondary;
+	fill: $color-text;
 	height: 4rem;
 }
 
@@ -75,4 +76,11 @@
 	order: 4;
 	margin-bottom: 0;
 	// margin-top: $baseline;
+
+	a:not([class]) {
+		padding: 1px 3px;
+		word-wrap: break-word;
+
+		@include fancyLinks($color-secondary, $color-frame);
+	}
 }
