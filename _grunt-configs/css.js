@@ -15,13 +15,9 @@ module.exports = function (grunt, options) {
 		var cssDir = grunt.config.process(options.config.css.distDir);
 
 		var plugins = [
-			autoprefixer({ browsers: options.config.css.autoprefixer })
+			autoprefixer({ browsers: options.config.css.autoprefixer }),
+			cssnano()
 		];
-
-		// Release flag, use cssnano
-		if (grunt.option('release')) {
-			plugins.push(cssnano());
-		}
 
 		postscss(plugins).processMany([
 			{
