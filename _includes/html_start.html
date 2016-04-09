@@ -6,7 +6,7 @@
 		{% assign title = page.title %}
 
 		{% if page.path contains '_posts' %}
-			{% assign section = ' - an article by Zander Martineau' %}
+			{% assign section = ' - an article by {{ site.myname }}' %}
 		{% endif %}
 
 		<title>{{ title }}{{ section }}</title>
@@ -15,10 +15,11 @@
 			%}<meta name="description" property="og:description" content="{{ title }} - {{ page.excerpt }}">
 			<meta name="twitter:description" content="{{ title }} - {{ page.excerpt }}" />
 		{% elsif page.path contains '_work' %}
-			%}<meta name="description" property="og:description" content="Development & design work by Zander Martineau">
+			%}<meta name="description" property="og:description" content="Development & design work by {{ site.myname }}">
 		{% else
-			%}<meta name="description" property="og:description" content="Zander Martineau - Front-end developer from London">{%
+			%}<meta name="description" property="og:description" content="{{ site.myname }} - Front-end developer from London">{%
 		endif %}
+		<meta name="author" itemprop="creator" content="{{ site.myname }} <{{ site.email }}>">
 
 		{% if page.original %}
 		<link rel="canonical" href="{{page.original.url}}" />
@@ -38,7 +39,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<meta name="apple-mobile-web-app-title" content="martineau.tv">
 
-		<meta property="og:site_name" content="Zander Martineau's portfolio and blog" />
+		<meta property="og:site_name" content="{{ site.myname }}'s portfolio and blog" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://martineau.tv{{page.url}}" />
 		<meta property="og:locale" content="en_GB" />
