@@ -1,11 +1,11 @@
 ---
 layout: default
-title: I'm Zander, a creative technologist / front-end developer from London
+title: "I'm Zander, a front-end developer from London. I work at [TMW](//tmwunlimited.com) as a Creative Technology Lead. When I'm not working there I can usually be found hacking on [Kickoff](//trykickoff.com) or other open source projects as [on Github](//github.com/mrmartineau). Read [some articles](/#articles) or get in contact with me in any of the usual ways; it'd be great to hear from you."
 section: home
 pageid: home
 ---
 <main>
-	{% include header.html class="header--home" copy=page.title logo=true %}
+	{% include header.html class="header--home" copy=site.bio avatar=true %}
 
 	<div class="l-container content">
 
@@ -24,30 +24,10 @@ pageid: home
 
 			<p>Kickoff is an open-source front-end framework that I co-created and maintain. It has been a major focus of mine for the past four years while working at <a href="http://tmwunlimited.com">TMW</a>. Rather than be all things to all people, we have endeavored to focus on ensuring the framework is as robust and helpful so that developers at the agency, and beyond, can focus on what matters most — making awesome websites!</p>
 
-			<h4>Find out more at <a href="http://trykickoff.com">trykickoff.com</a> or at our <a href="http://github.com/TryKickoff/">Github organisation</a></h4>
+			<p>For more information and to read our docs, please visit <a href="http://trykickoff.com">trykickoff.com</a> or our <a href="http://github.com/TryKickoff/">Github organisation</a>. Alternatively I have written <a href="{% post_url 2016-02-10-kickoff-6-and-the-future %}">a</a> <a href="{% post_url 2015-09-07-UX-of-a-front-end-framework %}">few</a> <a href="{% post_url 2013-12-10-introducing-kickoff %}">articles</a> about Kickoff here and on our <a href="https://medium.com/try-kickoff/">Medium channel</a>.</p>
 		</div>
 
-		<a id="projects" class="offsetAnchor"></a>
-		<!-- <div class="full full--projects"> -->
-			<h2 class="sectionHeading">Projects</h2>
-			<div class="contentList">
-				{% for post in site.work limit:1 %}
-					{{post.title}}
-				{% endfor %}
 
-				<!--
-					Show the latest project here, kind of like Frank Chimero's featured articles
-				 -->
-				{% assign posts = site.work %}
-				{% include posts.html %}
-			</div>
-		<!-- </div> -->
-
-		<h2 id="code" class="sectionHeading offsetAnchor">Code</h2>
-		<div class="contentList">
-			{% assign posts = site.code %}
-			{% include posts.html %}
-		</div>
 
 	</div>
 </main>
