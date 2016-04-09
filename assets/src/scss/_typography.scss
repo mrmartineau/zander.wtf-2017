@@ -15,29 +15,32 @@
  *
  */
 
-@font-face {
-	font-family: Colfax;
-	font-weight: normal;
-	src: url('fonts/ColfaxWebRegularSub.woff') format('woff');
-}
+@include respond-min(mid) {
+	@font-face {
+		font-family: Colfax;
+		font-weight: normal;
+		src: url('fonts/ColfaxWebRegularSub.woff') format('woff');
+	}
 
-@font-face {
-	font-family: Colfax;
-	font-weight: bold;
-	src: url('fonts/ColfaxWebBoldSub.woff') format('woff');
+	@font-face {
+		font-family: Colfax;
+		font-weight: bold;
+		src: url('fonts/ColfaxWebBoldSub.woff') format('woff');
+	}
 }
 
 html {
 	font-size: $font-size-base-narrow-px;
 	-webkit-text-size-adjust: 100%;
+	font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 	@include respond-min(mid) {
+		font-family: $font-family-base;
 		font-size: $font-size-base-px;
 	}
 }
 
 body {
-	font-family: $font-family-base;
 	@include font-size($type-base);
 	line-height: $leading-base;
 	color: $color-text;
