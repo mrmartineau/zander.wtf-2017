@@ -40,6 +40,8 @@ images:
    type: wide
  - src: narrow.jpg
    type: narrow
+
+video: //player.vimeo.com/video/84577799?title=0&amp;amp;byline=0&amp;amp;portrait=0
 ---
 theBar.com is a popular US cocktail resource; my team and I created the Western Europe version of this already popular site, specifically the UK version.
 
