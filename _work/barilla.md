@@ -45,4 +45,4 @@ This project used a styleguide-driven development workflow with modular componen
 
 From a technical perspective, all the Javascript was ES2015 compatible using Babel to transpile through the Browserify bundler. Many NPM modules were used to ensure maximum efficiency (so far, no issues with #unpublishgate). The ES2015 was ported to version 7 of [Kickoff](http://trykickoff.com). Teamcity was used to build/compile all client-side assets at each deployment.
 
-We soft-launch to the US market in March 2016 with more locales being rolled out in the months following. We are actively developing new features and the site is constantly improving.
+We soft-launched to the US market in March 2016 with more locales being rolled out in the months following. We are actively developing new features and the site is constantly improving.
