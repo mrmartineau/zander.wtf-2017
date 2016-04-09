@@ -18,7 +18,7 @@ Usage:
 -->{% endcomment %}
 
 <div class="contentList-group">
-	<aside class="contentList-group-year"></aside>
+	<aside class="contentList-group-year">{{ include.title }}</aside>
 	<ul class="contentList-group-items">
 
 	{% for post in posts reversed %}
@@ -28,7 +28,15 @@ Usage:
 			{% else %}
 				<a class="infoLink" href="{{post.url}}" title='Read "{{post.title}}"'>
 			{% endif %}
-				<div class="infoLink-content">{{post.title}}</div>
+				<div class="infoLink-content">
+					<div class="infoLink-content-title">{{post.title}}</div>
+				{% if post.excerpt %}
+					<div class="infoLink-content-excerpt">
+						{{post.excerpt}}
+					</div>
+				{% endif %}
+
+				</div>
 				<time class="infoLink-date">{{post.date | date: "%b %Y" }}</time>
 			</a>
 		</li>
