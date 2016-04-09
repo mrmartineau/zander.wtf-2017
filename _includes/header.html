@@ -1,12 +1,18 @@
 <header class="header {{ include.class }}" {% if include.img %}style="background-image:url({{ include.bg }})"{% endif %}>
 	<div class="header-inner l-container">
 
+		{% if include.title %}
+			<h1 class="header-title">{{ include.title }}</h1>
+		{% endif %}
+
 		{% if include.logo %}
 			<svg class="header-logo"><use xlink:href="#icon-zmLogo"></use></svg>
 		{% endif %}
 
-		{% if include.title %}
-			<h1 class="header-title">{{ include.title }}</h1>
+		{% if include.avatar %}
+			<div class="avatar avatar--lrg">
+				<img src="/assets/dist/img/about/avatar.jpg" alt="" class="is-visuallyHidden" aria-label="hidden">
+			</div>
 		{% endif %}
 
 		{% if include.img %}
@@ -26,7 +32,7 @@
 		{% endif %}
 
 		{% if include.copy %}
-			<p class="header-copy">{{ include.copy }}</p>
+			<div class="header-copy">{{ include.copy | markdownify }}</div>
 		{% endif %}
 
 	</div>
