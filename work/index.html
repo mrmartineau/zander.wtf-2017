@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Selected work by Zander Martineau
+title: Selected work, open source code and experiments
 section: work
 ---
 <main class="{{ page.section }} {{ page.type }}">
-	{% include header.html title=page.title %}
+	{% include header.html title="Work" subtitle=page.title %}
 
 	{% for item in site.work reversed %}
 		<article class="piece piece--{{item.type}}" id="{{item.meta.name}}">
