@@ -1,12 +1,6 @@
 .workTitle {
 	margin-bottom: 0;
 	padding: 5% -0px;
-	// background: url(/img/latestentries/latestentry-03.jpg) center center no-repeat;
-	// -webkit-background-clip: text;
-	// // background-clip: text;
-	// -webkit-text-fill-color: transparent;
-	// text-fill-color: transparent;
-
 
 	@include respond-min(wide) {
 		@include font-size(80);
@@ -34,21 +28,22 @@
 .piece-title {
 	margin: 0;
 	text-transform: uppercase;
-	@include font-size(30);
+	@include font-size($type-mid);
 	line-height: 1.3;
-	font-weight: bold;
+	// font-weight: bold;
 	text-align: center;
 
 	@include respond-min(wide) {
-		@include font-size(50);
+		@include font-size($type-largest);
 	}
 }
 
 .piece-url {
-	@include rem(margin-top, $line-height-base);
+	margin-top: 0;
 	@include rem(margin-bottom, $line-height-base);
 	text-align: center;
 	font-weight: normal;
+	@include font-size($type-base);
 }
 
 /*
@@ -83,12 +78,22 @@
 .piece-info-list-item {
 	position: relative;
 }
+
 .piece-info-list-item-key {
-	position: absolute;
-	width: 150px;
+
+	@include respond-min(mid) {
+		position: absolute;
+		width: 150px;
+		font-weight: normal;
+	}
 }
+
 .piece-info-list-item-value {
-	margin-left: 160px;
+	margin-bottom: 1rem;
+	@include respond-min(mid) {
+		margin-bottom: 0;
+		margin-left: 160px;
+	}
 }
 
 .github-details {
