@@ -1,0 +1,68 @@
+<article class="piece piece--{{item.type}}" id="{{item.meta.name}}">
+	<div class="piece-inner piece-inner--{{item.meta.layout}}">
+		{% unless include.solo %}
+			<h1 class="piece-title">{{item.title}}</h1>
+			<h3 class="piece-url ellipsis">
+				{% if item.view.url %}
+					<a href="{{item.view.url}}" title="Go to {{item.view.text}}">{{item.view.text}}</a>
+				{% else %}
+					{{item.view.text}}
+				{% endif %}
+			</h3>
+		{% endunless %}
+
+		<div class="piece-infoContainer clearfix">
+			<div class="piece-infoContainer-info clearfix">
+				<ul class="piece-info-list unstyled">
+					{% for info in item.info %}
+						<li class="piece-info-list-item">
+							<b class="piece-info-list-item-key">{{info.key}}:</b>
+							<div class="piece-info-list-item-value ellipsis">
+							{% if info.url %}
+								<a href="{{info.url}}">{{info.value}}</a>
+							{% else %}
+								{{info.value}}
+							{% endif %}
+							</div>
+						</li>
+					{% endfor %}
+
+					{% if item.github %}<li class="piece-info-list-item">
+						<b class="piece-info-list-item-key">Github:</b>
+						<div class="piece-info-list-item-value ellipsis"><a href="https://github.com/{{item.github.user}}/{{item.github.repo}}">github.com/{{item.github.user}}/{{item.github.repo}}</a></div></li>{% endif %}
+				</ul>
+
+				{% if item.github %}
+					<div class="github-details">
+						<iframe src="http://ghbtns.com/github-btn.html?user={{item.github.user}}&repo={{item.github.repo}}&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
+						<iframe src="http://ghbtns.com/github-btn.html?user={{item.github.user}}&repo={{item.github.repo}}&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
+					</div>
+				{% endif %}
+			</div>
+
+			<div class="piece-infoContainer-desc">
+				{{item.content | markdownify}}
+			</div>
+		</div>
+
+		{% if item.logos %}
+			{% for logo in item.logos %}
+				<img class="piece-shots-logo" src="/assets/dist/img/projects/{{item.meta.name}}/{{logo.src}}" alt="{{logo.caption}}" class="piece-shots-shot-img">
+			{% endfor %}
+		{% endif %}
+
+		{% if item.images %}
+		<div class="piece-shots piece-shots--{{item.meta.layout}}">
+
+			{% for img in item.images %}
+				<figure class="piece-shots-shot piece-shots-shot--{{img.type}} piece-shots-shot--0{{forloop.index}}{% if item.meta.layout == 'icon' %} icon-{{img.class}}{% endif %}">
+					{% if item.meta.layout != 'icon' %}
+						<img src="/assets/dist/img/projects/{{item.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
+					{% endif %}
+				</figure>
+			{% endfor %}
+
+		</div>
+		{% endif %}
+	</div>
+</article>

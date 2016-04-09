@@ -5,64 +5,9 @@ layout: default
 <main>
 	{% include header.html title=page.title subtitle=page.view.text %}
 
-	<article class="piece piece--{{page.type}}" id="{{page.meta.name}}">
-		<div class="piece-inner piece-inner--{{page.meta.layout}}">
-			<div class="piece-infoContainer clearfix">
-				<div class="piece-infoContainer-desc">
-					{{content | markdownify}}
-				</div>
-
-
-				<div class="piece-infoContainer-info clearfix">
-					<ul class="piece-info-list unstyled">
-						{% for info in page.info %}
-							<li class="piece-info-list-item">
-								<b class="piece-info-list-item-key">{{info.key}}:</b>
-								<div class="piece-info-list-item-value ellipsis">
-								{% if info.url %}
-									<a href="{{info.url}}">{{info.value}}</a>
-								{% else %}
-									{{info.value}}
-								{% endif %}
-								</div>
-							</li>
-						{% endfor %}
-
-						{% if page.github %}<li class="piece-info-list-item">
-							<b class="piece-info-list-item-key">Github:</b>
-							<div class="piece-info-list-item-value ellipsis"><a href="https://github.com/{{page.github.user}}/{{page.github.repo}}">github.com/{{page.github.user}}/{{page.github.repo}}</a></div></li>{% endif %}
-					</ul>
-
-					{% if page.github %}
-						<div class="github-details">
-							<iframe src="http://ghbtns.com/github-btn.html?user={{page.github.user}}&repo={{page.github.repo}}&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
-							<iframe src="http://ghbtns.com/github-btn.html?user={{page.github.user}}&repo={{page.github.repo}}&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
-						</div>
-					{% endif %}
-				</div>
-			</div>
-
-			{% if page.logos %}
-				{% for logo in page.logos %}
-					<img class="piece-shots-logo" src="/assets/dist/img/projects/{{page.meta.name}}/{{logo.src}}" alt="{{logo.caption}}" class="piece-shots-shot-img">
-				{% endfor %}
-			{% endif %}
-
-			{% if page.images %}
-			<div class="piece-shots piece-shots--{{page.meta.layout}}">
-
-				{% for img in page.images %}
-					<figure class="piece-shots-shot piece-shots-shot--{{img.type}} piece-shots-shot--0{{forloop.index}}{% if page.meta.layout == 'icon' %} icon-{{img.class}}{% endif %}">
-						{% if page.meta.layout != 'icon' %}
-							<img src="/assets/dist/img/projects/{{page.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
-						{% endif %}
-					</figure>
-				{% endfor %}
-
-			</div>
-			{% endif %}
-		</div>
-	</article>
+	{% assign item = page %}
+	{% include work-item.html solo="true" %}
+	{% assign item = nil %}
 </main>
 
 
