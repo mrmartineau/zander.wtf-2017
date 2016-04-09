@@ -16,18 +16,3 @@
 	width: 40%;
 	border-top: 2px solid $grayDark;
 }
-
-.avatar {
-	display: block;
-	background-image: url(/assets/dist/img/about/avatar.jpg);
-	background-size: cover;
-	background-position: center center;
-	margin: 0 auto 1rem;
-	order: 1;
-	border-radius: 50% 10%;
-}
-
-.avatar--lrg {
-	width: 6rem;
-	height: 6rem;
-}
