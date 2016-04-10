@@ -1,5 +1,5 @@
 ---
-title: "Kickoff Front-end framework"
+title: "Kickoff"
 date: 2015-11-01
 excerpt: Framework
 meta:
@@ -14,14 +14,11 @@ view:
   text: trykickoff.com
   url: http://trykickoff.com
 
-credits:
- - title: Developer
-   name: Zander Martineau
- - title: Developer
-   name: Ashley Nolan
-   url: http://ashleynolan.co.uk
- - title: Blog post
-   name: Introducing Kickoff on tech.tmw
+info:
+ - key: Team
+   value: Zander Martineau, Ashley Nolan and Nic Bell
+ - key: Blog post
+   value: Introducing Kickoff on tech.tmw
    url: http://tech.tmw.co.uk/2013/12/introducing-kickoff/
 
 github:
@@ -41,6 +38,9 @@ The framework includes a Sass-based, CSS framework (with all the usual resets an
 
 - Framework
 - Docs site
-- Yeoman Generator
-- Stickers
+## Yeoman Generator
+Kickoff
+
+Stickers
+
 - Guidelines

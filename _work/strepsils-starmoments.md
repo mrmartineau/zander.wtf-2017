@@ -13,11 +13,8 @@ info:
    value: Oct - Nov 2013
  - key: Skills
    value: Front-end development
- - key: AD
-   value: Marcus Aitman
-   url: http://www.marcusjonaitman.com/
- - key: Designer
-   value: Robert Sinderman
+ - key: Team
+   value: "Front-end: Zander Martineau; Art direction: Marcus Aitman; Design: Robert Sinderman"
  - key: Agency
    value: TMW
    url: http://tmwunlimited.com

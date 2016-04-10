@@ -12,10 +12,10 @@ view:
 credits:
  - key: Date
    value: October 2013
- - key: Skills
-   value: Front-end development; asset font creation
- - key: Designer
-   value: Andrew Turk
+ - key: Role
+   value: Lead developer
+ - key: Team
+   value: "Front-end: Zander Martineau; Design: Andrew Turk"
  - key: Agency
    value: TMW
    url: http://tmwunlimited.com

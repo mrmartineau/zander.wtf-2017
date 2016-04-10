@@ -14,11 +14,9 @@ view:
   text: github.com/mrmartineau/trak.js
   url: http://github.com/mrmartineau/trak.js
 
-credits:
- - title: Developer
-   name: Zander Martineau
- - title: NPM
-   name: npmjs.com/package/trak.js
+info:
+ - key: NPM
+   value: npmjs.com/package/trak.js
    url: https://www.npmjs.com/package/trak.js
 
 github:

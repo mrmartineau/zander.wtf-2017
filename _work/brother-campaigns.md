@@ -12,10 +12,12 @@ view:
 info:
  - key: Date
    value: Sept 2012 - Jan 2013
+ - key: Role
+   value: Lead developer
  - key: Skills
    value: "Front-end: Parallax scrolling, web performance & HTML5 Geolocation API"
- - key: Designer
-   value: Dawn Jenner
+ - key: Team
+   value: "Developer: Zander Martineau; Design: Dawn Jenner"
  - key: Agency
    value: TMW
    url: http://tmwunlimited.com

@@ -14,20 +14,8 @@ info:
    value: Feb - Sept 2013
  - key: Skills
    value: Front-end development; asset font creation
- - key: Dev (F/E)
-   value: Zander Martineau
- - key: Dev (F/E)
-   value: Nic Bell
-   url: http://nicbell.net/
- - key: Dev (B/E)
-   value: Martin Georgiev
-   url: http://www.linkedin.com/profile/view?id=17683453
- - key: Dev (B/E)
-   value: Matthew Basson
-   url: http://www.linkedin.com/profile/view?id=50420509
- - key: Designer
-   value: Simon Kinslow
-   url: http://www.simonkinslow.com
+ - key: Team
+   value: "Front-end: Zander Martineau, Nic Bell; Back-end: Martin Georgiev & Matt Basson; Design: Simon Kinslow"
  - key: Agency
    value: TMW
    url: http://tmwunlimited.com

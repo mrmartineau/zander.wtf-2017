@@ -13,8 +13,8 @@ view:
 info:
  - key: Date
    value: June 2011
- - key: Skills
-   value: Design
+ - key: Role
+   value: Designer
  - key: Agency
    value: NEVERBLAND
    url: http://neverbland.com

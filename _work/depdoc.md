@@ -14,15 +14,13 @@ view:
   text: github.com/mrmartineau/depdoc
   url: http://github.com/mrmartineau/depdoc
 
-credits:
- - title: Developer
-   name: Zander Martineau
- - title: NPM
-   name: npmjs.com/package/depdoc
-   url: https://www.npmjs.com/package/depdoc
- - title: Demo
-   name: depdoc.herokuapp.com
+info:
+ - key: Demo
+   value: depdoc.herokuapp.com
    url: http://depdoc.herokuapp.com/
+ - key: NPM
+   value: npmjs.com/package/depdoc
+   url: https://www.npmjs.com/package/depdoc
 
 github:
   user: mrmartineau

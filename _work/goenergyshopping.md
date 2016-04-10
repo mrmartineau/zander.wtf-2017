@@ -12,8 +12,8 @@ view:
 info:
  - key: Date
    value: Mar - Apr 2014
- - key: Skills
-   value: Front-end development
+ - key: Role
+   value: Lead developer
  - key: Designer
    value: Simon Kinslow
  - key: Agency
