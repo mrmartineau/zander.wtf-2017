@@ -24,8 +24,8 @@ pre {
 code {
 	padding: 2px 4px;
 	color: $code-textColor;
-	background-color: darken($color-bg, 3%);
-	border: 1px solid darken($color-bg, 10%);
+	background-color: rgba(0,0,0,.06);
+	border: 1px solid rgba(0,0,0,.12);
 }
 
 // Blocks of code
