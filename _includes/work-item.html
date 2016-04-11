@@ -46,9 +46,11 @@
 		</div>
 
 		{% if item.logos %}
+			<div class="piece-logos">
 			{% for logo in item.logos %}
 				<img class="piece-shots-logo" src="/assets/dist/img/projects/{{item.meta.name}}/{{logo.src}}" alt="{{logo.caption}}" class="piece-shots-shot-img">
 			{% endfor %}
+			</div>
 		{% endif %}
 
 		{% if item.images %}

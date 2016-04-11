@@ -12,6 +12,10 @@
 	margin: 0;
 	background-color: #fff;
 	overflow: hidden;
+
+	&--code {
+		padding-bottom: $common-spacing;
+	}
 }
 
 .piece-inner {
@@ -77,7 +81,7 @@
 		// order: 0;
 		float: right;
 		width: 48%;
-		margin-bottom: $common-spacing * 2;
+		margin-bottom: $common-spacing;
 		margin-left: $common-spacing;
 	}
 }
@@ -113,7 +117,7 @@
    ========================================================================== */
 .piece-shots {
 	position: relative;
-	margin-top: $line-height-base + px;
+	// margin-top: $line-height-base + px;
 	text-align: center;
 	perspective: 300px;
 
@@ -125,6 +129,19 @@
 	width: 240px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.piece-logos {
+	margin: 1rem auto;
+	width: 80%;
+
+	img {
+		display: block;
+	}
+
+	img + img {
+		margin-top: 1rem;
+	}
 }
 
 
