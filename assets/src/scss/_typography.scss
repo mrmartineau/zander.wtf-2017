@@ -247,6 +247,12 @@ hr {
 	border-bottom: 1px solid #fff;
 }
 
+.hr--short {
+	content: '';
+	width: 40%;
+	border-top: 2px solid $grayDark;
+}
+
 // https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
 .hyphenate {
 	overflow-wrap: break-word;
