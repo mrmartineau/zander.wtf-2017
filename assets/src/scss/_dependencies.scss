@@ -46,7 +46,7 @@
 @import "components/fluid-video";
 // @import "components/tables";
 @import "components/code";
-@import "components/skip-navigation";
+// @import "components/skip-navigation";
 @import "components/info-link";
 @import "components/full";
 
@@ -56,7 +56,7 @@
 /**
  * Your app styles
  */
-@import "global"; // Global styles
+@import "global";
 @import "partials/masthead";
 @import "partials/nav";
 @import "partials/footer";
@@ -64,7 +64,7 @@
 @import "partials/content-list";
 @import "partials/header";
 @import "partials/avatar";
-// @import "partials/browser-upgrade"; // Styles to show an upgrade message to users on old browsers
+@import "partials/browser-upgrade";
 
 
 /**
