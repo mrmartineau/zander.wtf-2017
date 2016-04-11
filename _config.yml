@@ -4,6 +4,7 @@ exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-pro
 timezone: Europe/London
 gems: ['emoji']
 emoji_dir: /img/emoji
+excerpt_separator: ""
 
 # Vars
 name: Z&er
