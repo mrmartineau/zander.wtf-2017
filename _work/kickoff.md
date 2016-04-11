@@ -37,11 +37,4 @@ Developed in partnership with [Ash Nolan](http://ashleynolan.co.uk/) at TMW, Kic
 
 The framework includes a Sass-based, CSS framework (with all the usual resets and mixins), a responsive grid system; beautiful typographic styles; javascript plugins, utilities and a great set of boilerplates for most eventualities. This means that our devs can get up and running as quickly as possible and not have to worry about this tedious initial step.
 
-- Framework
-- Docs site
-## Yeoman Generator
-Kickoff
-
-Stickers
-
-- Guidelines
+For more information and to read our docs, please visit [trykickoff.com](http://trykickoff.com) or our [Github organisation](http://github.com/TryKickoff/). Alternatively I have written [a]({% post_url 2016-02-10-kickoff-6-and-the-future %}) [few]({% post_url 2015-09-07-UX-of-a-front-end-framework %}) [articles]({% post_url 2013-12-10-introducing-kickoff %}) about Kickoff here and on our [Medium channel](https://medium.com/try-kickoff/).
