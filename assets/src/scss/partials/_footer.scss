@@ -9,10 +9,3 @@
 		@include fancyLinks($color-secondary, $color-frame);
 	}
 }
-
-
-.footer-hr {
-	content: '';
-	width: 40%;
-	border-top: 2px solid $grayDark;
-}
