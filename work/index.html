@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Selected work, open source code and experiments
+title: Work
+excerpt: Selected work, open source code and experiments
 section: work
 ---
-<main class="{{ page.section }} {{ page.type }}">
-	{% include header.html title="Work" subtitle=page.title %}
+<main class="{{ page.section }}" role="main">
+	{% include header.html title=page.title subtitle=page.subtitle %}
 
 	{% assign posts = site.work %}
 	{% for item in site.work reversed %}

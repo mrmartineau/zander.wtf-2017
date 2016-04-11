@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Kickoff
+excerpt: An open-source front-end framework
 section: kickoff
 ---
-<main class="{{ page.section }}">
-	{% include header.html title=page.title %}
+<main class="{{ page.section }}" role="main">
+	{% include header.html title=page.title subtitle=page.excerpt %}
 
 	<div class="l-container">
 		<div class="full full--kickoff">
