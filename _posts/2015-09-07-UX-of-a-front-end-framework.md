@@ -28,7 +28,7 @@ Pre version 5, Kickoff's folder structure looked something like this:
 └── testing
 ```
 
-Can you see `css`, `img`, `scss` & `js` in the root of the project? On one hand, its easy to find them :thumbsup:, but on the other, it is a messy structure because there are source files mixed with compiled code. The compiled Javascript lived inside the `js` folder but the compiled scss lived in the `css` folder.. :confused:
+Can you see `css`, `img`, `scss` & `js` in the root of the project? On one hand, its easy to find them 👍, but on the other, it is a messy structure because there are source files mixed with compiled code. The compiled Javascript lived inside the `js` folder but the compiled scss lived in the `css` folder.. 😕
 
 To fix this, we moved all these into an `assets` folder, but separated the source code and compiled/dist code. We decided that this would be more useful as there is now a separation of concerns & if you have a continuous deployment workflow you can deploy an entire directory and leave the source files behind. See below for the updated tree:
 
