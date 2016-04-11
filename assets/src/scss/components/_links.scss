@@ -25,3 +25,10 @@ a {
 		//text-decoration: underline;
 	}
 }
+
+.pagination {}
+
+.pagination-btn {
+	@include fancyLinks($color-secondary, $color-bg);
+	margin-right: 1rem;
+}

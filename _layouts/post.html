@@ -16,13 +16,15 @@ layout: default
 				</div>
 			{% endif %}
 
+			<hr class="hr--short">
+
 			<!-- Pagination links -->
 			<div class="pagination clearfix">
 				{% if page.previous %}
-					<a href="{{page.previous.url}}" class="pagination-btn pagination-btn--old">Older</a>
+					<a href="{{page.previous.url}}" class="pagination-btn pagination-btn--old">Previous</a>
 				{% endif %}
 				{% if page.next %}
-					<a href="{{page.next.url}}" class="pagination-btn pagination-btn--new">Newer</a>
+					<a href="{{page.next.url}}" class="pagination-btn pagination-btn--new">Next</a>
 				{% endif %}
 			</div>
 		</div>
