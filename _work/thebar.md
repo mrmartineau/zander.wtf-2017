@@ -1,6 +1,7 @@
 ---
 title: "The Bar"
 date: 2013-09-01
+section: work
 meta:
   name: thebar
   layout: rwd

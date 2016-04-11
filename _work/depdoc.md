@@ -1,6 +1,7 @@
 ---
 title: depdoc
 date: 2015-09-27
+section: work
 excerpt: Automatic dependency documentation generator
 meta:
   name: depdoc

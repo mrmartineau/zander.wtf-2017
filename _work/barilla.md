@@ -1,6 +1,7 @@
 ---
 title: Barilla
 date: 2016-03-01
+section: work
 meta:
   name: barilla
   layout: wide
@@ -34,11 +35,11 @@ images:
  - src: skinny.jpg
    type: narrow
 ---
-Barilla, the world's most successful Pasta company, came to TMW to update all their local brand websites. Barilla operates in 30+ markets and needed a solution that would fit for each.
+Barilla, the world's leading pasta maker, came to TMW to reimagine their existing web site. Thwy operate in 30+ markets globally and needed a solution that would fit for each one.
 
-I worked in tight collaboration with the UX and design teams to create a consistent, accessible and performant website that enabled consumers to find what they needed quickly.
+I collaborated with our UX and design teams to create a consistent, accessible and performant website that would enable consumers to find what they needed quickly.
 
-This project used a styleguide-driven development workflow with modular components. The styleguide is a project in and of itself and serves as documentation and a living reference for all the modules and templates that are used on the site (Kickoff's [Statix](https://github.com/trykickoff/statix) made this job much more easy). View styleguide at its temporary home [here](//barilla-static-ci.tmwtest.co.uk).
+I used a styleguide-driven approach to development using modular components where possible. This styleguide is a project in and of itself and serves as documentation and a living reference for all the modules and templates that are used on the site (Kickoff's [Statix](https://github.com/trykickoff/statix) made this job much more easy). View styleguide at its temporary home [here](//barilla-static-ci.tmwtest.co.uk).
 
 From a technical perspective, all the Javascript was ES2015 compatible using Babel to transpile through the Browserify bundler. Many NPM modules were used to ensure maximum efficiency (so far, no issues with #unpublishgate). The ES2015 was ported to version 7 of [Kickoff](http://trykickoff.com). Teamcity was used to build/compile all client-side assets at each deployment.
 

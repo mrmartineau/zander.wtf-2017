@@ -1,6 +1,7 @@
 ---
 title: "Novalux Energy website"
 date: 2012-03-02
+section: work
 meta:
   name: novalux
   layout: wide

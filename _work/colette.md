@@ -1,6 +1,7 @@
 ---
 title: "Colette"
 date: 2011-06-01
+section: work
 meta:
   name: colette
   date: June 2011

@@ -1,6 +1,7 @@
 ---
 title: "Kickoff"
 date: 2015-11-01
+section: work
 excerpt: Framework
 meta:
   name: kickoff

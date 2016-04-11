@@ -1,6 +1,7 @@
 ---
 title: "Trak.js"
 date: 2014-04-01
+section: work
 excerpt: Analytics
 meta:
   name: trak

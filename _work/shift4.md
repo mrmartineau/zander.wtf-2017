@@ -1,6 +1,7 @@
 ---
 title: "Shift 4"
 date: 2011-10-01
+section: work
 
 meta:
   name: shift-4

@@ -1,6 +1,7 @@
 ---
 title: "Soho Fixed"
 date: 2011-01-02
+section: work
 meta:
   name: sohofixed
   layout: wide

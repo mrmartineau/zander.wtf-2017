@@ -1,6 +1,7 @@
 ---
 title: "Brother Printers"
 date: 2013-01-01
+section: work
 meta:
   name: brother-campaigns
   layout: wide

@@ -1,6 +1,7 @@
 ---
 title: Strepsils Star Moments
 date: 2013-11-01
+section: work
 meta:
   name: strepsils-starmoments
   layout: wide

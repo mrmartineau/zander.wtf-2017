@@ -1,6 +1,7 @@
 ---
 title: "Lynx Africa 18th Anniversary"
 date: 2013-09-01
+section: work
 meta:
   name: lynxafrica
   layout: rwd
