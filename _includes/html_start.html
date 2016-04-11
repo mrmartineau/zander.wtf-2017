@@ -10,15 +10,12 @@
 		{% endif %}
 
 		<title>{{ title }}{{ section }}</title>
-
-		{% if page.excerpt
-			%}<meta name="description" property="og:description" content="{{ title }} - {{ page.excerpt }}">
-			<meta name="twitter:description" content="{{ title }} - {{ page.excerpt }}" />
-		{% elsif page.path contains '_work' %}
-			%}<meta name="description" property="og:description" content="Development & design work by {{ site.myname }}">
-		{% else
-			%}<meta name="description" property="og:description" content="{{ site.myname }} - Front-end developer from London">{%
-		endif %}
+		<meta property="og:title" content="{{ title }}{{ section }}" />
+		{% if page.excerpt %}
+			<meta name="description" property="og:description" content="{{ title }} - {{ page.excerpt }} by {{ site.myname }}">
+		{% else %}
+			<meta name="description" property="og:description" content="{{ title }} by {{ site.myname }}">
+		{% endif %}
 		<meta name="author" itemprop="creator" content="{{ site.myname }} <{{ site.email }}>">
 
 		{% if page.original %}
@@ -40,5 +37,6 @@
 		<meta property="og:url" content="http://martineau.tv{{page.url}}" />
 		<meta property="og:locale" content="en_GB" />
 		<meta name="twitter:site" content="@mrmartineau">
+		<meta name="twitter:card" content="summary">
 
 	</head>
