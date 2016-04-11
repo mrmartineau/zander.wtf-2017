@@ -55,7 +55,7 @@
  * .g--stack--narrow
  * .g--stack--wide
  */
-@mixin grid-stack($breakpoint: $bp-wide) {
+@mixin grid-stack($breakpoint: wide) {
 	@include respond-max($breakpoint) {
 		flex-flow: column nowrap;
 
