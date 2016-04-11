@@ -35,9 +35,9 @@ images:
  - src: skinny.jpg
    type: narrow
 ---
-Barilla, the world's leading pasta maker, came to TMW to reimagine their existing web site. Thwy operate in 30+ markets globally and needed a solution that would fit for each one.
+Barilla, the world's leading pasta maker, came to TMW to reimagine their existing web site. They operate in 30+ markets globally and needed a solution that would fit for each of their specific needs.
 
-I collaborated with our UX and design teams to create a consistent, accessible and performant website that would enable consumers to find what they needed quickly.
+I collaborated with our UX and design teams to create a consistent, accessible, flexible and performant website that would enable consumers to find what they needed quickly.
 
 I used a styleguide-driven approach to development using modular components where possible. This styleguide is a project in and of itself and serves as documentation and a living reference for all the modules and templates that are used on the site (Kickoff's [Statix](https://github.com/trykickoff/statix) made this job much more easy). View styleguide at its temporary home [here](//barilla-static-ci.tmwtest.co.uk).
 
