@@ -3,7 +3,7 @@ section: blog
 type: article
 layout: post
 title: "Martineau.tv redesign"
-excerpt: "Some of the tricks I used in my recent redesign"
+excerpt: "The focus for, and some techniques I used in, my recent redesign"
 navgroup: blog
 comments: true
 ---
