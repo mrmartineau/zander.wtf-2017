@@ -65,17 +65,11 @@ main {
 		}
 	}
 
-	img:not(.emoji) {
-		max-width: calc(100% + 100px);
-		left: -50px;
-		position: relative;
-	}
-}
-
-
-.emoji {
-	width: 35px;
-	vertical-align: middle;
+	// img:not(.emoji) {
+	// 	max-width: calc(100% + 100px);
+	// 	left: -50px;
+	// 	position: relative;
+	// }
 }
 
 
