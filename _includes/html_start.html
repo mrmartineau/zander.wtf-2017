@@ -11,11 +11,17 @@
 
 		<title>{{ title }}{{ section }}</title>
 		<meta property="og:title" content="{{ title }}{{ section }}" />
-		{% if page.excerpt %}
-			<meta name="description" property="og:description" content="{{ title }} - {{ page.excerpt }} by {{ site.myname }}">
+
+		{% if page.description %}
+			<meta name="description" property="og:description" content="{{ page.description }} by {{ site.myname }}">
 		{% else %}
-			<meta name="description" property="og:description" content="{{ title }} by {{ site.myname }}">
+			{% if page.excerpt %}
+				<meta name="description" property="og:description" content="{{ page.excerpt }} by {{ site.myname }}">
+			{% else %}
+				<meta name="description" property="og:description" content="{{ title }} by {{ site.myname }}">
+			{% endif %}
 		{% endif %}
+
 		<meta name="author" itemprop="creator" content="{{ site.myname }} <{{ site.email }}>">
 
 		{% if page.original %}
