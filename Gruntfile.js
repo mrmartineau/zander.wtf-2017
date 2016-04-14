@@ -55,7 +55,6 @@ module.exports = function (grunt) {
 
 	// grunt compile
 	grunt.registerTask('compile', [
-		'browserify',
 		'postscss',
 		'images',
 		'shimly',
