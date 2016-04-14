@@ -97,7 +97,6 @@ h1, h2, h3, h4, h5, h6 {
 // For example: h3.h1 or h3.alpha
 h1 {
 	@include font-size($type-largest);
-	margin-bottom: $baseline * 2;
 }
 
 h2 {
