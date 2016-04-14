@@ -55,14 +55,14 @@
   "scripts": {
     "test": "",
 
-    "start": "concurrent 'grunt' 'npm run jekyll'",
+    "start": "concurrent 'grunt watch' 'npm run jekyll'",
 
-    "install": "gem install bundler && bundle install && npm i -g grunt-cli && npm prune && npm install --no-optional",
+    "new": "gem install bundler && bundle install && npm i -g grunt-cli && npm prune && npm install --no-optional",
 
-    "predeploy": "npm run install",
+    "predeploy": "npm run new",
     "deploy": "jekyll build && grunt compile --release",
 
-    "jekyll": "jekyll build --watch"
+    "jekyll": "jekyll serve --watch"
   },
   "babel": {
     "presets": [
