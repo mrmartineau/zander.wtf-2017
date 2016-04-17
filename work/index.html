@@ -5,7 +5,7 @@ excerpt: Selected work, open source code and experiments
 section: work
 ---
 <main class="{{ page.section }}" role="main">
-	{% include header.html title=page.title subtitle=page.subtitle %}
+	{% include header.html title=page.title subtitle=page.excerpt %}
 
 	{% assign posts = site.work %}
 	{% for item in site.work reversed %}
