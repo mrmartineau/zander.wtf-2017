@@ -27,4 +27,26 @@ github:
 npm:
   package: trak.js
 ---
-**trak.js** is a wrapper for any analytics API. By default it uses Google Universal Analytics but you can override this with the older ga.js or Google Tag Manager if you wish, or you can even add custom event trackers as well, instead of Google Analytics.
+trak.js is a wrapper for any analytics API. By default it uses Google Universal Analytics but you can override this with the older ga.js or Google Tag Manager if you wish, or you can even add custom event trackers as well, instead of Google Analytics.
+
+
+```html
+<a
+ data-trak='{"category":"Rating","action":"Comparison notepad","label":"Up"}'
+ href="#">
+	link
+</a>
+```
+
+```js
+el.addEventListener('mouseover', function() {
+  trak.event({
+    category: 'engagement',
+    action: 'signpost',
+    label: 'page.href',
+    value: 10,
+    nonInteraction: true,
+    eventName: 'This is a Google Tag Manager event name'
+  });
+}
+```

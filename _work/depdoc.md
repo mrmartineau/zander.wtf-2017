@@ -30,6 +30,6 @@ github:
 npm:
   package: depdoc
 ---
-**depdoc** simply scans your `package.json`'s dependencies property and returns some simple information about each item. It is meant to allow developers an easy way to document their project using the dependencies as a starting point.
+depdoc simply scans your `package.json`'s dependencies property and returns some simple information about each item. It is meant to allow developers an easy way to document their project using the dependencies as a starting point.
 
 depdoc comes with a CLI, it can also be used in your own code and there is a [demo on heroku](https://depdoc.herokuapp.com/).

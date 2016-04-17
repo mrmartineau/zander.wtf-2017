@@ -21,6 +21,12 @@ info:
  - key: Blog post
    value: Introducing Kickoff on tech.tmw
    url: http://tech.tmw.co.uk/2013/12/introducing-kickoff/
+ - key: Code
+   value: View the framework
+   url: https://github.com/TryKickoff/kickoff
+ - key: Yeoman
+   value: View the generator
+   url: https://github.com/TryKickoff/generator-kickoff
 
 github:
   user: trykickoff
