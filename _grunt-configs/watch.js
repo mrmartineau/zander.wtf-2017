@@ -14,9 +14,7 @@ module.exports.tasks = {
 		scss: {
 			files: ['<%=config.css.scssDir%>/**/*.scss'],
 			tasks: [
-				'bsNotify:sassStart',
 				'postscss',
-				'bsReload:css',
 				'filesizegzip:css'
 			]
 		},
@@ -26,7 +24,6 @@ module.exports.tasks = {
 				'<%=config.js.distDir%>/**/*.js'
 			],
 			tasks: [
-				'bsReload:all',
 				'filesizegzip:js'
 			]
 		},
@@ -35,7 +32,6 @@ module.exports.tasks = {
 			files: ['<%=config.img.srcDir%>/**/*.{svg,png,jpg,gif}'],
 			tasks: [
 				'newer:imagemin:images',
-				'bsReload:all'
 			]
 		},
 
@@ -43,7 +39,6 @@ module.exports.tasks = {
 			files: ['<%=config.img.grunticonDir%>/**/*.{svg,png,jpg,gif}'],
 			tasks: [
 				'icons',
-				'bsReload:all'
 			]
 		},
 
@@ -54,21 +49,4 @@ module.exports.tasks = {
 			}
 		}
 	},
-
-	// Browsersync reload
-	bsReload: {
-		css: {
-			reload: '<%=config.distDir%>/css/*.css'
-		},
-		all: {
-			reload: true
-		}
-	},
-
-	// Browsersync notify
-	bsNotify: {
-		sassStart: {
-			notify: 'Please wait, compiling Sass!'
-		}
-	}
 };
