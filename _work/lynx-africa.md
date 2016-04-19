@@ -10,7 +10,7 @@ view:
   text: "lynxafrica18.tumblr.com"
   url: "http://lynxafrica18.tumblr.com"
 
-credits:
+info:
  - key: Date
    value: October 2013
  - key: Role

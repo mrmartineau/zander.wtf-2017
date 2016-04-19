@@ -134,9 +134,10 @@
 .piece-logos {
 	margin: 1rem auto;
 	width: 80%;
+	text-align: center;
 
 	img {
-		display: block;
+		display: inline-block;
 	}
 
 	img + img {

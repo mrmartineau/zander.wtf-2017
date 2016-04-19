@@ -3,7 +3,7 @@ title: "interactionCheck.js"
 date: 2015-04-06
 section: work
 meta:
-  name: trak
+  name: interactionCheck
   date: Ongoing
   skills: "Javascript"
   layout: wide

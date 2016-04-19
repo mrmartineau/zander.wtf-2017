@@ -24,12 +24,8 @@ images:
    type: wide
 
 logos:
- - src: logo-light.jpg
+ - src: logo.jpg
    type: logo
-   caption: Logo on light background
- - src: logo-dark.jpg
-   type: logo
-   caption: Logo on dark background
 
 ---
 Novalux Energy Solutions are experts in providing renewable and cost-effective energy solutions to businesses across the world. I was given the task of creating their visual identity and the design and development of their corporate website.

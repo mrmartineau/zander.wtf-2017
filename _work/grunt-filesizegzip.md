@@ -29,6 +29,10 @@ npm:
 ---
 Grunt plugin to output of the original & gzipped size of a string or buffer:
 
-130 B → 53 B (gzip).
+```sh
+Running "filesizegzip" task
+>> ./assets/dist/js/script.js 20.2kb → 6.8kb (gzip)
 
-![](https://github.com/mrmartineau/grunt-filesizegzip/raw/master/screenshot.png)
+Running "filesizegzip" task
+>> ./assets/dist/css/kickoff.css 57.06kb → 13.27kb (gzip)
+```
