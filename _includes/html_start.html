@@ -34,6 +34,13 @@
 			<link rel="stylesheet" href="/assets/dist/css/styleguide.css">
 		{% endif %}
 
+		{% if page.previous %}
+			<link rel="prev" href="{{page.previous.url}}" />
+		{% endif %}
+		{% if page.next %}
+			<link rel="next" href="{{page.next.url}}" />
+		{% endif %}
+
 		<!-- Mobile & Fav Icons -->
 		<link rel="shortcut icon" type="image/x-icon" href="/assets/dist/img/favicon/favicon.png" >
 		<meta name="apple-mobile-web-app-title" content="martineau.tv">
