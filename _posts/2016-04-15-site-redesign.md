@@ -55,7 +55,20 @@ To achieve this style, a linear gradient is applied to the background of the lin
 a:not([class]) {
 	background-image: linear-gradient(to bottom, transparent 81%, #FC5185 81%, #FC5185 85.5%, transparent 85.5%);
 	text-decoration: none;
-	text-shadow: 0 0.03em #F5F5F5, 0 -0.03em #F5F5F5, 0.06em 0 #F5F5F5, 0 -0.06em #F5F5F5, 0.03em 0 #F5F5F5, -0.03em 0 #F5F5F5, 0.06em 0 #F5F5F5, -0.06em 0 #F5F5F5, 0.09em 0 #F5F5F5, -0.09em 0 #F5F5F5, 0.12em 0 #F5F5F5, -0.12em 0 #F5F5F5, 0.15em 0 #F5F5F5, -0.15em 0 #F5F5F5;
+	text-shadow: 0 0.03em #F5F5F5,
+	             0 -0.03em #F5F5F5,
+	             0.06em 0 #F5F5F5,
+	             0 -0.06em #F5F5F5,
+	             0.03em 0 #F5F5F5,
+	            -0.03em 0 #F5F5F5,
+	             0.06em 0 #F5F5F5,
+	            -0.06em 0 #F5F5F5,
+	             0.09em 0 #F5F5F5,
+	            -0.09em 0 #F5F5F5,
+	             0.12em 0 #F5F5F5,
+	            -0.12em 0 #F5F5F5,
+	             0.15em 0 #F5F5F5,
+	            -0.15em 0 #F5F5F5;
 }
 ```
 
@@ -65,7 +78,20 @@ I also created a Sass mixin so I could reuse it:
 @mixin fancyLinks($underlineColor, $bg) {
 	background-image: linear-gradient(to bottom, transparent 81%, $underlineColor 81%, $underlineColor 85.5%, transparent 85.5%);
 	text-decoration: none;
-	text-shadow: 0 0.03em $bg, 0 -0.03em $bg, 0.06em 0 $bg, 0 -0.06em $bg, 0.03em 0 $bg, -0.03em 0 $bg, 0.06em 0 $bg, -0.06em 0 $bg, 0.09em 0 $bg, -0.09em 0 $bg, 0.12em 0 $bg, -0.12em 0 $bg, 0.15em 0 $bg, -0.15em 0 $bg;
+	text-shadow: 0 0.03em $bg,
+	             0 -0.03em $bg,
+	             0.06em 0 $bg,
+	             0 -0.06em $bg,
+	             0.03em 0 $bg,
+	            -0.03em 0 $bg,
+	             0.06em 0 $bg,
+	            -0.06em 0 $bg,
+	             0.09em 0 $bg,
+	            -0.09em 0 $bg,
+	             0.12em 0 $bg,
+	            -0.12em 0 $bg,
+	             0.15em 0 $bg,
+	            -0.15em 0 $bg;
 }
 
 // Usage
@@ -77,6 +103,6 @@ a:not([class]) {
 This is a little detail that I love and will start using on other sites that I develop. I changed standard link underlines so that any descenders break the underline itself.
 
 ## Fin
-This new version is as simple as I dared make it, without it looking too basic, as I still wanted it to be 'designed' in some way. My [page speed score](https://developers.google.com/speed/pagespeed/insights/?url=martineau.tv&tab=desktop) is pretty impressive too, with 90/100 on mobile and 96/100 on desktop 🎉
+This new version is as simple as I dared make it, without it looking too basic, as I still wanted it to be 'designed' in some way. My [WebPageTest score](http://www.webpagetest.org/result/160420_GW_BC8/) was the best I’ve ever seen & my [page speed score](https://developers.google.com/speed/pagespeed/insights/?url=martineau.tv&tab=desktop) is pretty impressive too, with 90/100 on mobile and 96/100 on desktop 🎉
 
 [^1]: Tests at Amazon revealed similar results: every 100 ms increase in load time of Amazon.com decreased sales by 1% (Kohavi and Longbotham 2007)
