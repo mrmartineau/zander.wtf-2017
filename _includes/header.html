@@ -2,7 +2,7 @@
 	<div class="header-inner l-container">
 
 		{% if include.title %}
-			<h1 class="header-title">{{ include.title }}</h1>
+			<h1 class="header-title p-name" itemprop="headline">{{ include.title }}</h1>
 		{% endif %}
 
 		{% if include.logo %}
@@ -20,11 +20,12 @@
 		{% endif %}
 
 		{% if page.path contains '_posts' %}
-			<time datetime="{{ page.date | date_to_xmlschema }}" class="header-meta">{{ page.date | date_to_long_string }}</time>
+			<time datetime="{{ page.date | date_to_xmlschema }}" class="header-meta dt-published">{{ page.date | date_to_long_string }}</time>
+			<meta itemprop="datePublished" content="{{ page.date | "%Y-%m-%d" }}">
 		{% endif %}
 
 		{% if include.subtitle %}
-			<h2 class="header-subtitle">{{ include.subtitle }}</h2>
+			<h2 class="header-subtitle p-summary">{{ include.subtitle }}</h2>
 		{% endif %}
 
 		{% if page.original %}

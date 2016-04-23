@@ -10,19 +10,19 @@
 		{% endif %}
 
 		<title>{{ title }}{{ section }}</title>
-		<meta property="og:title" content="{{ title }}{{ section }}" />
+		<meta property="og:title" name="twitter:title" content="{{ title }}{{ section }}" />
 
 		{% if page.description %}
-			<meta name="description" property="og:description" content="{{ page.description }} by {{ site.myname }}">
+			<meta name="description" property="og:description" name="twitter:description" content="{{ page.description }} by {{ site.myname }}">
 		{% else %}
 			{% if page.excerpt %}
-				<meta name="description" property="og:description" content="{{ page.excerpt }} by {{ site.myname }}">
+				<meta name="description" property="og:description" name="twitter:description" content="{{ page.excerpt }} by {{ site.myname }}">
 			{% else %}
-				<meta name="description" property="og:description" content="{{ title }} by {{ site.myname }}">
+				<meta name="description" property="og:description" name="twitter:description" content="{{ title }} by {{ site.myname }}">
 			{% endif %}
 		{% endif %}
 
-		<meta name="author" itemprop="creator" content="{{ site.myname }} <{{ site.email }}>">
+		<meta name="author" itemprop="creator" property="article:author" content="{{ site.myname }}">
 
 		{% if page.original %}
 		<link rel="canonical" href="{{page.original.url}}" />
@@ -46,9 +46,14 @@
 		<meta name="apple-mobile-web-app-title" content="martineau.tv">
 
 		<meta property="og:site_name" content="{{ site.myname }}'s portfolio and blog" />
-		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://martineau.tv{{page.url}}" />
 		<meta property="og:locale" content="en_GB" />
+		<meta property="og:image" itemprop="image" name="twitter:image" content="http://martineau.tv/assets/dist/img/about/avatar.jpg" />
+		{% if page.path contains '_posts' %}
+		<meta property="og:type" content="article" />
+		{% else %}
+		<meta property="og:type" content="website" />
+		{% endif %}
 		<meta name="twitter:site" content="@mrmartineau">
 		<meta name="twitter:card" content="summary">
 

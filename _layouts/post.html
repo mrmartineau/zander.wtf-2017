@@ -4,10 +4,12 @@ type: article
 layout: default
 ---
 <main role="main">
-	<article class="article" role="article">
+	<article class="article h-entry" role="article" itemscope itemtype="http://schema.org/Article">
+		<meta itemprop="author" content="{{ site.myname }}">
+
 		{% include header.html title=page.title subtitle=page.excerpt class="header--article" %}
 
-		<div class="content content--article l-container">
+		<div class="content content--article l-container e-content" itemprop="articleBody">
 			{{ content | emojify }}
 
 			{% if page.comments %}
