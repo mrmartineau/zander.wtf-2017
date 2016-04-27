@@ -32,6 +32,6 @@ logos:
    caption: Soho Fixed logo on light background
 
 ---
-Soho Fixed is a site where you can buy custom-made, fixed-gear or single-speed bycycles. I designed and developed the entire project - pay attention to the header with it's animating background image and the hover effect on the navigation. All non-bike photography was also shot by me.
+Soho Fixed is a site where you can buy custom-made, fixed-gear or single-speed bicycles. I designed the logo and site, and developed site - pay attention to the header with it's animating background image and the hover effect on the navigation. All non-bike photography was also shot by me.
 
 As well as creating the website, I was given the task of creating the Soho Fixed visual identity.
