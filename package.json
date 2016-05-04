@@ -9,7 +9,7 @@
     "url": "http://martineau.tv"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=4.0.0"
   },
   "dependencies": {},
   "devDependencies": {
@@ -19,23 +19,20 @@
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^1.0.0",
-    "grunt-grunticon": "^2.2.2",
     "grunt-newer": "^1.2.0",
-    "grunt-shimly": "^1.0.1",
-    "imagemin-gifsicle": "^4.2.0",
-    "imagemin-jpegtran": "^4.3.1",
-    "imagemin-mozjpeg": "^5.1.0",
-    "imagemin-optipng": "^4.3.0",
-    "imagemin-pngquant": "^4.2.2",
-    "imagemin-svgo": "^4.2.0",
-    "load-grunt-configs": "^0.4.3",
+    "imagemin-gifsicle": "^5.0.0",
+    "imagemin-jpegtran": "^5.0.0",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-optipng": "^5.0.0",
+    "imagemin-pngquant": "^5.0.0",
+    "imagemin-svgo": "^5.0.0",
+    "load-grunt-configs": "^1.0.0",
     "load-grunt-tasks": "^3.5.0",
-    "postscss": "^1.2.3"
+    "postscss": "^1.4.1"
   },
   "optionalDependencies": {
-    "eslint-config-airbnb": "^6.2.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-filesizegzip": "^0.2.0",
+    "grunt-filesizegzip": "^0.3.0",
     "grunt-scss-lint": "^0.3.8"
   },
   "keywords": [],
@@ -44,19 +41,11 @@
 
     "start": "concurrent 'grunt watch' 'npm run jekyll'",
 
-    "new": "gem install bundler && bundle install && npm i -g grunt-cli && npm prune && npm install --no-optional",
+    "new": "gem install bundler && bundle install && npm prune && npm install --no-optional",
 
     "predeploy": "npm run new",
     "deploy": "jekyll build && grunt compile --release",
 
     "jekyll": "jekyll serve --watch"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ],
-    "plugins": [
-      "transform-object-assign"
-    ]
   }
 }
