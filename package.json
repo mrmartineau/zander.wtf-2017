@@ -9,23 +9,22 @@
     "url": "http://martineau.tv"
   },
   "engines": {
-    "node": ">=0.12.10"
+    "node": ">=4.0.0"
   },
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.3.6",
-    "cssnano": "^3.5.2",
+    "cssnano": "^3.6.2",
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^1.0.0",
     "grunt-newer": "^1.2.0",
-    "imagemin-gifsicle": "^5.0.0",
-    "imagemin-jpegtran": "^5.0.0",
-    "imagemin-mozjpeg": "^6.0.0",
-    "imagemin-optipng": "^5.0.0",
-    "imagemin-pngquant": "^5.0.0",
-    "imagemin-svgo": "^5.0.0",
+    "imagemin-gifsicle": "4.2.0",
+    "imagemin-mozjpeg": "5.1.0",
+    "imagemin-optipng": "4.3.0",
+    "imagemin-pngquant": "4.2.2",
+    "imagemin-svgo": "4.2.1",
     "load-grunt-configs": "^1.0.0",
     "load-grunt-tasks": "^3.5.0",
     "postscss": "^1.4.1"
