@@ -240,16 +240,14 @@ samp {
 
 // Horizontal rules
 hr {
-	margin: ($baseline) 0;
+	margin: ($baseline * 2) auto;
 	border: 0;
-	border-top: 1px solid $hr-border;
-	border-bottom: 1px solid #fff;
+	border-top: 2px solid $hr-border;
+	width: 40%;
 }
 
 .hr--short {
-	content: '';
-	width: 40%;
-	border-top: 2px solid $grayDark;
+	margin: ($baseline * 2) 0;
 }
 
 // https://justmarkup.com/log/2015/07/dealing-with-long-words-in-css/
