@@ -57,8 +57,6 @@ module.exports = function (grunt) {
 	grunt.registerTask('compile', [
 		'postscss',
 		'images',
-		'shimly',
-		'copy:jsStandalone',
 	]);
 
 
@@ -80,15 +78,6 @@ module.exports = function (grunt) {
 	// grunt images
 	grunt.registerTask('images', [
 		'newer:imagemin:images',
-		'icons',
-	]);
-
-
-	// grunt icons
-	grunt.registerTask('icons', [
-		'clean:icons',
-		'newer:imagemin:grunticon',
-		'grunticon',
 	]);
 
 
