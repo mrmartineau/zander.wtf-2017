@@ -83,6 +83,7 @@ devDependencies
 npm install --save-dev imagemin-optipng@5.1.0 imagemin-pngquant@5.0.0 imagemin-mozjpeg@6.0.0 imagemin-gifsicle@5.0.1 imagemin-svgo@5.1.0
 ```
 
+---
 
 ### npm-check-updates
 npm-check-updates is a command-line tool that allows you to upgrade your package.json or bower.json dependencies to the latest versions, regardless of existing version constraints.
@@ -112,6 +113,8 @@ The following dependencies are satisfied by their declared version range, but th
 
 Run with -u to upgrade package.json
 ```
+
+---
 
 ### npm-dview
 npm-dview is a command line tool for comparing a package.json file's dependency version numbers with the latest remote version number. It compares both "dependencies" and/or "devDependencies".
@@ -199,6 +202,8 @@ Peer Dependencies
 └────────────────────────────────────────────────┘
 ```
 
+---
+
 ### npm-check
 npm-check is very similar to the others in this category, with one exception: it has an interactive interface that allows you to choose which packages you want updated. This is extremely useful if you don't want to update some packages for example. It can also be used on global packages too/
 
@@ -224,6 +229,8 @@ $ npm-check -u
 
  Space to select. Enter to start upgrading. Control-C to cancel.
 ```
+
+---
 
 ## Is there another way?
 Yes there is. A service called [Greenkeeper.io](https://greenkeeper.io/), which tracks your dependencies and applies an update to a branch for every new version coming in. Your test suite runs behind the scenes, and only if a dependency update breaks your software, we let you know in a Pull Request, including all the information you need to make an informed decision.
