@@ -2,7 +2,7 @@
 section: blog
 type: article
 layout: post
-title: "Updating your npm packages"
+title: "Updating npm packages"
 excerpt: "Exploring the myriad of options to enable you to update with ease"
 navgroup: blog
 ---
