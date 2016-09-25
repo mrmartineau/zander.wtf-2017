@@ -55,15 +55,15 @@ for any coder. Install this through ‘Package Control’
 
 Zen meets Sublime. Again, a definite must for any coder. Install this through ‘Package Control’.
 
-### 4. [HTML5](https://github.com/mrmartineau/HTML5) by [me](http://martineau.tv)
+### 4. [HTML5](https://github.com/mrmartineau/HTML5) by [me](http://zander.wtf)
 
 I ported the HTML5 bundle from Textmate over to Sublime, this is the result. Install this through ‘Package Control’.
 
-### 5. [Placeholders](https://github.com/mrmartineau/Placeholders) by [me](http://martineau.tv)
+### 5. [Placeholders](https://github.com/mrmartineau/Placeholders) by [me](http://zander.wtf)
 
 Lorem ipsum, dummy content, placeholder HTML. This little package has what you need. Install this through ‘Package Control’.
 
-### 6. [jQuery](https://github.com/mrmartineau/Jquery) by [me](http://martineau.tv)
+### 6. [jQuery](https://github.com/mrmartineau/Jquery) by [me](http://zander.wtf)
 
 Another port from a Textmate bundle, it is still a work in progress but does work & if anyone feels like lending a hand, I don’t mind. Download the source from Github & place the contents into a `jQuery` folder in `/Application Support/Sublime Text 2/Packages` (at least it is on a Mac!).
 

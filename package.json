@@ -1,50 +1,49 @@
 {
-  "name": "Martineau.tv",
-  "title": "Martineau.tv",
-  "description": "Zander Martineau's personal website",
-  "version": "0.5.0",
-  "homepage": "http://martineau.tv",
-  "author": {
-    "name": "Zander Martineau",
-    "url": "http://martineau.tv"
-  },
-  "engines": {
-    "node": ">=4.0.0"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "cssnano": "^3.6.2",
-    "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-imagemin": "^1.0.0",
-    "grunt-newer": "^1.2.0",
-    "imagemin-gifsicle": "4.2.0",
-    "imagemin-mozjpeg": "5.1.0",
-    "imagemin-optipng": "4.3.0",
-    "imagemin-pngquant": "4.2.2",
-    "imagemin-svgo": "4.2.1",
-    "load-grunt-configs": "^1.0.0",
-    "load-grunt-tasks": "^3.5.0",
-    "postscss": "^1.4.1"
-  },
-  "optionalDependencies": {
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-filesizegzip": "^0.3.0",
-    "grunt-scss-lint": "^0.3.8"
-  },
-  "keywords": [],
-  "scripts": {
-    "test": "",
+	"name": "zander.wtf",
+	"title": "zander.wtf",
+	"description": "Zander Martineau's personal website",
+	"version": "0.5.0",
+	"homepage": "http://zander.wtf",
+	"author": {
+		"name": "Zander Martineau",
+		"url": "http://zander.wtf"
+	},
+	"engines": {
+		"node": ">=4.0.0"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"autoprefixer": "^6.3.6",
+		"cssnano": "^3.6.2",
+		"grunt": "^1.0.1",
+		"grunt-contrib-clean": "^1.0.0",
+		"grunt-contrib-copy": "^1.0.0",
+		"grunt-contrib-imagemin": "^1.0.0",
+		"grunt-newer": "^1.2.0",
+		"imagemin-gifsicle": "4.2.0",
+		"imagemin-mozjpeg": "5.1.0",
+		"imagemin-optipng": "4.3.0",
+		"imagemin-pngquant": "4.2.2",
+		"imagemin-svgo": "4.2.1",
+		"load-grunt-configs": "^1.0.0",
+		"load-grunt-tasks": "^3.5.0",
+		"postscss": "^1.4.1"
+	},
+	"optionalDependencies": {
+		"grunt-contrib-watch": "^1.0.0",
+		"grunt-filesizegzip": "^0.3.0",
+		"grunt-scss-lint": "^0.3.8"
+	},
+	"keywords": [],
+	"scripts": {
+		"test": "",
 
-    "start": "concurrent 'grunt watch' 'npm run jekyll'",
+		"start": "concurrent 'grunt watch' 'npm run jekyll'",
 
-    "new": "gem install bundler && bundle install && npm prune && npm install --no-optional",
+		"new": "gem install bundler && bundle install && npm prune && npm install --no-optional",
 
-    "predeploy": "npm run new",
-    "deploy": "jekyll build && grunt compile --release",
+		"deploy": "jekyll build && grunt compile --release && ns -n zander.wtf",
 
-    "jekyll": "jekyll serve --watch"
-  }
+		"jekyll": "jekyll serve --watch"
+	}
 }

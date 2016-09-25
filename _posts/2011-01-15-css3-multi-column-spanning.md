@@ -2,7 +2,7 @@
 section: blog
 type: article
 layout: post
-title: "CSS3 Multi-column spanning"
+title: "CSS3 'column-span'"
 categories:
 - CSS
 excerpt: "A simple test of this handy CSS feature."

@@ -18,8 +18,8 @@ When you first open Shuttle, it adds `~/.shuttle.json`, just open it & change wh
 ```json
 "hosts": [
 	{
-		"name": "Martineau.tv",
-		"cmd": "cd ~/htdocs/martineau.tv && grunt serve"
+		"name": "zander.wtf",
+		"cmd": "cd ~/htdocs/zander.wtf && grunt serve"
 	}
 ]
 ```

@@ -169,7 +169,7 @@ $color-info               : $blue;               // base colour for info input s
 		padding: 2px;
 	}
 
-	// See http://martineau.tv/2013/05/hidden-characters-in-password-inputs/
+	// See http://zander.wtf/2013/05/hidden-characters-in-password-inputs/
 	&[type="password"] {
 		font-family: sans-serif;
 	}

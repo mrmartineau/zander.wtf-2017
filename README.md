@@ -1,6 +1,5 @@
-# martineau.tv
-
-This is my personal portfolio and blog. It is built with Jekyll.
+# zander.wtf
+> This is my personal portfolio and blog. It is built with Jekyll and hosted using △now from Zeit.
 
 ## Development
 
@@ -11,8 +10,7 @@ Run:
 npm start
 ```
 
-## Deployment
-
+## Deployment:
 ```sh
 npm run deploy
 ```

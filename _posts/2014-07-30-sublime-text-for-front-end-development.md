@@ -9,7 +9,7 @@ comments: true
 ---
 It has been a long time since I have written about Sublime Text & the benefits it provides me as a front-end developer. Its packages are one of the main reasons I haven't changed my text editor/IDE in over 3 years. I even created [a wiki](https://github.com/mrmartineau/SublimeTextSetupWiki/wiki/) (of sorts) to help users get up and running with the app and choosing the right packages for a given task. This post will only focus on the packages that I believe most users should be using for front-end development.
 
-[**UPDATE - July 2015**] Added & removed some packages. See the changes [here](https://github.com/mrmartineau/martineau.tv/commit/1bb1c4a54cd713b9f6b4b98541f74fef92e24e05).
+[**UPDATE - July 2015**] Added & removed some packages. See the changes [here](https://github.com/mrmartineau/zander.wtf/commit/1bb1c4a54cd713b9f6b4b98541f74fef92e24e05).
 
 ### [Package Control](https://sublime.wbond.net/installation)
 Before you install any other packages, make sure you install Package Control first. It makes installing and keeping packages up-to-date really simple.

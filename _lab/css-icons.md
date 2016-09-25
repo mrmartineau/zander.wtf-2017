@@ -13,7 +13,7 @@ css: css-icons.css
 
 		<h3>RSS (without border)</h3>
 		<div id="rss_icon_main" class="outside gap">
-			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<a href="//zander.wtf"><span class="outer_ring"></span>
 			<span class="middle_ring"></span>
 			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
@@ -21,7 +21,7 @@ css: css-icons.css
 		<h3>RSS (with Border)</h3>
 		<div id="rss_icon_wrapper" class="gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="//martineau.tv"><span class="outer_ring"></span>
+					<a href="//zander.wtf"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -30,7 +30,7 @@ css: css-icons.css
 		<h3>32px RSS</h3>
 		<p>The dimensions for this and the 16px icon are fixed.</p>
 		<div id="rss_icon_main" class="outside px32 gap">
-			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<a href="//zander.wtf"><span class="outer_ring"></span>
 			<span class="middle_ring"></span>
 			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
@@ -38,7 +38,7 @@ css: css-icons.css
 		<h3>32px RSS with border</h3>
 		<div id="rss_icon_wrapper" class="px32 gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="//martineau.tv"><span class="outer_ring"></span>
+					<a href="//zander.wtf"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -46,7 +46,7 @@ css: css-icons.css
 
 		<h3>16px RSS</h3>
 		<div id="rss_icon_main" class="outside px16 gap">
-			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<a href="//zander.wtf"><span class="outer_ring"></span>
 			<span class="middle_ring"></span>
 			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
@@ -122,14 +122,14 @@ css: css-icons.css
 	<!-- Wrapper 2 -->
 	<div class="wrapper" style="font-size:7px;">
 		<div id="rss_icon_main" class="outside gap">
-			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<a href="//zander.wtf"><span class="outer_ring"></span>
 			<span class="middle_ring"></span>
 			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<div id="rss_icon_wrapper" class="gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="//martineau.tv"><span class="outer_ring"></span>
+					<a href="//zander.wtf"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -137,14 +137,14 @@ css: css-icons.css
 
 
 		<div id="rss_icon_main" class="outside px32 gap">
-			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<a href="//zander.wtf"><span class="outer_ring"></span>
 			<span class="middle_ring"></span>
 			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<div id="rss_icon_wrapper" class="px32 gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="//martineau.tv"><span class="outer_ring"></span>
+					<a href="//zander.wtf"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -152,7 +152,7 @@ css: css-icons.css
 
 
 		<div id="rss_icon_main" class="outside px16 gap">
-			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<a href="//zander.wtf"><span class="outer_ring"></span>
 			<span class="middle_ring"></span>
 			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
@@ -211,14 +211,14 @@ css: css-icons.css
 
 	<div class="wrapper" style="font-size:3px;">
 		<div id="rss_icon_main" class="outside gap">
-			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<a href="//zander.wtf"><span class="outer_ring"></span>
 			<span class="middle_ring"></span>
 			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<div id="rss_icon_wrapper" class="gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="//martineau.tv"><span class="outer_ring"></span>
+					<a href="//zander.wtf"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -226,14 +226,14 @@ css: css-icons.css
 
 
 		<div id="rss_icon_main" class="outside px32 gap">
-			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<a href="//zander.wtf"><span class="outer_ring"></span>
 			<span class="middle_ring"></span>
 			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->
 
 		<div id="rss_icon_wrapper" class="px32 gap">
 				<div id="rss_icon_main" class="inside">
-					<a href="//martineau.tv"><span class="outer_ring"></span>
+					<a href="//zander.wtf"><span class="outer_ring"></span>
 					<span class="middle_ring"></span>
 					<span class="circle"></span></a>
 				</div><!-- /rss_icon_main -->
@@ -241,7 +241,7 @@ css: css-icons.css
 
 
 		<div id="rss_icon_main" class="outside px16 gap">
-			<a href="//martineau.tv"><span class="outer_ring"></span>
+			<a href="//zander.wtf"><span class="outer_ring"></span>
 			<span class="middle_ring"></span>
 			<span class="circle"></span></a>
 		</div><!-- /rss_icon_main -->

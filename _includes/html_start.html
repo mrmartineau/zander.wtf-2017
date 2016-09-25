@@ -43,12 +43,12 @@
 
 		<!-- Mobile & Fav Icons -->
 		<link rel="shortcut icon" type="image/x-icon" href="/assets/dist/img/favicons/favicon.png" >
-		<meta name="apple-mobile-web-app-title" content="martineau.tv">
+		<meta name="apple-mobile-web-app-title" content="Zander">
 
 		<meta property="og:site_name" content="{{ site.myname }}'s portfolio and blog" />
-		<meta property="og:url" content="http://martineau.tv{{page.url}}" />
+		<meta property="og:url" content="{{site.url}}{{page.url}}" />
 		<meta property="og:locale" content="en_GB" />
-		<meta property="og:image" itemprop="image" name="twitter:image" content="http://martineau.tv/assets/dist/img/about/avatar.jpg" />
+		<meta property="og:image" itemprop="image" name="twitter:image" content="{{site.url}}/assets/dist/img/about/avatar.jpg" />
 		{% if page.path contains '_posts' %}
 		<meta property="og:type" content="article" />
 		{% else %}
@@ -56,5 +56,7 @@
 		{% endif %}
 		<meta name="twitter:site" content="@mrmartineau">
 		<meta name="twitter:card" content="summary">
+		<meta property="fb:pages" content="1404002209615909" />
+		<link href='{{site.url}}/feed.xml' rel='alternate' type='application/atom+xml'>
 
 	</head>
