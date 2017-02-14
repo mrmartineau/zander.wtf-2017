@@ -2,7 +2,7 @@
 	"name": "zander.wtf",
 	"title": "zander.wtf",
 	"description": "Zander Martineau's personal website",
-	"version": "0.5.0",
+	"version": "0.6.0",
 	"homepage": "http://zander.wtf",
 	"author": {
 		"name": "Zander Martineau",
@@ -36,14 +36,11 @@
 	},
 	"keywords": [],
 	"scripts": {
-		"test": "",
-
+		"compile": "grunt compile",
 		"start": "concurrent 'grunt watch' 'npm run jekyll'",
-
-		"new": "gem install bundler && bundle install && npm prune && npm install --no-optional",
-
-		"deploy": "jekyll build && grunt compile --release && ns -n zander.wtf",
-
-		"jekyll": "jekyll serve --watch"
+		"new": "gem install bundler ; bundle install ; npm prune ; npm install --no-optional",
+		"deploy": "jekyll build ; grunt compile --release ; npm run now",
+		"jekyll": "jekyll serve --watch",
+		"now": "now _site -n zander.wtf --alias zander.wtf"
 	}
 }
