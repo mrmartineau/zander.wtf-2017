@@ -5,15 +5,3 @@ description: "I'm Zander, a front-end developer from London. I work at TMW as a 
 section: home
 pageid: home
 ---
-<main role="main">
-	{% include header.html class="header--home" copy=site.bio avatar=true %}
-
-	<div class="l-container content">
-
-		<a id="articles" class="offsetAnchor"></a>
-		<div class="contentList">
-			{% assign posts = site.posts %}
-			{% include posts-by-year.html %}
-		</div>
-	</div>
-</main>

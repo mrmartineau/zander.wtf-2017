@@ -43,6 +43,7 @@ body {
 	font-family: $font-family-base;
 	line-height: $leading-base;
 	color: $color-text;
+	font-weight: 300;
 
 	// Add ligatures
 	font-feature-settings: "liga","dlig", "hist";
@@ -158,14 +159,14 @@ abbr[title] {
  * Blockquotes
  */
 blockquote {
-	padding-left: 10px;
-	margin: $baseline;
-	border-left: 4px solid lighten(#000, 80%);
+	margin: $baseline $baseline $baseline 0;
+	padding: ($baseline / 2) 0 ($baseline / 2) $baseline;
+	border-left: 4px solid $pink;
+	color: $pink;
 
 	p {
 		margin-bottom: 0;
-		@include font-size($type-base);
-		font-weight: 300;
+		@include font-size($type-mid);
 	}
 
 	small {
@@ -175,15 +176,6 @@ blockquote {
 		&:before {
 			content: '\2014 \00A0';
 		}
-	}
-}
-
-// Quotes
-q,
-blockquote {
-	&:before,
-	&:after {
-		content: "";
 	}
 }
 

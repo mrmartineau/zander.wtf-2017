@@ -1,17 +1,8 @@
 <footer role="contentinfo" class="footer">
-	<div class="l-container">
+	<div class="l-containerWide">
+		{% include aboutme.html %}
 
-		{% if page.path != 'index.html' %}
-			<div class="aboutMe">
-				<div class="avatar avatar--lrg">
-					<img src="/assets/dist/img/about/avatar.jpg" alt="" class="is-visuallyHidden" aria-label="hidden">
-				</div>
-
-				{{ site.bio | markdownify }}
-			</div>
-
-			<hr class="hr--short">
-		{% endif %}
+		<hr class="hr--short">
 
 		{% include nav.html class="nav--footer" extras=true %}
 

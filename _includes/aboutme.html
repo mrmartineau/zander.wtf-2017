@@ -1,7 +1,5 @@
 <div class="aboutMe">
-	<div class="avatar avatar--lrg">
-		<img src="/assets/dist/img/about/avatar.jpg" alt="" class="is-visuallyHidden" aria-label="hidden">
+	<div class="aboutMe-inner">
+		{{ site.bio | markdownify }}
 	</div>
-
-	{{ site.bio | markdownify }}
 </div>

@@ -4,6 +4,11 @@
 	z-index: $z-frame;
 	display: flex;
 	justify-content: space-between;
+	padding: ($common-spacing / 2) ($common-spacing / 2) 0;
+
+	@include respond-min(narrow) {
+		padding: 0;
+	}
 }
 
 .logo {

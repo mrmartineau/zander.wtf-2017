@@ -10,10 +10,6 @@
 		display: flex;
 		flex-direction: column;
 	}
-
-	// &--home {
-	// 	padding: 6rem 0;
-	// }
 }
 
 .header-img,
@@ -61,7 +57,7 @@
 	opacity: .8;
 	margin-top: 1rem;
 	margin-bottom: 0;
-	@include font-size($type-mid);
+	@include font-size($type-base);
 }
 
 .header-canonical {

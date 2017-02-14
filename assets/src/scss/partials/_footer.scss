@@ -1,6 +1,6 @@
 .footer {
 	background-color: #fff;
-	padding: $common-spacing 0;
+	padding: ($common-spacing * 3) 0 $common-spacing;
 
 	a:not([class]) {
 		padding: 1px 3px;
