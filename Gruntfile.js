@@ -56,7 +56,7 @@ module.exports = function (grunt) {
 	// grunt compile
 	grunt.registerTask('compile', [
 		'postscss',
-		'images',
+		// 'images',
 	]);
 
 
