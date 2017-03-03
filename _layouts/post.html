@@ -10,7 +10,7 @@ layout: default
 		{% include header.html title=page.title subtitle=page.excerpt class="header--article" %}
 
 		<div class="content content--article l-container e-content" itemprop="articleBody">
-			{{ content | emojify }}
+			{{ content }}
 
 			{% if page.comments %}
 				<div class="comments">

@@ -17,7 +17,7 @@ info:
    value: Lead front-end developer
  - key: Style guide
    value: "View it"
-   url: "http://barilla-static.tmwtest.co.uk"
+   url: "http://barilla-static-ci.tmwtest.co.uk"
  - key: Skills
    value: "ES2015, Styleguide-driven development"
  - key: Team

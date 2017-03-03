@@ -48,7 +48,7 @@
 		{% if item.logos %}
 			<div class="piece-logos">
 			{% for logo in item.logos %}
-				<img class="piece-shots-logo" src="/assets/dist/img/projects/{{item.meta.name}}/{{logo.src}}" alt="{{logo.caption}}" class="piece-shots-shot-img">
+				<img class="piece-shots-logo" src="/assets/img/projects/{{item.meta.name}}/{{logo.src}}" alt="{{logo.caption}}" class="piece-shots-shot-img">
 			{% endfor %}
 			</div>
 		{% endif %}
@@ -59,7 +59,7 @@
 			{% for img in item.images %}
 				<figure class="piece-shots-shot piece-shots-shot--{{img.type}} piece-shots-shot--0{{forloop.index}}{% if item.meta.layout == 'icon' %} icon-{{img.class}}{% endif %}">
 					{% if item.meta.layout != 'icon' %}
-						<img src="/assets/dist/img/projects/{{item.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
+						<img src="/assets/img/projects/{{item.meta.name}}/{{img.src}}" alt="{{img.caption}}" class="piece-shots-shot-img">
 					{% endif %}
 				</figure>
 			{% endfor %}

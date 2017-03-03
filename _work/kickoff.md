@@ -9,8 +9,6 @@ meta:
   skills: "Grunt, Sass, Javascript"
   layout: wide
 
-type: code
-
 view:
   text: trykickoff.com
   url: http://trykickoff.com
@@ -34,10 +32,6 @@ github:
 
 npm:
   package: kickoff-framework
-
-images:
- - src: 01.gif
-   type: wide
 ---
 Developed in partnership with [Ash Nolan](http://ashleynolan.co.uk/) at TMW, Kickoff is a robust, adaptable and unopinionated front-end framework that is great starting point for any web site; we use it on all of our front-end projects at TMW.
 
