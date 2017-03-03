@@ -1,46 +1,54 @@
 {
-	"name": "zander.wtf",
-	"title": "zander.wtf",
-	"description": "Zander Martineau's personal website",
-	"version": "0.6.0",
-	"homepage": "http://zander.wtf",
-	"author": {
-		"name": "Zander Martineau",
-		"url": "http://zander.wtf"
-	},
-	"engines": {
-		"node": ">=4.0.0"
-	},
-	"dependencies": {},
-	"devDependencies": {
-		"autoprefixer": "^6.3.6",
-		"cssnano": "^3.6.2",
-		"grunt": "^1.0.1",
-		"grunt-contrib-clean": "^1.0.0",
-		"grunt-contrib-copy": "^1.0.0",
-		"grunt-contrib-imagemin": "^1.0.0",
-		"grunt-newer": "^1.2.0",
-		"imagemin-gifsicle": "4.2.0",
-		"imagemin-mozjpeg": "5.1.0",
-		"imagemin-optipng": "4.3.0",
-		"imagemin-pngquant": "4.2.2",
-		"imagemin-svgo": "4.2.1",
-		"load-grunt-configs": "^1.0.0",
-		"load-grunt-tasks": "^3.5.0",
-		"postscss": "^1.4.1"
-	},
-	"optionalDependencies": {
-		"grunt-contrib-watch": "^1.0.0",
-		"grunt-filesizegzip": "^0.3.0",
-		"grunt-scss-lint": "^0.3.8"
-	},
-	"keywords": [],
-	"scripts": {
-		"compile": "grunt compile",
-		"start": "concurrent 'grunt watch' 'npm run jekyll'",
-		"new": "gem install bundler ; bundle install ; npm prune ; npm install --no-optional",
-		"deploy": "jekyll build ; grunt compile --release ; npm run now",
-		"jekyll": "jekyll serve --watch",
-		"now": "now _site -n zander.wtf --alias zander.wtf"
-	}
+  "name": "zander.wtf",
+  "title": "zander.wtf",
+  "description": "Zander Martineau's personal website",
+  "version": "0.6.0",
+  "homepage": "http://zander.wtf",
+  "author": {
+    "name": "Zander Martineau",
+    "url": "http://zander.wtf"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "css-loader": "^0.26.2",
+    "cssnano": "^3.6.2",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-newer": "^1.2.0",
+    "imagemin-gifsicle": "4.2.0",
+    "imagemin-mozjpeg": "5.1.0",
+    "imagemin-optipng": "4.3.0",
+    "imagemin-pngquant": "4.2.2",
+    "imagemin-svgo": "4.2.1",
+    "load-grunt-configs": "^1.0.0",
+    "load-grunt-tasks": "^3.5.0",
+    "node-sass": "^4.5.0",
+    "postcss-loader": "^1.3.3",
+    "postscss": "^1.4.1",
+    "resolve-url-loader": "^2.0.1",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1"
+  },
+  "optionalDependencies": {
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-filesizegzip": "^0.3.0",
+    "grunt-scss-lint": "^0.3.8"
+  },
+  "keywords": [],
+  "scripts": {
+    "compile": "grunt compile",
+    "start": "concurrent 'grunt watch' 'npm run jekyll'",
+    "new": "gem install bundler ; bundle install ; npm prune ; npm install --no-optional",
+    "deploy": "jekyll build ; grunt compile --release ; npm run now",
+    "jekyll": "jekyll serve --watch",
+    "now": "now _site -n zander.wtf --alias zander.wtf"
+  }
 }
