@@ -1,1 +1,1 @@
-import '../scss/kickoff.scss';
+import '../postcss/global.css';

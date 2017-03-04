@@ -63,24 +63,33 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
+/* 0 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__postcss_global_css__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__postcss_global_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__postcss_global_css__);
+
+
+
+/***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: Error\n    at /Users/zander/code/zander.wtf/node_modules/webpack/lib/NormalModule.js:141:35\n    at /Users/zander/code/zander.wtf/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/zander/code/zander.wtf/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/zander/code/zander.wtf/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at /Users/zander/code/zander.wtf/node_modules/postcss-loader/index.js:148:13\n    at process._tickCallback (internal/process/next_tick.js:103:7)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(1);
+module.exports = __webpack_require__(0);
 
 
 /***/ })
 /******/ ]);
-/*# sourceMappingURL=styleguide.css.map*/
+//# sourceMappingURL=kickoff.js.map
