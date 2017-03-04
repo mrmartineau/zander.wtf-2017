@@ -1,0 +1,24 @@
+@define-mixin project-colours $projectID, $bgColour, $textColour, $linkColour, $linkHover {
+	$(projectID) {
+		background-color: $bgColour;
+		color: $textColour;
+
+		.piece-title,
+		.piece-title a {
+			color: $textColour;
+		}
+
+		a:not([class]) {
+			color: $textColour;
+			/*@include fancyLinks($textColour, $bgColour);*/
+		}
+
+		a:hover,
+		a:active {
+			color: $linkColour;
+		}
+	}
+}
+
+/*Usage:*/
+/*@include project-colours('#id', $bgColour, $textColour, $linkColour, $linkHover);*/

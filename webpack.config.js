@@ -1,37 +1,44 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const autoprefixer = require('autoprefixer');
 
 module.exports = {
 	devtool: "source-map",
 	entry: {
-		kickoff: [path.resolve('assets/scss', 'kickoff.scss')],
-		styleguide: [path.resolve('assets/scss', 'styleguide.scss')],
+		kickoff: [path.resolve('assets/js', 'script.js')],
+		// styleguide: [path.resolve('assets/postcss', 'styleguide.css')],
 	},
 	output: {
 		path: path.resolve('build'),
-		filename: '[name].css',
+		filename: '[name].js',
 		publicPath: '/'
 	},
 	module: {
 		// rules: [{
-  //           test: /\.scss$/,
-  //           use: [{
-  //               loader: "style-loader"
-  //           }, {
-  //               loader: "css-loader", options: {
-  //                   sourceMap: true
-  //               }
-  //           }, {
-  //               loader: "sass-loader", options: {
-  //                   sourceMap: true
-  //               }
-  //           }]
-  //       }]
+		// 	test: /\.css$/,
+		// 	use: [
+		// 		{
+		// 			loader: "style-loader"
+		// 		},
+		// 		{
+		// 			loader: "css-loader", options: {
+		// 				sourceMap: true,
+		//         importLoaders: 1,
+		// 			}
+		// 		},
+		// 		// {
+		// 		// 	loader: 'resolve-url-loader',
+		// 		// },
+		// 		{
+		// 			loader: "postcss-loader", options: {
+		// 				sourceMap: true
+		// 			}
+		// 		}
+		// 	]
+		// }]
 
 		rules: [{
-			test: /\.scss$/,
+			test: /\.css$/,
 			loader: ExtractTextPlugin.extract({
 				fallback: "style-loader",
 				loader: [
@@ -44,24 +51,15 @@ module.exports = {
 							sourceMap: true
 						}
 					},
+					// {
+					// 	loader: 'resolve-url-loader',
+				 //  },
 					{
 						loader: 'postcss-loader',
 						options: {
 							sourceMap: 'inline',
-							plugins: () => [
-								autoprefixer({ browsers: ['> 1% in US', 'last 2 versions', 'iOS > 8'] })
-							]
 						}
 					},
-					{
-						loader: 'resolve-url-loader',
-				  },
-					{
-						loader: "sass-loader",
-						options: {
-							sourceMap: true
-						}
-					}
 				]
 			})
 		}]

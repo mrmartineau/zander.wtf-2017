@@ -1,0 +1,23 @@
+.infoLink {
+	display: flex;
+	justify-content: space-between;
+	text-decoration: none;
+}
+
+.infoLink-content {}
+
+.infoLink-content-title {}
+
+.infoLink-content-excerpt {
+	font-size: 70%;
+	opacity: .6;
+}
+
+.infoLink-date {
+	white-space: nowrap;
+	opacity: .5;
+	font-size: 80%;
+	margin-left: 20px;
+	min-width: 65px;
+	text-align: right;
+}

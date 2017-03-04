@@ -1,0 +1,41 @@
+.contentList {}
+
+.contentList-group {
+	& + & {
+		margin-top: $common-spacing;
+	}
+
+	@media <mid {
+		border-top: 1px solid $grayDark;
+		display: flex;
+
+		& + & {
+			margin-top: -1px;
+		}
+	}
+
+}
+
+.contentList-group-year {
+	padding: .4em 0;
+
+	@media <mid {
+		width: 25%;
+	}
+}
+
+.contentList-group-items {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	@media <mid {
+		width: 75%;
+	}
+}
+
+.contentList-group-items-item {
+	display: block;
+	padding: .4em 0;
+	border-bottom: 1px solid $grayDark;
+}

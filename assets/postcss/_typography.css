@@ -1,0 +1,175 @@
+/**
+ * Typography
+ * - Base
+ * - Paragraphs
+ * - Headings
+ * - Type sizes
+ * - Misc
+ * - Utilities
+ *
+ * Body font size, leadings etc have been set in _variables.scss
+ * http://modularscale.com/
+ *
+ */
+
+/* @media >mid {
+	@font-face {
+		font-family: Colfax;
+		font-weight: normal;
+		src: url('fonts/ColfaxWebRegularSub.woff') format('woff');
+	}
+
+	@font-face {
+		font-family: Colfax;
+		font-weight: bold;
+		src: url('fonts/ColfaxWebBoldSub.woff') format('woff');
+	}
+} */
+
+html {
+	font-size: calc((var(--font-size-base) - 6) * 1px);
+	-webkit-text-size-adjust: 100%;
+
+	@media >mid {
+		font-size: var(--font-size-base);
+	}
+}
+
+body {
+	font-size: $type-base;
+	font-family: $font-family-base;
+	line-height: $leading-base;
+	color: $color-text;
+	font-weight: 300;
+	font-feature-settings: "liga","dlig", "hist";
+	font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+}
+
+/**
+ * Paragraphs
+ */
+p {
+	font-family: $font-family-base;
+	font-size: $type-base;
+	margin-top: 0;
+	margin-bottom: $baseline;
+}
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: $font-family-headings;
+	font-weight: $font-weight-headings;
+	line-height: $line-height-headings;
+	text-rendering: optimizelegibility;
+	margin-top: 0;
+	margin-bottom: $baseline;
+
+	small {
+		font-weight: normal;
+	}
+}
+
+h1 {
+	font-size: $type-largest;
+}
+
+h2 {
+	font-size: $type-large;
+}
+
+h3 {
+	font-size: $type-mid;
+}
+
+h4 {
+	font-size: $type-base;
+}
+
+h5,
+h6 {
+	font-size: $type-small;
+	margin-bottom: 0;
+}
+
+
+* + h1,
+* + h2,
+* + h3,
+* + h4 {
+	margin-top: $baseline;
+}
+
+small {
+	font-size: 80%;
+}
+
+/**
+ * Miscellaneous
+ */
+strong, b {
+	font-weight: $font-weight-bold;
+}
+
+em, i {
+	font-style: italic;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted #ddd;
+	cursor: help;
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+	margin: $baseline $baseline $baseline 0;
+	padding: calc($baseline / 2) 0 calc($baseline / 2) $baseline;
+	border-left: 4px solid $pink;
+	color: $pink;
+
+	p {
+		margin-bottom: 0;
+		font-size: $type-mid;
+	}
+
+	small {
+		display: block;
+
+		&:before {
+			content: '\2014 \00A0';
+		}
+	}
+}
+
+
+/**
+ * Utilities
+ */
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+/* @include text-selection($color-selection, $color-selection-bg); */
+
+hr {
+	margin: calc($baseline * 2) auto;
+	border: 0;
+	border-top: 2px solid $hr-border;
+	width: 40%;
+}
+
+.hr--short {
+	margin: calc($baseline * 2) 0;
+}
