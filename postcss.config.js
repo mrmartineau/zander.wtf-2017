@@ -5,8 +5,9 @@ module.exports = {
 		require('postcss-mixins'), // https://github.com/postcss/postcss-mixins
 		require('postcss-advanced-variables'), // https://github.com/jonathantneal/postcss-advanced-variables
 		require('postcss-custom-properties'), // https://github.com/postcss/postcss-custom-properties
-		require('lost'), // http://lostgrid.org/docs.html
-		require('postcss-utilities'), // https://github.com/ismamz/postcss-utilities
+		require('pixrem'), // https://github.com/robwierzbowski/node-pixrem
+		//require('lost'), // http://lostgrid.org/docs.html
+		// require('postcss-utilities'), // https://github.com/ismamz/postcss-utilities
 		require('postcss-compact-mq'), // https://github.com/rominmx/postcss-compact-mq
 		require('postcss-modular-scale'), // https://github.com/kristoferjoseph/postcss-modular-scale
 		require('postcss-nested'), // https://github.com/postcss/postcss-nested

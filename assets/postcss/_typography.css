@@ -27,12 +27,8 @@
 } */
 
 html {
-	font-size: calc((var(--font-size-base) - 6) * 1px);
 	-webkit-text-size-adjust: 100%;
-
-	@media >mid {
-		font-size: var(--font-size-base);
-	}
+	font-size: var(--font-size-base);
 }
 
 body {
@@ -50,9 +46,13 @@ body {
  */
 p {
 	font-family: $font-family-base;
-	font-size: $type-base;
 	margin-top: 0;
 	margin-bottom: $baseline;
+	font-size: $type-small;
+
+	@media >narrow {
+		font-size: $type-base;
+	}
 }
 
 /**
@@ -73,25 +73,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: $type-largest;
+	font-size: $type-large;
+
+	@media >narrow {
+		font-size: $type-jumbo;
+	}
 }
 
 h2 {
-	font-size: $type-large;
+	font-size: $type-mid;
+
+	@media >narrow {
+		font-size: $type-large;
+	}
 }
 
 h3 {
-	font-size: $type-mid;
-}
-
-h4 {
 	font-size: $type-base;
+
+	@media >narrow {
+		font-size: $type-mid;
+	}
 }
 
+
+h4,
 h5,
 h6 {
 	font-size: $type-small;
 	margin-bottom: 0;
+
+	@media >narrow {
+		font-size: $type-base;
+	}
 }
 
 
@@ -128,8 +142,8 @@ abbr[title] {
 blockquote {
 	margin: $baseline $baseline $baseline 0;
 	padding: calc($baseline / 2) 0 calc($baseline / 2) $baseline;
-	border-left: 4px solid $pink;
-	color: $pink;
+	border-left: 4px solid $color-primary;
+	color: $color-primary;
 
 	p {
 		margin-bottom: 0;
@@ -166,7 +180,7 @@ blockquote {
 hr {
 	margin: calc($baseline * 2) auto;
 	border: 0;
-	border-top: 2px solid $hr-border;
+	border-top: 2px solid #ddd;
 	width: 40%;
 }
 

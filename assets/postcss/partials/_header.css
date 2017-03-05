@@ -1,6 +1,6 @@
 .header {
 	position: relative;
-	padding: 3rem 0;
+	margin-bottom: 10%;
 
 	.header-inner {
 		display: flex;
@@ -30,10 +30,19 @@
 .header-title {
 	margin: 0;
 	order: 2;
+	/*font-size: $type-large;*/
 
-	@media >mid {
-		font-size: $type-largest;
-	}
+	/*@media >mid {
+		font-size: $type-mid;
+	}*/
+
+	/*@media >wide {
+		font-size: $type-large;
+	}*/
+
+	/*@media >huge {
+		font-size: $type-jumbo;
+	}*/
 
 	/*&--work {
 		// text-transform: uppercase;
@@ -43,9 +52,8 @@
 .header-meta {
 	order: -1;
 	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: bold;
-	opacity: .7;
+	font-size: $type-small;
+	opacity: .5;
 }
 
 .header-subtitle {

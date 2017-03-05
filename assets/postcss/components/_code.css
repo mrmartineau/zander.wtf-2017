@@ -28,16 +28,13 @@ code {
 /* Blocks of code */
 pre {
 	display: block;
-	padding: calc($common-spacing / 2);
-	margin: $baseline 0;
+	padding: 10% 0;
+	margin: 10% 0;
 	line-height: $leading-base;
 	color: $pre-textColor;
 	background-color: $pre-bgColor;
 	white-space: pre;
 	overflow: auto;
-	/* white-space: pre-wrap; */
-	/* word-break: break-all; */
-	/* word-wrap: break-word; */
 
 	/* Account for some code outputs that place code tags in pre tags */
 	code {

@@ -10,29 +10,19 @@
  */
 
 /* Using this color scheme: http://www.colorhunt.co/c/15830 */
-
-/* Generic colors */
-$blue: #3FC1C9;
-$green: #16c98d;
-$red: #fa5e5b;
-$yellow: #feef6d;
-$orange: #fe7c08;
-$pink: #DA37CF; /* #FC5185 */
-$purple: #8e44ad;
-$gray: #F5F5F5;
 $dark: #364F6B;
-/* $grayDark: darken($gray, 15%); */
+$bright: #fff;
 
 /* Color Scheme */
 $color-primary: $dark;
-$color-secondary: $pink;
-$color-highlight: $blue;
+$color-secondary: #DA37CF; /* #FC5185 */
+$color-highlight: #3FC1C9;
 
 /* Common colors */
 $color-text: $dark;
-$color-bg: #fff;
+$color-bg: $bright;
 $color-border: #ddd;
-$color-frame: #fff;
+$color-frame: $bright;
 
 
 /* Links */
@@ -43,12 +33,8 @@ $color-link-active: $color-link-hover;
 $color-link-hover-alt: #B2BABE;
 
 /* Text Selection */
-$color-selection: #fff;
+$color-selection: $bright;
 $color-selection-bg: $color-primary;
-
-
-/* <hr> border color */
-$hr-border: $grayDark;
 
 /* 3rd party brand colors - find more at brandcolors.net */
 $color-twitter: #55acee;
@@ -61,4 +47,3 @@ $color-instagram: #e4405f;
 $kickoff-orange: #FE7C08;
 $kickoff-blue: #181830;
 $kickoff-blueLt: #3498db;
-

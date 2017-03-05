@@ -6,7 +6,7 @@ div.highlighter-rouge {
 	&:before,
 	&:after {
 		content: '';
-		width: 100%;
+		width: 200%;
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -22,7 +22,7 @@ div.highlighter-rouge {
 
 	&--dark {
 		background-color: $color-primary;
-		color: #fff;
+		color: $bright;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 
@@ -55,10 +55,10 @@ div.highlighter-rouge {
 
 		a:not([class]) {
 			color: $kickoff-orange;
-			/* @include fancyLinks(#fff, $kickoff-blue); */
+			/* @include fancyLinks($bright, $kickoff-blue); */
 
 			&:hover {
-				color: #fff;
+				color: $bright;
 			}
 		}
 	}
@@ -75,10 +75,10 @@ div.highlighter-rouge {
 
 		a:not([class]) {
 			color: $orange;
-			/* @include fancyLinks(#fff, darken($color-bg, 35%)); */
+			/* @include fancyLinks($bright, darken($color-bg, 35%)); */
 
 			&:hover {
-				color: #fff;
+				color: $bright;
 			}
 		}
 	}

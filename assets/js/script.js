@@ -1,1 +1,1 @@
-import '../postcss/global.css';
+import '../postcss/zander.css';

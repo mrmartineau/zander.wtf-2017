@@ -1,0 +1,29 @@
+.footer {
+	margin: 10% 0;
+}
+
+.footer-social {
+	display: inline-block;
+	vertical-align: top;
+
+	@media <mid {
+		line-height: 56px;
+		margin-left: 10px;
+
+		/* .home & {
+			position: absolute;
+			top: 370px;
+			left: 10px;
+		} */
+	}
+
+	@media >mid {
+		position: absolute;
+		bottom: 1em;
+		top: auto;
+		left: 0;
+		right: 0;
+	}
+}
+
+

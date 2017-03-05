@@ -1,0 +1,12 @@
+@import 'normalize.css';
+@import './mixins/*.css';
+
+@import './_colorPalette.css';
+@import './_variables.css';
+@import './_typography.css';
+@import './_global.css';
+
+@import './components/*.css';
+@import './partials/*.css';
+@import './views/*.css';
+@import './helpers/*.css';

@@ -3,26 +3,32 @@
 	padding: 5% -0px;
 
 	@media >wide {
-		@include font-size(80);
+		font-size: 80px;
 	}
 }
 
 .piece {
 	position: relative;
 	margin: 0;
-	background-color: #fff;
 	overflow: hidden;
 
-	&--code {
-		padding-bottom: $common-spacing;
+	@media >narrow {
+		& + & {
+			margin-top: 5%;
+		}
 	}
+
+	@media >mid {
+		& + & {
+			margin-top: 10%;
+		}
+	}
+
 }
 
 .piece-inner {
-	width: 90%;
 	max-width: 1200px;
-	margin: 0 auto;
-	padding: $common-spacing 0;
+	margin: 10%;
 }
 
 .piece-inner--icon {
@@ -32,22 +38,22 @@
 .piece-title {
 	margin: 0;
 	/* text-transform: uppercase; */
-	@include font-size($type-mid);
+	font-size: $type-mid;
 	line-height: 1.3;
 	/* font-weight: bold; */
 	text-align: center;
 
-	@media >wide {
-		@include font-size($type-largest);
+	@media >mid {
+		font-size: $type-jumbo;
 	}
 }
 
 .piece-url {
 	margin-top: 0;
-	@include rem(margin-bottom, $line-height-base);
+	margin-bottom: 1rem;
 	text-align: center;
 	font-weight: normal;
-	@include font-size($type-base);
+	font-size: $type-base;
 }
 
 /*
@@ -63,8 +69,8 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-
 }
+
 .piece-infoContainer-desc {
 	margin-bottom: $line-height-base + px;
 	order: 1;
@@ -100,6 +106,7 @@
 
 .piece-info-list-item-value {
 	margin-bottom: 1rem;
+
 	@media >mid {
 		margin-bottom: 0;
 		margin-left: 160px;
@@ -229,8 +236,3 @@
 @mixin project-colours #shift-4, #FE0C24, #fff, #000, #fff;
 /*@mixin project-colours #conversocial, #4A9BDC, #000, #fff, #fff;*/
 @mixin project-colours #sohofixed, #536077, #fff, #000, #fff;
-
-
-.piece--code + .piece--code {
-	border-top: 1px dashed $color-text;
-}

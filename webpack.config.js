@@ -42,13 +42,11 @@ module.exports = {
 			loader: ExtractTextPlugin.extract({
 				fallback: "style-loader",
 				loader: [
-					// {
-					// 	loader: "style-loader"
-					// },
 					{
 						loader: "css-loader",
 						options: {
-							sourceMap: true
+							sourceMap: true,
+							importLoaders: 1,
 						}
 					},
 					// {
