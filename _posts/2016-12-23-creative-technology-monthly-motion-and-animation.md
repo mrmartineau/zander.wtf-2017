@@ -42,7 +42,7 @@ Anime is a flexible, yet lightweight JavaScript animation library developed by J
 
 ---
 
-## 🔥 Showcase
+## Showcase
 * [Intergalactic Mission](https://www.valerian.bnpparibas/en/intergalactic-mission) is a cool microsite/game for the Valerian movie.
 * [Balloon.earth](http://balloon.earth/) is an exciting web experiment that combines real-time weather data and 3D map renderings. Created by Hinderling Volkart’ Lab. [🎈.🌍](http://balloon.earth/)
 * The team at Polygraph have created a gorgeous [data-visualisation](http://polygraph.cool/hamilton/) analysing lyrics of the Hamilton musical. 🎼
@@ -51,7 +51,7 @@ Anime is a flexible, yet lightweight JavaScript animation library developed by J
 
 ---
 
-## 📖 Reading / Link list
+## Reading / Link list
 * Cognitive biases affect everything we do, Alvin Hsia writes about them in [The Irrational User](https://medium.com/startup-grind/cognitive-bias-ad5f9fe7f59b).
 * Smashing Magazine published a comprehensive [Front-End performance checklist for 2017](https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/). It is extremely useful to see all the different techniques in one place and quite staggering the lengths we, as front-end devs, need to go to, to make a performant site.
 * Hot off the heels from Creative Tech Monthly’s issue 01 focus, Chatbots is this article by botnerds, [Chatbots: a Misleading Term We Should Stop Using](https://medium.com/@botnerds/chatbots-a-misleading-term-we-should-stop-using-5e24ece8797c#.9xr6psf22). Let’s start calling them Bots from now on 😉.
@@ -62,12 +62,12 @@ Anime is a flexible, yet lightweight JavaScript animation library developed by J
 
 ---
 
-## 🎄 Advent calendars
+## Advent calendars
 [24 Ways](https://24ways.org/), the [Web Performance Calendar](http://calendar.perfplanet.com/2016/), [UXMas](http://uxmas.com/) and the [Advent of Code](http://adventofcode.com/) are all back for another year. If you have some spare time over the Holiday period, I urge you to give them a try.
 
 ---
 
-## ⚒ Code
+## Code
 * [cssreference.io](http://cssreference.io/) is a beautifully made free visual guide to CSS with illustrated and animated examples of the most popular CSS properties. Made by Jeremy Thomas.
 * [The Responsive Breakpoints Generator](http://www.responsivebreakpoints.com/) helps you easily generate the optimal responsive image dimensions 🖼
 * [ntl](https://github.com/ruyadorno/ntl) — a super useful package if you are running lots of npm run scripts
@@ -75,7 +75,7 @@ Anime is a flexible, yet lightweight JavaScript animation library developed by J
 
 ---
 
-## 🖥 Apps
+## Apps
 * [Rocket](http://matthewpalmer.net/rocket/) — Slack-style emoji everywhere on your Mac
 * [Hyper](https://hyper.is/) — A cross-platform Terminal emulator by zeit. Version 1.0.0 was released recently which added Windows support!
 * [Drop](http://dropcolorpicker.com/) is a great little Colour Picker for Mac.
@@ -84,7 +84,7 @@ Anime is a flexible, yet lightweight JavaScript animation library developed by J
 
 ---
 
-## 🌯 Tech Team Activity
+## Tech Team Activity
 🎉 The new [TMW website](http://tmwunlimited.com) has just been launched. I (Zander) and Lorena have been working on it for the past few months and we are extremely proud of it. Have a look and let us know what you think: [tmwunlimited.com](http://tmwunlimited.com).
 
 🗣 I (Zander) gave a #brunchandlearn talk about now by zeit. If you haven’t heard about the service, now is a cloud-based hosting and deployment platform. They offer realtime deployments for Javascript-based apps, Docker containers and static sites and files. It is extremely easy to setup and every site is uses HTTPS & HTTP2 by default! If you’d like to learn what others think about zeit, Remy Sharp wrote an article about it a few days ago.

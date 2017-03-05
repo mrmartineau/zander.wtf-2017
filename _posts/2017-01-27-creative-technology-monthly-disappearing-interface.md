@@ -39,9 +39,10 @@ Don Norman would point towards his long held belief that poor user experience is
 
 ---
 
-## 🔥 Showcase
-![](https://cdn-images-1.medium.com/max/1600/1*N_C4Ts57F8R4VF1q6-KawQ.gif)
+## Showcase
 [How some cool silent film effects were done](http://imgur.com/a/wUAcl), creative technology in a different era
+
+![](https://cdn-images-1.medium.com/max/1600/1*N_C4Ts57F8R4VF1q6-KawQ.gif)
 
 ![](https://cdn-images-1.medium.com/max/2000/1*yqfj9Hb4rTN4C4-xFVdqbQ.png)
 
@@ -64,7 +65,7 @@ HP’s Sound in Colour is a beautiful microsite for one of their laptops. It rec
 
 ---
 
-## 📖 Reading / Link list
+## Reading / Link list
 * [Designing for Brand Interaction](https://uxdesign.cc/designing-for-brand-interaction-95556c013782#.a6smxzwag) by Rebecca Ussai Henderson relates to last month’s CTM by showing how a branded experiences can be created👌
 * [Welcome to the internet of superfluous things](http://www.tmwunlimited.com/latest/2017/01/19/welcome-the-internet-superfluous-things/) by, our very own, Marc Curtis talks about some of the useless things that are being created these days. _"For the love of all that is holy do we need Edwin the Smart Rubber Duck? I’m calling it: we’ve reached peak internet of things."_
 
@@ -73,7 +74,7 @@ HP’s Sound in Colour is a beautiful microsite for one of their laptops. It rec
 
 ---
 
-## ⚒ Code
+## Code
 * 🎉 _Webpack 2_ (or more appropriately, v2.2.0) has finally been released, read about it [here](https://medium.com/webpack/webpack-2-2-the-final-release-76c3d43bf144#.fqwrj0cqh). There’s even a brand new website for the project too: [webpack.js.org](https://webpack.js.org/)
 * [p5.js](http://p5js.org/) is a JavaScript library that starts with the original goal of [Processing](http://processing.org/), to make coding accessible for artists, designers, educators, and beginners, and reinterprets this for today’s web. Follow an interactive introduction at [hello.p5js.org](http://hello.p5js.org/)
 * [Rellax](https://dixonandmoe.com/rellax/) is a buttery smooth, super lightweight (1021bytes gzipped), vanilla javascript parallax library that also works on mobile.
@@ -82,14 +83,14 @@ HP’s Sound in Colour is a beautiful microsite for one of their laptops. It rec
 
 ---
 
-## 📱 Apps
+## Apps
 * [Antipersona](http://antipersona.co/) is an app which lets you experience what it’s like to use Twitter as someone else for a day.
 * [The 31 tools we use to make our “semi remote” SaaS team work efficiently]() by Emeric Ernoult lists many useful app that may help you and your team work.
 * [Kitestring](https://www.kitestring.io/) checks up on you when you’re out and alerts your friends if you don’t respond. Best of all, the service is completely free but its SMS-based, so it isn’t strictly an app.. This is somewhat similar to the [Boy Bye Bot](https://boybyebot.com/) for when you want to give a fake number ‘for real fuckbois’.
 
 ---
 
-## 🍗 Interactive Team Activity
+## Interactive Team Activity
 You might have noticed that we are not the ‘Tech team’ any longer, this is because there has been a bit of a reshuffle at TMW. We are now the Interactive team. More on this soon. 😄
 
 🗣 Vijay gave a brilliant #brunch&learn talk about Docker. It will improve development and release workflow, and reduces costs that we can pass on to our clients. Look out for his post on Docker soon. 📦

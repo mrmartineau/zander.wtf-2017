@@ -36,7 +36,7 @@ Special mention goes to [wit.ai](https://wit.ai/), [Gupshup](https://www.gupshup
 
 ---
 
-## 🔥 Showcase
+## Showcase
 
 * [Quick, draw! by Google]() — This is a game built with machine learning. You draw, and a neural network tries to guess what you’re drawing. You can find more A.I experiments [here](https://aiexperiments.withgoogle.com/).
 * [Adult Swim Singles](http://www.adultswim.com/music/singles-2016/) created in partnership with [Active Theory](https://activetheory.net/). Check out their other work, pretty much everything they do is incredible.
@@ -47,7 +47,7 @@ Special mention goes to [wit.ai](https://wit.ai/), [Gupshup](https://www.gupshup
 
 ---
 
-## 📖 Reading / Link list
+## Reading / Link list
 * [An Event Apart archive](https://aneventapart.com/resources) — This is gold. It contains links and slides from all ‘An Event Apart’ events.
 * [10 principles for smooth web animations](https://blog.gyrosco.pe/smooth-css-animations-7d8ffc2c1d29#.zhvgsija8) — The complete guide to getting 60fps animations with CSS with some very useful tips.
 * [Introduction to Machine Learning for Developers](http://blog.algorithmia.com/introduction-machine-learning-developers/) by Stephanie Kim at Algorithmia
@@ -59,7 +59,7 @@ Special mention goes to [wit.ai](https://wit.ai/), [Gupshup](https://www.gupshup
 
 ---
 
-## ⚒ Code
+## Code
 * [npms](https://npms.io/) isn’t a library but if you need to search for open-source code on npm, this is the site to do it. It is far faster and the results are more accurate. You can also use [unpkg.com](https://unpkg.com/) for demo/prototyping purposes. You can link directly to an npm package’s script. Also, [ntl](https://github.com/ruyadorno/ntl) is a really useful package if you are running lots of npm run scripts.
 * [Reframe.js](https://dollarshaveclub.github.io/reframe.js/) 📽 is a javascript plugin that makes elements scale at a fixed ratio. Very useful for making Youtube/Vimeo embeds responsive.
 * [dont-go](https://github.com/mightyCrow/dont-go) is a small client-side library with zero dependencies to change the title and/or favicon of the page when it is inactive. 😌
@@ -69,14 +69,14 @@ Special mention goes to [wit.ai](https://wit.ai/), [Gupshup](https://www.gupshup
 
 ---
 
-## 🖥 Apps
+## Apps
 * [Franz](http://meetfranz.com/) is a free messaging app that supports Slack, Facebook Messenger, Whatsapp, Skype and many more.
 * [Alfred](https://www.alfredapp.com/) is a Mac productivity app that replaces Spotlight search and adds many more features. 3rd party plugins, known as workflows can also be installed to extend the app.
 * [Flux](https://justgetflux.com/) makes the colour of your computer’s display adapt to the time of day, warm at night and like sunlight during the day.
 
 ---
 
-## 🍔 Tech Team Activity
+## Tech Team Activity
 🗣 Ciaran Park, Denzil Brade, JP and myself all attended [#FFconf](https://ffconf.org/) recently, it was a brilliant few days with many inspiring talks. Watch this space for a full write-up.
 
 🗣 In a recent #brunch&learn™ JP spoke about Redux Observables, he will be writing a piece about it soon.
