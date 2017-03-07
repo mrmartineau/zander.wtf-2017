@@ -6,7 +6,7 @@ module.exports = {
 	devtool: "source-map",
 	entry: {
 		kickoff: [path.resolve('assets/js', 'script.js')],
-		// styleguide: [path.resolve('assets/postcss', 'styleguide.css')],
+		styleguide: [path.resolve('assets/js', 'styleguide.js')],
 	},
 	output: {
 		path: path.resolve('build'),

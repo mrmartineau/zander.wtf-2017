@@ -11,7 +11,7 @@ module.exports = {
 		require('postcss-modular-scale'), // https://github.com/kristoferjoseph/postcss-modular-scale
 		require('postcss-nested'), // https://github.com/postcss/postcss-nested
 		require('postcss-nested-ancestors'), // https://github.com/toomuchdesign/postcss-nested-ancestors
-		// require('postcss-reporter')({clearReportedMessages: true}), // https://github.com/postcss/postcss-reporter
+		require('postcss-reporter')({clearReportedMessages: true}), // https://github.com/postcss/postcss-reporter
 		require('autoprefixer')({ browsers: ['> 1% in US', 'last 2 versions', 'iOS > 8'] }), // https://github.com/postcss/autoprefixer
 	]
 }
