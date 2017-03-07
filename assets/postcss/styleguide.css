@@ -98,6 +98,7 @@ $styleguide-type: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	transition: $default-transition;
 	cursor: pointer;
 	width: 22%;
+	min-width: 180px;
 	margin-bottom: 22px;
 
 	&:hover {

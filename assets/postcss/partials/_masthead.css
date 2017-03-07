@@ -5,18 +5,15 @@
 }
 
 .logo {
-	/*position: absolute;*/
-	/*left: 10px;*/
-	/*top: 13px;*/
-	/*height: 35px;*/
-
 	&:hover {
-		/*animation: wiggle 200ms linear 1;*/
-
 		svg {
-			fill: $color-link-hover;
+			fill: $color-link-default;
 		}
 	}
+}
+
+.logo svg {
+	transition: $default-transition;
 }
 
 .logo-icon {
