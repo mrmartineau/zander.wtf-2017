@@ -28,8 +28,6 @@ code {
 /* Blocks of code */
 pre {
 	display: block;
-	padding: 10% 0;
-	margin: 10% 0;
 	line-height: $leading-base;
 	color: $pre-textColor;
 	background-color: $pre-bgColor;
@@ -43,6 +41,11 @@ pre {
 		background-color: $pre-bgColor;
 		border: 0;
 	}
+}
+
+.article pre {
+	padding: 10% 0;
+	margin: 10% 0;
 }
 
 /* Enable scrollable blocks of code */

@@ -6,13 +6,8 @@ a {
 	transition: $default-transition;
 	cursor: url(/assets/img/cursors/middle-finger@0,5x.png) 10 2, pointer !important;
 
-	&, &:link {
-		color: $color-link-default;
-		text-decoration: none;
-	}
-
-	&:visited {
-		color: $color-link-visited;
+	&, &:link, &:visited {
+		color: $color-text;
 		text-decoration: none;
 	}
 
@@ -30,4 +25,17 @@ a {
 .pagination-btn {
 	/* @include fancyLinks($color-secondary, $color-bg); */
 	margin-right: 1rem;
+}
+
+p a {
+	&, &:link, &:visited {
+		color: $color-link-default;
+		border-bottom: 2px solid transparent;
+		text-decoration: none;
+	}
+
+	&:hover, &:focus {
+		border-bottom: 2px solid $color-link-default;
+		color: $color-link-hover;
+	}
 }

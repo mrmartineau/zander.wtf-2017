@@ -15,7 +15,7 @@ $bright: #fff;
 
 /* Color Scheme */
 $color-primary: $dark;
-$color-secondary: #DA37CF; /* #FC5185 */
+$color-secondary: #FC5185;
 $color-highlight: #3FC1C9;
 
 /* Common colors */
@@ -28,7 +28,7 @@ $color-frame: $bright;
 /* Links */
 $color-link-default: $color-secondary;
 $color-link-visited: $color-link-default;
-$color-link-hover: $color-highlight;
+$color-link-hover: $color-secondary;
 $color-link-active: $color-link-hover;
 $color-link-hover-alt: #B2BABE;
 

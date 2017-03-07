@@ -59,7 +59,6 @@ p {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-	margin: 0;
 	font-family: $font-family-headings;
 	font-weight: $font-weight-headings;
 	line-height: $line-height-headings;

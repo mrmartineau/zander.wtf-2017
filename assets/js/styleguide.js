@@ -1,1 +1,1 @@
-import '../scss/styleguide.scss';
+import '../postcss/styleguide.css';

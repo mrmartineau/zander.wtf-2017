@@ -39,24 +39,8 @@
 	width: 2rem;
 	height: 2rem;
 	fill: $color-primary;
-}
 
-.icon-npm:hover {
-	fill: #cb3837;
-}
-
-.icon-twitter:hover {
-	fill: $color-twitter;
-}
-
-.icon-github:hover {
-	fill: #000;
-}
-
-.icon-libsio:hover {
-	fill: #000;
-}
-
-.icon-instagram:hover {
-	fill: $color-instagram;
+	&:hover {
+		fill: $color-secondary;
+	}
 }

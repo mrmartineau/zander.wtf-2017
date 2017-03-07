@@ -16,8 +16,8 @@
  */
 :root {
 	--font-size-base: 20px;
-	--ms-bases: 1.25;
-	--ms-ratios: 1.04;
+	--ms-bases: 20;
+	--ms-ratios: 1.125;
 	--leading-base: 1.5;
 }
 
@@ -25,14 +25,14 @@ $leading-base: var(--leading-base);
 $line-height-base: calc(var(--font-size-base) * var(--leading-base));
 $baseline: $line-height-base;
 
-$type-micro    : ms(-4);
-$type-smallest : ms(-3);
-$type-smaller  : ms(-2);
-$type-small    : 17.778px /*ms(-1);*/
-$type-base     : ms(0);  /* p, h3, h4, h5, h6 */
-$type-mid      : 22.5px; /*ms(1);*/  /* h2 */
-$type-large    : 25.313px /*ms(2);*/  /* h1 */
-$type-jumbo    : 28.477px /*ms(3);*/
+$type-micro    : ms(-4)rem;
+$type-smallest : ms(-3)rem;
+$type-smaller  : 0.64rem; /*ms(-2)rem;*/
+$type-small    : 0.8rem; /*ms(-1)rem;*/
+$type-base     : 1rem; /*ms(0)rem;  p, h4, h5, h6 */
+$type-mid      : 1.25rem; /*ms(1)rem; h3 */
+$type-large    : 1.563rem; /*ms(2)rem; h2 */
+$type-jumbo    : 1.953rem; /*ms(3)rem;  h1 */
 
 /* Useful to set here when bold webfonts come as 400 font-weight. */
 $font-weight-bold             : bold;

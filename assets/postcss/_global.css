@@ -19,7 +19,7 @@ html {
 .l-container {
 	margin-left: 10%;
 	margin-right: 10%;
-	max-width: 37rem;
+	max-width: 30rem;
 }
 
 .l-containerWide {
@@ -79,8 +79,6 @@ main {
 		height: 150px;
 	}
 }
-
-
 
 img {
 	max-width: 100%;

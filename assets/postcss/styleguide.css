@@ -1,0 +1,333 @@
+/**
+ * Setup styleguide imports
+ */
+@import './mixins/*.css';
+
+@import './_colorPalette.css';
+@import './_variables.css';
+@import './_typography.css';
+
+$styleguide-color-primary: $color-primary;
+$styleguide-type: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+/**
+ * Styleguide type styles
+ */
+.sg-interfaceType {
+	font-family: $styleguide-type;
+	font-weight: 300;
+}
+
+.sg-interfaceType--subtle {
+	color: #888;
+}
+
+.sg-sectionHeading {
+	/*@extend .sg-interfaceType;*/
+	color: $styleguide-color-primary;
+}
+
+
+/**
+ * Styleguide navigation style
+ */
+
+/**
+ * Styleguide .page styles
+ */
+.sg-page {
+	overflow: hidden;
+	padding: 8% 0;
+}
+
+.sg-page--start {
+	background-color: $styleguide-color-primary;
+	padding: 70px 0 60px;
+	color: #fff;
+}
+
+.sg-spacer {
+	padding: 20px;
+}
+
+.sg-footer {
+	background-color: #181830;
+	color: #fff;
+	padding: 30px;
+	margin-top: 30px;
+
+	h1 {
+		margin-bottom: .2em;
+	}
+
+	a {
+		color: #fff;
+		border-bottom: 2px dashed rgba(#fff, .3);
+
+		&:hover {
+			border-bottom: 2px solid #fff;
+		}
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+
+/**
+ * Colour swatches
+ */
+.sg-swatches {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	> div {
+		width: 22%;
+	}
+}
+
+.sg-swatch {
+	border: 1px solid rgba(0,0,0, .2);
+	border-radius: 4px;
+	padding: 15px;
+	text-align: center;
+	transition: $default-transition;
+	cursor: pointer;
+	width: 22%;
+	margin-bottom: 22px;
+
+	&:hover {
+		border-color: rgba(0,0,0, .6);
+	}
+
+	&.is-active {
+		animation: sgSwatch 500ms ease-in-out;
+	}
+}
+
+@keyframes sgSwatch {
+	50% { opacity: .3; }
+}
+
+.sg-swatch-color {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+
+.sg-swatch-text {
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 1;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+
+.sg-swatch-var {
+	width: 100%;
+	font-family: $font-family-mono;
+	margin-top: 15px;
+	font-size: 12px;
+	display: block;
+}
+
+@define-mixin ko-swatch $color, $bg: #fff {
+	background-color: $bg;
+
+	.sg-swatch-color {
+		background-color: $color;
+	}
+
+	.sg-swatch-text {
+		color: $color;
+	}
+
+	.sg-swatch-var {
+		&:after {
+			content: '$(color)';
+			display: block;
+		}
+	}
+}
+
+.sg-color-link-hover {
+	@mixin ko-swatch $color-link-hover;
+}
+.sg-color-primary {
+	@mixin ko-swatch $color-primary;
+}
+.sg-color-secondary {
+	@mixin ko-swatch $color-secondary;
+}
+.sg-color-highlight {
+	@mixin ko-swatch $color-highlight;
+}
+.sg-color-text {
+	@mixin ko-swatch $color-text, $color-bg;
+}
+.sg-color-background {
+	@mixin ko-swatch $color-bg;
+}
+.sg-color-border {
+	@mixin ko-swatch $color-border;
+}
+.sg-color-link {
+	@mixin ko-swatch $color-link-default;
+}
+/*
+
+@define-mixin swatch $color {
+	color: $color;
+
+	.sg-swatch-color {
+		background-color: $color;
+
+		&:before {
+			content: '$(color)';
+			display: block;
+		}
+	}
+}
+
+.sg-color-link-hover {
+	@mixin swatch $color-link-hover;
+}
+.sg-color-primary {
+	@mixin swatch $color-primary;
+}
+.sg-color-secondary {
+	@mixin swatch $color-secondary;
+}
+.sg-color-highlight {
+	@mixin swatch $color-highlight;
+}
+.sg-color-text {
+	@mixin swatch $color-text;
+}
+.sg-color-background {
+	@mixin swatch $color-bg;
+}
+.sg-color-border {
+	@mixin swatch $color-border;
+}
+.sg-color-link {
+	@mixin swatch $color-link-default;
+}*/
+
+
+/**
+ * Typography
+ */
+.sg-type {
+	margin-bottom: 1em;
+}
+
+code {
+	border: 1px solid #ddd;
+	background-color: #F9F8F8;
+	font-size: 11px;
+}
+
+@define-mixin  sgTypeTest $size {
+	.sg-type-item {
+		font-size: $size;
+	}
+
+	code {
+			&:after { content: ' = $(size)px'; }
+	}
+}
+
+
+.sg-type-micro {
+	@mixin sgTypeTest $type-micro;
+}
+.sg-type-smallest {
+	@mixin sgTypeTest $type-smallest;
+}
+.sg-type-smaller {
+	@mixin sgTypeTest $type-smaller;
+}
+.sg-type-small {
+	@mixin sgTypeTest $type-small;
+}
+.sg-type-base {
+	@mixin sgTypeTest $type-base;
+}
+.sg-type-mid {
+	@mixin sgTypeTest $type-mid;
+}
+.sg-type-large {
+	@mixin sgTypeTest $type-large;
+}
+.sg-type-largest {
+	@mixin sgTypeTest $type-largest;
+}
+.sg-type-jumbo {
+	@mixin sgTypeTest $type-jumbo;
+}
+
+.sg-typeSpecimen {
+	margin-bottom: 0;
+	margin-top: 0;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+
+	&:after {
+		display: block;
+		/*@extend .sg-interfaceType;*/
+		/*@extend .sg-interfaceType--subtle;*/
+		font-size: 16px;
+		margin-top: 5px;
+		border-top: 1px solid #ddd;
+		font-weight: normal;
+	}
+}
+
+/*h1.typeSpecimen:after { content: "Font stack: #{$font-family-headings}"; }*/
+/*p.typeSpecimen:after  { content: "Font stack: #{$font-family-base}"; }*/
+
+.sg-typeSpecimen--primary {
+	font-size: 30px;
+	font-family: $font-family-base;
+}
+
+.sg-typeSpecimen--secondary {
+	font-size: 30px;
+	font-family: $font-family-alt;
+}
+
+.sg-typeSpecimen--giant {
+	font-size: 120px;
+	line-height: 1;
+}
+
+
+/**
+ * Icons
+ */
+.icon-sg {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.sg-favicon {
+	padding: 5px;
+
+	img {
+		vertical-align: middle;
+		margin-right: 15px;
+	}
+}
