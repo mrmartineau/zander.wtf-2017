@@ -44,6 +44,7 @@
     "testdeploy": "jekyll build ; grunt compile --release ; now _site -n zander.wtf",
     "deploy": "jekyll build ; npm run build ; npm run now",
     "jekyll": "jekyll serve --watch",
+    "prenow": "npm run build",
     "now": "now _site -n zander.wtf --alias zander.wtf"
   }
 }
