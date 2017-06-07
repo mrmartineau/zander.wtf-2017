@@ -55,7 +55,6 @@ div.highlighter-rouge {
 
 		a:not([class]) {
 			color: $kickoff-orange;
-			/* @include fancyLinks($bright, $kickoff-blue); */
 
 			&:hover {
 				color: $bright;
@@ -64,18 +63,11 @@ div.highlighter-rouge {
 	}
 
 	&--projects {
-		/* background-color: darken($color-bg, 35%); */
 		color: $orange;
 		padding: $common-spacing 0;
 
-		&:before,
-		&:after {
-			/* background-color: darken($color-bg, 35%); */
-		}
-
 		a:not([class]) {
 			color: $orange;
-			/* @include fancyLinks($bright, darken($color-bg, 35%)); */
 
 			&:hover {
 				color: $bright;

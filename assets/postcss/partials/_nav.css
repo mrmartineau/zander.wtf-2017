@@ -7,7 +7,6 @@
 }
 
 .nav--footer {
-
 	.nav-link {
 		margin-right: 1rem;
 	}
@@ -25,7 +24,6 @@
 /**
  * Nav social
  */
-
 .navSocial {
 	margin-top: 1rem;
 }
@@ -39,6 +37,7 @@
 	width: 2rem;
 	height: 2rem;
 	fill: $color-primary;
+	transition: $default-transition;
 
 	&:hover {
 		fill: $color-secondary;

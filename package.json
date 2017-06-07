@@ -19,7 +19,6 @@
     "css-loader": "^0.26.2",
     "cssnano": "^3.6.2",
     "extract-text-webpack-plugin": "^2.0.0",
-    "lost": "^8.0.0",
     "postcss-advanced-variables": "^1.2.2",
     "postcss-compact-mq": "^0.2.1",
     "postcss-custom-properties": "^5.0.2",
@@ -37,11 +36,14 @@
   },
   "keywords": [],
   "scripts": {
-    "compile": "webpack",
-    "start": "concurrent 'grunt watch' 'npm run jekyll'",
+    "build": "webpack -p",
+    "watch": "webpack -w",
+    "start": "concurrent 'npm run watch' 'npm run jekyll'",
     "new": "gem install bundler ; bundle install ; npm prune ; npm install --no-optional",
-    "deploy": "jekyll build ; grunt compile --release ; npm run now",
+    "testdeploy": "jekyll build ; grunt compile --release ; now _site -n zander.wtf",
+    "deploy": "jekyll build ; npm run build ; npm run now",
     "jekyll": "jekyll serve --watch",
+    "prenow": "npm run build",
     "now": "now _site -n zander.wtf --alias zander.wtf"
   }
 }

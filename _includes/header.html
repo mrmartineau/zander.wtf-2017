@@ -15,27 +15,23 @@
 			</div>
 		{% endif %}
 
+		{% if include.subtitle %}
+			<h2 class="header-subtitle p-summary">{{ include.subtitle }}</h2>
+		{% endif %}
+
 		{% if include.img %}
 			<div class="header-img" style="background-image: url({{ include.img }});"></div>
 		{% endif %}
 
 		{% if page.path contains '_posts' %}
-			<time datetime="{{ page.date | date_to_xmlschema }}" class="header-meta dt-published">{{ page.date | date_to_long_string }}</time>
-			<meta itemprop="datePublished" content="{{ page.date | "%Y-%m-%d" }}">
+			<div class="header-meta">
+				<time datetime="{{ page.date | date_to_xmlschema }}" class="dt-published">{{ page.date | date_to_long_string }}</time>
+				{% if page.original %}
+					&bull; Originally posted at <a href="{{ page.original.url }}">{{ page.original.text }}</a>
+				{% endif %}
+				<meta itemprop="datePublished" content="{{ page.date | "%Y-%m-%d" }}">
+			</div>
 		{% endif %}
-
-		{% if include.subtitle %}
-			<h2 class="header-subtitle p-summary">{{ include.subtitle }}</h2>
-		{% endif %}
-
-		{% if page.original %}
-			<p class="header-canonical">Originally posted at <a href="{{ page.original.url }}">{{ page.original.text }}</a></p>
-		{% endif %}
-
-		{% if include.copy %}
-			<div class="header-copy">{{ include.copy | markdownify }}</div>
-		{% endif %}
-
 	</div>
 	<hr class="hr--short">
 </header>

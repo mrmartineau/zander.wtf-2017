@@ -28,7 +28,7 @@ $color-frame: $bright;
 /* Links */
 $color-link-default: $color-secondary;
 $color-link-visited: $color-link-default;
-$color-link-hover: $color-secondary;
+$color-link-hover: #C13E67;
 $color-link-active: $color-link-hover;
 $color-link-hover-alt: #B2BABE;
 

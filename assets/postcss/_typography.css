@@ -12,7 +12,7 @@
  *
  */
 
-/* @media >mid {
+/*@media >mid {
 	@font-face {
 		font-family: Colfax;
 		font-weight: normal;
@@ -24,7 +24,7 @@
 		font-weight: bold;
 		src: url('fonts/ColfaxWebBoldSub.woff') format('woff');
 	}
-} */
+}*/
 
 html {
 	-webkit-text-size-adjust: 100%;
@@ -87,7 +87,8 @@ h2 {
 	}
 }
 
-h3 {
+h3,
+h4 {
 	font-size: $type-base;
 
 	@media >narrow {
@@ -95,8 +96,10 @@ h3 {
 	}
 }
 
+h4 {
+	margin-bottom: 0;
+}
 
-h4,
 h5,
 h6 {
 	font-size: $type-small;
@@ -106,7 +109,6 @@ h6 {
 		font-size: $type-base;
 	}
 }
-
 
 * + h1,
 * + h2,
@@ -122,13 +124,6 @@ small {
 /**
  * Miscellaneous
  */
-strong, b {
-	font-weight: $font-weight-bold;
-}
-
-em, i {
-	font-style: italic;
-}
 
 abbr[title] {
 	border-bottom: 1px dotted #ddd;
@@ -139,8 +134,8 @@ abbr[title] {
  * Blockquotes
  */
 blockquote {
-	margin: $baseline $baseline $baseline 0;
-	padding: calc($baseline / 2) 0 calc($baseline / 2) $baseline;
+	margin: 30px 30px 30px 0;
+	padding: 15px 0 15px 30px;
 	border-left: 4px solid $color-primary;
 	color: $color-primary;
 
@@ -177,12 +172,12 @@ blockquote {
 /* @include text-selection($color-selection, $color-selection-bg); */
 
 hr {
-	margin: calc($baseline * 2) auto;
+	margin: 60px auto;
 	border: 0;
 	border-top: 2px solid #ddd;
 	width: 40%;
 }
 
 .hr--short {
-	margin: calc($baseline * 2) 0;
+	margin: 60px 0;
 }
