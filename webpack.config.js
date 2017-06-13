@@ -14,30 +14,16 @@ module.exports = {
 		publicPath: '/'
 	},
 	module: {
-		// rules: [{
-		// 	test: /\.css$/,
-		// 	use: [
-		// 		{
-		// 			loader: "style-loader"
-		// 		},
-		// 		{
-		// 			loader: "css-loader", options: {
-		// 				sourceMap: true,
-		//         importLoaders: 1,
-		// 			}
-		// 		},
-		// 		// {
-		// 		// 	loader: 'resolve-url-loader',
-		// 		// },
-		// 		{
-		// 			loader: "postcss-loader", options: {
-		// 				sourceMap: true
-		// 			}
-		// 		}
-		// 	]
-		// }]
-
-		rules: [{
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader',
+				query: {
+					cacheDirectory: true,
+				},
+			},
+			{
 			test: /\.css$/,
 			loader: ExtractTextPlugin.extract({
 				fallback: "style-loader",
