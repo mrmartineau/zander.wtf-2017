@@ -31,16 +31,6 @@
 	}
 }
 
-
-
-/*Hide from both screenreaders and browsers: h5bp.com/u*/
-.is-hidden {
-	display: none !important;
-	visibility: hidden !important;
-}
-
-.is-shown { display: block; }
-
 /*Hide only visually, but have it available for screenreaders: h5bp.com/v*/
 .is-visuallyHidden {
 	border: 0;
@@ -62,57 +52,6 @@
 		position: static;
 		width: auto;
 	}
-}
-
-/*Hide visually and from screenreaders, but maintain layout*/
-.is-invisible { visibility: hidden; }
-
-.l-floatLeft {
-	float: left;
-}
-
-.l-floatRight {
-	float: right;
-}
-
-.l-clear {
-	clear: both;
-	float: none;
-}
-
-.l-mb0 { margin-bottom: 0 !important;}
-.l-mb1 { margin-bottom: 1rem !important;}
-.l-mt0 { margin-top:    0 !important;}
-
-
-/**
- * Responsive Utilities
- */
-
-* {
-	/*-webkit-tap-highlight-color: rgba($color-primary, 0) !important;*/
-}
-
-/* A hack for HTML5 contenteditable attribute on mobile */
-textarea[contenteditable] {
-	-webkit-appearance: none;
-}
-
-.promote-layer {
-  /*
-  This may promote the layer to a composited
-  layer.
-
-  Replace with will-change when available
-
-  #perfmatters
-  */
-  backface-visibility: hidden;
-}
-
-/*Add the default transition to any element*/
-.transition {
-	transition: $default-transition;
 }
 
 /*Faster taps on mobile devices*/
