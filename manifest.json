@@ -1,19 +1,19 @@
 {
-  "short_name": "Zander Martineau",
+  "short_name": "Zander-Martineau",
   "name": "Zander Martineau's personal website",
   "icons": [
     {
-      "src": "launcher-icon-1x.png",
+      "src": "/assets/img/favicons/favicon.png",
       "type": "image/png",
       "sizes": "48x48"
     },
     {
-      "src": "launcher-icon-2x.png",
+      "src": "/assets/img/favicons/favicon.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "launcher-icon-4x.png",
+      "src": "/assets/img/favicons/favicon.png",
       "type": "image/png",
       "sizes": "192x192"
     }
