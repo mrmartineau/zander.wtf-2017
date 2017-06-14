@@ -10,10 +10,10 @@ const setupServiceWorker = () => {
 		// Attempt to register it
 		navigator.serviceWorker.register('/serviceWorker.js').then(() => {
 			// Success Message
-			console.log('ServiceWorker: 👍')
+			console.log('ServiceWorker: 👍');
 		}).catch(err => {
 			// Error Message
-			console.log('ServiceWorker: 👎: ', err)
+			console.log('ServiceWorker: 👎: ', err);
 		})
 	}
 }
