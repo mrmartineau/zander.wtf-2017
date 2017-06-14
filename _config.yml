@@ -1,6 +1,6 @@
 permalink: /:year/:month/:title/
 include: ['.htaccess']
-exclude: ['node_modules', 'scss', 'Gruntfile.js', 'package.json', '*.sublime-project', '*.sublime-workspace', '*.sketch', 'bower_components', 'README.md', 'bower.json']
+exclude: ['node_modules', 'package.json', '*.sketch', 'README.md', 'Gemfile', 'Gemfile.lock', 'postcss.config.js', 'webpack.config.js', 'yarn.lock']
 timezone: Europe/London
 excerpt_separator: ""
 
@@ -9,7 +9,7 @@ name: Z&er
 myname: Zander Martineau
 email: zander@martineau.tv
 socialusername: MrMartineau
-bio: "Hi there, I'm Zander Martineau, and I make websites. I've been lucky enough to work with agencies like [Nimbletank](https://nimbletank.com) (current), [TMW Unlimited](https://tmwunlimited.com) and [NEVERBLAND](https://neverbland.com). When I'm not <airquotes>working</airquotes>, I usually work on updating [Kickoff](http://trykickoff.com), or a myriad of [other open source projects](http://github.com/mrmartineau). Read [some articles](/articles) or get in contact with me in any of the usual ways; it'd be great to hear from you."
+bio: "Hi there, I'm Zander Martineau, and I make websites. I've been lucky enough to work with agencies like [Nimbletank](https://nimbletank.com) (current), [TMW Unlimited](https://tmwunlimited.com) and [NEVERBLAND](https://neverbland.com). When I'm not <code>&lt;airquotes></code>working<code>&lt;/airquotes></code>, I usually work on updating [Kickoff](http://trykickoff.com), or a myriad of [other open source projects](http://github.com/mrmartineau). Read [some articles](/articles) or get in contact with me in any of the usual ways; it'd be great to hear from you."
 metadescription: "I'm Zander, a front-end developer from London. I work at TMW as a Creative Technology Lead. When I'm not working there I can usually be found hacking on Kickoff or other open source projects."
 url: http://zander.wtf
 
