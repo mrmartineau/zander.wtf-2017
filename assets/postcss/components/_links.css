@@ -3,7 +3,6 @@
  */
 a {
 	transition: $default-transition;
-	cursor: url(/assets/img/cursors/middle-finger@0,5x.png) 10 2, pointer !important;
 
 	&, &:link, &:visited {
 		color: $color-text;
