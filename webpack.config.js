@@ -28,30 +28,55 @@ module.exports = {
 					cacheDirectory: true,
 				},
 			},
+
 			{
-			test: /\.css$/,
-			loader: ExtractTextPlugin.extract({
-				fallback: "style-loader",
-				loader: [
-					{
-						loader: "css-loader",
-						options: {
-							sourceMap: true,
-							importLoaders: 1,
-						}
-					},
-					// {
-					// 	loader: 'resolve-url-loader',
-				 //  },
-					{
-						loader: 'postcss-loader',
-						options: {
-							sourceMap: 'inline',
-						}
-					},
+				test: /\.css$/,
+				exclude: /node_modules/,
+
+				// Inject <style> tag
+				// use: [
+				// 	'style-loader',
+				// 	{
+				// 		loader: 'css-loader',
+				// 		options: {
+				// 			importLoaders: 1
+				// 		}
+				// 	},
+				// 	{
+				// 		loader: 'postcss-loader',
+				// 		options: {
+				// 			sourceMap: 'inline'
+				// 		}
+				// 	}
+				// ]
+
+				// Extract to CSS file
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								importLoaders: 1
+							}
+						},
+						'postcss-loader'
+					]
+				})
+			},
+			{
+				test: /\.(png|svg|jpg|gif)$/,
+				use: [
+					'file-loader'
 				]
-			})
-		}]
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/,
+				use: [
+					'file-loader'
+				]
+			}
+		]
 
 	},
 	plugins: [
