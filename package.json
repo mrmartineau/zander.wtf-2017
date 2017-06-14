@@ -41,12 +41,12 @@
   "keywords": [],
   "scripts": {
     "build": "webpack -p",
-    "watch": "webpack -w",
+    "watch": "webpack -w -p",
     "start": "concurrent 'npm run watch' 'npm run jekyll'",
     "new": "gem install bundler ; bundle install ; npm prune ; npm install --no-optional",
-    "testdeploy": "jekyll build ; grunt compile --release ; now _site -n zander.wtf",
     "deploy": "jekyll build ; npm run build ; npm run now",
-    "jekyll": "jekyll serve --watch",
+    "jekyll:serve": "jekyll serve --watch",
+    "jekyll:watch": "jekyll build --watch",
     "prenow": "npm run build",
     "now": "now _site -n zander.wtf --alias zander.wtf"
   },
@@ -59,5 +59,8 @@
         }
       ]
     ]
+  },
+  "now": {
+    "alias": "zander.wtf"
   }
 }
