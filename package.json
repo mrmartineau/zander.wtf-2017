@@ -22,6 +22,7 @@
     "css-loader": "^0.28.4",
     "cssnano": "^3.6.2",
     "extract-text-webpack-plugin": "^2.0.0",
+    "file-loader": "^0.11.2",
     "live-server-https": "0.0.2",
     "postcss-advanced-variables": "^1.2.2",
     "postcss-compact-mq": "^0.2.1",
