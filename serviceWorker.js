@@ -14,7 +14,7 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-v1';
+const PRECACHE = '2.0.2'; // match the package.json version
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
@@ -22,7 +22,8 @@ const PRECACHE_URLS = [
   '/index.html',
   './', // Alias for index.html
   '/build/kickoff.css',
-  '/build/kickoff.js'
+  '/build/kickoff.js',
+  // '/build/img/**/*',
 ];
 
 // STEP 1
