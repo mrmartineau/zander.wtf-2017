@@ -1,5 +1,9 @@
 .footer {
 	margin: 10% 0;
+
+	code {
+		font-size: 80%;
+	}
 }
 
 .footer-social {
