@@ -1,18 +1,23 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const PUBLIC_PATH = 'https://zander.wtf/';
 
 module.exports = {
 	devtool: "source-map",
+
 	entry: {
 		kickoff: [path.resolve('assets/js', 'script.js')],
 		styleguide: [path.resolve('assets/js', 'styleguide.js')],
 	},
+
 	output: {
 		path: path.resolve('build'),
 		filename: '[name].js',
-		publicPath: '/'
+		publicPath: PUBLIC_PATH
 	},
+
 	module: {
 		rules: [
 			{
@@ -50,6 +55,26 @@ module.exports = {
 
 	},
 	plugins: [
-		new ExtractTextPlugin("[name].css"),
+		new ExtractTextPlugin("[name].css"), // Extract to CSS file
+		new SWPrecacheWebpackPlugin(
+			{
+				cacheId: 'Zander-Martineau',
+				dontCacheBustUrlsMatching: /\.\w{8}\./,
+				filename: 'service-worker.js',
+				minify: false,
+				navigateFallback: `${PUBLIC_PATH}index.html`,
+				staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+				mergeStaticsConfig: true,
+				staticFileGlobs: [
+					`${PUBLIC_PATH}index.html`,
+					'/index.html',
+					'./',
+					'/offline/index.html',
+					'/build/img/**.*',
+					'/build/*.css',
+					'/build/*.js',
+				],
+			}
+		),
 	]
 };
